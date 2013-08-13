@@ -9,8 +9,17 @@ from wx.lib.agw import floatspin
 from Cura.util import validators
 from Cura.util import profile
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
+
 class configPanelBase(wx.Panel):
-	"A base class for configuration dialogs. Handles creation of settings, and popups"
+	_("A base class for configuration dialogs. Handles creation of settings, and popups")
 	def __init__(self, parent, changeCallback = None):
 		super(configPanelBase, self).__init__(parent)
 		
@@ -108,7 +117,7 @@ class configPanelBase(wx.Panel):
 			self.popup.SetPosition((x, y+sy))
 	
 	def updateProfileToControls(self):
-		"Update the configuration wx controls to show the new configuration settings"
+		_("Update the configuration wx controls to show the new configuration settings")
 		for setting in self.settingControlList:
 			setting.SetValue(setting.setting.getValue())
 		self.Update()
@@ -135,7 +144,7 @@ class configPanelBase(wx.Panel):
 	
 class TitleRow():
 	def __init__(self, panel, name):
-		"Add a title row to the configuration panel"
+		_("Add a title row to the configuration panel")
 		sizer = panel.GetSizer()
 		x = sizer.GetRows()
 		self.title = wx.StaticText(panel, -1, name.replace('&', '&&'))
@@ -146,7 +155,7 @@ class TitleRow():
 
 class SettingRow():
 	def __init__(self, panel, configName, valueOverride = None):
-		"Add a setting to the configuration panel"
+		_("Add a setting to the configuration panel")
 		sizer = panel.GetSizer()
 		x = sizer.GetRows()
 		y = 0

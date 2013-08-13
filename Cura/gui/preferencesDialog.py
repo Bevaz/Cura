@@ -8,9 +8,18 @@ from Cura.util import removableStorage
 from Cura.util import machineCom
 from Cura.util import profile
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
+
 class preferencesDialog(wx.Dialog):
 	def __init__(self, parent):
-		super(preferencesDialog, self).__init__(None, title="Preferences")
+		super(preferencesDialog, self).__init__(None, title=_("Preferences"))
 		
 		wx.EVT_CLOSE(self, self.OnClose)
 		
@@ -73,6 +82,6 @@ class preferencesDialog(wx.Dialog):
 
 	def OnClose(self, e):
 		if self.oldExtruderAmount != int(profile.getPreference('extruder_amount')):
-			wx.MessageBox('After changing the amount of extruders you need to restart Cura for full effect.', 'Extruder amount warning.', wx.OK | wx.ICON_INFORMATION)
+			wx.MessageBox(_('After changing the amount of extruders you need to restart Cura for full effect.'), _('Extruder amount warning.'), wx.OK | wx.ICON_INFORMATION)
 		self.parent.updateProfileToControls()
 		self.Destroy()

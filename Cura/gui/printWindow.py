@@ -20,6 +20,15 @@ from Cura.util import machineCom
 from Cura.util import gcodeInterpreter
 from Cura.util.resources import getPathForImage
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
+
 #The printProcessMonitor is used from the main GUI python process. This monitors the printing python process.
 # This class also handles starting of the 2nd process for printing and all communications with it.
 class printProcessMonitor():
@@ -121,10 +130,10 @@ class PrintCommandButton(buttons.GenBitmapButton):
 
 
 class printWindow(wx.Frame):
-	"Main user interface window"
+	_("Main user interface window")
 
 	def __init__(self):
-		super(printWindow, self).__init__(None, -1, title='Printing')
+		super(printWindow, self).__init__(None, -1, title=_('Printing'))
 		self.machineCom = None
 		self.gcode = None
 		self.gcodeList = None
@@ -153,12 +162,12 @@ class printWindow(wx.Frame):
 		self.sizer = wx.GridBagSizer(2, 2)
 		self.panel.SetSizer(self.sizer)
 
-		sb = wx.StaticBox(self.panel, label="Statistics")
+		sb = wx.StaticBox(self.panel, label=_("Statistics"))
 		boxsizer = wx.StaticBoxSizer(sb, wx.VERTICAL)
 
 		self.powerWarningText = wx.StaticText(parent=self.panel,
 			id=-1,
-			label="Your computer is running on battery power.\nConnect your computer to AC power or your print might not finish.",
+			label=_("Your computer is running on battery power.\nConnect your computer to AC power or your print might not finish."),
 			style=wx.ALIGN_CENTER)
 		self.powerWarningText.SetBackgroundColour('red')
 		self.powerWarningText.SetForegroundColour('white')
@@ -169,17 +178,17 @@ class printWindow(wx.Frame):
 		self.OnPowerWarningChange(None)
 		self.powerWarningTimer.Start(10000)
 
-		self.statsText = wx.StaticText(self.panel, -1, "Filament: ####.##m #.##g\nEstimated print time: #####:##\nMachine state:\nDetecting baudrateXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+		self.statsText = wx.StaticText(self.panel, -1, _("Filament: ####.##m #.##g\nEstimated print time: #####:##\nMachine state:\nDetecting baudrateXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"))
 		boxsizer.Add(self.statsText, flag=wx.LEFT, border=5)
 
 		self.sizer.Add(boxsizer, pos=(0, 0), span=(7, 1), flag=wx.EXPAND)
 
-		self.connectButton = wx.Button(self.panel, -1, 'Connect')
+		self.connectButton = wx.Button(self.panel, -1, _('Connect'))
 		#self.loadButton = wx.Button(self.panel, -1, 'Load')
-		self.printButton = wx.Button(self.panel, -1, 'Print')
-		self.pauseButton = wx.Button(self.panel, -1, 'Pause')
-		self.cancelButton = wx.Button(self.panel, -1, 'Cancel print')
-		self.machineLogButton = wx.Button(self.panel, -1, 'Error log')
+		self.printButton = wx.Button(self.panel, -1, _('Print'))
+		self.pauseButton = wx.Button(self.panel, -1, _('Pause'))
+		self.cancelButton = wx.Button(self.panel, -1, _('Cancel print'))
+		self.machineLogButton = wx.Button(self.panel, -1, _('Error log'))
 		self.progress = wx.Gauge(self.panel, -1)
 
 		self.sizer.Add(self.connectButton, pos=(1, 1), flag=wx.EXPAND)
@@ -200,7 +209,7 @@ class printWindow(wx.Frame):
 		self.temperatureSelect = wx.SpinCtrl(self.temperaturePanel, -1, '0', size=(21 * 3, 21), style=wx.SP_ARROW_KEYS)
 		self.temperatureSelect.SetRange(0, 400)
 		self.temperatureHeatUpPLA = wx.Button(self.temperaturePanel, -1, '210C')
-		self.bedTemperatureLabel = wx.StaticText(self.temperaturePanel, -1, "BedTemp:")
+		self.bedTemperatureLabel = wx.StaticText(self.temperaturePanel, -1, _("BedTemp:"))
 		self.bedTemperatureSelect = wx.SpinCtrl(self.temperaturePanel, -1, '0', size=(21 * 3, 21), style=wx.SP_ARROW_KEYS)
 		self.bedTemperatureSelect.SetRange(0, 400)
 		self.bedTemperatureLabel.Show(False)
@@ -208,7 +217,7 @@ class printWindow(wx.Frame):
 
 		self.temperatureGraph = temperatureGraph(self.temperaturePanel)
 
-		sizer.Add(wx.StaticText(self.temperaturePanel, -1, "Temp:"), pos=(0, 0))
+		sizer.Add(wx.StaticText(self.temperaturePanel, -1, _("Temp:")), pos=(0, 0))
 		sizer.Add(self.temperatureSelect, pos=(0, 1))
 		sizer.Add(self.temperatureHeatUpPLA, pos=(0, 2))
 		sizer.Add(self.bedTemperatureLabel, pos=(1, 0))
@@ -217,7 +226,7 @@ class printWindow(wx.Frame):
 		sizer.AddGrowableRow(2)
 		sizer.AddGrowableCol(2)
 
-		nb.AddPage(self.temperaturePanel, 'Temp')
+		nb.AddPage(self.temperaturePanel, _('Temp'))
 
 		self.directControlPanel = wx.Panel(nb)
 
@@ -271,20 +280,20 @@ class printWindow(wx.Frame):
 		self.supportSpeedSelect = wx.SpinCtrl(self.speedPanel, -1, '100', size=(21 * 3, 21), style=wx.SP_ARROW_KEYS)
 		self.supportSpeedSelect.SetRange(5, 1000)
 
-		sizer.Add(wx.StaticText(self.speedPanel, -1, "Outer wall:"), pos=(0, 0))
+		sizer.Add(wx.StaticText(self.speedPanel, -1, _("Outer wall:")), pos=(0, 0))
 		sizer.Add(self.outerWallSpeedSelect, pos=(0, 1))
 		sizer.Add(wx.StaticText(self.speedPanel, -1, "%"), pos=(0, 2))
-		sizer.Add(wx.StaticText(self.speedPanel, -1, "Inner wall:"), pos=(1, 0))
+		sizer.Add(wx.StaticText(self.speedPanel, -1, _("Inner wall:")), pos=(1, 0))
 		sizer.Add(self.innerWallSpeedSelect, pos=(1, 1))
 		sizer.Add(wx.StaticText(self.speedPanel, -1, "%"), pos=(1, 2))
-		sizer.Add(wx.StaticText(self.speedPanel, -1, "Fill:"), pos=(2, 0))
+		sizer.Add(wx.StaticText(self.speedPanel, -1, _("Fill:")), pos=(2, 0))
 		sizer.Add(self.fillSpeedSelect, pos=(2, 1))
 		sizer.Add(wx.StaticText(self.speedPanel, -1, "%"), pos=(2, 2))
-		sizer.Add(wx.StaticText(self.speedPanel, -1, "Support:"), pos=(3, 0))
+		sizer.Add(wx.StaticText(self.speedPanel, -1, _("Support:")), pos=(3, 0))
 		sizer.Add(self.supportSpeedSelect, pos=(3, 1))
 		sizer.Add(wx.StaticText(self.speedPanel, -1, "%"), pos=(3, 2))
 
-		nb.AddPage(self.speedPanel, 'Speed')
+		nb.AddPage(self.speedPanel, _('Speed'))
 
 		self.termPanel = wx.Panel(nb)
 		sizer = wx.GridBagSizer(2, 2)
@@ -309,7 +318,7 @@ class printWindow(wx.Frame):
 			sizer = wx.GridBagSizer(2, 2)
 			self.camPage.SetSizer(sizer)
 
-			self.timelapsEnable = wx.CheckBox(self.camPage, -1, 'Enable timelapse movie recording')
+			self.timelapsEnable = wx.CheckBox(self.camPage, -1, _('Enable timelapse movie recording'))
 			self.timelapsSavePath = wx.TextCtrl(self.camPage, -1, os.path.expanduser('~/timelaps_' + datetime.datetime.now().strftime('%Y-%m-%d_%H:%M') + '.mpg'))
 			sizer.Add(self.timelapsEnable, pos=(0, 0), span=(1, 2), flag=wx.EXPAND)
 			sizer.Add(self.timelapsSavePath, pos=(1, 0), span=(1, 2), flag=wx.EXPAND)
@@ -323,13 +332,13 @@ class printWindow(wx.Frame):
 				button.Bind(wx.EVT_BUTTON, self.OnPropertyPageButton)
 				self.cam.buttons.append(button)
 
-			self.campreviewEnable = wx.CheckBox(self.camPage, -1, 'Show preview')
+			self.campreviewEnable = wx.CheckBox(self.camPage, -1, _('Show preview'))
 			sizer.Add(self.campreviewEnable, pos=(3, 0), span=(1, 2), flag=wx.EXPAND)
 
 			self.camPreview = wx.Panel(self.camPage)
 			sizer.Add(self.camPreview, pos=(4, 0), span=(1, 2), flag=wx.EXPAND)
 
-			nb.AddPage(self.camPage, 'Camera')
+			nb.AddPage(self.camPage, _('Camera'))
 			self.camPreview.timer = wx.Timer(self)
 			self.Bind(wx.EVT_TIMER, self.OnCameraTimer, self.camPreview.timer)
 			self.camPreview.timer.Start(500)
@@ -412,9 +421,9 @@ class printWindow(wx.Frame):
 		self.pauseButton.Enable(
 			self.machineCom is not None and (self.machineCom.isPrinting() or self.machineCom.isPaused()))
 		if self.machineCom is not None and self.machineCom.isPaused():
-			self.pauseButton.SetLabel('Resume')
+			self.pauseButton.SetLabel(_('Resume'))
 		else:
-			self.pauseButton.SetLabel('Pause')
+			self.pauseButton.SetLabel(_('Pause'))
 		self.cancelButton.Enable(
 			self.machineCom is not None and (self.machineCom.isPrinting() or self.machineCom.isPaused()))
 		self.temperatureSelect.Enable(self.machineCom is not None and self.machineCom.isOperational())
@@ -429,41 +438,41 @@ class printWindow(wx.Frame):
 	def UpdateProgress(self):
 		status = ""
 		if self.gcode is None:
-			status += "Loading gcode...\n"
+			status += _("Loading gcode...\n")
 		else:
-			status += "Filament: %.2fm %.2fg\n" % (
+			status += _("Filament: %.2fm %.2fg\n") % (
 			self.gcode.extrusionAmount / 1000, self.gcode.calculateWeight() * 1000)
 			cost = self.gcode.calculateCost()
 			if cost is not None:
-				status += "Filament cost: %s\n" % (cost)
+				status += _("Filament cost: %s\n") % (cost)
 			#status += "Estimated print time: %02d:%02d\n" % (int(self.gcode.totalMoveTimeMinute / 60), int(self.gcode.totalMoveTimeMinute % 60))
 		if self.machineCom is None or not self.machineCom.isPrinting():
 			self.progress.SetValue(0)
 			if self.gcodeList is not None:
-				status += 'Line: -/%d\n' % (len(self.gcodeList))
+				status += _('Line: -/%d\n') % (len(self.gcodeList))
 		else:
 			printTime = self.machineCom.getPrintTime() / 60
 			printTimeLeft = self.machineCom.getPrintTimeRemainingEstimate()
-			status += 'Line: %d/%d %d%%\n' % (self.machineCom.getPrintPos(), len(self.gcodeList),
+			status += _('Line: %d/%d %d%%\n') % (self.machineCom.getPrintPos(), len(self.gcodeList),
 			                                  self.machineCom.getPrintPos() * 100 / len(self.gcodeList))
 			if self.currentZ > 0:
-				status += 'Height: %0.1f\n' % (self.currentZ)
-			status += 'Print time: %02d:%02d\n' % (int(printTime / 60), int(printTime % 60))
+				status += _('Height: %0.1f\n') % (self.currentZ)
+			status += _('Print time: %02d:%02d\n') % (int(printTime / 60), int(printTime % 60))
 			if printTimeLeft is None:
-				status += 'Print time left: Unknown\n'
+				status += _('Print time left: Unknown\n')
 			else:
-				status += 'Print time left: %02d:%02d\n' % (int(printTimeLeft / 60), int(printTimeLeft % 60))
+				status += _('Print time left: %02d:%02d\n') % (int(printTimeLeft / 60), int(printTimeLeft % 60))
 			self.progress.SetValue(self.machineCom.getPrintPos())
 			taskbar.setProgress(self, self.machineCom.getPrintPos(), len(self.gcodeList))
 		if self.machineCom is not None:
 			if self.machineCom.getTemp() > 0:
-				status += 'Temp: %s\n' % (' ,'.join(map(str, self.machineCom.getTemp())))
+				status += _('Temp: %s\n') % (' ,'.join(map(str, self.machineCom.getTemp())))
 			if self.machineCom.getBedTemp() > 0:
-				status += 'Bed Temp: %d\n' % (self.machineCom.getBedTemp())
+				status += _('Bed Temp: %d\n') % (self.machineCom.getBedTemp())
 				self.bedTemperatureLabel.Show(True)
 				self.bedTemperatureSelect.Show(True)
 				self.temperaturePanel.Layout()
-			status += 'Machine state:%s\n' % (self.machineCom.getStateString())
+			status += _('Machine state:%s\n') % (self.machineCom.getStateString())
 
 		self.statsText.SetLabel(status.strip())
 
@@ -491,7 +500,7 @@ class printWindow(wx.Frame):
 		self.UpdateButtonStates()
 
 	def OnCancel(self, e):
-		self.pauseButton.SetLabel('Pause')
+		self.pauseButton.SetLabel(_('Pause'))
 		self.machineCom.cancelPrint()
 		self.machineCom.sendCommand("M84")
 		self.machineCom.sendCommand("M104 S0")

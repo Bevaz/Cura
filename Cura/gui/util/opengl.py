@@ -18,6 +18,14 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from OpenGL.GL import *
 from OpenGL.GL import shaders
+
+import gettext
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install() 
+
 glutInit()
 
 platformMesh = None
@@ -192,7 +200,7 @@ class GLVBO(GLReferenceCounter):
 
 	def __del__(self):
 		if self._buffer is not None and bool(glDeleteBuffers):
-			print "VBO was not properly released!"
+			print _("VBO was not properly released!")
 
 def DrawMachine(machineSize):
 	glDisable(GL_LIGHTING)

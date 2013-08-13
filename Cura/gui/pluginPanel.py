@@ -8,6 +8,15 @@ from wx.lib import scrolledpanel
 from Cura.util import profile
 from Cura.util import explorer
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
+
 class pluginPanel(wx.Panel):
 	def __init__(self, parent, callback):
 		wx.Panel.__init__(self, parent,-1)
@@ -23,12 +32,12 @@ class pluginPanel(wx.Panel):
 			effectStringList.append(effect['name'])
 		
 		self.listbox = wx.ListBox(self, -1, choices=effectStringList)
-		title = wx.StaticText(self, -1, "Plugins:")
+		title = wx.StaticText(self, -1, _("Plugins:"))
 		title.SetFont(wx.Font(wx.SystemSettings.GetFont(wx.SYS_ANSI_VAR_FONT).GetPointSize(), wx.FONTFAMILY_DEFAULT, wx.NORMAL, wx.FONTWEIGHT_BOLD))
 		helpButton = wx.Button(self, -1, '?', style=wx.BU_EXACTFIT)
 		addButton = wx.Button(self, -1, 'V', style=wx.BU_EXACTFIT)
-		openPluginLocationButton = wx.Button(self, -1, 'Open plugin location')
-		sb = wx.StaticBox(self, label="Enabled plugins")
+		openPluginLocationButton = wx.Button(self, -1, _('Open plugin location'))
+		sb = wx.StaticBox(self, label=_("Enabled plugins"))
 		boxsizer = wx.StaticBoxSizer(sb, wx.VERTICAL)
 		self.pluginEnabledPanel = scrolledpanel.ScrolledPanel(self)
 		self.pluginEnabledPanel.SetupScrolling(False, True)
@@ -130,7 +139,7 @@ class pluginPanel(wx.Panel):
 	
 	def OnAdd(self, e):
 		if self.listbox.GetSelection() < 0:
-			wx.MessageBox('You need to select a plugin before you can add anything.', 'Error: no plugin selected', wx.OK | wx.ICON_INFORMATION)
+			wx.MessageBox(_('You need to select a plugin before you can add anything.'), _('Error: no plugin selected'), wx.OK | wx.ICON_INFORMATION)
 			return
 		plugin = self.pluginList[self.listbox.GetSelection()]
 		newConfig = {'filename': plugin['filename'], 'params': {}}
