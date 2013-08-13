@@ -11,6 +11,14 @@ from Cura.util import machineCom
 from Cura.util import profile
 from Cura.util import resources
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
 def getDefaultFirmware():
 	if profile.getPreference('machine_type') == 'ultimaker':
 		if profile.getPreference('has_heated_bed') == 'True':
@@ -30,13 +38,13 @@ def getDefaultFirmware():
 
 class InstallFirmware(wx.Dialog):
 	def __init__(self, filename = None, port = None):
-		super(InstallFirmware, self).__init__(parent=None, title="Firmware install", size=(250, 100))
+		super(InstallFirmware, self).__init__(parent=None, title=_("Firmware install"), size=(250, 100))
 		if port is None:
 			port = profile.getPreference('serial_port')
 		if filename is None:
 			filename = getDefaultFirmware()
 		if filename is None:
-			wx.MessageBox('I am sorry, but Cura does not ship with a default firmware for your machine configuration.', 'Firmware update', wx.OK | wx.ICON_ERROR)
+			wx.MessageBox(_('I am sorry, but Cura does not ship with a default firmware for your machine configuration.'), _('Firmware update'), wx.OK | wx.ICON_ERROR)
 			self.Destroy()
 			return
 
@@ -65,9 +73,9 @@ class InstallFirmware(wx.Dialog):
 		return
 
 	def OnRun(self):
-		wx.CallAfter(self.updateLabel, "Reading firmware...")
+		wx.CallAfter(self.updateLabel, _("Reading firmware..."))
 		hexFile = intelHex.readHex(self.filename)
-		wx.CallAfter(self.updateLabel, "Connecting to machine...")
+		wx.CallAfter(self.updateLabel, _("Connecting to machine..."))
 		programmer = stk500v2.Stk500v2()
 		programmer.progressCallback = self.OnProgress
 		if self.port == 'AUTO':
@@ -84,17 +92,17 @@ class InstallFirmware(wx.Dialog):
 				pass
 				
 		if programmer.isConnected():
-			wx.CallAfter(self.updateLabel, "Uploading firmware...")
+			wx.CallAfter(self.updateLabel, _("Uploading firmware..."))
 			try:
 				programmer.programChip(hexFile)
-				wx.CallAfter(self.updateLabel, "Done!\nInstalled firmware: %s" % (os.path.basename(self.filename)))
+				wx.CallAfter(self.updateLabel, _("Done!\nInstalled firmware: %s") % (os.path.basename(self.filename)))
 			except ispBase.IspError as e:
-				wx.CallAfter(self.updateLabel, "Failed to write firmware.\n" + str(e))
+				wx.CallAfter(self.updateLabel, _("Failed to write firmware.\n") + str(e))
 				
 			programmer.close()
 			wx.CallAfter(self.okButton.Enable)
 			return
-		wx.MessageBox('Failed to find machine for firmware upgrade\nIs your machine connected to the PC?', 'Firmware update', wx.OK | wx.ICON_ERROR)
+		wx.MessageBox(_('Failed to find machine for firmware upgrade\nIs your machine connected to the PC?'), _('Firmware update'), wx.OK | wx.ICON_ERROR)
 		wx.CallAfter(self.Close)
 	
 	def updateLabel(self, text):

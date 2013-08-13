@@ -6,8 +6,17 @@ import wx
 from Cura.gui import configBase
 from Cura.util import profile
 
+import gettext
+import os
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+ 
+
 class expertConfigWindow(wx.Dialog):
-	"Expert configuration window"
+	_("Expert configuration window")
 	def _addSettingsToPanels(self, category, left, right):
 		count = len(profile.getSubCategoriesFor(category)) + len(profile.getSettingsForCategory(category))
 
@@ -23,7 +32,7 @@ class expertConfigWindow(wx.Dialog):
 					configBase.SettingRow(p, s.getName())
 
 	def __init__(self, callback):
-		super(expertConfigWindow, self).__init__(None, title='Expert config', style=wx.DEFAULT_DIALOG_STYLE)
+		super(expertConfigWindow, self).__init__(None, title=_('Expert config'), style=wx.DEFAULT_DIALOG_STYLE)
 
 		wx.EVT_CLOSE(self, self.OnClose)
 		self.panel = configBase.configPanelBase(self, callback)

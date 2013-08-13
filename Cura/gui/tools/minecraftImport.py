@@ -10,12 +10,19 @@ from Cura.util import mesh
 from Cura.util.meshLoaders import stl
 from Cura.util.pymclevel import mclevel
 
+import gettext
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install() 
+
 def hasMinecraft():
 	return os.path.isdir(mclevel.saveFileDir)
 
 class minecraftImportWindow(wx.Frame):
 	def __init__(self, parent):
-		super(minecraftImportWindow, self).__init__(parent, title='Cura - Minecraft import')
+		super(minecraftImportWindow, self).__init__(parent, title=_('Cura - Minecraft import'))
 
 		saveFileList = map(os.path.basename, glob.glob(mclevel.saveFileDir + "/*"))
 
@@ -34,7 +41,7 @@ class minecraftImportWindow(wx.Frame):
 		self.previewPanel.SetMinSize((512, 512))
 		sizer.Add(self.previewPanel, (0,2), flag=wx.EXPAND)
 
-		self.importButton = wx.Button(self.panel, -1, 'Import')
+		self.importButton = wx.Button(self.panel, -1, _('Import'))
 		sizer.Add(self.importButton, (1,2))
 
 		sizer.AddGrowableRow(1)

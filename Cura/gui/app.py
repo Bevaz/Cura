@@ -11,6 +11,13 @@ import warnings
 #Only import the _core to save import time
 import wx._core
 
+import gettext
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
 class CuraApp(wx.App):
 	def __init__(self, files):
 		if platform.system() == "Windows" and not 'PYCHARM_HOSTED' in os.environ:
@@ -78,7 +85,7 @@ class CuraApp(wx.App):
 			if newVersion is not None:
 				if self.splash is not None:
 					self.splash.Show(False)
-				if wx.MessageBox('A new version of Cura is available, would you like to download?', 'New version available', wx.YES_NO | wx.ICON_INFORMATION) == wx.YES:
+				if wx.MessageBox(_('A new version of Cura is available, would you like to download?'), _('New version available'), wx.YES_NO | wx.ICON_INFORMATION) == wx.YES:
 					webbrowser.open(newVersion)
 					return
 		self.mainWindow = mainWindow.mainWindow()

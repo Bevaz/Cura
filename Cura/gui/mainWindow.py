@@ -24,9 +24,18 @@ from Cura.util import version
 from Cura.util import meshLoader
 from Cura.util import resources
 
+
+import gettext
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+		
 class mainWindow(wx.Frame):
 	def __init__(self):
-		super(mainWindow, self).__init__(None, title='Cura - ' + version.getVersion())
+	
+		super(mainWindow, self).__init__(None, title=_('Cura - ') + version.getVersion())
 
 		self.extruderCount = int(profile.getPreference('extruder_amount'))
 
@@ -53,65 +62,65 @@ class mainWindow(wx.Frame):
 
 		self.menubar = wx.MenuBar()
 		self.fileMenu = wx.Menu()
-		i = self.fileMenu.Append(-1, 'Load model file...\tCTRL+L')
+		i = self.fileMenu.Append(-1, _('Load model file...\tCTRL+L'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showLoadModel(), i)
-		i = self.fileMenu.Append(-1, 'Save model...\tCTRL+S')
+		i = self.fileMenu.Append(-1, _('Save model...\tCTRL+S'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showSaveModel(), i)
-		i = self.fileMenu.Append(-1, 'Clear platform')
+		i = self.fileMenu.Append(-1, _('Clear platform'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.OnDeleteAll(e), i)
 
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(-1, 'Print...\tCTRL+P')
+		i = self.fileMenu.Append(-1, _('Print...\tCTRL+P'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showPrintWindow(), i)
-		i = self.fileMenu.Append(-1, 'Save GCode...')
+		i = self.fileMenu.Append(-1, _('Save GCode...'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showSaveGCode(), i)
-		i = self.fileMenu.Append(-1, 'Show slice engine log...')
+		i = self.fileMenu.Append(-1, _('Show slice engine log...'))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene._showSliceLog(), i)
 
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(-1, 'Open Profile...')
+		i = self.fileMenu.Append(-1, _('Open Profile...'))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnLoadProfile, i)
-		i = self.fileMenu.Append(-1, 'Save Profile...')
+		i = self.fileMenu.Append(-1, _('Save Profile...'))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnSaveProfile, i)
-		i = self.fileMenu.Append(-1, 'Load Profile from GCode...')
+		i = self.fileMenu.Append(-1, _('Load Profile from GCode...'))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnLoadProfileFromGcode, i)
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(-1, 'Reset Profile to default')
+		i = self.fileMenu.Append(-1, _('Reset Profile to default'))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnResetProfile, i)
 
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(-1, 'Preferences...\tCTRL+,')
+		i = self.fileMenu.Append(-1, _('Preferences...\tCTRL+,'))
 		self.Bind(wx.EVT_MENU, self.OnPreferences, i)
 		self.fileMenu.AppendSeparator()
 
 		# Model MRU list
 		modelHistoryMenu = wx.Menu()
-		self.fileMenu.AppendMenu(wx.NewId(), "&Recent Model Files", modelHistoryMenu)
+		self.fileMenu.AppendMenu(wx.NewId(), _("&Recent Model Files"), modelHistoryMenu)
 		self.modelFileHistory.UseMenu(modelHistoryMenu)
 		self.modelFileHistory.AddFilesToMenu()
 		self.Bind(wx.EVT_MENU_RANGE, self.OnModelMRU, id=self.ID_MRU_MODEL1, id2=self.ID_MRU_MODEL10)
 
 		# Profle MRU list
 		profileHistoryMenu = wx.Menu()
-		self.fileMenu.AppendMenu(wx.NewId(), "&Recent Profile Files", profileHistoryMenu)
+		self.fileMenu.AppendMenu(wx.NewId(), _("&Recent Profile Files"), profileHistoryMenu)
 		self.profileFileHistory.UseMenu(profileHistoryMenu)
 		self.profileFileHistory.AddFilesToMenu()
 		self.Bind(wx.EVT_MENU_RANGE, self.OnProfileMRU, id=self.ID_MRU_PROFILE1, id2=self.ID_MRU_PROFILE10)
 		
 		self.fileMenu.AppendSeparator()
-		i = self.fileMenu.Append(wx.ID_EXIT, 'Quit')
+		i = self.fileMenu.Append(wx.ID_EXIT, _('Quit'))
 		self.Bind(wx.EVT_MENU, self.OnQuit, i)
-		self.menubar.Append(self.fileMenu, '&File')
+		self.menubar.Append(self.fileMenu, _('&File') )
 
 		toolsMenu = wx.Menu()
-		i = toolsMenu.Append(-1, 'Switch to quickprint...')
+		i = toolsMenu.Append(-1, _('Switch to quickprint...'))
 		self.switchToQuickprintMenuItem = i
 		self.Bind(wx.EVT_MENU, self.OnSimpleSwitch, i)
-		i = toolsMenu.Append(-1, 'Switch to full settings...')
+		i = toolsMenu.Append(-1, _('Switch to full settings...'))
 		self.switchToNormalMenuItem = i
 		self.Bind(wx.EVT_MENU, self.OnNormalSwitch, i)
 		toolsMenu.AppendSeparator()
@@ -119,43 +128,43 @@ class mainWindow(wx.Frame):
 		#self.Bind(wx.EVT_MENU, self.OnBatchRun, i)
 		#self.normalModeOnlyItems.append(i)
 		if minecraftImport.hasMinecraft():
-			i = toolsMenu.Append(-1, 'Minecraft import...')
+			i = toolsMenu.Append(-1, _('Minecraft import...'))
 			self.Bind(wx.EVT_MENU, self.OnMinecraftImport, i)
 		if version.isDevVersion():
-			i = toolsMenu.Append(-1, 'PID Debugger...')
+			i = toolsMenu.Append(-1, _('PID Debugger...'))
 			self.Bind(wx.EVT_MENU, self.OnPIDDebugger, i)
-		self.menubar.Append(toolsMenu, 'Tools')
+		self.menubar.Append(toolsMenu, _('Tools'))
 
 		expertMenu = wx.Menu()
-		i = expertMenu.Append(-1, 'Open expert settings...')
+		i = expertMenu.Append(-1, _('Open expert settings...'))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnExpertOpen, i)
 		expertMenu.AppendSeparator()
 		if firmwareInstall.getDefaultFirmware() is not None:
-			i = expertMenu.Append(-1, 'Install default Marlin firmware')
+			i = expertMenu.Append(-1, _('Install default Marlin firmware'))
 			self.Bind(wx.EVT_MENU, self.OnDefaultMarlinFirmware, i)
-		i = expertMenu.Append(-1, 'Install custom firmware')
+		i = expertMenu.Append(-1, _('Install custom firmware'))
 		self.Bind(wx.EVT_MENU, self.OnCustomFirmware, i)
 		expertMenu.AppendSeparator()
-		i = expertMenu.Append(-1, 'Run first run wizard...')
+		i = expertMenu.Append(-1, _('Run first run wizard...'))
 		self.Bind(wx.EVT_MENU, self.OnFirstRunWizard, i)
-		i = expertMenu.Append(-1, 'Run bed leveling wizard...')
+		i = expertMenu.Append(-1, _('Run bed leveling wizard...'))
 		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, i)
 		if self.extruderCount > 1:
-			i = expertMenu.Append(-1, 'Run head offset wizard...')
+			i = expertMenu.Append(-1, _('Run head offset wizard...'))
 			self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, i)
-		self.menubar.Append(expertMenu, 'Expert')
+		self.menubar.Append(expertMenu, _('Expert'))
 
 		helpMenu = wx.Menu()
-		i = helpMenu.Append(-1, 'Online documentation...')
+		i = helpMenu.Append(-1, _('Online documentation...'))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
-		i = helpMenu.Append(-1, 'Report a problem...')
+		i = helpMenu.Append(-1, _('Report a problem...'))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('https://github.com/daid/Cura/issues'), i)
-		i = helpMenu.Append(-1, 'Check for update...')
+		i = helpMenu.Append(-1, _('Check for update...'))
 		self.Bind(wx.EVT_MENU, self.OnCheckForUpdate, i)
-		i = helpMenu.Append(-1, 'About Cura...')
+		i = helpMenu.Append(-1, _('About Cura...'))
 		self.Bind(wx.EVT_MENU, self.OnAbout, i)
-		self.menubar.Append(helpMenu, 'Help')
+		self.menubar.Append(helpMenu, _('Help'))
 		self.SetMenuBar(self.menubar)
 
 		self.splitter = wx.SplitterWindow(self, style = wx.SP_3D | wx.SP_LIVE_UPDATE)
@@ -168,7 +177,7 @@ class mainWindow(wx.Frame):
 		self.normalSettingsPanel = normalSettingsPanel(self.leftPane, lambda : self.scene.sceneUpdated())
 
 		self.youmagineButton = wx.BitmapButton(self.leftPane, -1, wx.Bitmap(resources.getPathForImage('youmagine-text.png')))
-		self.youmagineButton.SetToolTipString("Share your design to YouMagine.com")
+		self.youmagineButton.SetToolTipString(_("Share your design to YouMagine.com"))
 		self.youmagineButton.Bind(wx.EVT_BUTTON, self.OnYouMagine)
 
 		self.leftSizer = wx.BoxSizer(wx.VERTICAL)
@@ -320,7 +329,7 @@ class mainWindow(wx.Frame):
 		self.simpleSettingsPanel.updateProfileToControls()
 
 	def OnLoadProfile(self, e):
-		dlg=wx.FileDialog(self, "Select profile file to load", os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
+		dlg=wx.FileDialog(self, _("Select profile file to load"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
 		dlg.SetWildcard("ini files (*.ini)|*.ini")
 		if dlg.ShowModal() == wx.ID_OK:
 			profileFile = dlg.GetPath()
@@ -332,7 +341,7 @@ class mainWindow(wx.Frame):
 		dlg.Destroy()
 
 	def OnLoadProfileFromGcode(self, e):
-		dlg=wx.FileDialog(self, "Select gcode file to load profile from", os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
+		dlg=wx.FileDialog(self, _("Select gcode file to load profile from"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
 		dlg.SetWildcard("gcode files (*.gcode)|*.gcode;*.g")
 		if dlg.ShowModal() == wx.ID_OK:
 			gcodeFile = dlg.GetPath()
@@ -345,11 +354,11 @@ class mainWindow(wx.Frame):
 			if hasProfile:
 				self.updateProfileToControls()
 			else:
-				wx.MessageBox('No profile found in GCode file.\nThis feature only works with GCode files made by Cura 12.07 or newer.', 'Profile load error', wx.OK | wx.ICON_INFORMATION)
+				wx.MessageBox(_('No profile found in GCode file.\nThis feature only works with GCode files made by Cura 12.07 or newer.'), _('Profile load error'), wx.OK | wx.ICON_INFORMATION)
 		dlg.Destroy()
 
 	def OnSaveProfile(self, e):
-		dlg=wx.FileDialog(self, "Select profile file to save", os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_SAVE)
+		dlg=wx.FileDialog(self, _("Select profile file to save"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_SAVE)
 		dlg.SetWildcard("ini files (*.ini)|*.ini")
 		if dlg.ShowModal() == wx.ID_OK:
 			profileFile = dlg.GetPath()
@@ -357,7 +366,7 @@ class mainWindow(wx.Frame):
 		dlg.Destroy()
 
 	def OnResetProfile(self, e):
-		dlg = wx.MessageDialog(self, 'This will reset all profile settings to defaults.\nUnless you have saved your current profile, all settings will be lost!\nDo you really want to reset?', 'Profile reset', wx.YES_NO | wx.ICON_QUESTION)
+		dlg = wx.MessageDialog(self, _('This will reset all profile settings to defaults.\nUnless you have saved your current profile, all settings will be lost!\nDo you really want to reset?'), _('Profile reset'), wx.YES_NO | wx.ICON_QUESTION)
 		result = dlg.ShowModal() == wx.ID_YES
 		dlg.Destroy()
 		if result:
@@ -377,8 +386,8 @@ class mainWindow(wx.Frame):
 
 	def OnCustomFirmware(self, e):
 		if profile.getPreference('machine_type') == 'ultimaker':
-			wx.MessageBox('Warning: Installing a custom firmware does not guarantee that you machine will function correctly, and could damage your machine.', 'Firmware update', wx.OK | wx.ICON_EXCLAMATION)
-		dlg=wx.FileDialog(self, "Open firmware to upload", os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
+			wx.MessageBox(_('Warning: Installing a custom firmware does not guarantee that you machine will function correctly, and could damage your machine.'), _('Firmware update'), wx.OK | wx.ICON_EXCLAMATION)
+		dlg=wx.FileDialog(self, _("Open firmware to upload"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST)
 		dlg.SetWildcard("HEX file (*.hex)|*.hex;*.HEX")
 		if dlg.ShowModal() == wx.ID_OK:
 			filename = dlg.GetPath()
@@ -414,22 +423,22 @@ class mainWindow(wx.Frame):
 
 	def OnYouMagine(self, e):
 		if len(self.scene._scene.objects()) < 1:
-			wx.MessageBox('You cannot upload to YouMagine without have a file loaded.', 'Cura', wx.OK | wx.ICON_ERROR)
+			wx.MessageBox(_('You cannot upload to YouMagine without have a file loaded.'), 'Cura', wx.OK | wx.ICON_ERROR)
 			return
 		youmagineGui.youmagineManager(self, self.scene._scene)
 
 	def OnCheckForUpdate(self, e):
 		newVersion = version.checkForNewerVersion()
 		if newVersion is not None:
-			if wx.MessageBox('A new version of Cura is available, would you like to download?', 'New version available', wx.YES_NO | wx.ICON_INFORMATION) == wx.YES:
+			if wx.MessageBox(_('A new version of Cura is available, would you like to download?'), _('New version available'), wx.YES_NO | wx.ICON_INFORMATION) == wx.YES:
 				webbrowser.open(newVersion)
 		else:
-			wx.MessageBox('You are running the latest version of Cura!', 'Awesome!', wx.ICON_INFORMATION)
+			wx.MessageBox(_('You are running the latest version of Cura!'), _('Awesome!'), wx.ICON_INFORMATION)
 
 	def OnAbout(self, e):
 		info = wx.AboutDialogInfo()
 		info.SetName('Cura')
-		info.SetDescription('End solution for Open Source Fused Filament Fabrication 3D printing.')
+		info.SetDescription(_('End solution for Open Source Fused Filament Fabrication 3D printing.'))
 		info.SetWebSite('http://software.ultimaker.com/')
 		info.SetCopyright('Copyright (C) David Braam')
 		info.SetLicence("""

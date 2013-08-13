@@ -9,9 +9,17 @@ from Cura.util import meshLoader
 from Cura.util import gcodeInterpreter
 from Cura.gui.util import dropTarget
 
+import gettext
+cura_lang = os.environ['cura_lang']
+cura_lang_path = os.environ['cura_lang_path']
+t = gettext.translation('cura', cura_lang_path, languages=[cura_lang],fallback = True)
+_= t.ugettext
+t.install()
+
+
 class batchRunWindow(wx.Frame):
 	def __init__(self, parent):
-		super(batchRunWindow, self).__init__(parent, title='Cura - Batch run')
+		super(batchRunWindow, self).__init__(parent, title=_('Cura - Batch run'))
 		
 		self.list = []
 		
@@ -26,9 +34,9 @@ class batchRunWindow(wx.Frame):
 		self.panel.SetSizer(self.sizer)
 
 		self.listbox = wx.ListBox(self.panel, -1, choices=[])
-		self.addButton = wx.Button(self.panel, -1, "Add")
-		self.remButton = wx.Button(self.panel, -1, "Remove")
-		self.sliceButton = wx.Button(self.panel, -1, "Prepare all")
+		self.addButton = wx.Button(self.panel, -1, _("Add"))
+		self.remButton = wx.Button(self.panel, -1, _("Remove"))
+		self.sliceButton = wx.Button(self.panel, -1, _("Prepare all"))
 
 		self.addButton.Bind(wx.EVT_BUTTON, self.OnAddModel)
 		self.remButton.Bind(wx.EVT_BUTTON, self.OnRemModel)
@@ -44,8 +52,8 @@ class batchRunWindow(wx.Frame):
 		self.sizer.AddGrowableRow(0)
 
 	def OnAddModel(self, e):
-		dlg=wx.FileDialog(self, "Open file to batch prepare", os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST|wx.FD_MULTIPLE)
-		dlg.SetWildcard("STL files (*.stl)|*.stl;*.STL")
+		dlg=wx.FileDialog(self, _("Open file to batch prepare"), os.path.split(profile.getPreference('lastFile'))[0], style=wx.FD_OPEN|wx.FD_FILE_MUST_EXIST|wx.FD_MULTIPLE)
+		dlg.SetWildcard( _("STL files (*.stl)|*.stl;*.STL"))
 		if dlg.ShowModal() == wx.ID_OK:
 			for filename in dlg.GetPaths():
 				profile.putPreference('lastFile', filename)
@@ -102,7 +110,7 @@ class batchRunWindow(wx.Frame):
 	
 class BatchSliceProgressWindow(wx.Frame):
 	def __init__(self, filenameList, outputFilenameList, sliceCmdList):
-		super(BatchSliceProgressWindow, self).__init__(None, title='Cura')
+		super(BatchSliceProgressWindow, self).__init__(None, title=_('Cura'))
 		self.SetBackgroundColour(wx.SystemSettings.GetColour(wx.SYS_COLOUR_BTNFACE))
 		
 		self.filenameList = filenameList
@@ -131,13 +139,13 @@ class BatchSliceProgressWindow(wx.Frame):
 		self.progressGauge = []
 		self.statusText = []
 		for i in xrange(0, self.threadCount):
-			self.statusText.append(wx.StaticText(self, -1, "Building: %d                           " % (len(self.sliceCmdList))))
+			self.statusText.append(wx.StaticText(self, -1, _("Building: %d                           " % (len(self.sliceCmdList)))))
 			self.progressGauge.append(wx.Gauge(self, -1))
 			self.progressGauge[i].SetRange(10000)
-		self.progressTextTotal = wx.StaticText(self, -1, "Done: 0/%d                           " % (len(self.sliceCmdList)))
+		self.progressTextTotal = wx.StaticText(self, -1, _("Done: 0/%d                           " % (len(self.sliceCmdList))))
 		self.progressGaugeTotal = wx.Gauge(self, -1)
 		self.progressGaugeTotal.SetRange(len(self.sliceCmdList))
-		self.abortButton = wx.Button(self, -1, "Abort")
+		self.abortButton = wx.Button(self, -1, _("Abort"))
 		for i in xrange(0, self.threadCount):
 			self.sizer.Add(self.statusText[i], (i*2,0), span=(1,4))
 			self.sizer.Add(self.progressGauge[i], (1+i*2, 0), span=(1,4), flag=wx.EXPAND)
@@ -184,8 +192,8 @@ class BatchSliceProgressWindow(wx.Frame):
 
 		self.abort = True
 		sliceTime = time.time() - self.sliceStartTime
-		status = "Build: %d models" % (len(self.sliceCmdList))
-		status += "\nSlicing took: %02d:%02d" % (sliceTime / 60, sliceTime % 60)
+		status = _("Build: %d models") % (len(self.sliceCmdList))
+		status += _("\nSlicing took: %02d:%02d") % (sliceTime / 60, sliceTime % 60)
 
 		wx.CallAfter(self.statusText[0].SetLabel, status)
 		wx.CallAfter(self.OnSliceDone)
@@ -195,14 +203,14 @@ class BatchSliceProgressWindow(wx.Frame):
 			cmdIndex = self.cmdIndex;
 			self.cmdIndex += 1			
 			action = self.sliceCmdList[cmdIndex]
-			wx.CallAfter(self.SetTitle, "Building: [%d/%d]"  % (self.sliceCmdList.index(action) + 1, len(self.sliceCmdList)))
+			wx.CallAfter(self.SetTitle, _("Building: [%d/%d]")  % (self.sliceCmdList.index(action) + 1, len(self.sliceCmdList)))
 
 			p = sliceRun.startSliceCommandProcess(action)
 			line = p.stdout.readline()
 			maxValue = 1
 			while(len(line) > 0):
 				line = line.rstrip()
-				if line[0:9] == "Progress[" and line[-1:] == "]":
+				if line[0:9] == _("Progress[") and line[-1:] == "]":
 					progress = line[9:-1].split(":")
 					if len(progress) > 2:
 						maxValue = int(progress[2])
@@ -211,7 +219,7 @@ class BatchSliceProgressWindow(wx.Frame):
 					wx.CallAfter(self.statusText[index].SetLabel, line)
 				if self.abort:
 					p.terminate()
-					wx.CallAfter(self.statusText[index].SetLabel, "Aborted by user.")
+					wx.CallAfter(self.statusText[index].SetLabel, _("Aborted by user."))
 					return
 				line = p.stdout.readline()
 			self.returnCode = p.wait()
@@ -225,15 +233,15 @@ class BatchSliceProgressWindow(wx.Frame):
 			
 			wx.CallAfter(self.progressGauge[index].SetValue, 10000)
 			self.totalDoneFactor[index] = 0.0
-			wx.CallAfter(self.progressTextTotal.SetLabel, "Done %d/%d" % (self.cmdIndex, len(self.sliceCmdList)))
+			wx.CallAfter(self.progressTextTotal.SetLabel, _("Done %d/%d") % (self.cmdIndex, len(self.sliceCmdList)))
 			wx.CallAfter(self.progressGaugeTotal.SetValue, self.cmdIndex)
 	
 	def OnSliceDone(self):
 		self.abortButton.Destroy()
-		self.closeButton = wx.Button(self, -1, "Close")
+		self.closeButton = wx.Button(self, -1, _("Close"))
 		self.sizer.Add(self.closeButton, (2+self.threadCount*2,0), span=(1,1))
 		if profile.getPreference('sdpath') != '':
-			self.copyToSDButton = wx.Button(self, -1, "To SDCard")
+			self.copyToSDButton = wx.Button(self, -1, _("To SDCard"))
 			self.Bind(wx.EVT_BUTTON, self.OnCopyToSD, self.copyToSDButton)
 			self.sizer.Add(self.copyToSDButton, (2+self.threadCount*2,1), span=(1,1))
 		self.Bind(wx.EVT_BUTTON, self.OnAbort, self.closeButton)
