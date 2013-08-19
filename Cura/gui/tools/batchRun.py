@@ -139,10 +139,10 @@ class BatchSliceProgressWindow(wx.Frame):
 		self.progressGauge = []
 		self.statusText = []
 		for i in xrange(0, self.threadCount):
-			self.statusText.append(wx.StaticText(self, -1, _("Building: %d                           " % (len(self.sliceCmdList)))))
+			self.statusText.append(wx.StaticText(self, -1, _("Building:") + " %d                           " % (len(self.sliceCmdList))))
 			self.progressGauge.append(wx.Gauge(self, -1))
 			self.progressGauge[i].SetRange(10000)
-		self.progressTextTotal = wx.StaticText(self, -1, _("Done: 0/%d                           " % (len(self.sliceCmdList))))
+		self.progressTextTotal = wx.StaticText(self, -1, _("Done:") + " 0/%d                           " % (len(self.sliceCmdList)))
 		self.progressGaugeTotal = wx.Gauge(self, -1)
 		self.progressGaugeTotal.SetRange(len(self.sliceCmdList))
 		self.abortButton = wx.Button(self, -1, _("Abort"))

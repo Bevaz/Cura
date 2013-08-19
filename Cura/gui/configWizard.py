@@ -1149,7 +1149,7 @@ class headOffsetCalibrationPage(InfoPage):
 					wx.CallAfter(self.resumeButton.SetFocus)
 
 		elif self.comm.isError():
-			wx.CallAfter(self.infoBox.SetError, _('Failed to establish connection with the printer.', 'http://wiki.ultimaker.com/Cura:_Connection_problems'))
+			wx.CallAfter(self.infoBox.SetError, _('Failed to establish connection with the printer.'), 'http://wiki.ultimaker.com/Cura:_Connection_problems')
 
 	def mcMessage(self, message):
 		pass
