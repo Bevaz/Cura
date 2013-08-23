@@ -1,0 +1,1471 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Cura\n"
+"POT-Creation-Date: 2013-08-19 18:05+Àðàáñêîå âðåìÿ (çèìà)\n"
+"PO-Revision-Date: 2013-08-23 19:41+0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 1.5.7\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\app.py:88
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:433
+msgid "A new version of Cura is available, would you like to download?"
+msgstr "Доступна новая версия Cura. Скачать?"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\app.py:88
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:433
+msgid "New version available"
+msgstr "Доступна новая версия"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configBase.py:22
+msgid ""
+"A base class for configuration dialogs. Handles creation of settings, and "
+"popups"
+msgstr ""
+"Базовый класс конфигурационных окон. Ответственен за создание настроек и "
+"всплывающих окон."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configBase.py:120
+msgid ""
+"Update the configuration wx controls to show the new configuration settings"
+msgstr ""
+"Update the configuration wx controls to show the new configuration settings"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configBase.py:147
+msgid "Add a title row to the configuration panel"
+msgstr "Add a title row to the configuration panel"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configBase.py:158
+msgid "Add a setting to the configuration panel"
+msgstr "Add a setting to the configuration panel"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:227
+msgid "First time run wizard"
+msgstr "Мастер первого запуска"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:228
+msgid "Welcome, and thanks for trying Cura!"
+msgstr "Добро пожаловать и спасибо за использование Cura!"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:230
+msgid "This wizard will help you with the following steps:"
+msgstr "Мастер поможет вым выполнить следующие шаги:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:231
+msgid "* Configure Cura for your machine"
+msgstr "* Настроить Cura под ваш принтер"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:232
+msgid "* Upgrade your firmware"
+msgstr "* Обновить прошивку"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:233
+msgid "* Check if your machine is working safely"
+msgstr "* Проверить функционируют ли основные узлы"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:234
+msgid "* Level your printer bed"
+msgstr "* Откалибровать уровень платформы"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:242
+msgid "RepRap information"
+msgstr "Информация о RepRap принтерах"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:244
+msgid ""
+"RepRap machines are vastly different, and there is no\n"
+"default configuration in Cura for any of them."
+msgstr ""
+"RepRap принтеры очень сильно могут отличаться друг от друга\n"
+"В связи с этим невозможно подобрать какие-либо умолчательные настройки."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:245
+msgid ""
+"If you like a default profile for your machine added,\n"
+"then make an issue on github."
+msgstr ""
+"Если вам нравится профиль по умолчанию для вашей машины,\n"
+"заведите предложение на github."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:247
+msgid "You will have to manually install Marlin or Sprinter firmware."
+msgstr "Необходимо вручную установить прошивку Marlin или Sprinter"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:249
+msgid "Machine width (mm)"
+msgstr "Ширина печатающей головки (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:250
+msgid "Machine depth (mm)"
+msgstr "Глубина печатающей головки (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:251
+msgid "Machine height (mm)"
+msgstr "Высота печатающей головки (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:252
+msgid "Nozzle size (mm)"
+msgstr "Диаметр сопла (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:253
+msgid "Heated bed"
+msgstr "Подогреваемая платформа"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:254
+msgid "Bed center is 0,0,0 (RoStock)"
+msgstr "Центр платформы 0,0,0 (RoStock)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:273
+msgid "Select your machine"
+msgstr "Выберите ваш принтер"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:274
+msgid "What kind of machine do you have:"
+msgstr "Какой у вас принтер:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:279
+msgid "Other (Ex: RepRap)"
+msgstr "Другая модель (Например, RepRap)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:282
+msgid ""
+"The collection of anonymous usage information helps with the continued "
+"improvement of Cura."
+msgstr ""
+"Сбор анонимной статистики по использованию Cura помогает нам "
+"совершенствовать программу."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:283
+msgid ""
+"This does NOT submit your models online nor gathers any privacy related "
+"information."
+msgstr "Мы НЕ публикуем ваши модели и НЕ собираем персональные данные."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:284
+msgid "Submit anonymous usage information:"
+msgstr "Отсылать анонимную статистику использования Cura:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:285
+msgid "For full details see: http://wiki.ultimaker.com/Cura:stats"
+msgstr ""
+"Полную информацию смотрите на сайте: http://wiki.ultimaker.com/Cura:stats"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:322
+msgid "Select upgraded parts you have"
+msgstr "Выбирете какие улучшения у вас установлены"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:323
+msgid ""
+"To assist you in having better default settings for your Ultimaker\n"
+"Cura would like to know which upgrades you have in your machine."
+msgstr ""
+"Для того, чтобы выбрать наиболее подходящие настройки для вашего принтера,\n"
+"необходимо выбрать какие улучшения установлены на вашем принтере."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:325
+msgid "Extruder drive upgrade"
+msgstr "Улучшение экструдера"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:326
+msgid "Heated printer bed (self built)"
+msgstr "Подогреваемая платформа"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:327
+msgid "Dual extrusion (experimental)"
+msgstr "Две печатающие головки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:329
+msgid ""
+"If you have an Ultimaker bought after october 2012 you will have the\n"
+"Extruder drive upgrade. If you do not have this upgrade,\n"
+"it is highly recommended to improve reliability."
+msgstr ""
+"Если вы купили принтер после октября 2012, то у вас уже\n"
+"установлено улучшение экструдера. Если у вас не установлено\n"
+"это улучшение, то мы настоятельно рекомендуем сделать это."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:330
+msgid ""
+"This upgrade can be bought from the Ultimaker webshop\n"
+"or found on thingiverse as thing:26094"
+msgstr ""
+"Это улучшение можно купить в магазине Ultimaker\n"
+"или найти на thingiverse (thing:26094)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:348
+msgid "Upgrade Ultimaker Firmware"
+msgstr "Обновить прошивку Ultimaker"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:350
+msgid ""
+"Firmware is the piece of software running directly on your 3D printer.\n"
+"This firmware controls the step motors, regulates the temperature\n"
+"and ultimately makes your printer work."
+msgstr ""
+"Прошивка - это программа, которая работает на самом 3D принтере.\n"
+"Она управляет шаговыми двигателями, регулирует температуру\n"
+"и осуществляет печать."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:353
+msgid ""
+"The firmware shipping with new Ultimakers works, but upgrades\n"
+"have been made to make better prints, and make calibration easier."
+msgstr ""
+"Прошивка, поставляемая с принтером, работает хорошо.\n"
+"Но обновление позволяет легче откалибровать устройство\n"
+"и делать более качественную печать."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:356
+msgid ""
+"Cura requires these new features and thus\n"
+"your firmware will most likely need to be upgraded.\n"
+"You will get the chance to do so now."
+msgstr ""
+"Cura требуется этот новый функционал, и поэтому\n"
+"необходимо обновить прошивку принтера.\n"
+"Сейчас хорошая возможность это сделать."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:357
+msgid "Skip upgrade"
+msgstr "Пропустить обновление прошивки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:357
+msgid "Upgrade to Marlin firmware"
+msgstr "Обновить на прошивку Marlin"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:361
+msgid "Do not upgrade to this firmware if:"
+msgstr "Не обновляйтесь на эту прошивку если:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:362
+msgid "* You have an older machine based on ATMega1280"
+msgstr "* У вас старая машина на чипе ATMega1280"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:363
+msgid "* Have other changes in the firmware"
+msgstr "* Или в вашей прошивке были сделаны изменения"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:384
+msgid "Ultimaker Checkup"
+msgstr "Проверка основных узлов принтера"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:398
+msgid ""
+"It is a good idea to do a few sanity checks now on your Ultimaker.\n"
+"You can skip these if you know your machine is functional."
+msgstr ""
+"Хорошая идея сделать несколько действий для проверки того,\n"
+"что принтер функционирует правильно.\n"
+"Можно пропустить этот шаг, если вы уверены, что принтер исправен."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:399
+msgid "Run checks"
+msgstr "Запустить проверку"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:399
+msgid "Skip checks"
+msgstr "Пропустить проверку"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:403
+msgid "Communication:"
+msgstr "Связь с принтером:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:404
+msgid "Temperature:"
+msgstr "Температура:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:405
+msgid "Endstops:"
+msgstr "Концевики:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:410
+msgid "Show error log"
+msgstr "Показать лог ошибок:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:444
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:815
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:976
+msgid "Connecting to machine."
+msgstr "Подключение к принтеру."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:465
+msgid "Cooldown before temperature check."
+msgstr "Охлаждаем перед запуском проверки температуры."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:471
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:478
+msgid "Checking the heater and temperature sensor."
+msgstr "Проверяем нагреватель и датчик температуры."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:489
+msgid "Please make sure none of the endstops are pressed."
+msgstr "Пожалуйста, убедитесь, что концевики не нажаты."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:502
+msgid "Temperature measurement FAILED!"
+msgstr "НЕ УДАЛОСЬ измерить температуру!"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:507
+msgid "Head temperature: %d"
+msgstr "Температура печатающей головки: %d"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:514
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:523
+msgid "Communication State: %s"
+msgstr "Состояние подключения: %s"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:517
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:937
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1152
+msgid "Failed to establish connection with the printer."
+msgstr "Не удалось установить соединение с принтером."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:562
+msgid "Please press the right X endstop."
+msgstr "Пожалуйста, нажмите на правый концевик оси X."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:567
+msgid "Please press the left X endstop."
+msgstr "Пожалуйста, нажмите на левый концевик оси X."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:572
+msgid "Please press the front Y endstop."
+msgstr "Пожалуйста, нажмите на передний концевик оси Y."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:577
+msgid "Please press the back Y endstop."
+msgstr "Пожалуйста, нажмите на задний концевик оси Y."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:582
+msgid "Please press the top Z endstop."
+msgstr "Пожалуйста, нажмите на верхний концевик оси Z."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:587
+msgid "Please press the bottom Z endstop."
+msgstr "Пожалуйста, нажмите на нижний концевик оси Z."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:593
+msgid "Checkup finished"
+msgstr "Проверка завершена"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:608
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:631
+msgid "Ultimaker Calibration"
+msgstr "Калибровка принтера"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:610
+msgid "Your Ultimaker requires some calibration."
+msgstr "Необходимо настроить ваш принтер."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:611
+msgid "This calibration is needed for a proper extrusion amount."
+msgstr ""
+"Эта калибровка необходима для того, чтобы настроить объем выдавливаемого "
+"пластика."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:613
+msgid "The following values are needed:"
+msgstr "Нужны следующие значения:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:614
+msgid "* Diameter of filament"
+msgstr "* Диаметр нити"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:615
+msgid "* Number of steps per mm of filament extrusion"
+msgstr ""
+"* Количество шагов экструдера для выдавливания 1 мм пластика (steps per E)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:617
+msgid ""
+"The better you have calibrated these values, the better your prints\n"
+"will become."
+msgstr ""
+"Чем лучше вы подберете эти значения, тем выше будет\n"
+"качество печати."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:619
+msgid "First we need the diameter of your filament:"
+msgstr "Для начало укажите диаметр пластиковой нити:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:622
+msgid ""
+"If you do not own digital Calipers that can measure\n"
+"at least 2 digits then use 2.89mm.\n"
+"Which is the average diameter of most filament."
+msgstr ""
+"Если у вас нет штангенциркуля, то укажите 2.89мм\n"
+"Это средний диаметр пластиковой нити."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:623
+msgid "Note: This value can be changed later at any time."
+msgstr "Замечание: В дальнейшем это значение можно в любой момент изменить."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:636
+msgid "Calibrating the Steps Per E requires some manual actions."
+msgstr ""
+"Настройка количества шагов экструдера требует некоторых ручных действий."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:637
+msgid "First remove any filament from your machine."
+msgstr "Для начала удалите оставшийся пластик из принтера."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:638
+msgid ""
+"Next put in your filament so the tip is aligned with the\n"
+"top of the extruder drive."
+msgstr ""
+"Далее загрузите пластиковую нить так, что кончик\n"
+"пластика выровнен с верхней частью экструдера."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:639
+msgid "We'll push the filament 100mm"
+msgstr "Продавим 100мм пластика"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:640
+msgid "Extrude 100mm filament"
+msgstr "Выдавить 100мм пластика"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:641
+msgid ""
+"Now measure the amount of extruded filament:\n"
+"(this can be more or less then 100mm)"
+msgstr ""
+"Измерьте количество выдавленного пластика:\n"
+"(может быть больше или меньше 100мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:642
+msgid "Save"
+msgstr "Сохранить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:643
+msgid "This results in the following steps per E:"
+msgstr "Результирующее значение количества шагов экструдера:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:645
+msgid "You can repeat these steps to get better calibration."
+msgstr "Вы можете повторить эти шаги для лучшей калибровки."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:648
+msgid ""
+"If you still have filament in your printer which needs\n"
+"heat to remove, press the heat up button below:"
+msgstr ""
+"Если в принтере остался пластик, который\n"
+"необходимо извлечь нажмите кнопку ниже:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:649
+msgid "Heatup for filament removal"
+msgstr "Нагреть принтер извлечения пластика"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:672
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:704
+msgid ""
+"Error: Failed to open serial port to machine\n"
+"If this keeps happening, try disconnecting and reconnecting the USB cable"
+msgstr ""
+"Ошибка: Не удалось открыть последовательный порт\n"
+"Если ошибка повторяется, то попробуйте отключить и заново подключить USB "
+"каьбель"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:673
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:705
+msgid "Printer error"
+msgstr "Ошибка принтера"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:722
+msgid ""
+"Wait till you can remove the filament from the machine, and press OK.\n"
+"(Temperature is set to 200C)"
+msgstr ""
+"Подождите пока не сможете удалить остатки пластика с печатающей головки, и "
+"нажмите OK.\n"
+"(Температура установлена в 200C)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:723
+msgid "Machine heatup"
+msgstr "Принтер нагревается"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:745
+msgid "Configuration Wizard"
+msgstr "Мастер настройки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:786
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1165
+msgid "Bed leveling wizard"
+msgstr "Мастер калибровки платформы"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:788
+msgid "This wizard will help you in leveling your printer bed"
+msgstr ""
+"Мастер поможет вам настроить расстояние между платформой и печатающей "
+"головкой"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:790
+msgid "It will do the following steps"
+msgstr "Мастер выполненит следующие шаги"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:791
+msgid "* Move the printer head to each corner"
+msgstr "* Переместит печатающую головку в каждый угол"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:792
+msgid "  and let you adjust the height of the bed to the nozzle"
+msgstr "  и позволит вам настроить расстояние между платформой и соплом"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:793
+msgid "* Print a line around the bed to check if it is level"
+msgstr ""
+"* Напечатает полоску на платформе для проверки того, что принтер "
+"окткалиброван"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:796
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:955
+msgid "Connect to printer"
+msgstr "Подключиться к принтеру"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:800
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:961
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:424
+msgid "Resume"
+msgstr "Продолжить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:827
+msgid "Moving head to back left corner..."
+msgstr "Перемещаем печатающую головку в задний левый угол..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:834
+msgid "Moving head to back right corner..."
+msgstr "Перемещаем печатающую головку в задний правый угол..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:841
+msgid "Moving head to front right corner..."
+msgstr "Перемещаем печатающую головку в передний правый угол..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:848
+msgid "Heating up printer..."
+msgstr "Нагреваем принтер..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:855
+msgid "Printing a square on the printer bed at 0.3mm height."
+msgstr "Печатаем квадрат на высоте 0.3мм от платформы."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:895
+msgid ""
+"Adjust the front left screw of your printer bed\n"
+"So the nozzle just hits the bed."
+msgstr ""
+"Подкрутите передний левый винт на платформе принтиера\n"
+"Сопло должно слегка касаться платформы."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:899
+msgid ""
+"Adjust the back left screw of your printer bed\n"
+"So the nozzle just hits the bed."
+msgstr ""
+"Подкрутите задний левый винт на платформе принтиера\n"
+"Сопло должно слегка касаться платформы."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:903
+msgid ""
+"Adjust the back right screw of your printer bed\n"
+"So the nozzle just hits the bed."
+msgstr ""
+"Подкрутите задний правый винт на платформе принтиера\n"
+"Сопло должно слегка касаться платформы."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:907
+msgid ""
+"Adjust the front right screw of your printer bed\n"
+"So the nozzle just hits the bed."
+msgstr ""
+"Подкрутите передний правый винт на платформе принтиера\n"
+"Сопло должно слегка касаться платформы."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:911
+msgid "Heating up printer: %d/%d"
+msgstr "Нагреваем принтер: %d/%d"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:913
+msgid ""
+"The printer is hot now. Please insert some PLA filament into the printer."
+msgstr ""
+"Принтер нагрет до рабочей температуры. Пожалуйста, загрузите PLA пластик в "
+"экструдер."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:922
+msgid "Homing printer..."
+msgstr "Возвращаем принтер в начальное положение..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:931
+msgid ""
+"Calibration finished.\n"
+"The squares on the bed should slightly touch each other."
+msgstr ""
+"Настройка завершена.\n"
+"Квадраты на платформе должны слегка касаться друг друга."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:950
+msgid "Printer head offset calibration"
+msgstr "Настройка смещения между печатающими головками"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:952
+msgid ""
+"This wizard will help you in calibrating the printer head offsets of your "
+"dual extrusion machine"
+msgstr "Данный мастер поможет определить смещение между печатающими головками"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:982
+msgid "Printing initial calibration cross"
+msgstr "Печатаем первоначальный калибровочный крестик"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1030
+msgid ""
+"Please measure the distance between the horizontal lines in millimeters."
+msgstr ""
+"Пожалуйста измерьте расстояние в миллиметрах между горизонтальными полосками."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1040
+msgid "Printing the fine calibration lines."
+msgstr "Печатаем калибровочные полоски."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1095
+msgid ""
+"Which horizontal line number lays perfect on top of each other? Front most "
+"line is zero."
+msgstr ""
+"Какая из горизонтальных полосок лежит ровно на другой? Самая передняя имеет "
+"номер 0."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1106
+msgid "Calibration finished. Offsets are: %s %s"
+msgstr "Настройка завершена. Смещение составляет: %s %s"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1119
+msgid "Please load both extruders with PLA."
+msgstr "Пожалуйста, загрузите PLA пластик в оба экструдера."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1128
+msgid "Homing printer and heating up both extruders."
+msgstr ""
+"Возвращаем принтер в начальное положение и нагреваем обе печатающие головки."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1138
+msgid "Please measure the distance between the vertical lines in millimeters."
+msgstr ""
+"Пожалуйста измерьте расстояние в миллиметрах между вертикальными полосками."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1145
+msgid ""
+"Which vertical line number lays perfect on top of each other? Leftmost line "
+"is zero."
+msgstr ""
+"Какая из вертикальных полосок лежит ровно на другой? Самая левая имеет номер "
+"0."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:1191
+msgid "Head offset wizard"
+msgstr "Мастер настройки смещения печатающих головок"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\expertConfig.py:19
+msgid "Expert configuration window"
+msgstr "Окно расширенных настроек"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\expertConfig.py:35
+msgid "Expert config"
+msgstr "Расширенные настройки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:41
+msgid "Firmware install"
+msgstr "Установка прошивки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:47
+msgid ""
+"I am sorry, but Cura does not ship with a default firmware for your machine "
+"configuration."
+msgstr "К сожалению, у Cura нет прошивки для вашего принтера."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:47
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:105
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:389
+msgid "Firmware update"
+msgstr "Обновление прошивки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:76
+msgid "Reading firmware..."
+msgstr "Идет загрузка прошивки..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:78
+msgid "Connecting to machine..."
+msgstr "Подключаемся к принтеру..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:95
+msgid "Uploading firmware..."
+msgstr "Загружаем прошивку..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:98
+msgid ""
+"Done!\n"
+"Installed firmware: %s"
+msgstr ""
+"Готово!\n"
+"Установлена прошивка: %s"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:100
+msgid "Failed to write firmware.\n"
+msgstr "Не удалось загрузить прошивку.\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\firmwareInstall.py:105
+msgid ""
+"Failed to find machine for firmware upgrade\n"
+"Is your machine connected to the PC?"
+msgstr ""
+"Не удалось найти принтер для обновления прошивки\n"
+"Ваша машина подключена к компьютеру?"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:38
+msgid "Cura - "
+msgstr "Cura - "
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:65
+msgid "Load model file...\tCTRL+L"
+msgstr "Загрузить файл с моделью...\tCTRL+L"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:67
+msgid "Save model...\tCTRL+S"
+msgstr "Сохранить модель...\tCTRL+S"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:69
+msgid "Clear platform"
+msgstr "Очистить платформу"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:73
+msgid "Print...\tCTRL+P"
+msgstr "Печать...\tCTRL+P"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:75
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:198
+msgid "Save GCode..."
+msgstr "Сохранить GCode"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:77
+msgid "Show slice engine log..."
+msgstr "Показать логи слайсера..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:81
+msgid "Open Profile..."
+msgstr "Открыть профиль..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:84
+msgid "Save Profile..."
+msgstr "Сохранить профиль..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:87
+msgid "Load Profile from GCode..."
+msgstr "Загрузить профиль из файла GCode..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:91
+msgid "Reset Profile to default"
+msgstr "Восстановить профиль по умолчанию"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:96
+msgid "Preferences...\tCTRL+,"
+msgstr "Настройки...\tCTRL+,"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:102
+msgid "&Recent Model Files"
+msgstr "&Недавние модели"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:109
+msgid "&Recent Profile Files"
+msgstr "&Недавние профили"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:115
+msgid "Quit"
+msgstr "Выход"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:117
+msgid "&File"
+msgstr "&Файл"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:120
+msgid "Switch to quickprint..."
+msgstr "Переключиться к быстрой печати..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:123
+msgid "Switch to full settings..."
+msgstr "Переключиться к полным настройкам..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:131
+msgid "Minecraft import..."
+msgstr "Импорт из Minecraft..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:134
+msgid "PID Debugger..."
+msgstr "PID отладчик..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:136
+msgid "Tools"
+msgstr "Инструменты"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:139
+msgid "Open expert settings..."
+msgstr "Открыть расширенные настройки..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:144
+msgid "Install default Marlin firmware"
+msgstr "Установить оригинальную прошивку Marlin"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:146
+msgid "Install custom firmware"
+msgstr "Установить неоригинальную прошивку"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:149
+msgid "Run first run wizard..."
+msgstr "Запустить мастер первоначальной настройки..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:151
+msgid "Run bed leveling wizard..."
+msgstr "Запустить мастер калибровки платформы..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:154
+msgid "Run head offset wizard..."
+msgstr "Запустить мастер настройки смещения головки..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:156
+msgid "Expert"
+msgstr "Эксперт"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:159
+msgid "Online documentation..."
+msgstr "Онлайн документация..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:161
+msgid "Report a problem..."
+msgstr "Сообщить об ошибке..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:163
+msgid "Check for update..."
+msgstr "Проверить обновления..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:165
+msgid "About Cura..."
+msgstr "О програме Cura..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:167
+msgid "Help"
+msgstr "Помощь"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:180
+msgid "Share your design to YouMagine.com"
+msgstr "Поделитесь дизайном в YouMagine.com"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:332
+msgid "Select profile file to load"
+msgstr "Выберите файл с профилем"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:344
+msgid "Select gcode file to load profile from"
+msgstr "Выберите файл GCode для загрузки профиля"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:357
+msgid ""
+"No profile found in GCode file.\n"
+"This feature only works with GCode files made by Cura 12.07 or newer."
+msgstr ""
+"Не найден профиль в файле GCode.\n"
+"Данная функция работает только с файлами GCode, сохраненными в Cura 12.07 "
+"или новее."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:357
+msgid "Profile load error"
+msgstr "Ошибка загрузки профиля"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:361
+msgid "Select profile file to save"
+msgstr "Выберите файл с профилем для сохранения"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:369
+msgid "Profile reset"
+msgstr "Сбросить профиль"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:369
+msgid ""
+"This will reset all profile settings to defaults.\n"
+"Unless you have saved your current profile, all settings will be lost!\n"
+"Do you really want to reset?"
+msgstr ""
+"Сейчас будут восстановлены настройки профиля по умолчанию. \n"
+"Если вы не сохранили ваш текущий профиль, то все настройки будут потеряны!\n"
+"Вы действительно хотите восстановить профиль по умолчанию?"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:389
+msgid ""
+"Warning: Installing a custom firmware does not guarantee that you machine "
+"will function correctly, and could damage your machine."
+msgstr ""
+"Осторожно: Установка неоригинальной прошивки не гарантирует того, что ваш "
+"принтер будет правильно работать и не повредит ваше устройство."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:390
+msgid "Open firmware to upload"
+msgstr "Откройте прошивку для загрузки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:426
+msgid "You cannot upload to YouMagine without have a file loaded."
+msgstr "Сначала загрузите файл перед публикацией на Youmagine."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:436
+msgid "Awesome!"
+msgstr "Потрясающе!"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:436
+msgid "You are running the latest version of Cura!"
+msgstr "У вас запущена последняя версия Cura!"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\mainWindow.py:441
+msgid "End solution for Open Source Fused Filament Fabrication 3D printing."
+msgstr ""
+"Комплексное решение для 3D принтеров с открытым исходным кодом, работающих "
+"по методу наплавления."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\pluginPanel.py:35
+msgid "Plugins:"
+msgstr "Плагины:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\pluginPanel.py:39
+msgid "Open plugin location"
+msgstr "Открыть расположение плагина"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\pluginPanel.py:40
+msgid "Enabled plugins"
+msgstr "Активные плагины"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\pluginPanel.py:142
+msgid "Error: no plugin selected"
+msgstr "Ошибка: не выбран плагин"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\pluginPanel.py:142
+msgid "You need to select a plugin before you can add anything."
+msgstr "Необходимо выбрать плагин перед тем как что-либо добавлять."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\preferencesDialog.py:22
+msgid "Preferences"
+msgstr "Настройки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\preferencesDialog.py:86
+msgid ""
+"After changing the amount of extruders you need to restart Cura for full "
+"effect."
+msgstr ""
+"Необходимо перезапустить Cura для того, чтобы изменение количества "
+"экструдеров вступило в силу."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\preferencesDialog.py:86
+msgid "Extruder amount warning."
+msgstr "Предупреждение об изменении количества экструдеров"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:133
+msgid "Main user interface window"
+msgstr "Главное окно пользовательского интерфейса"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:136
+msgid "Printing"
+msgstr "Печать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:165
+msgid "Statistics"
+msgstr "Статистика"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:170
+msgid ""
+"Your computer is running on battery power.\n"
+"Connect your computer to AC power or your print might not finish."
+msgstr ""
+"Компьютер работает от аккумуляторов.\n"
+"Подключите компьютер к сети. В противном случае печать может не завершиться."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:181
+msgid ""
+"Filament: ####.##m #.##g\n"
+"Estimated print time: #####:##\n"
+"Machine state:\n"
+"Detecting baudrateXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+msgstr ""
+"Материал: ####.##м #.##гnПримерное время печати: #####:##\n"
+"Состояние машины:\n"
+"Определение скорости передачи данныхXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:186
+msgid "Connect"
+msgstr "Подключить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:188
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:72
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:748
+msgid "Print"
+msgstr "Печать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:189
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:426
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:503
+msgid "Pause"
+msgstr "Пауза"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:190
+msgid "Cancel print"
+msgstr "Отменить печать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:191
+msgid "Error log"
+msgstr "Лог ошибок"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:212
+msgid "BedTemp:"
+msgstr "Температура платформы:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:220
+msgid "Temp:"
+msgstr "Температура:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:229
+msgid "Temp"
+msgstr "Температура"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:283
+msgid "Outer wall:"
+msgstr "Внешние стенки:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:286
+msgid "Inner wall:"
+msgstr "Внутренние стенки:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:289
+msgid "Fill:"
+msgstr "Заполнение:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:292
+msgid "Support:"
+msgstr "Поддержка:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:296
+msgid "Speed"
+msgstr "Скорость"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:321
+msgid "Enable timelapse movie recording"
+msgstr "Включить запись видеоролика"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:335
+msgid "Show preview"
+msgstr "Предварительный просмотр"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:341
+msgid "Camera"
+msgstr "Камера"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:441
+msgid "Loading gcode...\n"
+msgstr "Загрузка управляющего кода...\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:443
+msgid "Filament: %.2fm %.2fg\n"
+msgstr "Материал: %.2fм %.2fг\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:447
+msgid "Filament cost: %s\n"
+msgstr "Стоимость материала: %s\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:452
+msgid "Line: -/%d\n"
+msgstr "Строка: -/%d\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:456
+msgid "Line: %d/%d %d%%\n"
+msgstr "Строка: %d/%d %d%%\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:459
+msgid "Height: %0.1f\n"
+msgstr "Высота: %0.1f\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:460
+msgid "Print time: %02d:%02d\n"
+msgstr "Время печати: %02d:%02d\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:462
+msgid "Print time left: Unknown\n"
+msgstr "Оставшееся время печати: Неизвестно\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:464
+msgid "Print time left: %02d:%02d\n"
+msgstr "Оставшееся время печати: %02d:%02d\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:469
+msgid "Temp: %s\n"
+msgstr "Температура: %s\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:471
+msgid "Bed Temp: %d\n"
+msgstr "Температура платформы: %d\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:475
+msgid "Machine state:%s\n"
+msgstr "Состояние принтера:%s\n"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:71
+msgid "Load"
+msgstr "Загрузить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:76
+msgid "Rotate"
+msgstr "Повернуть"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:77
+msgid "Scale"
+msgstr "Масштабировать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:78
+msgid "Mirror"
+msgstr "Отразить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:80
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:83
+msgid "Reset"
+msgstr "Сбросить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:81
+msgid "Lay flat"
+msgstr "Расположить на поверхности"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:84
+msgid "To max"
+msgstr "Максимальный размер"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:86
+msgid "Mirror X"
+msgstr "Отражение X"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:87
+msgid "Mirror Y"
+msgstr "Отражение Y"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:88
+msgid "Mirror Z"
+msgstr "Отражение Z"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:96
+msgid "Scale X"
+msgstr "Масштаб X"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:98
+msgid "Scale Y"
+msgstr "Масштаб Y"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:100
+msgid "Scale Z"
+msgstr "Масштаб Z"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:102
+msgid "Size X (mm)"
+msgstr "Размер X (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:104
+msgid "Size Y (mm)"
+msgstr "Размер Y (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:106
+msgid "Size Z (mm)"
+msgstr "Размер Z (мм)"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:108
+msgid "Uniform scale"
+msgstr "Равномерное масштабирование"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "Layers"
+msgstr "Слои"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "Normal"
+msgstr "Стандартный"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "Overhang"
+msgstr "Подвешивание"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "Transparent"
+msgstr "Прозрачный"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "View mode"
+msgstr "Режимы просмотра"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:111
+msgid "X-Ray"
+msgstr "Рентген"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:129
+msgid "Open 3D model"
+msgstr "Открыть 3D модель"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:167
+msgid "Save 3D model"
+msgstr "Сохранить 3D модель"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:183
+msgid ""
+"Multiple removable drives have been found,\n"
+"please select your SD card drive"
+msgstr ""
+"Было найдено несколько съемных дисков,\n"
+"выберите ваш SD диск"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:183
+msgid "Select SD drive"
+msgstr "Выберите SD диск"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:197
+msgid "Print with USB"
+msgstr "Печать через USB"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:199
+msgid "Slice engine log..."
+msgstr "Логи слайсера..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:213
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:754
+msgid "Save toolpath"
+msgstr "Сохранить управляющий код"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:215
+msgid "Toolpath (*.gcode)|*.gcode;*.g"
+msgstr "Управляющий код (*.gcode)|*.gcode;*.g"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:239
+msgid "Failed to save"
+msgstr "Не удалось сохранить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:242
+msgid "Safe remove failed..."
+msgstr "Не удалось извлечь..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:242
+msgid "You can now eject the card."
+msgstr "Сейчас можно извлечь карту."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:242
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:244
+msgid "Saved as %s"
+msgstr "Сохранен как %s"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:250
+msgid "Engine log..."
+msgstr "Логи слайсера..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:250
+msgid "The slicing engine reported the following"
+msgstr "Слайсер сообщил следующее"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:377
+msgid "Copies"
+msgstr "Копии"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:377
+msgid "How many copies do you want?"
+msgstr "Сколько копий сделать?"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:377
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:621
+msgid "Multiply"
+msgstr "Размножить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:394
+msgid "Could not create more then %d items"
+msgstr "Не возможно создать более %d предметов"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:620
+msgid "Delete"
+msgstr "Удалить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:622
+msgid "Split"
+msgstr "Разделить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:624
+msgid "Dual extrusion merge"
+msgstr "Объединить для двухцветной печати"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:626
+msgid "Delete all"
+msgstr "Удалить все"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:751
+msgid "Toolpath to SD"
+msgstr "Записать на SD"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:1060
+msgid "Loading toolpath for visualization..."
+msgstr "Загрузка управляющего кода для визуализации..."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:1111
+msgid "Overhang view not working due to lack of OpenGL shaders support."
+msgstr ""
+"Не удается отобразить в режиме подвешивания из-за недостаточной поддержки "
+"OpenGL шейдеров."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\sceneView.py:1331
+msgid "Shader editor"
+msgstr "Редактор шейдеров"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:18
+msgid "Main user interface window for Quickprint mode"
+msgstr "Главное окно пользовательского интерфейса для режима Быстрая Печать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:29
+msgid "High quality print"
+msgstr "Печать с высоким качеством"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:30
+msgid "Normal quality print"
+msgstr "Печать с высоким качеством"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:31
+msgid "Fast low quality print"
+msgstr "Быстрая печать с низким качеством"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:32
+msgid "Thin walled cup or vase"
+msgstr "Тонкостенная чаша или ваза"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:40
+msgid "Print support structure"
+msgstr "Печать поддерживающей структуры"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:45
+msgid "Select a print type:"
+msgstr "Выберите тип печати:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:55
+msgid "Material:"
+msgstr "Материал:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:59
+msgid "Diameter:"
+msgstr "Диаметр:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\simpleMode.py:65
+msgid "Other:"
+msgstr "Прочие:"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:22
+msgid "Cura - Batch run"
+msgstr "Cura - пакетный запуск"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:37
+msgid "Add"
+msgstr "Добавить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:38
+msgid "Remove"
+msgstr "Удалить"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:39
+msgid "Prepare all"
+msgstr "Подготовить всё"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:55
+msgid "Open file to batch prepare"
+msgstr "Открыть файл для пакетной обработки"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:56
+msgid "STL files (*.stl)|*.stl;*.STL"
+msgstr "STL файлы (*.stl)|*.stl;*.STL"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:113
+msgid "Cura"
+msgstr "Cura"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:142
+msgid "Building: %d                           "
+msgstr "Обработка: %d                           "
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:145
+msgid "Done: 0/%d                           "
+msgstr "Готово: 0/%d                           "
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:148
+msgid "Abort"
+msgstr "Прервать"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:195
+msgid "Build: %d models"
+msgstr "Обработанно: %d моделей"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:196
+msgid ""
+"\n"
+"Slicing took: %02d:%02d"
+msgstr ""
+"\n"
+"Генерация заняла: %02d:%02d"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:206
+msgid "Building: [%d/%d]"
+msgstr "Обработка: [%d/%d]"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:213
+msgid "Progress["
+msgstr "Прогресс["
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:222
+msgid "Aborted by user."
+msgstr "Прервано пользователем."
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:236
+msgid "Done %d/%d"
+msgstr "Готово %d/%d"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:241
+msgid "Close"
+msgstr "Закрыть"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\batchRun.py:244
+msgid "To SDCard"
+msgstr "На SD карту"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\minecraftImport.py:25
+msgid "Cura - Minecraft import"
+msgstr "Cura - импорт из Minecraft"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\tools\minecraftImport.py:44
+msgid "Import"
+msgstr "Импорт"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\util\opengl.py:203
+msgid "VBO was not properly released!"
+msgstr "Не удалось корректно освободить VBO!"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\util\openglGui.py:246
+msgid "An error has occurred during the 3D view drawing."
+msgstr "Возникла ошибка во время отрисовки 3D сцены"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\util\openglGui.py:253
+msgid "3D window error"
+msgstr "Ошибка в окне с 3D сценой"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\util\openglGui.py:711
+msgid "Notification"
+msgstr "Оповещение"
+
+#: C:\Build\Cura-git\Cura\Cura\gui\util\openglGui.py:712
+msgid "Eject"
+msgstr "Извлечь"
