@@ -112,10 +112,12 @@ msgid "Machine height (mm)"
 msgstr "Высота печатающей головки (мм)"
 
 #: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:252
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:126
 msgid "Nozzle size (mm)"
 msgstr "Диаметр сопла (мм)"
 
 #: C:\Build\Cura-git\Cura\Cura\gui\configWizard.py:253
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:312
 msgid "Heated bed"
 msgstr "Подогреваемая платформа"
 
@@ -1057,6 +1059,9 @@ msgid "Support:"
 msgstr "Поддержка:"
 
 #: C:\Build\Cura-git\Cura\Cura\gui\printWindow.py:296
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:151
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:152
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:153
 msgid "Speed"
 msgstr "Скорость"
 
@@ -1469,3 +1474,977 @@ msgstr "Оповещение"
 #: C:\Build\Cura-git\Cura\Cura\gui\util\openglGui.py:712
 msgid "Eject"
 msgstr "Извлечь"
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:121
+msgid "Layer height (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:121
+msgid ""
+"Layer height in millimeters.\n"
+"This is the most important setting to determen the quality of your print. Normal quality prints are 0.1mm, high quality is 0.06mm. You can go up to 0.25mm with an Ultimaker for very fast prints at low quality."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:121
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:122
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:123
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:147
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:148
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:150
+msgid "Quality"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:122
+msgid "Shell thickness (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:122
+msgid ""
+"Thickness of the outside shell in the horizontal direction.\n"
+"This is used in combination with the nozzle size to define the number\n"
+"of perimeter lines and the thickness of those perimeter lines."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:123
+msgid "Enable retraction"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:123
+msgid "Retract the filament when the nozzle is moving over a none-printed area. Details about the retraction can be configured in the advanced tab."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:124
+msgid "Bottom/Top thickness (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:124
+msgid ""
+"This controls the thickness of the bottom and top layers, the amount of solid layers put down is calculated by the layer thickness and this value.\n"
+"Having this value a multiply of the layer thickness makes sense. And keep it near your wall thickness to make an evenly strong part."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:124
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:125
+msgid "Fill"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:125
+msgid "Fill Density (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:125
+msgid ""
+"This controls how densely filled the insides of your print will be. For a solid part use 100%, for an empty part use 0%. A value around 20% is usually enough.\n"
+"This won't effect the outside of the print and only adjusts how strong the part becomes."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:126
+msgid "Machine"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:126
+msgid "The nozzle size is very important, this is used to calculate the line width of the infill, and used to calculate the amount of outside wall lines and thickness for the wall thickness you entered in the print settings."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:127
+msgid "Print speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:127
+msgid "Speed at which printing happens. A well adjusted Ultimaker can reach 150mm/s, but for good quality prints you want to print slower. Printing speed depends on a lot of factors. So you will be experimenting with optimal settings for this."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:127
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:128
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:129
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:130
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:131
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:132
+msgid "Speed & Temperature"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:128
+msgid "Printing temperature (C)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:128
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:129
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:130
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:131
+msgid ""
+"Temperature used for printing. Set at 0 to pre-heat yourself.\n"
+"For PLA a value of 210C is usually used.\n"
+"For ABS a value of 230C or higher is required."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:129
+msgid "2nd nozzle temperature (C)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:130
+msgid "3th nozzle temperature (C)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:131
+msgid "4th nozzle temperature (C)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:132
+msgid "Bed temperature (C)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:132
+msgid "Temperature used for the heated printer bed. Set at 0 to pre-heat yourself."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+msgid "Everywhere"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+msgid "Support type"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+msgid "Touching buildplate"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+msgid ""
+"Type of support structure build.\n"
+"\"Touching buildplate\" is the most commonly used support setting.\n"
+"\n"
+"None does not do any support.\n"
+"Touching buildplate only creates support where the support structure will touch the build platform.\n"
+"Everywhere creates support even on top of parts of the model."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+msgid "None"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:133
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:174
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:175
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:176
+msgid "Support"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+msgid ""
+"Different options that help in preventing corners from lifting due to warping.\n"
+"Brim adds a single layer thick flat area around your object which is easy to cut off afterwards, and the recommended option.\n"
+"Raft adds a thick raster at below the object and a thin interface between this and your object.\n"
+"(Note that enabling the brim or raft disables the skirt)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+msgid "Platform adhesion type"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+msgid "basic"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:180
+msgid "Brim"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:134
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:181
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:182
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:183
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:184
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:185
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:186
+msgid "Raft"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+msgid "Both"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+msgid "First extruder"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+msgid "Second extruder"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+msgid "Support dual extrusion"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:135
+msgid ""
+"Which extruder to use for support material, for break-away support you can use both extruders.\n"
+"But if one of the materials is more expensive then the other you could select an extruder to use for support material. This causes more extruder switches.\n"
+"You can also use the 2nd extruder for soluble support materials."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:136
+msgid "Diameter (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:136
+msgid ""
+"Diameter of your filament, as accurately as possible.\n"
+"If you cannot measure this value you will have to calibrate it, a higher number means less extrusion, a smaller number generates more extrusion."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:136
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:137
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:138
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:139
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:140
+msgid "Filament"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:137
+msgid "Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter as for nozzle 1."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:137
+msgid "Diameter2 (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:138
+msgid "Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter as for nozzle 1."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:138
+msgid "Diameter3 (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:139
+msgid "Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:139
+msgid "Diameter4 (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:140
+msgid "Flow (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:140
+msgid "Flow compensation, the amount of material extruded is multiplied by this value"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:141
+msgid "Speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:141
+msgid "Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:141
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:142
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:143
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:144
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:145
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:146
+msgid "Retraction"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:142
+msgid "Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm seems to generate good results."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:142
+msgid "Distance (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:143
+msgid "Amount of retraction when switching nozzle with dual-extrusion, set at 0 for no retraction at all. A value of 16.0mm seems to generate good results."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:143
+msgid "Dual extrusion switch amount (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:144
+msgid "Minimum amount of travel needed for a retraction to happen at all. To make sure you do not get a lot of retractions in a small area."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:144
+msgid "Minimum travel (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:145
+msgid "Combing is the act of avoiding holes in the print for the head to travel over. If combing is disabled the printer head moves straight from the start point to the end point and it will always retract."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:145
+msgid "Enable combing"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:146
+msgid "Minimal extrusion before retracting (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:146
+msgid ""
+"The minimal amount of extrusion that needs to be done before retracting again if a retraction needs to happen before this minimal is reached the retraction is ignored.\n"
+"This avoids retraction a lot on the same piece of filament which flattens the filament and causes grinding issues."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:147
+msgid "Initial layer thickness (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:147
+msgid "Layer thickness of the bottom layer. A thicker bottom layer makes sticking to the bed easier. Set to 0.0 to have the bottom layer thickness the same as the other layers."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:148
+msgid "Cut off object bottom (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:148
+msgid "Sinks the object into the platform, this can be used for objects that do not have a flat bottom and thus create a too small first layer."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:150
+msgid "Add a certain amount of overlapping extrusion on dual-extrusion prints. This bonds the different colors better together."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:150
+msgid "Dual extrusion overlap (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:151
+msgid "Speed at which travel moves are done, a high quality build Ultimaker can reach speeds of 250mm/s. But some machines might miss steps then."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:151
+msgid "Travel speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:152
+msgid "Bottom layer speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:152
+msgid "Print speed for the bottom layer, you want to print the first layer slower so it sticks better to the printer bed."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:153
+msgid "Infill speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:153
+msgid "Speed at which infill parts are printed. If set to 0 then the print speed is used for the infill. Printing the infill faster can greatly reduce printing, but this can negatively effect print quality.."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:154
+msgid "Minimal layer time (sec)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:154
+msgid "Minimum time spend in a layer, gives the layer time to cool down before the next layer is put on top. If the layer will be placed down too fast the printer will slow down to make sure it has spend at least this amount of seconds printing this layer."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:154
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:155
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:162
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:163
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:164
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:165
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:166
+msgid "Cool"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:155
+msgid "Enable cooling fan"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:155
+msgid "Enable the cooling fan during the print. The extra cooling from the cooling fan is essential during faster prints."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:157
+msgid "Line count"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:157
+msgid ""
+"The skirt is a line drawn around the object at the first layer. This helps to prime your extruder, and to see if the object fits on your platform.\n"
+"Setting this to 0 will disable the skirt. Multiple skirt lines can help priming your extruder better for small objects."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:157
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:158
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:159
+msgid "Skirt"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:158
+msgid "Start distance (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:158
+msgid ""
+"The distance between the skirt and the first layer.\n"
+"This is the minimal distance, multiple skirt lines will be put outwards from this distance."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:159
+msgid "Minimal length (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:159
+msgid ""
+"The minimal length of the skirt, if this minimal length is not reached it will add more skirt lines to reach this minimal lenght.\n"
+"Note: If the line count is set to 0 this is ignored."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:162
+msgid "Fan on layer number"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:162
+msgid "The layer at which the fan is turned on. The first layer is layer 0. The first layer can stick better if you turn on the fan on, on the 2nd layer."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:163
+msgid "Fan speed min (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:163
+msgid "When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Minimal fan speed is used if the layer is not slowed down due to cooling."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:164
+msgid "Fan speed max (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:164
+msgid "When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Maximal fan speed is used if the layer is slowed down due to cooling by more than 200%."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:165
+msgid "Minimum speed (mm/s)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:165
+msgid "The minimal layer time can cause the print to slow down so much it starts to ooze. The minimal feedrate protects against this. Even if a print gets slown down it will never be slower than this minimal speed."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:166
+msgid "Cool head lift"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:166
+msgid "Lift the head if the minimal speed is hit because of cool slowdown, and wait the extra time so the minimal layer time is always hit."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:171
+msgid "Create a solid top surface, if set to false the top is filled with the fill percentage. Useful for cups/vases."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:171
+msgid "Solid infill top"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:171
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:172
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:173
+msgid "Infill"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:172
+msgid "Create a solid bottom surface, if set to false the bottom is filled with the fill percentage. Useful for buildings."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:172
+msgid "Solid infill bottom"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:173
+msgid "Amount of overlap between the infill and the walls. There is a slight overlap with the walls and the infill so the walls connect firmly to the infill."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:173
+msgid "Infill overlap (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:174
+msgid "Amount of infill structure in the support material, less material gives weaker support which is easier to remove. 20% seems to be a good average."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:174
+msgid "Fill amount (%)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:175
+msgid "Distance X/Y (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:175
+msgid ""
+"Distance of the support material from the print, in the X/Y directions.\n"
+"0.7mm gives a nice distance from the print so the support does not stick to the print."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:176
+msgid "Distance Z (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:176
+msgid ""
+"Distance from the top/bottom of the support to the print. A small gap here makes it easier to remove the support but makes the print a bit uglier.\n"
+"0.15mm gives a good seperation of the support material."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:180
+msgid "Brim line amount"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:180
+msgid "The amount of lines used for a brim, more lines means a larger brim which sticks better, but this also makes your effective print area smaller."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:181
+msgid "Extra margin (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:181
+msgid "If the raft is enabled, this is the extra raft area around the object which is also rafted. Increasing this margin will create a stronger raft while using more material and leaving less are for your print."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:182
+msgid "Line spacing (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:182
+msgid "When you are using the raft this is the distance between the centerlines of the raft line."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:183
+msgid "Base thickness (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:183
+msgid "When you are using the raft this is the thickness of the base layer which is put down."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:184
+msgid "Base line width (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:184
+msgid "When you are using the raft this is the width of the base layer lines which are put down."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:185
+msgid "Interface thickness (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:185
+msgid "When you are using the raft this is the thickness of the interface layer which is put down."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:186
+msgid "Interface line width (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:186
+msgid "When you are using the raft this is the width of the interface layer lines which are put down."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:188
+msgid "Combine everything (Type-A)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:188
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:189
+msgid "This expert option adds all parts of the model together. The result is usually that internal cavities disappear. Depending on the model this can be intended or not. Enabling this option is at your own risk. Type-A is depended on the model normals and tries to keep some internal holes intact. Type-B ignores all internal holes and only keeps the outside shape per layer."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:188
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:189
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:190
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:191
+msgid "Fix horrible"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:189
+msgid "Combine everything (Type-B)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:190
+msgid "Keep open faces"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:190
+msgid ""
+"This expert option keeps all the open bits of the model intact. Normally Cura tries to stitch up small holes and remove everything with big holes, but this option keeps bits that are not properly part of anything and just goes with whatever it is left. This option is usually not what you want, but it might enable you to slice models otherwise failing to produce proper paths.\n"
+"As with all \"Fix horrible\" options, results may vary and use at your own risk."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:191
+msgid "Extensive stitching"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:191
+msgid ""
+"Extrensive stitching tries to fix up open holes in the model by closing the hole with touching polygons. This algorthm is quite expensive and could introduce a lot of processing time.\n"
+"As with all \"Fix horrible\" options, results may vary and use at your own risk."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:197
+msgid ""
+";Sliced at: {day} {date} {time}\n"
+";Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}\n"
+";Print time: {print_time}\n"
+";Filament used: {filament_amount}m {filament_weight}g\n"
+";Filament cost: {filament_cost}\n"
+"G21        ;metric values\n"
+"G90        ;absolute positioning\n"
+"M107       ;start with the fan off\n"
+"\n"
+"G28 X0 Y0  ;move X/Y to min endstops\n"
+"G28 Z0     ;move Z to min endstops\n"
+"\n"
+"G1 Z15.0 F{travel_speed} ;move the platform down 15mm\n"
+"\n"
+"G92 E0                  ;zero the extruded length\n"
+"G1 F200 E3              ;extrude 3mm of feed stock\n"
+"G92 E0                  ;zero the extruded length again\n"
+"G1 F{travel_speed}\n"
+"M117 Printing...\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:218
+msgid ""
+";End GCode\n"
+"M104 S0                     ;extruder heater off\n"
+"M140 S0                     ;heated bed heater off (if you have it)\n"
+"\n"
+"G91                                    ;relative positioning\n"
+"G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure\n"
+"G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more\n"
+"G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way\n"
+"\n"
+"M84                         ;steppers off\n"
+"G90                         ;absolute positioning\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:231
+msgid ""
+";Sliced at: {day} {date} {time}\n"
+";Basic settings: Layer height: {layer_height} Walls: {wall_thickness} Fill: {fill_density}\n"
+";Print time: {print_time}\n"
+";Filament used: {filament_amount}m {filament_weight}g\n"
+";Filament cost: {filament_cost}\n"
+"G21        ;metric values\n"
+"G90        ;absolute positioning\n"
+"M107       ;start with the fan off\n"
+"\n"
+"G28 X0 Y0  ;move X/Y to min endstops\n"
+"G28 Z0     ;move Z to min endstops\n"
+"\n"
+"G1 Z15.0 F{travel_speed} ;move the platform down 15mm\n"
+"\n"
+"T1\n"
+"G92 E0                  ;zero the extruded length\n"
+"G1 F200 E10             ;extrude 10mm of feed stock\n"
+"G92 E0                  ;zero the extruded length again\n"
+"G1 F200 E-{retraction_dual_amount}\n"
+"\n"
+"T0\n"
+"G92 E0                  ;zero the extruded length\n"
+"G1 F200 E10              ;extrude 10mm of feed stock\n"
+"G92 E0                  ;zero the extruded length again\n"
+"G1 F{travel_speed}\n"
+"M117 Printing...\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:259
+msgid ""
+";End GCode\n"
+"M104 T0 S0                     ;extruder heater off\n"
+"M104 T1 S0                     ;extruder heater off\n"
+"M140 S0                     ;heated bed heater off (if you have it)\n"
+"\n"
+"G91                                    ;relative positioning\n"
+"G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure\n"
+"G1 Z+0.5 E-5 X-20 Y-20 F{travel_speed} ;move Z up a bit and retract filament even more\n"
+"G28 X0 Y0                              ;move X/Y to min endstops, so the head is out of the way\n"
+"\n"
+"M84                         ;steppers off\n"
+"G90                         ;absolute positioning\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:279
+msgid ""
+";Move to next object on the platform. clear_z is the minimal z height we need to make sure we do not hit any objects.\n"
+"G92 E0\n"
+"\n"
+"G91                                    ;relative positioning\n"
+"G1 E-1 F300                            ;retract the filament a bit before lifting the nozzle, to release some of the pressure\n"
+"G1 Z+0.5 E-5 F{travel_speed}           ;move Z up a bit and retract filament even more\n"
+"G90                                    ;absolute positioning\n"
+"\n"
+"G1 Z{clear_z} F{max_z_speed}\n"
+"G92 E0\n"
+"G1 X{object_center_x} Y{object_center_y} F{travel_speed}\n"
+"G1 F200 E6\n"
+"G92 E0\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:294
+msgid ""
+";Switch between the current extruder and the next extruder, when printing with multiple extruders.\n"
+"G92 E0\n"
+"G1 E-36 F5000\n"
+"G92 E0\n"
+"T{extruder}\n"
+"G1 X{new_x} Y{new_y} Z{new_z} F{travel_speed}\n"
+"G1 E36 F5000\n"
+"G92 E0\n"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:306
+msgid "Maximum width (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:306
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:307
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:308
+msgid "Size of the machine in mm"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:307
+msgid "Maximum depth (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:308
+msgid "Maximum height (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:312
+msgid "If you have an heated bed, this enabled heated bed settings (requires restart)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:314
+msgid ""
+"Flavor of generated GCode.\n"
+"RepRap..."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:314
+msgid "GCode Flavor"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:315
+msgid "Amount of extruders in your machine."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:315
+msgid "Extruder count"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:316
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:317
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:318
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:319
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:320
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:321
+msgid "The offset of your secondary extruder compared to the primary."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:316
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:318
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:320
+msgid "Offset X"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:317
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:319
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:321
+msgid "Offset Y"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:322
+msgid "Density (kg/m3)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:322
+msgid "Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. This value is used to estimate the weight if the filament used for the print."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:323
+msgid "Amount of steps per mm filament extrusion. If set to 0 then this value is ignored and the value in your firmware is used."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:323
+msgid "E-Steps per 1mm filament"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:324
+msgid "Serial port"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:324
+msgid "Serial port to use for communication with the printer"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:326
+msgid "Baudrate"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:326
+msgid ""
+"Speed of the serial port communication\n"
+"Needs to match your firmware settings\n"
+"Common values are 250000, 115200, 57600"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:328
+msgid "Save profile on slice"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:328
+msgid "When slicing save the profile as [stl_file]_profile.ini next to the model."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:329
+msgid "Cost (price/kg)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:329
+msgid "Cost of your filament per kg, to estimate the cost of the final print."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:330
+msgid "Cost (price/m)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:330
+msgid "Cost of your filament per meter, to estimate the cost of the final print."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:331
+msgid "Auto detect SD card drive"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:331
+msgid "Auto detect the SD card. You can disable this because on some systems external hard-drives or USB sticks are detected as SD card."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:332
+msgid "Check for newer versions of Cura on startup"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:332
+msgid "Check for updates"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:333
+msgid "Send usage statistics"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:333
+msgid "Submit anonymous usage information to improve next versions of Cura"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:336
+msgid "Head size towards X min (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:336
+msgid "The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan is on the left side."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:337
+msgid "Head size towards Y min (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:337
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:338
+msgid "The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan is on the left side."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:338
+msgid "Head size towards X max (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:339
+msgid "Head size towards Y max (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:339
+msgid "The head size when printing multiple objects, measured from the tip of the nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan is on the left side."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:340
+msgid "Printer gantry height (mm)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:340
+msgid "The height of the gantry holding up the printer head. If an object is higher then this then you cannot print multiple objects one for one. 60mm for an Ultimaker."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:342
+msgid "Model colour"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:343
+msgid "Model colour (2)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:344
+msgid "Model colour (3)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:345
+msgid "Model colour (4)"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:354
+msgid "More flow then 150% is rare and usually not recommended."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:355
+msgid "More flow then 50% is rare and usually not recommended."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:356
+msgid "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and are not recommended."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:358
+msgid "It is highly unlikely that your machine can achieve a printing speed above 150mm/s"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:360
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:361
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:362
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:363
+msgid "Temperatures above 260C could damage your machine, be careful!"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:364
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:365
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:366
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:367
+msgid "Are you sure your filament is that thick? Normal filament is around 3mm or 1.75mm."
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:368
+msgid "It is highly unlikely that your machine can achieve a travel speed above 300mm/s"
+msgstr ""
+
+#: C:\Build\Cura-git\Cura\Cura\util\profile.py:369
+msgid "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad results and is not recommended."
+msgstr ""
+
