@@ -184,7 +184,7 @@ class mainWindow(wx.Frame):
 		self.leftSizer.Add(self.normalSettingsPanel, 1, wx.EXPAND)
 		self.leftPane.SetSizer(self.leftSizer)
 
-		buyFilamentButton = wx.Button(self.leftPane, -1, _("Buy filament"), style=wx.BU_EXACTFIT)
+		buyFilamentButton = wx.Button(self.leftPane, -1, _("Buy filament on-line"), style=wx.BU_EXACTFIT)
 		self.leftPane.GetSizer().Add(buyFilamentButton, border=5, flag=wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_BOTTOM)
 		self.Bind(wx.EVT_BUTTON, lambda e: webbrowser.open('http://3dfilament.ru/'), buyFilamentButton)
 		
