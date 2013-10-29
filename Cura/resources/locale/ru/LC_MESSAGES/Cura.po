@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-08 14:30+0200\n"
-"PO-Revision-Date: 2013-10-29 15:54+0400\n"
+"PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -476,7 +476,7 @@ msgstr "Печать...\tCTRL+P"
 
 #: Cura/gui/mainWindow.py:66 Cura/gui/sceneView.py:244
 msgid "Save GCode..."
-msgstr "Сохранить GCode"
+msgstr ""
 
 #: Cura/gui/mainWindow.py:68
 msgid "Show slice engine log..."
@@ -764,7 +764,7 @@ msgstr "Подключить"
 #: Cura/gui/printWindow.py:181 Cura/gui/sceneView.py:65
 #: Cura/gui/sceneView.py:803
 msgid "Print"
-msgstr "Печать"
+msgstr ""
 
 #: Cura/gui/printWindow.py:182 Cura/gui/printWindow.py:428
 msgid "Pause"
@@ -847,119 +847,119 @@ msgstr "Стоимость пластика: %s\n"
 
 #: Cura/gui/sceneView.py:64
 msgid "Load"
-msgstr "Загрузить"
+msgstr ""
 
 #: Cura/gui/sceneView.py:69
 msgid "Rotate"
-msgstr "Повернуть"
+msgstr ""
 
 #: Cura/gui/sceneView.py:70
 msgid "Scale"
-msgstr "Масштабировать"
+msgstr ""
 
 #: Cura/gui/sceneView.py:71
 msgid "Mirror"
-msgstr "Отразить"
+msgstr ""
 
 #: Cura/gui/sceneView.py:73 Cura/gui/sceneView.py:76
 msgid "Reset"
-msgstr "Сбросить"
+msgstr ""
 
 #: Cura/gui/sceneView.py:74
 msgid "Lay flat"
-msgstr "Расположить на поверхности"
+msgstr ""
 
 #: Cura/gui/sceneView.py:77
 msgid "To max"
-msgstr "Максимальный размер"
+msgstr ""
 
 #: Cura/gui/sceneView.py:79
 msgid "Mirror X"
-msgstr "Отражение X"
+msgstr ""
 
 #: Cura/gui/sceneView.py:80
 msgid "Mirror Y"
-msgstr "Отражение Y"
+msgstr ""
 
 #: Cura/gui/sceneView.py:81
 msgid "Mirror Z"
-msgstr "Отражение Z"
+msgstr ""
 
 #: Cura/gui/sceneView.py:89
 msgid "Scale X"
-msgstr "Масштаб X"
+msgstr ""
 
 #: Cura/gui/sceneView.py:91
 msgid "Scale Y"
-msgstr "Масштаб Y"
+msgstr ""
 
 #: Cura/gui/sceneView.py:93
 msgid "Scale Z"
-msgstr "Масштаб Z"
+msgstr ""
 
 #: Cura/gui/sceneView.py:95
 msgid "Size X (mm)"
-msgstr "Размер X (мм)"
+msgstr ""
 
 #: Cura/gui/sceneView.py:97
 msgid "Size Y (mm)"
-msgstr "Размер Y (мм)"
+msgstr ""
 
 #: Cura/gui/sceneView.py:99
 msgid "Size Z (mm)"
-msgstr "Размер Z (мм)"
+msgstr ""
 
 #: Cura/gui/sceneView.py:101
 msgid "Uniform scale"
-msgstr "Равномерное масштабирование"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "View mode"
-msgstr "Режимы просмотра"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "Normal"
-msgstr "Стандартный"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "Overhang"
-msgstr "Подвешивание"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "Transparent"
-msgstr "Прозрачный"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "X-Ray"
-msgstr "Рентген"
+msgstr ""
 
 #: Cura/gui/sceneView.py:104
 msgid "Layers"
-msgstr "Слои"
+msgstr ""
 
 #: Cura/gui/sceneView.py:107
 msgid "Share on YouMagine"
-msgstr "Поделиться на YouMagine"
+msgstr ""
 
 #: Cura/gui/sceneView.py:198
 msgid "Open 3D model"
-msgstr "Открыть 3D модель"
+msgstr ""
 
 #: Cura/gui/sceneView.py:213
 msgid "Save 3D model"
-msgstr "Сохранить 3D модель"
+msgstr ""
 
 #: Cura/gui/sceneView.py:243
 msgid "Print with USB"
-msgstr "Печать через USB"
+msgstr ""
 
 #: Cura/gui/sceneView.py:245
 msgid "Slice engine log..."
-msgstr "Журнал слайсера..."
+msgstr ""
 
 #: Cura/gui/sceneView.py:257 Cura/gui/sceneView.py:809
 msgid "Save toolpath"
-msgstr "Сохранить управляющий код"
+msgstr ""
 
 #: Cura/gui/sceneView.py:295
 msgid "The slicing engine reported the following"
@@ -1007,11 +1007,11 @@ msgstr "Удалить все объекты"
 
 #: Cura/gui/sceneView.py:806
 msgid "Toolpath to SD"
-msgstr "Записать на SD"
+msgstr ""
 
 #: Cura/gui/sceneView.py:1116
 msgid "Loading toolpath for visualization..."
-msgstr "Загрузка управляющего кода для визуализации..."
+msgstr ""
 
 #: Cura/gui/sceneView.py:1167
 msgid "Overhang view not working due to lack of OpenGL shaders support."
