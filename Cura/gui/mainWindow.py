@@ -184,6 +184,10 @@ class mainWindow(wx.Frame):
 		self.leftSizer.Add(self.normalSettingsPanel, 1, wx.EXPAND)
 		self.leftPane.SetSizer(self.leftSizer)
 
+		buyFilamentButton = wx.Button(self.leftPane, -1, _("Buy filament"), style=wx.BU_EXACTFIT)
+		self.leftPane.GetSizer().Add(buyFilamentButton, border=5, flag=wx.ALIGN_CENTER_HORIZONTAL|wx.ALIGN_BOTTOM)
+		self.Bind(wx.EVT_BUTTON, lambda e: webbrowser.open('http://3dfilament.ru/'), buyFilamentButton)
+		
 		#Preview window
 		self.scene = sceneView.SceneView(self.rightPane)
 
@@ -573,11 +577,11 @@ class normalSettingsPanel(configBase.configPanelBase):
 		self.SetSizer(wx.BoxSizer(wx.HORIZONTAL))
 		self.GetSizer().Add(self.nb, 1, wx.EXPAND)
 
-		(left, right, self.printPanel) = self.CreateDynamicConfigTab(self.nb, 'Basic')
+		(left, right, self.printPanel) = self.CreateDynamicConfigTab(self.nb, _('Basic'))
 		self._addSettingsToPanels('basic', left, right)
 		self.SizeLabelWidths(left, right)
 
-		(left, right, self.advancedPanel) = self.CreateDynamicConfigTab(self.nb, 'Advanced')
+		(left, right, self.advancedPanel) = self.CreateDynamicConfigTab(self.nb, _('Advanced'))
 		self._addSettingsToPanels('advanced', left, right)
 		self.SizeLabelWidths(left, right)
 
