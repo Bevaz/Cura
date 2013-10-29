@@ -72,6 +72,7 @@ def getLanguageOptions():
 	return [
 		# [None, 'System default'],
 		['en', 'English'],
+		['ru', 'Russian'],
 		# ['de', 'Deutsch'],
 		# ['fr', 'French'],
 		# ['nl', 'Nederlands'],

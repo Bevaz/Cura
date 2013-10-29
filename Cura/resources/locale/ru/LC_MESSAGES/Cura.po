@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-08 14:30+0200\n"
-"PO-Revision-Date: 2013-10-28 23:08+0400\n"
+"PO-Revision-Date: 2013-10-29 15:54+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2035,7 +2035,7 @@ msgid ""
 "weaker support which is easier to remove. 20% seems to be a good average."
 msgstr ""
 "Процент заполнения опорной сетки. Меньшее заполнение делает опорную сетку "
-"более хрупкой, которую легко уудалить. Рекомендуется задавать 20% "
+"более хрупкой, которую легко уудалить. Рекомендуется задавать 20%s "
 "заполнение."
 
 #: Cura/util/profile.py:207
@@ -2490,12 +2490,12 @@ msgstr ""
 #: Cura/util/profile.py:374
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
-msgstr "Не рекомендуется задавать поток более 150%"
+msgstr "Не рекомендуется задавать поток более 150%i"
 
 #: Cura/util/profile.py:375
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
-msgstr "Не рекомендуется задавать поток менее 50%"
+msgstr "Не рекомендуется задавать поток менее 50%i"
 
 #: Cura/util/profile.py:376
 #, python-format
