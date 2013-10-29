@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 21:01+0400\n"
+"POT-Creation-Date: 2013-10-30 01:19+0400\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:528
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:532
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Er is een nieuwere versie van Cura beschikbaar, wil je die downloaden?"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:528
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:532
 msgid "New version available"
 msgstr "Nieuwe versie beschikbaar"
 
@@ -421,7 +421,7 @@ msgstr ""
 "machine."
 
 #: Cura/gui/firmwareInstall.py:41 Cura/gui/firmwareInstall.py:100
-#: Cura/gui/mainWindow.py:463
+#: Cura/gui/mainWindow.py:467
 msgid "Firmware update"
 msgstr "Firmware update"
 
@@ -600,27 +600,32 @@ msgstr "Over Cura..."
 msgid "Help"
 msgstr "Help"
 
-#: Cura/gui/mainWindow.py:394
+#: Cura/gui/mainWindow.py:187
+#, fuzzy
+msgid "Buy filament"
+msgstr "Filament"
+
+#: Cura/gui/mainWindow.py:398
 msgid "Add new machine..."
 msgstr "Voeg Een Nieuwe Machine Toe..."
 
-#: Cura/gui/mainWindow.py:399
+#: Cura/gui/mainWindow.py:403
 msgid "Install custom firmware..."
 msgstr "Installeer Je Eigen Firmware..."
 
-#: Cura/gui/mainWindow.py:402
+#: Cura/gui/mainWindow.py:406
 msgid "Install default Marlin firmware..."
 msgstr "Installeer De Standaardfirmware..."
 
-#: Cura/gui/mainWindow.py:406
+#: Cura/gui/mainWindow.py:410
 msgid "Select profile file to load"
 msgstr "Selecteer Een Profielbestand Om Te Laden"
 
-#: Cura/gui/mainWindow.py:418
+#: Cura/gui/mainWindow.py:422
 msgid "Select gcode file to load profile from"
 msgstr "Selecteer Een GCode Bestand Om Het Profiel Uit Te Laden..."
 
-#: Cura/gui/mainWindow.py:431
+#: Cura/gui/mainWindow.py:435
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -629,15 +634,15 @@ msgstr ""
 "Deze feature werkt alleen wanneer GCode is gemaakt vanuit Cura nieuwe dan "
 "versie 12.07"
 
-#: Cura/gui/mainWindow.py:431
+#: Cura/gui/mainWindow.py:435
 msgid "Profile load error"
 msgstr "Fout bij het laden van het profiel"
 
-#: Cura/gui/mainWindow.py:435
+#: Cura/gui/mainWindow.py:439
 msgid "Select profile file to save"
 msgstr "Selecteer een profiel om op te slaan"
 
-#: Cura/gui/mainWindow.py:443
+#: Cura/gui/mainWindow.py:447
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -648,11 +653,11 @@ msgstr ""
 "opgeslagen!\n"
 "Wil je echt resetten?"
 
-#: Cura/gui/mainWindow.py:443
+#: Cura/gui/mainWindow.py:447
 msgid "Profile reset"
 msgstr "Reset profiel"
 
-#: Cura/gui/mainWindow.py:463
+#: Cura/gui/mainWindow.py:467
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -660,19 +665,27 @@ msgstr ""
 "Let op: Wanneer je je eigen firmware installeert, zou je machine niet goed "
 "kunnen werken en zou je je printer kunnen beschadigen."
 
-#: Cura/gui/mainWindow.py:464
+#: Cura/gui/mainWindow.py:468
 msgid "Open firmware to upload"
 msgstr "Open firmware om te installeren"
 
-#: Cura/gui/mainWindow.py:531
+#: Cura/gui/mainWindow.py:535
 msgid "You are running the latest version of Cura!"
 msgstr "Je hebt de nieuwste versie van Cura!"
 
-#: Cura/gui/mainWindow.py:531
+#: Cura/gui/mainWindow.py:535
 msgid "Awesome!"
 msgstr "Te gek!"
 
-#: Cura/gui/mainWindow.py:586
+#: Cura/gui/mainWindow.py:580
+msgid "Basic"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:584
+msgid "Advanced"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:590
 msgid "Plugins"
 msgstr "Plugins"
 

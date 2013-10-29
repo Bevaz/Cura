@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-29 21:01+0400\n"
+"POT-Creation-Date: 2013-10-30 01:19+0400\n"
 "PO-Revision-Date: 2013-10-03 08:10+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:528
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:532
 msgid "A new version of Cura is available, would you like to download?"
 msgstr ""
 "Une nouvelle version de Cura est disponible, voulez-vous la télécharger?"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:528
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:532
 msgid "New version available"
 msgstr "Nouvelle version disponible"
 
@@ -417,7 +417,7 @@ msgstr ""
 "votre machine."
 
 #: Cura/gui/firmwareInstall.py:41 Cura/gui/firmwareInstall.py:100
-#: Cura/gui/mainWindow.py:463
+#: Cura/gui/mainWindow.py:467
 msgid "Firmware update"
 msgstr "Mise à jour du micrologiciel"
 
@@ -594,29 +594,34 @@ msgstr "A propos de Cura..."
 msgid "Help"
 msgstr "Aide"
 
-#: Cura/gui/mainWindow.py:394
+#: Cura/gui/mainWindow.py:187
+#, fuzzy
+msgid "Buy filament"
+msgstr "Filament"
+
+#: Cura/gui/mainWindow.py:398
 msgid "Add new machine..."
 msgstr "Ajouter une nouvelle machine..."
 
-#: Cura/gui/mainWindow.py:399
+#: Cura/gui/mainWindow.py:403
 #, fuzzy
 msgid "Install custom firmware..."
 msgstr "Installer un micrologiciel maison"
 
-#: Cura/gui/mainWindow.py:402
+#: Cura/gui/mainWindow.py:406
 #, fuzzy
 msgid "Install default Marlin firmware..."
 msgstr "Installer le micrologicel Marlin par défaut"
 
-#: Cura/gui/mainWindow.py:406
+#: Cura/gui/mainWindow.py:410
 msgid "Select profile file to load"
 msgstr "Sélection du profil à "
 
-#: Cura/gui/mainWindow.py:418
+#: Cura/gui/mainWindow.py:422
 msgid "Select gcode file to load profile from"
 msgstr "Sélection du fichier GCode à utiliser"
 
-#: Cura/gui/mainWindow.py:431
+#: Cura/gui/mainWindow.py:435
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -624,15 +629,15 @@ msgstr ""
 "Pas de profil trouvé dans le fichier GCode.\n"
 "Cette option ne marche qu'avec les fichiers crées à partir de Cura 12.07. "
 
-#: Cura/gui/mainWindow.py:431
+#: Cura/gui/mainWindow.py:435
 msgid "Profile load error"
 msgstr "Erreur de chargement du profil"
 
-#: Cura/gui/mainWindow.py:435
+#: Cura/gui/mainWindow.py:439
 msgid "Select profile file to save"
 msgstr "Sélectio du profil à sauvegarder"
 
-#: Cura/gui/mainWindow.py:443
+#: Cura/gui/mainWindow.py:447
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -642,11 +647,11 @@ msgstr ""
 "A moins de l'avoir sauvegardé, tous les réglages actuels seront perdus!\n"
 "Voulez-vous vraiment les réinitialiser?"
 
-#: Cura/gui/mainWindow.py:443
+#: Cura/gui/mainWindow.py:447
 msgid "Profile reset"
 msgstr "Réinitialisation du profile"
 
-#: Cura/gui/mainWindow.py:463
+#: Cura/gui/mainWindow.py:467
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -654,19 +659,27 @@ msgstr ""
 "Attention: installer un micrologiciel maison ne garantit pas le bon "
 "fonctionnement de votre machine et pourrait même l'endommager."
 
-#: Cura/gui/mainWindow.py:464
+#: Cura/gui/mainWindow.py:468
 msgid "Open firmware to upload"
 msgstr "Sélection du micrologiciel à mettre à jour"
 
-#: Cura/gui/mainWindow.py:531
+#: Cura/gui/mainWindow.py:535
 msgid "You are running the latest version of Cura!"
 msgstr "Vous avez la dernière version de Cura!"
 
-#: Cura/gui/mainWindow.py:531
+#: Cura/gui/mainWindow.py:535
 msgid "Awesome!"
 msgstr "Excellent!"
 
-#: Cura/gui/mainWindow.py:586
+#: Cura/gui/mainWindow.py:580
+msgid "Basic"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:584
+msgid "Advanced"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:590
 msgid "Plugins"
 msgstr "Extensions"
 
