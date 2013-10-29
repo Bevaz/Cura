@@ -320,6 +320,10 @@ class Slicer(object):
 			settings['layerThickness'] = 1000
 		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 			settings['gcodeFlavor'] = 1
+		if profile.getMachineSetting('gcode_flavor') == 'MakerBot':
+			settings['gcodeFlavor'] = 2
+		if profile.getMachineSetting('gcode_flavor') == 'Myriwell':
+			settings['gcodeFlavor'] = 3
 		return settings
 
 	def _runSliceProcess(self, cmdList):
