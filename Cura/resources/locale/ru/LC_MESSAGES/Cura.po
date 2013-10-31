@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-30 01:56+0400\n"
+"POT-Creation-Date: 2013-10-31 08:26+0400\n"
 "PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,8 +137,9 @@ msgid "What kind of machine do you have:"
 msgstr "Какой у вас принтер:"
 
 #: Cura/gui/configWizard.py:315
-msgid "Other (Ex: RepRap, MakerBot)"
-msgstr "Другая модель (Например: RepRap, Makerbot)"
+#, fuzzy
+msgid "Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"
+msgstr "Другая модель (Например: Joysmaker, Myriwell, RepRap, Makerbot)"
 
 #: Cura/gui/configWizard.py:318
 msgid ""
@@ -596,7 +597,6 @@ msgid "Help"
 msgstr "Помощь"
 
 #: Cura/gui/mainWindow.py:187
-#, fuzzy
 msgid "Buy filament on-line"
 msgstr "Заказать пластик онлайн"
 
@@ -1441,7 +1441,7 @@ msgid ""
 msgstr ""
 "Диаметр сопла - это очень важный параметр. Он используется для подсчета "
 "толщины линии для заполнения и используется для подсчета количества линий "
-"внешнего периметра."
+"внешнего периметра. Это физическая характеристика вашего принтра."
 
 #: Cura/util/profile.py:159 Cura/util/profile.py:160 Cura/util/profile.py:161
 #: Cura/util/profile.py:162 Cura/util/profile.py:163 Cura/util/profile.py:164

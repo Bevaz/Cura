@@ -312,7 +312,7 @@ class MachineSelectPage(InfoPage):
 		self.Ultimaker2Radio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimaker2Select)
 		self.UltimakerRadio = self.AddRadioButton("Ultimaker")
 		self.UltimakerRadio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimakerSelect)
-		self.OtherRadio = self.AddRadioButton(_("Other (Ex: RepRap, MakerBot)"))
+		self.OtherRadio = self.AddRadioButton(_("Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"))
 		self.OtherRadio.Bind(wx.EVT_RADIOBUTTON, self.OnOtherSelect)
 		self.AddSeperator()
 		self.AddText(_("The collection of anonymous usage information helps with the continued improvement of Cura."))

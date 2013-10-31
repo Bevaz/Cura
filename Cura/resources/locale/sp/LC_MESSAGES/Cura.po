@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-30 01:56+0400\n"
+"POT-Creation-Date: 2013-10-31 08:26+0400\n"
 "PO-Revision-Date: 2013-10-02 14:50+0100\n"
 "Last-Translator: Jose Gemez <josegemez@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,7 +136,7 @@ msgstr "Que tipo de máquina tienes:"
 
 #: Cura/gui/configWizard.py:315
 #, fuzzy
-msgid "Other (Ex: RepRap, MakerBot)"
+msgid "Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"
 msgstr "Otras (ej. RepRap)"
 
 #: Cura/gui/configWizard.py:318
