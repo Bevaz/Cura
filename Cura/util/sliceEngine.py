@@ -205,9 +205,9 @@ class Slicer(object):
 						self._callback(progressValue, False)
 					except:
 						pass
-			elif line.startswith('Print time:'):
+			elif line.startswith(_('Print time:')):
 				self._printTimeSeconds = int(line.split(':')[1].strip())
-			elif line.startswith('Filament:'):
+			elif line.startswith(_('Filament:')):
 				self._filamentMM = int(line.split(':')[1].strip())
 				if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 					radius = profile.getProfileSettingFloat('filament_diameter') / 2.0
@@ -252,12 +252,12 @@ class Slicer(object):
 			'fanOnLayerNr': int(profile.getProfileSettingFloat('fan_layer')),
 			'fanSpeedMin': int(profile.getProfileSettingFloat('fan_speed')) if profile.getProfileSetting('fan_enabled') == 'True' else 0,
 			'fanSpeedMax': int(profile.getProfileSettingFloat('fan_speed_max')) if profile.getProfileSetting('fan_enabled') == 'True' else 0,
-			'supportAngle': int(-1) if profile.getProfileSetting('support') == 'None' else int(60),
-			'supportEverywhere': int(1) if profile.getProfileSetting('support') == 'Everywhere' else int(0),
+			'supportAngle': int(-1) if profile.getProfileSetting('support') == _('None') else int(60),
+			'supportEverywhere': int(1) if profile.getProfileSetting('support') == _('Everywhere') else int(0),
 			'supportLineDistance': int(100 * profile.calculateEdgeWidth() * 1000 / profile.getProfileSettingFloat('support_fill_rate')) if profile.getProfileSettingFloat('support_fill_rate') > 0 else -1,
 			'supportXYDistance': int(1000 * profile.getProfileSettingFloat('support_xy_distance')),
 			'supportZDistance': int(1000 * profile.getProfileSettingFloat('support_z_distance')),
-			'supportExtruder': 0 if profile.getProfileSetting('support_dual_extrusion') == 'First extruder' else (1 if profile.getProfileSetting('support_dual_extrusion') == 'Second extruder' else -1),
+			'supportExtruder': 0 if profile.getProfileSetting('support_dual_extrusion') == 'First extruder' else (1 if profile.getProfileSetting('support_dual_extrusion') == _('Second extruder') else -1),
 			'retractionAmount': int(profile.getProfileSettingFloat('retraction_amount') * 1000) if profile.getProfileSetting('retraction_enable') == 'True' else 0,
 			'retractionSpeed': int(profile.getProfileSettingFloat('retraction_speed')),
 			'retractionMinimalDistance': int(profile.getProfileSettingFloat('retraction_min_travel') * 1000),
@@ -290,10 +290,10 @@ class Slicer(object):
 			settings['upSkinCount'] = 10000
 		else:
 			settings['sparseInfillLineDistance'] = int(100 * profile.calculateEdgeWidth() * 1000 / profile.getProfileSettingFloat('fill_density'))
-		if profile.getProfileSetting('platform_adhesion') == 'Brim':
+		if profile.getProfileSetting('platform_adhesion') == _('Brim'):
 			settings['skirtDistance'] = 0
 			settings['skirtLineCount'] = int(profile.getProfileSettingFloat('brim_line_count'))
-		elif profile.getProfileSetting('platform_adhesion') == 'Raft':
+		elif profile.getProfileSetting('platform_adhesion') == _('Raft'):
 			settings['skirtDistance'] = 0
 			settings['skirtLineCount'] = 0
 			settings['raftMargin'] = int(profile.getProfileSettingFloat('raft_margin') * 1000)

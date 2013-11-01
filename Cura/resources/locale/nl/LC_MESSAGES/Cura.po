@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 08:26+0400\n"
+"POT-Creation-Date: 2013-11-01 22:53+0400\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -1508,6 +1508,7 @@ msgstr ""
 "voorverwarmt."
 
 #: Cura/util/profile.py:165 Cura/util/profile.py:166
+#: Cura/util/sliceEngine.py:255
 msgid "None"
 msgstr "Geen"
 
@@ -1515,7 +1516,7 @@ msgstr "Geen"
 msgid "Touching buildplate"
 msgstr "Contact met platform"
 
-#: Cura/util/profile.py:165
+#: Cura/util/profile.py:165 Cura/util/sliceEngine.py:256
 msgid "Everywhere"
 msgstr "Overal"
 
@@ -1544,12 +1545,13 @@ msgstr ""
 "\"Overal\" genereert ook ondersteuning in een model zelf."
 
 #: Cura/util/profile.py:166 Cura/util/profile.py:212
+#: Cura/util/sliceEngine.py:293
 msgid "Brim"
 msgstr "Boord"
 
 #: Cura/util/profile.py:166 Cura/util/profile.py:213 Cura/util/profile.py:214
 #: Cura/util/profile.py:215 Cura/util/profile.py:216 Cura/util/profile.py:217
-#: Cura/util/profile.py:218
+#: Cura/util/profile.py:218 Cura/util/sliceEngine.py:296
 msgid "Raft"
 msgstr "Mat"
 
@@ -1582,7 +1584,7 @@ msgstr "Beide"
 msgid "First extruder"
 msgstr "Eerste kop"
 
-#: Cura/util/profile.py:167
+#: Cura/util/profile.py:167 Cura/util/sliceEngine.py:260
 msgid "Second extruder"
 msgstr "Tweede kop"
 
@@ -2559,6 +2561,16 @@ msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
 "results and is not recommended."
 msgstr ""
+
+#: Cura/util/sliceEngine.py:208
+#, fuzzy
+msgid "Print time:"
+msgstr "Print"
+
+#: Cura/util/sliceEngine.py:210
+#, fuzzy
+msgid "Filament:"
+msgstr "Filament"
 
 #~ msgid "Copyright (C) David Braam"
 #~ msgstr "Auteursrecht (C) David Braam"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 08:26+0400\n"
+"POT-Creation-Date: 2013-11-01 22:55+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1384,6 +1384,7 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:165 Cura/util/profile.py:166
+#: Cura/util/sliceEngine.py:255
 msgid "None"
 msgstr ""
 
@@ -1391,7 +1392,7 @@ msgstr ""
 msgid "Touching buildplate"
 msgstr ""
 
-#: Cura/util/profile.py:165
+#: Cura/util/profile.py:165 Cura/util/sliceEngine.py:256
 msgid "Everywhere"
 msgstr ""
 
@@ -1416,12 +1417,13 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:166 Cura/util/profile.py:212
+#: Cura/util/sliceEngine.py:293
 msgid "Brim"
 msgstr ""
 
 #: Cura/util/profile.py:166 Cura/util/profile.py:213 Cura/util/profile.py:214
 #: Cura/util/profile.py:215 Cura/util/profile.py:216 Cura/util/profile.py:217
-#: Cura/util/profile.py:218
+#: Cura/util/profile.py:218 Cura/util/sliceEngine.py:296
 msgid "Raft"
 msgstr ""
 
@@ -1448,7 +1450,7 @@ msgstr ""
 msgid "First extruder"
 msgstr ""
 
-#: Cura/util/profile.py:167
+#: Cura/util/profile.py:167 Cura/util/sliceEngine.py:260
 msgid "Second extruder"
 msgstr ""
 
@@ -2242,4 +2244,12 @@ msgstr ""
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
 "results and is not recommended."
+msgstr ""
+
+#: Cura/util/sliceEngine.py:208
+msgid "Print time:"
+msgstr ""
+
+#: Cura/util/sliceEngine.py:210
+msgid "Filament:"
 msgstr ""
