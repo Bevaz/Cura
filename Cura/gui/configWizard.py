@@ -223,11 +223,12 @@ class FirstInfoPage(InfoPage):
 			super(FirstInfoPage, self).__init__(parent, _("First time run wizard"))
 			self.AddText(_("Welcome, and thanks for trying Cura!"))
 			self.AddSeperator()
-		self.AddText(_("This wizard will help you with the following steps:"))
-		self.AddText(_("* Configure Cura for your machine"))
-		self.AddText(_("* Optionally upgrade your firmware"))
-		self.AddText(_("* Optionally check if your machine is working safely"))
-		self.AddText(_("* Optionally level your printer bed"))
+		self.AddText(_("This wizard will help you in setting up Cura for your machine."))
+		# self.AddText(_("This wizard will help you with the following steps:"))
+		# self.AddText(_("* Configure Cura for your machine"))
+		# self.AddText(_("* Optionally upgrade your firmware"))
+		# self.AddText(_("* Optionally check if your machine is working safely"))
+		# self.AddText(_("* Optionally level your printer bed"))
 
 		#self.AddText('* Calibrate your machine')
 		#self.AddText('* Do your first print')
@@ -237,7 +238,7 @@ class OtherMachineSelectPage(InfoPage):
 	def __init__(self, parent):
 		super(OtherMachineSelectPage, self).__init__(parent, "Other machine information")
 		self.AddText(_("The following pre-defined machine profiles are available"))
-		self.AddText(_("Note that these profiles are not guaranteed to give good results,\nor work at all. Extra tweaks might be required."))
+		self.AddText(_("Note that these profiles are not guaranteed to give good results,\nor work at all. Extra tweaks might be required.\nIf you find issues with the predefined profiles,\nor want an extra profile.\nPlease report it at the github issue tracker."))
 		self.options = []
 		machines = resources.getDefaultMachineProfiles()
 		machines.sort()
@@ -335,6 +336,7 @@ class MachineSelectPage(InfoPage):
 		return True
 
 	def StoreData(self):
+		profile.putProfileSetting('retraction_enable', 'True')
 		if self.Ultimaker2Radio.GetValue():
 			profile.putMachineSetting('machine_width', '230')
 			profile.putMachineSetting('machine_depth', '225')
@@ -344,12 +346,13 @@ class MachineSelectPage(InfoPage):
 			profile.putMachineSetting('machine_center_is_zero', 'False')
 			profile.putMachineSetting('has_heated_bed', 'True')
 			profile.putMachineSetting('gcode_flavor', 'UltiGCode')
-			profile.putProfileSetting('nozzle_size', '0.4')
 			profile.putMachineSetting('extruder_head_size_min_x', '40.0')
 			profile.putMachineSetting('extruder_head_size_min_y', '10.0')
 			profile.putMachineSetting('extruder_head_size_max_x', '60.0')
 			profile.putMachineSetting('extruder_head_size_max_y', '30.0')
 			profile.putMachineSetting('extruder_head_size_height', '60.0')
+			profile.putProfileSetting('nozzle_size', '0.4')
+			profile.putProfileSetting('fan_full_height', '5.0')
 		elif self.UltimakerRadio.GetValue():
 			profile.putMachineSetting('machine_width', '205')
 			profile.putMachineSetting('machine_depth', '205')
@@ -421,7 +424,7 @@ class UltimakerFirmwareUpgradePage(InfoPage):
 		skipUpgradeButton.Bind(wx.EVT_BUTTON, self.OnSkipClick)
 		self.AddHiddenSeperator()
 		self.AddText(_("Do not upgrade to this firmware if:"))
-		self.AddText(_("* You have an older machine based on ATMega1280"))
+		self.AddText(_("* You have an older machine based on ATMega1280 (Rev 1 machine)"))
 		self.AddText(_("* Have other changes in the firmware"))
 #		button = self.AddButton('Goto this page for a custom firmware')
 #		button.Bind(wx.EVT_BUTTON, self.OnUrlClick)

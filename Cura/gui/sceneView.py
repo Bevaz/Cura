@@ -460,6 +460,9 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		self._focusObj.setPosition(numpy.array([0.0, 0.0]))
 		self._scene.pushFree()
+		newViewPos = numpy.array([self._focusObj.getPosition()[0], self._focusObj.getPosition()[1], self._focusObj.getSize()[2] / 2])
+		self._animView = openglGui.animation(self, self._viewTarget.copy(), newViewPos, 0.5)
+		self.sceneUpdated()
 
 	def _splitCallback(self, progress):
 		print progress
@@ -519,7 +522,7 @@ class SceneView(openglGui.glGuiPanel):
 		self._gcode.load(self._gcodeFilename)
 
 	def _gcodeLoadCallback(self, progress):
-		if self._gcode is None:
+		if not self or self._gcode is None:
 			return True
 		if len(self._gcode.layerList) % 15 == 0:
 			time.sleep(0.1)
