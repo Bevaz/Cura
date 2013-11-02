@@ -169,7 +169,7 @@ setting('filament_diameter',        2.85, float, 'basic',    _('Filament')).setR
 setting('filament_diameter2',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter2 (mm)"), _("Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter3',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter3 (mm)"), _("Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter as for nozzle 1."))
 setting('filament_diameter4',          0, float, 'basic',    _('Filament')).setRange(0).setLabel(_("Diameter4 (mm)"), _("Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter as for nozzle 1."))
-setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(1,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
+setting('filament_flow',            100., float, 'basic',    _('Filament')).setRange(5,300).setLabel(_("Flow (%)"), _("Flow compensation, the amount of material extruded is multiplied by this value"))
 setting('retraction_speed',         40.0, float, 'advanced', _('Retraction')).setRange(0.1).setLabel(_("Speed (mm/s)"), _("Speed at which the filament is retracted, a higher retraction speed works better. But a very high retraction speed can lead to filament grinding."))
 setting('retraction_amount',         4.5, float, 'advanced', _('Retraction')).setRange(0).setLabel(_("Distance (mm)"), _("Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm seems to generate good results."))
 setting('retraction_dual_amount',   16.5, float, 'advanced', _('Retraction')).setRange(0).setLabel(_("Dual extrusion switch amount (mm)"), _("Amount of retraction when switching nozzle with dual-extrusion, set at 0 for no retraction at all. A value of 16.0mm seems to generate good results."))
@@ -191,7 +191,7 @@ setting('skirt_gap',                 3.0, float, 'expert', 'Skirt').setRange(0).
 setting('skirt_minimal_length',    150.0, float, 'expert', 'Skirt').setRange(0).setLabel(_("Minimal length (mm)"), _("The minimal length of the skirt, if this minimal length is not reached it will add more skirt lines to reach this minimal lenght.\nNote: If the line count is set to 0 this is ignored."))
 #setting('max_z_speed',               3.0, float, 'expert',   _('Speed')).setRange(0.1).setLabel(_("Max Z speed (mm/s)"), _("Speed at which Z moves are done. When you Z axis is properly lubricated you can increase this for less Z blob."))
 #setting('retract_on_jumps_only',    True, bool,  'expert',   _('Retraction')).setLabel(_('Retract on jumps only'), _('Only retract when we are making a move that is over a hole in the model, else retract on every move. This effects print quality in different ways.'))
-setting('fan_layer',                   1, int,   'expert',   _('Cool')).setRange(0).setLabel(_("Fan on layer number"), _("The layer at which the fan is turned on. The first layer is layer 0. The first layer can stick better if you turn on the fan on, on the 2nd layer."))
+setting('fan_full_height',           0.5, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Fan full on at height"), _("The height at which the fan is turned on completely. For the layers below this the fan speed is scaled linear with the fan off at layer 0."))
 setting('fan_speed',                 100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed min (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Minimal fan speed is used if the layer is not slowed down due to cooling."))
 setting('fan_speed_max',             100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed max (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Maximal fan speed is used if the layer is slowed down due to cooling by more than 200%."))
 setting('cool_min_feedrate',          10, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Minimum speed (mm/s)"), _("The minimal layer time can cause the print to slow down so much it starts to ooze. The minimal feedrate protects against this. Even if a print gets slown down it will never be slower than this minimal speed."))
@@ -203,11 +203,10 @@ setting('cool_head_lift',          False, bool,  'expert',   _('Cool')).setLabel
 setting('solid_top', True, bool, 'expert', _('Infill')).setLabel(_("Solid infill top"), _("Create a solid top surface, if set to false the top is filled with the fill percentage. Useful for cups/vases."))
 setting('solid_bottom', True, bool, 'expert', _('Infill')).setLabel(_("Solid infill bottom"), _("Create a solid bottom surface, if set to false the bottom is filled with the fill percentage. Useful for buildings."))
 setting('fill_overlap', 15, int, 'expert', _('Infill')).setRange(0,100).setLabel(_("Infill overlap (%)"), _("Amount of overlap between the infill and the walls. There is a slight overlap with the walls and the infill so the walls connect firmly to the infill."))
-setting('support_fill_rate', 20, int, 'expert', _('Support')).setRange(0,100).setLabel(_("Fill amount (%)"), _("Amount of infill structure in the support material, less material gives weaker support which is easier to remove. 20% seems to be a good average."))
+setting('support_fill_rate', 15, int, 'expert', _('Support')).setRange(0,100).setLabel(_("Fill amount (%)"), _("Amount of infill structure in the support material, less material gives weaker support which is easier to remove. 15% seems to be a good average."))
 setting('support_xy_distance', 0.7, float, 'expert', _('Support')).setRange(0,10).setLabel(_("Distance X/Y (mm)"), _("Distance of the support material from the print, in the X/Y directions.\n0.7mm gives a nice distance from the print so the support does not stick to the print."))
 setting('support_z_distance', 0.15, float, 'expert', _('Support')).setRange(0,10).setLabel(_("Distance Z (mm)"), _("Distance from the top/bottom of the support to the print. A small gap here makes it easier to remove the support but makes the print a bit uglier.\n0.15mm gives a good seperation of the support material."))
-#setting('support_distance',  0.5, float, 'expert', _('Support')).setRange(0).setLabel(_("Distance from object (mm)"), _("Distance between the support structure and the object. Empty gap in which no support structure is printed."))
-#setting('joris', False, bool, 'expert', 'Joris').setLabel(_("Spiralize the outer contour"), _("[Joris] is a code name for smoothing out the Z move of the outer edge. This will create a steady Z increase over the whole print. It is intended to be used with a single walled wall thickness to make cups/vases."))
+setting('spiralize', False, bool, 'expert', 'Spiralize').setLabel(_("Spiralize the outer contour"), _("Spiralize is smoothing out the Z move of the outer edge. This will create a steady Z increase over the whole print. This feature turns a solid object into a single walled print with a solid bottom."))
 #setting('bridge_speed', 100, int, 'expert', 'Bridge').setRange(0,100).setLabel(_("Bridge speed (%)"), _("Speed at which layers with bridges are printed, compared to normal printing speed."))
 setting('brim_line_count', 20, int, 'expert', _('Brim')).setRange(1,100).setLabel(_("Brim line amount"), _("The amount of lines used for a brim, more lines means a larger brim which sticks better, but this also makes your effective print area smaller."))
 setting('raft_margin', 5, float, 'expert', _('Raft')).setRange(0).setLabel(_("Extra margin (mm)"), _("If the raft is enabled, this is the extra raft area around the object which is also rafted. Increasing this margin will create a stronger raft while using more material and leaving less are for your print."))
@@ -231,6 +230,8 @@ setting('start.gcode', """;Sliced at: {day} {date} {time}
 ;Print time: {print_time}
 ;Filament used: {filament_amount}m {filament_weight}g
 ;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M109 S{print_temperature} ;Uncomment to add your own temperature line
 G21        ;metric values
 G90        ;absolute positioning
 M107       ;start with the fan off
@@ -244,6 +245,7 @@ G92 E0                  ;zero the extruded length
 G1 F200 E3              ;extrude 3mm of feed stock
 G92 E0                  ;zero the extruded length again
 G1 F{travel_speed}
+;Put printing message on LCD screen
 M117 Printing...
 """, str, 'alteration', 'alteration')
 #######################################################################################
@@ -265,6 +267,10 @@ setting('start2.gcode', """;Sliced at: {day} {date} {time}
 ;Print time: {print_time}
 ;Filament used: {filament_amount}m {filament_weight}g
 ;Filament cost: {filament_cost}
+;M190 S{print_bed_temperature} ;Uncomment to add your own bed temperature line
+;M104 S{print_temperature} ;Uncomment to add your own temperature line
+;M109 T1 S{print_temperature2} ;Uncomment to add your own temperature line
+;M109 T0 S{print_temperature} ;Uncomment to add your own temperature line
 G21        ;metric values
 G90        ;absolute positioning
 M107       ;start with the fan off
@@ -274,17 +280,18 @@ G28 Z0     ;move Z to min endstops
 
 G1 Z15.0 F{travel_speed} ;move the platform down 15mm
 
-T1
+T1                      ;Switch to the 2nd extruder
 G92 E0                  ;zero the extruded length
 G1 F200 E10             ;extrude 10mm of feed stock
 G92 E0                  ;zero the extruded length again
 G1 F200 E-{retraction_dual_amount}
 
-T0
+T0                      ;Switch to the first extruder
 G92 E0                  ;zero the extruded length
-G1 F200 E10              ;extrude 10mm of feed stock
+G1 F200 E10             ;extrude 10mm of feed stock
 G92 E0                  ;zero the extruded length again
 G1 F{travel_speed}
+;Put printing message on LCD screen
 M117 Printing...
 """, str, 'alteration', 'alteration')
 #######################################################################################
@@ -503,7 +510,7 @@ def resetProfile():
 	#Read a configuration file as global config
 	global settingsList
 	for set in settingsList:
-		if set.isPreference():
+		if not set.isProfile():
 			continue
 		set.setValue(set.getDefault())
 
@@ -516,6 +523,7 @@ def resetProfile():
 		putProfileSetting('retraction_enable', 'True')
 	else:
 		putProfileSetting('nozzle_size', '0.5')
+		putProfileSetting('retraction_enable', 'True')
 
 def setProfileFromString(options):
 	options = base64.b64decode(options)
@@ -791,6 +799,9 @@ def calculateEdgeWidth():
 	wallThickness = getProfileSettingFloat('wall_thickness')
 	nozzleSize = getProfileSettingFloat('nozzle_size')
 
+	if getProfileSetting('spiralize') == 'True':
+		return wallThickness
+
 	if wallThickness < 0.01:
 		return nozzleSize
 	if wallThickness < nozzleSize:
@@ -812,6 +823,8 @@ def calculateLineCount():
 	if wallThickness < 0.01:
 		return 0
 	if wallThickness < nozzleSize:
+		return 1
+	if getProfileSetting('spiralize') == 'True':
 		return 1
 
 	lineCount = int(wallThickness / (nozzleSize - 0.0001))
@@ -919,6 +932,10 @@ def setAlterationFile(name, value):
 		settingsDictionary[name].setValue(value)
 	saveProfile(getDefaultProfilePath())
 
+def isTagIn(tag, contents):
+	contents = re.sub(';[^\n]*\n', '', contents)
+	return tag in contents
+
 ### Get the alteration file for output. (Used by Skeinforge)
 def getAlterationFileContents(filename, extruderCount = 1):
 	prefix = ''
@@ -939,9 +956,9 @@ def getAlterationFileContents(filename, extruderCount = 1):
 		if getMachineSetting('has_heated_bed') == 'True':
 			bedTemp = getProfileSettingFloat('print_bed_temperature')
 
-		if bedTemp > 0 and not '{print_bed_temperature}' in alterationContents:
+		if bedTemp > 0 and isTagIn('{print_bed_temperature}', alterationContents):
 			prefix += 'M140 S%f\n' % (bedTemp)
-		if temp > 0 and not '{print_temperature}' in alterationContents:
+		if temp > 0 and not isTagIn('{print_temperature}', alterationContents):
 			if extruderCount > 0:
 				for n in xrange(1, extruderCount):
 					t = temp
@@ -956,7 +973,7 @@ def getAlterationFileContents(filename, extruderCount = 1):
 				prefix += 'T0\n'
 			else:
 				prefix += 'M109 S%f\n' % (temp)
-		if bedTemp > 0 and not '{print_bed_temperature}' in alterationContents:
+		if bedTemp > 0 and not isTagIn('{print_bed_temperature}', alterationContents):
 			prefix += 'M190 S%f\n' % (bedTemp)
 	elif filename == 'end.gcode':
 		if extruderCount > 1:
