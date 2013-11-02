@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 22:53+0400\n"
+"POT-Creation-Date: 2013-11-03 00:06+0400\n"
 "PO-Revision-Date: 2013-09-27 09:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1383,19 +1383,6 @@ msgid ""
 "Temperature used for the heated printer bed. Set at 0 to pre-heat yourself."
 msgstr ""
 
-#: Cura/util/profile.py:165 Cura/util/profile.py:166
-#: Cura/util/sliceEngine.py:255
-msgid "None"
-msgstr ""
-
-#: Cura/util/profile.py:165
-msgid "Touching buildplate"
-msgstr ""
-
-#: Cura/util/profile.py:165 Cura/util/sliceEngine.py:256
-msgid "Everywhere"
-msgstr ""
-
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:206 Cura/util/profile.py:207 Cura/util/profile.py:208
 msgid "Support"
@@ -1416,17 +1403,6 @@ msgid ""
 "Everywhere creates support even on top of parts of the model."
 msgstr ""
 
-#: Cura/util/profile.py:166 Cura/util/profile.py:212
-#: Cura/util/sliceEngine.py:293
-msgid "Brim"
-msgstr ""
-
-#: Cura/util/profile.py:166 Cura/util/profile.py:213 Cura/util/profile.py:214
-#: Cura/util/profile.py:215 Cura/util/profile.py:216 Cura/util/profile.py:217
-#: Cura/util/profile.py:218 Cura/util/sliceEngine.py:296
-msgid "Raft"
-msgstr ""
-
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr ""
@@ -1440,18 +1416,6 @@ msgid ""
 "Raft adds a thick raster at below the object and a thin interface between "
 "this and your object.\n"
 "(Note that enabling the brim or raft disables the skirt)"
-msgstr ""
-
-#: Cura/util/profile.py:167
-msgid "Both"
-msgstr ""
-
-#: Cura/util/profile.py:167
-msgid "First extruder"
-msgstr ""
-
-#: Cura/util/profile.py:167 Cura/util/sliceEngine.py:260
-msgid "Second extruder"
 msgstr ""
 
 #: Cura/util/profile.py:167
@@ -1840,6 +1804,10 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:212
+msgid "Brim"
+msgstr ""
+
+#: Cura/util/profile.py:212
 msgid "Brim line amount"
 msgstr ""
 
@@ -1847,6 +1815,11 @@ msgstr ""
 msgid ""
 "The amount of lines used for a brim, more lines means a larger brim which "
 "sticks better, but this also makes your effective print area smaller."
+msgstr ""
+
+#: Cura/util/profile.py:213 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+msgid "Raft"
 msgstr ""
 
 #: Cura/util/profile.py:213

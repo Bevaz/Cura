@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-01 22:53+0400\n"
+"POT-Creation-Date: 2013-11-03 00:06+0400\n"
 "PO-Revision-Date: 2013-10-02 11:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1496,19 +1496,6 @@ msgid ""
 msgstr ""
 "Temperatura używana dla stołu drukarki. Ustaw 0 aby rozgrzać samodzielnie."
 
-#: Cura/util/profile.py:165 Cura/util/profile.py:166
-#: Cura/util/sliceEngine.py:255
-msgid "None"
-msgstr ""
-
-#: Cura/util/profile.py:165
-msgid "Touching buildplate"
-msgstr ""
-
-#: Cura/util/profile.py:165 Cura/util/sliceEngine.py:256
-msgid "Everywhere"
-msgstr ""
-
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:206 Cura/util/profile.py:207 Cura/util/profile.py:208
 msgid "Support"
@@ -1537,17 +1524,6 @@ msgstr ""
 "Wszędzie powoduje utworzenie struktur wsparcia nawet w górnych częściach "
 "modelu."
 
-#: Cura/util/profile.py:166 Cura/util/profile.py:212
-#: Cura/util/sliceEngine.py:293
-msgid "Brim"
-msgstr "Obrys"
-
-#: Cura/util/profile.py:166 Cura/util/profile.py:213 Cura/util/profile.py:214
-#: Cura/util/profile.py:215 Cura/util/profile.py:216 Cura/util/profile.py:217
-#: Cura/util/profile.py:218 Cura/util/sliceEngine.py:296
-msgid "Raft"
-msgstr "Tratwa"
-
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr "Typ platformy przyklejania"
@@ -1569,18 +1545,6 @@ msgstr ""
 "Tratwa powoduje utworzenie grubej warstwy pod obiektem i cienkiego "
 "interfejsu pomiędzy taką tratwą a twoim obiektem.\n"
 "(Zwróć uwagę, że włączenie Obrysu lub Tratwy wyłączy Okrążanie)"
-
-#: Cura/util/profile.py:167
-msgid "Both"
-msgstr ""
-
-#: Cura/util/profile.py:167
-msgid "First extruder"
-msgstr ""
-
-#: Cura/util/profile.py:167 Cura/util/sliceEngine.py:260
-msgid "Second extruder"
-msgstr ""
 
 #: Cura/util/profile.py:167
 msgid "Support dual extrusion"
@@ -2073,6 +2037,10 @@ msgstr ""
 "0.15mm to dobra separacja supportu."
 
 #: Cura/util/profile.py:212
+msgid "Brim"
+msgstr "Obrys"
+
+#: Cura/util/profile.py:212
 msgid "Brim line amount"
 msgstr "Ilość lini obrysu"
 
@@ -2084,6 +2052,11 @@ msgstr ""
 "Ilość linii użytych do wydrukowania obrysu, więcej lini oznacza większy "
 "obrys który lepiej się przykleja, ale powoduje to zmniejszenia efektywnie "
 "dostępnej przestrzeni stołu."
+
+#: Cura/util/profile.py:213 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+msgid "Raft"
+msgstr "Tratwa"
 
 #: Cura/util/profile.py:213
 msgid "Extra margin (mm)"
@@ -2558,6 +2531,26 @@ msgstr "Drukowanie"
 #, fuzzy
 msgid "Filament:"
 msgstr "Filament"
+
+#, fuzzy
+#~ msgid "Print time: %02d:%02d\n"
+#~ msgstr "Drukowanie"
+
+#, fuzzy
+#~ msgid "Print time left: Unknown\n"
+#~ msgstr "Drukowanie"
+
+#, fuzzy
+#~ msgid "Temp: %s\n"
+#~ msgstr "Temp:"
+
+#, fuzzy
+#~ msgid "Bed Temp: %d\n"
+#~ msgstr "TempStołu:"
+
+#, fuzzy
+#~ msgid "Machine state:%s\n"
+#~ msgstr "Ustawienia drukarki"
 
 #~ msgid "End solution for Open Source Fused Filament Fabrication 3D printing."
 #~ msgstr ""
