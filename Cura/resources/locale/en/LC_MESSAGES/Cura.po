@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-03 00:46+0400\n"
+"POT-Creation-Date: 2013-11-13 19:29+0400\n"
 "PO-Revision-Date: 2013-09-27 09:41+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:533
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:534
 msgid "A new version of Cura is available, would you like to download?"
 msgstr ""
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:533
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:534
 msgid "New version available"
 msgstr ""
 
@@ -96,10 +96,14 @@ msgid "Machine height (mm)"
 msgstr ""
 
 #: Cura/gui/configWizard.py:286 Cura/util/profile.py:158
+#: Cura/util/profile.py.BASE.py:158 Cura/util/profile.py.LOCAL.py:158
+#: Cura/util/profile.py.REMOTE.py:158
 msgid "Nozzle size (mm)"
 msgstr ""
 
-#: Cura/gui/configWizard.py:287 Cura/util/profile.py:360
+#: Cura/gui/configWizard.py:287 Cura/util/profile.py:362
+#: Cura/util/profile.py.BASE.py:360 Cura/util/profile.py.LOCAL.py:360
+#: Cura/util/profile.py.REMOTE.py:362
 msgid "Heated bed"
 msgstr ""
 
@@ -139,220 +143,220 @@ msgstr ""
 msgid "For full details see: http://wiki.ultimaker.com/Cura:stats"
 msgstr ""
 
-#: Cura/gui/configWizard.py:389
+#: Cura/gui/configWizard.py:391
 msgid "Select upgraded parts you have"
 msgstr ""
 
-#: Cura/gui/configWizard.py:390
+#: Cura/gui/configWizard.py:392
 msgid ""
 "To assist you in having better default settings for your Ultimaker\n"
 "Cura would like to know which upgrades you have in your machine."
 msgstr ""
 
-#: Cura/gui/configWizard.py:392
+#: Cura/gui/configWizard.py:394
 msgid "Extruder drive upgrade"
 msgstr ""
 
-#: Cura/gui/configWizard.py:393
+#: Cura/gui/configWizard.py:395
 msgid "Heated printer bed (self built)"
 msgstr ""
 
-#: Cura/gui/configWizard.py:394
+#: Cura/gui/configWizard.py:396
 msgid "Dual extrusion (experimental)"
 msgstr ""
 
-#: Cura/gui/configWizard.py:396
+#: Cura/gui/configWizard.py:398
 msgid ""
 "If you have an Ultimaker bought after october 2012 you will have the\n"
 "Extruder drive upgrade. If you do not have this upgrade,\n"
 "it is highly recommended to improve reliability."
 msgstr ""
 
-#: Cura/gui/configWizard.py:397
+#: Cura/gui/configWizard.py:399
 msgid ""
 "This upgrade can be bought from the Ultimaker webshop\n"
 "or found on thingiverse as thing:26094"
 msgstr ""
 
-#: Cura/gui/configWizard.py:416
+#: Cura/gui/configWizard.py:418
 msgid "Upgrade Ultimaker Firmware"
 msgstr ""
 
-#: Cura/gui/configWizard.py:417
+#: Cura/gui/configWizard.py:419
 msgid ""
 "Firmware is the piece of software running directly on your 3D printer.\n"
 "This firmware controls the step motors, regulates the temperature\n"
 "and ultimately makes your printer work."
 msgstr ""
 
-#: Cura/gui/configWizard.py:419
+#: Cura/gui/configWizard.py:421
 msgid ""
 "The firmware shipping with new Ultimakers works, but upgrades\n"
 "have been made to make better prints, and make calibration easier."
 msgstr ""
 
-#: Cura/gui/configWizard.py:421
+#: Cura/gui/configWizard.py:423
 msgid ""
 "Cura requires these new features and thus\n"
 "your firmware will most likely need to be upgraded.\n"
 "You will get the chance to do so now."
 msgstr ""
 
-#: Cura/gui/configWizard.py:426
+#: Cura/gui/configWizard.py:428
 msgid "Do not upgrade to this firmware if:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:427
+#: Cura/gui/configWizard.py:429
 msgid "* You have an older machine based on ATMega1280 (Rev 1 machine)"
 msgstr ""
 
-#: Cura/gui/configWizard.py:428
+#: Cura/gui/configWizard.py:430
 msgid "* Have other changes in the firmware"
 msgstr ""
 
-#: Cura/gui/configWizard.py:462
+#: Cura/gui/configWizard.py:464
 msgid ""
 "It is a good idea to do a few sanity checks now on your Ultimaker.\n"
 "You can skip these if you know your machine is functional."
 msgstr ""
 
-#: Cura/gui/configWizard.py:463
+#: Cura/gui/configWizard.py:465
 msgid "Run checks"
 msgstr ""
 
-#: Cura/gui/configWizard.py:463
+#: Cura/gui/configWizard.py:465
 msgid "Skip checks"
 msgstr ""
 
-#: Cura/gui/configWizard.py:467
+#: Cura/gui/configWizard.py:469
 msgid "Communication:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:468
+#: Cura/gui/configWizard.py:470
 msgid "Temperature:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:469
+#: Cura/gui/configWizard.py:471
 msgid "Endstops:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:474
+#: Cura/gui/configWizard.py:476
 msgid "Show error log"
 msgstr ""
 
-#: Cura/gui/configWizard.py:508
+#: Cura/gui/configWizard.py:510
 msgid "Connecting to machine."
 msgstr ""
 
-#: Cura/gui/configWizard.py:529
+#: Cura/gui/configWizard.py:531
 msgid "Cooldown before temperature check."
 msgstr ""
 
-#: Cura/gui/configWizard.py:535 Cura/gui/configWizard.py:542
+#: Cura/gui/configWizard.py:537 Cura/gui/configWizard.py:544
 msgid "Checking the heater and temperature sensor."
 msgstr ""
 
-#: Cura/gui/configWizard.py:553
+#: Cura/gui/configWizard.py:555
 msgid "Please make sure none of the endstops are pressed."
 msgstr ""
 
-#: Cura/gui/configWizard.py:566
+#: Cura/gui/configWizard.py:568
 msgid "Temperature measurement FAILED!"
 msgstr ""
 
-#: Cura/gui/configWizard.py:571
+#: Cura/gui/configWizard.py:573
 #, python-format
 msgid "Head temperature: %d"
 msgstr ""
 
-#: Cura/gui/configWizard.py:578 Cura/gui/configWizard.py:587
+#: Cura/gui/configWizard.py:580 Cura/gui/configWizard.py:589
 #, python-format
 msgid "Communication State: %s"
 msgstr ""
 
-#: Cura/gui/configWizard.py:581
+#: Cura/gui/configWizard.py:583
 msgid "Failed to establish connection with the printer."
 msgstr ""
 
-#: Cura/gui/configWizard.py:626
+#: Cura/gui/configWizard.py:628
 msgid "Please press the right X endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:631
+#: Cura/gui/configWizard.py:633
 msgid "Please press the left X endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:636
+#: Cura/gui/configWizard.py:638
 msgid "Please press the front Y endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:641
+#: Cura/gui/configWizard.py:643
 msgid "Please press the back Y endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:646
+#: Cura/gui/configWizard.py:648
 msgid "Please press the top Z endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:651
+#: Cura/gui/configWizard.py:653
 msgid "Please press the bottom Z endstop."
 msgstr ""
 
-#: Cura/gui/configWizard.py:657
+#: Cura/gui/configWizard.py:659
 msgid "Checkup finished"
 msgstr ""
 
-#: Cura/gui/configWizard.py:700
+#: Cura/gui/configWizard.py:702
 msgid "Calibrating the Steps Per E requires some manual actions."
 msgstr ""
 
-#: Cura/gui/configWizard.py:701
+#: Cura/gui/configWizard.py:703
 msgid "First remove any filament from your machine."
 msgstr ""
 
-#: Cura/gui/configWizard.py:702
+#: Cura/gui/configWizard.py:704
 msgid ""
 "Next put in your filament so the tip is aligned with the\n"
 "top of the extruder drive."
 msgstr ""
 
-#: Cura/gui/configWizard.py:703
+#: Cura/gui/configWizard.py:705
 msgid "We'll push the filament 100mm"
 msgstr ""
 
-#: Cura/gui/configWizard.py:704
+#: Cura/gui/configWizard.py:706
 msgid "Extrude 100mm filament"
 msgstr ""
 
-#: Cura/gui/configWizard.py:705
+#: Cura/gui/configWizard.py:707
 msgid ""
 "Now measure the amount of extruded filament:\n"
 "(this can be more or less then 100mm)"
 msgstr ""
 
-#: Cura/gui/configWizard.py:706
+#: Cura/gui/configWizard.py:708
 msgid "Save"
 msgstr ""
 
-#: Cura/gui/configWizard.py:707
+#: Cura/gui/configWizard.py:709
 msgid "This results in the following steps per E:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:709
+#: Cura/gui/configWizard.py:711
 msgid "You can repeat these steps to get better calibration."
 msgstr ""
 
-#: Cura/gui/configWizard.py:712
+#: Cura/gui/configWizard.py:714
 msgid ""
 "If you still have filament in your printer which needs\n"
 "heat to remove, press the heat up button below:"
 msgstr ""
 
-#: Cura/gui/configWizard.py:713
+#: Cura/gui/configWizard.py:715
 msgid "Heatup for filament removal"
 msgstr ""
 
-#: Cura/gui/configWizard.py:736 Cura/gui/configWizard.py:768
+#: Cura/gui/configWizard.py:738 Cura/gui/configWizard.py:770
 msgid ""
 "Error: Failed to open serial port to machine\n"
 "If this keeps happening, try disconnecting and reconnecting the USB cable"
@@ -365,7 +369,7 @@ msgid ""
 msgstr ""
 
 #: Cura/gui/firmwareInstall.py:45 Cura/gui/firmwareInstall.py:49
-#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:468
+#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:469
 msgid "Firmware update"
 msgstr ""
 
@@ -495,6 +499,8 @@ msgid "Tools"
 msgstr ""
 
 #: Cura/gui/mainWindow.py:133 Cura/util/profile.py:158
+#: Cura/util/profile.py.BASE.py:158 Cura/util/profile.py.LOCAL.py:158
+#: Cura/util/profile.py.REMOTE.py:158
 msgid "Machine"
 msgstr ""
 
@@ -554,78 +560,78 @@ msgstr ""
 msgid "Buy filament on-line"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:398
+#: Cura/gui/mainWindow.py:399
 msgid "Add new machine..."
 msgstr ""
 
-#: Cura/gui/mainWindow.py:404
+#: Cura/gui/mainWindow.py:405
 msgid "Install default firmware..."
 msgstr ""
 
-#: Cura/gui/mainWindow.py:407
+#: Cura/gui/mainWindow.py:408
 msgid "Install custom firmware..."
 msgstr ""
 
-#: Cura/gui/mainWindow.py:411
+#: Cura/gui/mainWindow.py:412
 msgid "Select profile file to load"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:423
+#: Cura/gui/mainWindow.py:424
 msgid "Select gcode file to load profile from"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:436
+#: Cura/gui/mainWindow.py:437
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
 msgstr ""
 
-#: Cura/gui/mainWindow.py:436
+#: Cura/gui/mainWindow.py:437
 msgid "Profile load error"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:440
+#: Cura/gui/mainWindow.py:441
 msgid "Select profile file to save"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:448
+#: Cura/gui/mainWindow.py:449
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
 "Do you really want to reset?"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:448
+#: Cura/gui/mainWindow.py:449
 msgid "Profile reset"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:468
+#: Cura/gui/mainWindow.py:469
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
 msgstr ""
 
-#: Cura/gui/mainWindow.py:469
+#: Cura/gui/mainWindow.py:470
 msgid "Open firmware to upload"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:536
+#: Cura/gui/mainWindow.py:537
 msgid "You are running the latest version of Cura!"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:536
+#: Cura/gui/mainWindow.py:537
 msgid "Awesome!"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:581
+#: Cura/gui/mainWindow.py:582
 msgid "Basic"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:585
+#: Cura/gui/mainWindow.py:586
 msgid "Advanced"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:591
+#: Cura/gui/mainWindow.py:592
 msgid "Plugins"
 msgstr ""
 
@@ -653,7 +659,9 @@ msgstr ""
 msgid "Colours"
 msgstr ""
 
-#: Cura/gui/preferencesDialog.py:31 Cura/util/profile.py:338
+#: Cura/gui/preferencesDialog.py:31 Cura/util/profile.py:340
+#: Cura/util/profile.py.BASE.py:338 Cura/util/profile.py.LOCAL.py:338
+#: Cura/util/profile.py.REMOTE.py:340
 msgid "Language"
 msgstr ""
 
@@ -717,7 +725,7 @@ msgid "Connect"
 msgstr ""
 
 #: Cura/gui/printWindow.py:181 Cura/gui/sceneView.py:66
-#: Cura/gui/sceneView.py:814
+#: Cura/gui/sceneView.py:819
 msgid "Print"
 msgstr ""
 
@@ -761,8 +769,13 @@ msgstr ""
 msgid "Support:"
 msgstr ""
 
-#: Cura/gui/printWindow.py:290 Cura/util/profile.py:183
-#: Cura/util/profile.py:184 Cura/util/profile.py:185
+#: Cura/gui/printWindow.py:290 Cura/util/profile.py:185
+#: Cura/util/profile.py:186 Cura/util/profile.py:187
+#: Cura/util/profile.py.BASE.py:183 Cura/util/profile.py.BASE.py:184
+#: Cura/util/profile.py.BASE.py:185 Cura/util/profile.py.LOCAL.py:183
+#: Cura/util/profile.py.LOCAL.py:184 Cura/util/profile.py.LOCAL.py:185
+#: Cura/util/profile.py.REMOTE.py:185 Cura/util/profile.py.REMOTE.py:186
+#: Cura/util/profile.py.REMOTE.py:187
 msgid "Speed"
 msgstr ""
 
@@ -912,7 +925,7 @@ msgstr ""
 msgid "Slice engine log..."
 msgstr ""
 
-#: Cura/gui/sceneView.py:260 Cura/gui/sceneView.py:820
+#: Cura/gui/sceneView.py:260 Cura/gui/sceneView.py:825
 msgid "Save toolpath"
 msgstr ""
 
@@ -936,39 +949,39 @@ msgstr ""
 msgid "Multiply"
 msgstr ""
 
-#: Cura/gui/sceneView.py:685
+#: Cura/gui/sceneView.py:690
 msgid "Delete object"
 msgstr ""
 
-#: Cura/gui/sceneView.py:686
+#: Cura/gui/sceneView.py:691
 msgid "Center on platform"
 msgstr ""
 
-#: Cura/gui/sceneView.py:687
+#: Cura/gui/sceneView.py:692
 msgid "Multiply object"
 msgstr ""
 
-#: Cura/gui/sceneView.py:688
+#: Cura/gui/sceneView.py:693
 msgid "Split object into parts"
 msgstr ""
 
-#: Cura/gui/sceneView.py:690
+#: Cura/gui/sceneView.py:695
 msgid "Dual extrusion merge"
 msgstr ""
 
-#: Cura/gui/sceneView.py:692
+#: Cura/gui/sceneView.py:697
 msgid "Delete all objects"
 msgstr ""
 
-#: Cura/gui/sceneView.py:817
+#: Cura/gui/sceneView.py:822
 msgid "Toolpath to SD"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1127
+#: Cura/gui/sceneView.py:1132
 msgid "Loading toolpath for visualization..."
 msgstr ""
 
-#: Cura/gui/sceneView.py:1178
+#: Cura/gui/sceneView.py:1183
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 
@@ -993,7 +1006,7 @@ msgid "Print support structure"
 msgstr ""
 
 #: Cura/gui/simpleMode.py:38
-msgid "Select a print type:"
+msgid "Select a quickprint profile:"
 msgstr ""
 
 #: Cura/gui/simpleMode.py:48
@@ -1259,15 +1272,26 @@ msgid "3D window error"
 msgstr ""
 
 #: Cura/util/profile.py:153 Cura/util/profile.py:154 Cura/util/profile.py:155
-#: Cura/util/profile.py:179 Cura/util/profile.py:180 Cura/util/profile.py:182
+#: Cura/util/profile.py:181 Cura/util/profile.py:182 Cura/util/profile.py:184
+#: Cura/util/profile.py.BASE.py:153 Cura/util/profile.py.BASE.py:154
+#: Cura/util/profile.py.BASE.py:155 Cura/util/profile.py.BASE.py:179
+#: Cura/util/profile.py.BASE.py:180 Cura/util/profile.py.BASE.py:182
+#: Cura/util/profile.py.LOCAL.py:153 Cura/util/profile.py.LOCAL.py:154
+#: Cura/util/profile.py.LOCAL.py:155 Cura/util/profile.py.LOCAL.py:179
+#: Cura/util/profile.py.LOCAL.py:180 Cura/util/profile.py.LOCAL.py:182
+#: Cura/util/profile.py.REMOTE.py:153 Cura/util/profile.py.REMOTE.py:154
+#: Cura/util/profile.py.REMOTE.py:155 Cura/util/profile.py.REMOTE.py:181
+#: Cura/util/profile.py.REMOTE.py:182 Cura/util/profile.py.REMOTE.py:184
 msgid "Quality"
 msgstr ""
 
-#: Cura/util/profile.py:153
+#: Cura/util/profile.py:153 Cura/util/profile.py.BASE.py:153
+#: Cura/util/profile.py.LOCAL.py:153 Cura/util/profile.py.REMOTE.py:153
 msgid "Layer height (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:153
+#: Cura/util/profile.py:153 Cura/util/profile.py.BASE.py:153
+#: Cura/util/profile.py.LOCAL.py:153 Cura/util/profile.py.REMOTE.py:153
 msgid ""
 "Layer height in millimeters.\n"
 "This is the most important setting to determine the quality of your print. "
@@ -1275,36 +1299,45 @@ msgid ""
 "0.25mm with an Ultimaker for very fast prints at low quality."
 msgstr ""
 
-#: Cura/util/profile.py:154
+#: Cura/util/profile.py:154 Cura/util/profile.py.BASE.py:154
+#: Cura/util/profile.py.LOCAL.py:154 Cura/util/profile.py.REMOTE.py:154
 msgid "Shell thickness (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:154
+#: Cura/util/profile.py:154 Cura/util/profile.py.BASE.py:154
+#: Cura/util/profile.py.LOCAL.py:154 Cura/util/profile.py.REMOTE.py:154
 msgid ""
 "Thickness of the outside shell in the horizontal direction.\n"
 "This is used in combination with the nozzle size to define the number\n"
 "of perimeter lines and the thickness of those perimeter lines."
 msgstr ""
 
-#: Cura/util/profile.py:155
+#: Cura/util/profile.py:155 Cura/util/profile.py.BASE.py:155
+#: Cura/util/profile.py.LOCAL.py:155 Cura/util/profile.py.REMOTE.py:155
 msgid "Enable retraction"
 msgstr ""
 
-#: Cura/util/profile.py:155
+#: Cura/util/profile.py:155 Cura/util/profile.py.BASE.py:155
+#: Cura/util/profile.py.LOCAL.py:155 Cura/util/profile.py.REMOTE.py:155
 msgid ""
 "Retract the filament when the nozzle is moving over a none-printed area. "
 "Details about the retraction can be configured in the advanced tab."
 msgstr ""
 
 #: Cura/util/profile.py:156 Cura/util/profile.py:157
+#: Cura/util/profile.py.BASE.py:156 Cura/util/profile.py.BASE.py:157
+#: Cura/util/profile.py.LOCAL.py:156 Cura/util/profile.py.LOCAL.py:157
+#: Cura/util/profile.py.REMOTE.py:156 Cura/util/profile.py.REMOTE.py:157
 msgid "Fill"
 msgstr ""
 
-#: Cura/util/profile.py:156
+#: Cura/util/profile.py:156 Cura/util/profile.py.BASE.py:156
+#: Cura/util/profile.py.LOCAL.py:156 Cura/util/profile.py.REMOTE.py:156
 msgid "Bottom/Top thickness (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:156
+#: Cura/util/profile.py:156 Cura/util/profile.py.BASE.py:156
+#: Cura/util/profile.py.LOCAL.py:156 Cura/util/profile.py.REMOTE.py:156
 msgid ""
 "This controls the thickness of the bottom and top layers, the amount of "
 "solid layers put down is calculated by the layer thickness and this value.\n"
@@ -1312,11 +1345,13 @@ msgid ""
 "near your wall thickness to make an evenly strong part."
 msgstr ""
 
-#: Cura/util/profile.py:157
+#: Cura/util/profile.py:157 Cura/util/profile.py.BASE.py:157
+#: Cura/util/profile.py.LOCAL.py:157 Cura/util/profile.py.REMOTE.py:157
 msgid "Fill Density (%)"
 msgstr ""
 
-#: Cura/util/profile.py:157
+#: Cura/util/profile.py:157 Cura/util/profile.py.BASE.py:157
+#: Cura/util/profile.py.LOCAL.py:157 Cura/util/profile.py.REMOTE.py:157
 msgid ""
 "This controls how densely filled the insides of your print will be. For a "
 "solid part use 100%, for an empty part use 0%. A value around 20% is usually "
@@ -1325,7 +1360,8 @@ msgid ""
 "part becomes."
 msgstr ""
 
-#: Cura/util/profile.py:158
+#: Cura/util/profile.py:158 Cura/util/profile.py.BASE.py:158
+#: Cura/util/profile.py.LOCAL.py:158 Cura/util/profile.py.REMOTE.py:158
 msgid ""
 "The nozzle size is very important, this is used to calculate the line width "
 "of the infill, and used to calculate the amount of outside wall lines and "
@@ -1334,14 +1370,25 @@ msgstr ""
 
 #: Cura/util/profile.py:159 Cura/util/profile.py:160 Cura/util/profile.py:161
 #: Cura/util/profile.py:162 Cura/util/profile.py:163 Cura/util/profile.py:164
+#: Cura/util/profile.py.BASE.py:159 Cura/util/profile.py.BASE.py:160
+#: Cura/util/profile.py.BASE.py:161 Cura/util/profile.py.BASE.py:162
+#: Cura/util/profile.py.BASE.py:163 Cura/util/profile.py.BASE.py:164
+#: Cura/util/profile.py.LOCAL.py:159 Cura/util/profile.py.LOCAL.py:160
+#: Cura/util/profile.py.LOCAL.py:161 Cura/util/profile.py.LOCAL.py:162
+#: Cura/util/profile.py.LOCAL.py:163 Cura/util/profile.py.LOCAL.py:164
+#: Cura/util/profile.py.REMOTE.py:159 Cura/util/profile.py.REMOTE.py:160
+#: Cura/util/profile.py.REMOTE.py:161 Cura/util/profile.py.REMOTE.py:162
+#: Cura/util/profile.py.REMOTE.py:163 Cura/util/profile.py.REMOTE.py:164
 msgid "Speed and Temperature"
 msgstr ""
 
-#: Cura/util/profile.py:159
+#: Cura/util/profile.py:159 Cura/util/profile.py.BASE.py:159
+#: Cura/util/profile.py.LOCAL.py:159 Cura/util/profile.py.REMOTE.py:159
 msgid "Print speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:159
+#: Cura/util/profile.py:159 Cura/util/profile.py.BASE.py:159
+#: Cura/util/profile.py.LOCAL.py:159 Cura/util/profile.py.REMOTE.py:159
 msgid ""
 "Speed at which printing happens. A well adjusted Ultimaker can reach 150mm/"
 "s, but for good quality prints you want to print slower. Printing speed "
@@ -1349,49 +1396,72 @@ msgid ""
 "settings for this."
 msgstr ""
 
-#: Cura/util/profile.py:160
+#: Cura/util/profile.py:160 Cura/util/profile.py.BASE.py:160
+#: Cura/util/profile.py.LOCAL.py:160 Cura/util/profile.py.REMOTE.py:160
 msgid "Printing temperature (C)"
 msgstr ""
 
 #: Cura/util/profile.py:160 Cura/util/profile.py:161 Cura/util/profile.py:162
-#: Cura/util/profile.py:163
+#: Cura/util/profile.py:163 Cura/util/profile.py.BASE.py:160
+#: Cura/util/profile.py.BASE.py:161 Cura/util/profile.py.BASE.py:162
+#: Cura/util/profile.py.BASE.py:163 Cura/util/profile.py.LOCAL.py:160
+#: Cura/util/profile.py.LOCAL.py:161 Cura/util/profile.py.LOCAL.py:162
+#: Cura/util/profile.py.LOCAL.py:163 Cura/util/profile.py.REMOTE.py:160
+#: Cura/util/profile.py.REMOTE.py:161 Cura/util/profile.py.REMOTE.py:162
+#: Cura/util/profile.py.REMOTE.py:163
 msgid ""
 "Temperature used for printing. Set at 0 to pre-heat yourself.\n"
 "For PLA a value of 210C is usually used.\n"
 "For ABS a value of 230C or higher is required."
 msgstr ""
 
-#: Cura/util/profile.py:161
+#: Cura/util/profile.py:161 Cura/util/profile.py.BASE.py:161
+#: Cura/util/profile.py.LOCAL.py:161 Cura/util/profile.py.REMOTE.py:161
 msgid "2nd nozzle temperature (C)"
 msgstr ""
 
-#: Cura/util/profile.py:162
+#: Cura/util/profile.py:162 Cura/util/profile.py.BASE.py:162
+#: Cura/util/profile.py.LOCAL.py:162 Cura/util/profile.py.REMOTE.py:162
 msgid "3th nozzle temperature (C)"
 msgstr ""
 
-#: Cura/util/profile.py:163
+#: Cura/util/profile.py:163 Cura/util/profile.py.BASE.py:163
+#: Cura/util/profile.py.LOCAL.py:163 Cura/util/profile.py.REMOTE.py:163
 msgid "4th nozzle temperature (C)"
 msgstr ""
 
-#: Cura/util/profile.py:164
+#: Cura/util/profile.py:164 Cura/util/profile.py.BASE.py:164
+#: Cura/util/profile.py.LOCAL.py:164 Cura/util/profile.py.REMOTE.py:164
 msgid "Bed temperature (C)"
 msgstr ""
 
-#: Cura/util/profile.py:164
+#: Cura/util/profile.py:164 Cura/util/profile.py.BASE.py:164
+#: Cura/util/profile.py.LOCAL.py:164 Cura/util/profile.py.REMOTE.py:164
 msgid ""
 "Temperature used for the heated printer bed. Set at 0 to pre-heat yourself."
 msgstr ""
 
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
-#: Cura/util/profile.py:206 Cura/util/profile.py:207 Cura/util/profile.py:208
+#: Cura/util/profile.py:208 Cura/util/profile.py:209 Cura/util/profile.py:210
+#: Cura/util/profile.py.BASE.py:165 Cura/util/profile.py.BASE.py:166
+#: Cura/util/profile.py.BASE.py:167 Cura/util/profile.py.BASE.py:206
+#: Cura/util/profile.py.BASE.py:207 Cura/util/profile.py.BASE.py:208
+#: Cura/util/profile.py.LOCAL.py:165 Cura/util/profile.py.LOCAL.py:166
+#: Cura/util/profile.py.LOCAL.py:167 Cura/util/profile.py.LOCAL.py:206
+#: Cura/util/profile.py.LOCAL.py:207 Cura/util/profile.py.LOCAL.py:208
+#: Cura/util/profile.py.REMOTE.py:165 Cura/util/profile.py.REMOTE.py:166
+#: Cura/util/profile.py.REMOTE.py:167 Cura/util/profile.py.REMOTE.py:208
+#: Cura/util/profile.py.REMOTE.py:209 Cura/util/profile.py.REMOTE.py:210
 msgid "Support"
 msgstr ""
 
-#: Cura/util/profile.py:165
+#: Cura/util/profile.py:165 Cura/util/profile.py.BASE.py:165
+#: Cura/util/profile.py.LOCAL.py:165 Cura/util/profile.py.REMOTE.py:165
 msgid "Support type"
 msgstr ""
 
-#: Cura/util/profile.py:165
+#: Cura/util/profile.py:165 Cura/util/profile.py.BASE.py:165
+#: Cura/util/profile.py.LOCAL.py:165 Cura/util/profile.py.REMOTE.py:165
 msgid ""
 "Type of support structure build.\n"
 "\"Touching buildplate\" is the most commonly used support setting.\n"
@@ -1402,11 +1472,13 @@ msgid ""
 "Everywhere creates support even on top of parts of the model."
 msgstr ""
 
-#: Cura/util/profile.py:166
+#: Cura/util/profile.py:166 Cura/util/profile.py.BASE.py:166
+#: Cura/util/profile.py.LOCAL.py:166 Cura/util/profile.py.REMOTE.py:166
 msgid "Platform adhesion type"
 msgstr ""
 
-#: Cura/util/profile.py:166
+#: Cura/util/profile.py:166 Cura/util/profile.py.BASE.py:166
+#: Cura/util/profile.py.LOCAL.py:166 Cura/util/profile.py.REMOTE.py:166
 msgid ""
 "Different options that help in preventing corners from lifting due to "
 "warping.\n"
@@ -1417,11 +1489,13 @@ msgid ""
 "(Note that enabling the brim or raft disables the skirt)"
 msgstr ""
 
-#: Cura/util/profile.py:167
+#: Cura/util/profile.py:167 Cura/util/profile.py.BASE.py:167
+#: Cura/util/profile.py.LOCAL.py:167 Cura/util/profile.py.REMOTE.py:167
 msgid "Support dual extrusion"
 msgstr ""
 
-#: Cura/util/profile.py:167
+#: Cura/util/profile.py:167 Cura/util/profile.py.BASE.py:167
+#: Cura/util/profile.py.LOCAL.py:167 Cura/util/profile.py.REMOTE.py:167
 msgid ""
 "Which extruder to use for support material, for break-away support you can "
 "use both extruders.\n"
@@ -1431,123 +1505,190 @@ msgid ""
 "You can also use the 2nd extruder for soluble support materials."
 msgstr ""
 
-#: Cura/util/profile.py:168 Cura/util/profile.py:169 Cura/util/profile.py:170
-#: Cura/util/profile.py:171 Cura/util/profile.py:172
+#: Cura/util/profile.py:168 Cura/util/profile.py:169
+#: Cura/util/profile.py.REMOTE.py:168 Cura/util/profile.py.REMOTE.py:169
+msgid "Dual extrusion"
+msgstr ""
+
+#: Cura/util/profile.py:168 Cura/util/profile.py.REMOTE.py:168
+msgid "Wipe tower"
+msgstr ""
+
+#: Cura/util/profile.py:168 Cura/util/profile.py.REMOTE.py:168
+msgid ""
+"The wipe-tower is a tower printed on every layer when switching between "
+"nozzles.\n"
+"The old nozzle is wiped off on the tower before the new nozzle is used to "
+"print the 2nd color."
+msgstr ""
+
+#: Cura/util/profile.py:169 Cura/util/profile.py.REMOTE.py:169
+msgid "Ooze shield"
+msgstr ""
+
+#: Cura/util/profile.py:169 Cura/util/profile.py.REMOTE.py:169
+msgid ""
+"The ooze shield is a 1 line thick shell around the object which stands a few "
+"mm from the object.\n"
+"This shield catches any oozing from the unused nozzle in dual-extrusion."
+msgstr ""
+
+#: Cura/util/profile.py:170 Cura/util/profile.py:171 Cura/util/profile.py:172
+#: Cura/util/profile.py:173 Cura/util/profile.py:174
+#: Cura/util/profile.py.BASE.py:168 Cura/util/profile.py.BASE.py:169
+#: Cura/util/profile.py.BASE.py:170 Cura/util/profile.py.BASE.py:171
+#: Cura/util/profile.py.BASE.py:172 Cura/util/profile.py.LOCAL.py:168
+#: Cura/util/profile.py.LOCAL.py:169 Cura/util/profile.py.LOCAL.py:170
+#: Cura/util/profile.py.LOCAL.py:171 Cura/util/profile.py.LOCAL.py:172
+#: Cura/util/profile.py.REMOTE.py:170 Cura/util/profile.py.REMOTE.py:171
+#: Cura/util/profile.py.REMOTE.py:172 Cura/util/profile.py.REMOTE.py:173
+#: Cura/util/profile.py.REMOTE.py:174
 msgid "Filament"
 msgstr ""
 
-#: Cura/util/profile.py:168
+#: Cura/util/profile.py:170 Cura/util/profile.py.BASE.py:168
+#: Cura/util/profile.py.LOCAL.py:168 Cura/util/profile.py.REMOTE.py:170
 msgid "Diameter (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:168
+#: Cura/util/profile.py:170 Cura/util/profile.py.BASE.py:168
+#: Cura/util/profile.py.LOCAL.py:168 Cura/util/profile.py.REMOTE.py:170
 msgid ""
 "Diameter of your filament, as accurately as possible.\n"
 "If you cannot measure this value you will have to calibrate it, a higher "
 "number means less extrusion, a smaller number generates more extrusion."
 msgstr ""
 
-#: Cura/util/profile.py:169
+#: Cura/util/profile.py:171 Cura/util/profile.py.BASE.py:169
+#: Cura/util/profile.py.LOCAL.py:169 Cura/util/profile.py.REMOTE.py:171
 msgid "Diameter2 (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:169
+#: Cura/util/profile.py:171 Cura/util/profile.py.BASE.py:169
+#: Cura/util/profile.py.LOCAL.py:169 Cura/util/profile.py.REMOTE.py:171
 msgid ""
 "Diameter of your filament for the 2nd nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr ""
 
-#: Cura/util/profile.py:170
+#: Cura/util/profile.py:172 Cura/util/profile.py.BASE.py:170
+#: Cura/util/profile.py.LOCAL.py:170 Cura/util/profile.py.REMOTE.py:172
 msgid "Diameter3 (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:170
+#: Cura/util/profile.py:172 Cura/util/profile.py.BASE.py:170
+#: Cura/util/profile.py.LOCAL.py:170 Cura/util/profile.py.REMOTE.py:172
 msgid ""
 "Diameter of your filament for the 3th nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr ""
 
-#: Cura/util/profile.py:171
+#: Cura/util/profile.py:173 Cura/util/profile.py.BASE.py:171
+#: Cura/util/profile.py.LOCAL.py:171 Cura/util/profile.py.REMOTE.py:173
 msgid "Diameter4 (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:171
+#: Cura/util/profile.py:173 Cura/util/profile.py.BASE.py:171
+#: Cura/util/profile.py.LOCAL.py:171 Cura/util/profile.py.REMOTE.py:173
 msgid ""
 "Diameter of your filament for the 4th nozzle. Use 0 to use the same diameter "
 "as for nozzle 1."
 msgstr ""
 
-#: Cura/util/profile.py:172
+#: Cura/util/profile.py:174 Cura/util/profile.py.BASE.py:172
+#: Cura/util/profile.py.LOCAL.py:172 Cura/util/profile.py.REMOTE.py:174
 msgid "Flow (%)"
 msgstr ""
 
-#: Cura/util/profile.py:172
+#: Cura/util/profile.py:174 Cura/util/profile.py.BASE.py:172
+#: Cura/util/profile.py.LOCAL.py:172 Cura/util/profile.py.REMOTE.py:174
 msgid ""
 "Flow compensation, the amount of material extruded is multiplied by this "
 "value"
 msgstr ""
 
-#: Cura/util/profile.py:173 Cura/util/profile.py:174 Cura/util/profile.py:175
-#: Cura/util/profile.py:176 Cura/util/profile.py:177 Cura/util/profile.py:178
+#: Cura/util/profile.py:175 Cura/util/profile.py:176 Cura/util/profile.py:177
+#: Cura/util/profile.py:178 Cura/util/profile.py:179 Cura/util/profile.py:180
+#: Cura/util/profile.py.BASE.py:173 Cura/util/profile.py.BASE.py:174
+#: Cura/util/profile.py.BASE.py:175 Cura/util/profile.py.BASE.py:176
+#: Cura/util/profile.py.BASE.py:177 Cura/util/profile.py.BASE.py:178
+#: Cura/util/profile.py.LOCAL.py:173 Cura/util/profile.py.LOCAL.py:174
+#: Cura/util/profile.py.LOCAL.py:175 Cura/util/profile.py.LOCAL.py:176
+#: Cura/util/profile.py.LOCAL.py:177 Cura/util/profile.py.LOCAL.py:178
+#: Cura/util/profile.py.REMOTE.py:175 Cura/util/profile.py.REMOTE.py:176
+#: Cura/util/profile.py.REMOTE.py:177 Cura/util/profile.py.REMOTE.py:178
+#: Cura/util/profile.py.REMOTE.py:179 Cura/util/profile.py.REMOTE.py:180
 msgid "Retraction"
 msgstr ""
 
-#: Cura/util/profile.py:173
+#: Cura/util/profile.py:175 Cura/util/profile.py.BASE.py:173
+#: Cura/util/profile.py.LOCAL.py:173 Cura/util/profile.py.REMOTE.py:175
 msgid "Speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:173
+#: Cura/util/profile.py:175 Cura/util/profile.py.BASE.py:173
+#: Cura/util/profile.py.LOCAL.py:173 Cura/util/profile.py.REMOTE.py:175
 msgid ""
 "Speed at which the filament is retracted, a higher retraction speed works "
 "better. But a very high retraction speed can lead to filament grinding."
 msgstr ""
 
-#: Cura/util/profile.py:174
+#: Cura/util/profile.py:176 Cura/util/profile.py.BASE.py:174
+#: Cura/util/profile.py.LOCAL.py:174 Cura/util/profile.py.REMOTE.py:176
 msgid "Distance (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:174
+#: Cura/util/profile.py:176 Cura/util/profile.py.BASE.py:174
+#: Cura/util/profile.py.LOCAL.py:174 Cura/util/profile.py.REMOTE.py:176
 msgid ""
 "Amount of retraction, set at 0 for no retraction at all. A value of 4.5mm "
 "seems to generate good results."
 msgstr ""
 
-#: Cura/util/profile.py:175
+#: Cura/util/profile.py:177 Cura/util/profile.py.BASE.py:175
+#: Cura/util/profile.py.LOCAL.py:175 Cura/util/profile.py.REMOTE.py:177
 msgid "Dual extrusion switch amount (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:175
+#: Cura/util/profile.py:177 Cura/util/profile.py.BASE.py:175
+#: Cura/util/profile.py.LOCAL.py:175 Cura/util/profile.py.REMOTE.py:177
 msgid ""
 "Amount of retraction when switching nozzle with dual-extrusion, set at 0 for "
 "no retraction at all. A value of 16.0mm seems to generate good results."
 msgstr ""
 
-#: Cura/util/profile.py:176
+#: Cura/util/profile.py:178 Cura/util/profile.py.BASE.py:176
+#: Cura/util/profile.py.LOCAL.py:176 Cura/util/profile.py.REMOTE.py:178
 msgid "Minimum travel (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:176
+#: Cura/util/profile.py:178 Cura/util/profile.py.BASE.py:176
+#: Cura/util/profile.py.LOCAL.py:176 Cura/util/profile.py.REMOTE.py:178
 msgid ""
 "Minimum amount of travel needed for a retraction to happen at all. To make "
 "sure you do not get a lot of retractions in a small area."
 msgstr ""
 
-#: Cura/util/profile.py:177
+#: Cura/util/profile.py:179 Cura/util/profile.py.BASE.py:177
+#: Cura/util/profile.py.LOCAL.py:177 Cura/util/profile.py.REMOTE.py:179
 msgid "Enable combing"
 msgstr ""
 
-#: Cura/util/profile.py:177
+#: Cura/util/profile.py:179 Cura/util/profile.py.BASE.py:177
+#: Cura/util/profile.py.LOCAL.py:177 Cura/util/profile.py.REMOTE.py:179
 msgid ""
 "Combing is the act of avoiding holes in the print for the head to travel "
 "over. If combing is disabled the printer head moves straight from the start "
 "point to the end point and it will always retract."
 msgstr ""
 
-#: Cura/util/profile.py:178
+#: Cura/util/profile.py:180 Cura/util/profile.py.BASE.py:178
+#: Cura/util/profile.py.LOCAL.py:178 Cura/util/profile.py.REMOTE.py:180
 msgid "Minimal extrusion before retracting (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:178
+#: Cura/util/profile.py:180 Cura/util/profile.py.BASE.py:178
+#: Cura/util/profile.py.LOCAL.py:178 Cura/util/profile.py.REMOTE.py:180
 msgid ""
 "The minimal amount of extrusion that needs to be done before retracting "
 "again if a retraction needs to happen before this minimal is reached the "
@@ -1556,79 +1697,103 @@ msgid ""
 "the filament and causes grinding issues."
 msgstr ""
 
-#: Cura/util/profile.py:179
+#: Cura/util/profile.py:181 Cura/util/profile.py.BASE.py:179
+#: Cura/util/profile.py.LOCAL.py:179 Cura/util/profile.py.REMOTE.py:181
 msgid "Initial layer thickness (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:179
+#: Cura/util/profile.py:181 Cura/util/profile.py.BASE.py:179
+#: Cura/util/profile.py.LOCAL.py:179 Cura/util/profile.py.REMOTE.py:181
 msgid ""
 "Layer thickness of the bottom layer. A thicker bottom layer makes sticking "
 "to the bed easier. Set to 0.0 to have the bottom layer thickness the same as "
 "the other layers."
 msgstr ""
 
-#: Cura/util/profile.py:180
+#: Cura/util/profile.py:182 Cura/util/profile.py.BASE.py:180
+#: Cura/util/profile.py.LOCAL.py:180 Cura/util/profile.py.REMOTE.py:182
 msgid "Cut off object bottom (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:180
+#: Cura/util/profile.py:182 Cura/util/profile.py.BASE.py:180
+#: Cura/util/profile.py.LOCAL.py:180 Cura/util/profile.py.REMOTE.py:182
 msgid ""
 "Sinks the object into the platform, this can be used for objects that do not "
 "have a flat bottom and thus create a too small first layer."
 msgstr ""
 
-#: Cura/util/profile.py:182
+#: Cura/util/profile.py:184 Cura/util/profile.py.BASE.py:182
+#: Cura/util/profile.py.LOCAL.py:182 Cura/util/profile.py.REMOTE.py:184
 msgid "Dual extrusion overlap (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:182
+#: Cura/util/profile.py:184 Cura/util/profile.py.BASE.py:182
+#: Cura/util/profile.py.LOCAL.py:182 Cura/util/profile.py.REMOTE.py:184
 msgid ""
 "Add a certain amount of overlapping extrusion on dual-extrusion prints. This "
 "bonds the different colors better together."
 msgstr ""
 
-#: Cura/util/profile.py:183
+#: Cura/util/profile.py:185 Cura/util/profile.py.BASE.py:183
+#: Cura/util/profile.py.LOCAL.py:183 Cura/util/profile.py.REMOTE.py:185
 msgid "Travel speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:183
+#: Cura/util/profile.py:185 Cura/util/profile.py.BASE.py:183
+#: Cura/util/profile.py.LOCAL.py:183 Cura/util/profile.py.REMOTE.py:185
 msgid ""
 "Speed at which travel moves are done, a high quality build Ultimaker can "
 "reach speeds of 250mm/s. But some machines might miss steps then."
 msgstr ""
 
-#: Cura/util/profile.py:184
+#: Cura/util/profile.py:186 Cura/util/profile.py.BASE.py:184
+#: Cura/util/profile.py.LOCAL.py:184 Cura/util/profile.py.REMOTE.py:186
 msgid "Bottom layer speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:184
+#: Cura/util/profile.py:186 Cura/util/profile.py.BASE.py:184
+#: Cura/util/profile.py.LOCAL.py:184 Cura/util/profile.py.REMOTE.py:186
 msgid ""
 "Print speed for the bottom layer, you want to print the first layer slower "
 "so it sticks better to the printer bed."
 msgstr ""
 
-#: Cura/util/profile.py:185
+#: Cura/util/profile.py:187 Cura/util/profile.py.BASE.py:185
+#: Cura/util/profile.py.LOCAL.py:185 Cura/util/profile.py.REMOTE.py:187
 msgid "Infill speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:185
+#: Cura/util/profile.py:187 Cura/util/profile.py.BASE.py:185
+#: Cura/util/profile.py.LOCAL.py:185 Cura/util/profile.py.REMOTE.py:187
 msgid ""
 "Speed at which infill parts are printed. If set to 0 then the print speed is "
 "used for the infill. Printing the infill faster can greatly reduce printing, "
 "but this can negatively effect print quality.."
 msgstr ""
 
-#: Cura/util/profile.py:186 Cura/util/profile.py:187 Cura/util/profile.py:194
-#: Cura/util/profile.py:195 Cura/util/profile.py:196 Cura/util/profile.py:197
-#: Cura/util/profile.py:198
+#: Cura/util/profile.py:188 Cura/util/profile.py:189 Cura/util/profile.py:196
+#: Cura/util/profile.py:197 Cura/util/profile.py:198 Cura/util/profile.py:199
+#: Cura/util/profile.py:200 Cura/util/profile.py.BASE.py:186
+#: Cura/util/profile.py.BASE.py:187 Cura/util/profile.py.BASE.py:194
+#: Cura/util/profile.py.BASE.py:195 Cura/util/profile.py.BASE.py:196
+#: Cura/util/profile.py.BASE.py:197 Cura/util/profile.py.BASE.py:198
+#: Cura/util/profile.py.LOCAL.py:186 Cura/util/profile.py.LOCAL.py:187
+#: Cura/util/profile.py.LOCAL.py:194 Cura/util/profile.py.LOCAL.py:195
+#: Cura/util/profile.py.LOCAL.py:196 Cura/util/profile.py.LOCAL.py:197
+#: Cura/util/profile.py.LOCAL.py:198 Cura/util/profile.py.REMOTE.py:188
+#: Cura/util/profile.py.REMOTE.py:189 Cura/util/profile.py.REMOTE.py:196
+#: Cura/util/profile.py.REMOTE.py:197 Cura/util/profile.py.REMOTE.py:198
+#: Cura/util/profile.py.REMOTE.py:199 Cura/util/profile.py.REMOTE.py:200
 msgid "Cool"
 msgstr ""
 
-#: Cura/util/profile.py:186
+#: Cura/util/profile.py:188 Cura/util/profile.py.BASE.py:186
+#: Cura/util/profile.py.LOCAL.py:186 Cura/util/profile.py.REMOTE.py:188
 msgid "Minimal layer time (sec)"
 msgstr ""
 
-#: Cura/util/profile.py:186
+#: Cura/util/profile.py:188 Cura/util/profile.py.BASE.py:186
+#: Cura/util/profile.py.LOCAL.py:186 Cura/util/profile.py.REMOTE.py:188
 msgid ""
 "Minimum time spend in a layer, gives the layer time to cool down before the "
 "next layer is put on top. If the layer will be placed down too fast the "
@@ -1636,21 +1801,25 @@ msgid ""
 "seconds printing this layer."
 msgstr ""
 
-#: Cura/util/profile.py:187
+#: Cura/util/profile.py:189 Cura/util/profile.py.BASE.py:187
+#: Cura/util/profile.py.LOCAL.py:187 Cura/util/profile.py.REMOTE.py:189
 msgid "Enable cooling fan"
 msgstr ""
 
-#: Cura/util/profile.py:187
+#: Cura/util/profile.py:189 Cura/util/profile.py.BASE.py:187
+#: Cura/util/profile.py.LOCAL.py:187 Cura/util/profile.py.REMOTE.py:189
 msgid ""
 "Enable the cooling fan during the print. The extra cooling from the cooling "
 "fan is essential during faster prints."
 msgstr ""
 
-#: Cura/util/profile.py:189
+#: Cura/util/profile.py:191 Cura/util/profile.py.BASE.py:189
+#: Cura/util/profile.py.LOCAL.py:189 Cura/util/profile.py.REMOTE.py:191
 msgid "Line count"
 msgstr ""
 
-#: Cura/util/profile.py:189
+#: Cura/util/profile.py:191 Cura/util/profile.py.BASE.py:189
+#: Cura/util/profile.py.LOCAL.py:189 Cura/util/profile.py.REMOTE.py:191
 msgid ""
 "The skirt is a line drawn around the object at the first layer. This helps "
 "to prime your extruder, and to see if the object fits on your platform.\n"
@@ -1658,54 +1827,64 @@ msgid ""
 "priming your extruder better for small objects."
 msgstr ""
 
-#: Cura/util/profile.py:190
+#: Cura/util/profile.py:192 Cura/util/profile.py.BASE.py:190
+#: Cura/util/profile.py.LOCAL.py:190 Cura/util/profile.py.REMOTE.py:192
 msgid "Start distance (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:190
+#: Cura/util/profile.py:192 Cura/util/profile.py.BASE.py:190
+#: Cura/util/profile.py.LOCAL.py:190 Cura/util/profile.py.REMOTE.py:192
 msgid ""
 "The distance between the skirt and the first layer.\n"
 "This is the minimal distance, multiple skirt lines will be put outwards from "
 "this distance."
 msgstr ""
 
-#: Cura/util/profile.py:191
+#: Cura/util/profile.py:193 Cura/util/profile.py.BASE.py:191
+#: Cura/util/profile.py.LOCAL.py:191 Cura/util/profile.py.REMOTE.py:193
 msgid "Minimal length (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:191
+#: Cura/util/profile.py:193 Cura/util/profile.py.BASE.py:191
+#: Cura/util/profile.py.LOCAL.py:191 Cura/util/profile.py.REMOTE.py:193
 msgid ""
 "The minimal length of the skirt, if this minimal length is not reached it "
 "will add more skirt lines to reach this minimal lenght.\n"
 "Note: If the line count is set to 0 this is ignored."
 msgstr ""
 
-#: Cura/util/profile.py:194
+#: Cura/util/profile.py:196 Cura/util/profile.py.BASE.py:194
+#: Cura/util/profile.py.LOCAL.py:194 Cura/util/profile.py.REMOTE.py:196
 msgid "Fan full on at height"
 msgstr ""
 
-#: Cura/util/profile.py:194
+#: Cura/util/profile.py:196 Cura/util/profile.py.BASE.py:194
+#: Cura/util/profile.py.LOCAL.py:194 Cura/util/profile.py.REMOTE.py:196
 msgid ""
 "The height at which the fan is turned on completely. For the layers below "
 "this the fan speed is scaled linear with the fan off at layer 0."
 msgstr ""
 
-#: Cura/util/profile.py:195
+#: Cura/util/profile.py:197 Cura/util/profile.py.BASE.py:195
+#: Cura/util/profile.py.LOCAL.py:195 Cura/util/profile.py.REMOTE.py:197
 msgid "Fan speed min (%)"
 msgstr ""
 
-#: Cura/util/profile.py:195
+#: Cura/util/profile.py:197 Cura/util/profile.py.BASE.py:195
+#: Cura/util/profile.py.LOCAL.py:195 Cura/util/profile.py.REMOTE.py:197
 msgid ""
 "When the fan is turned on, it is enabled at this speed setting. If cool "
 "slows down the layer, the fan is adjusted between the min and max speed. "
 "Minimal fan speed is used if the layer is not slowed down due to cooling."
 msgstr ""
 
-#: Cura/util/profile.py:196
+#: Cura/util/profile.py:198 Cura/util/profile.py.BASE.py:196
+#: Cura/util/profile.py.LOCAL.py:196 Cura/util/profile.py.REMOTE.py:198
 msgid "Fan speed max (%)"
 msgstr ""
 
-#: Cura/util/profile.py:196
+#: Cura/util/profile.py:198 Cura/util/profile.py.BASE.py:196
+#: Cura/util/profile.py.LOCAL.py:196 Cura/util/profile.py.REMOTE.py:198
 msgid ""
 "When the fan is turned on, it is enabled at this speed setting. If cool "
 "slows down the layer, the fan is adjusted between the min and max speed. "
@@ -1713,187 +1892,234 @@ msgid ""
 "than 200%."
 msgstr ""
 
-#: Cura/util/profile.py:197
+#: Cura/util/profile.py:199 Cura/util/profile.py.BASE.py:197
+#: Cura/util/profile.py.LOCAL.py:197 Cura/util/profile.py.REMOTE.py:199
 msgid "Minimum speed (mm/s)"
 msgstr ""
 
-#: Cura/util/profile.py:197
+#: Cura/util/profile.py:199 Cura/util/profile.py.BASE.py:197
+#: Cura/util/profile.py.LOCAL.py:197 Cura/util/profile.py.REMOTE.py:199
 msgid ""
 "The minimal layer time can cause the print to slow down so much it starts to "
 "ooze. The minimal feedrate protects against this. Even if a print gets slown "
 "down it will never be slower than this minimal speed."
 msgstr ""
 
-#: Cura/util/profile.py:198
+#: Cura/util/profile.py:200 Cura/util/profile.py.BASE.py:198
+#: Cura/util/profile.py.LOCAL.py:198 Cura/util/profile.py.REMOTE.py:200
 msgid "Cool head lift"
 msgstr ""
 
-#: Cura/util/profile.py:198
+#: Cura/util/profile.py:200 Cura/util/profile.py.BASE.py:198
+#: Cura/util/profile.py.LOCAL.py:198 Cura/util/profile.py.REMOTE.py:200
 msgid ""
 "Lift the head if the minimal speed is hit because of cool slowdown, and wait "
 "the extra time so the minimal layer time is always hit."
 msgstr ""
 
-#: Cura/util/profile.py:203 Cura/util/profile.py:204 Cura/util/profile.py:205
+#: Cura/util/profile.py:205 Cura/util/profile.py:206 Cura/util/profile.py:207
+#: Cura/util/profile.py.BASE.py:203 Cura/util/profile.py.BASE.py:204
+#: Cura/util/profile.py.BASE.py:205 Cura/util/profile.py.LOCAL.py:203
+#: Cura/util/profile.py.LOCAL.py:204 Cura/util/profile.py.LOCAL.py:205
+#: Cura/util/profile.py.REMOTE.py:205 Cura/util/profile.py.REMOTE.py:206
+#: Cura/util/profile.py.REMOTE.py:207
 msgid "Infill"
 msgstr ""
 
-#: Cura/util/profile.py:203
+#: Cura/util/profile.py:205 Cura/util/profile.py.BASE.py:203
+#: Cura/util/profile.py.LOCAL.py:203 Cura/util/profile.py.REMOTE.py:205
 msgid "Solid infill top"
 msgstr ""
 
-#: Cura/util/profile.py:203
+#: Cura/util/profile.py:205 Cura/util/profile.py.BASE.py:203
+#: Cura/util/profile.py.LOCAL.py:203 Cura/util/profile.py.REMOTE.py:205
 msgid ""
 "Create a solid top surface, if set to false the top is filled with the fill "
 "percentage. Useful for cups/vases."
 msgstr ""
 
-#: Cura/util/profile.py:204
+#: Cura/util/profile.py:206 Cura/util/profile.py.BASE.py:204
+#: Cura/util/profile.py.LOCAL.py:204 Cura/util/profile.py.REMOTE.py:206
 msgid "Solid infill bottom"
 msgstr ""
 
-#: Cura/util/profile.py:204
+#: Cura/util/profile.py:206 Cura/util/profile.py.BASE.py:204
+#: Cura/util/profile.py.LOCAL.py:204 Cura/util/profile.py.REMOTE.py:206
 msgid ""
 "Create a solid bottom surface, if set to false the bottom is filled with the "
 "fill percentage. Useful for buildings."
 msgstr ""
 
-#: Cura/util/profile.py:205
+#: Cura/util/profile.py:207 Cura/util/profile.py.BASE.py:205
+#: Cura/util/profile.py.LOCAL.py:205 Cura/util/profile.py.REMOTE.py:207
 msgid "Infill overlap (%)"
 msgstr ""
 
-#: Cura/util/profile.py:205
+#: Cura/util/profile.py:207 Cura/util/profile.py.BASE.py:205
+#: Cura/util/profile.py.LOCAL.py:205 Cura/util/profile.py.REMOTE.py:207
 msgid ""
 "Amount of overlap between the infill and the walls. There is a slight "
 "overlap with the walls and the infill so the walls connect firmly to the "
 "infill."
 msgstr ""
 
-#: Cura/util/profile.py:206
+#: Cura/util/profile.py:208 Cura/util/profile.py.BASE.py:206
+#: Cura/util/profile.py.LOCAL.py:206 Cura/util/profile.py.REMOTE.py:208
 msgid "Fill amount (%)"
 msgstr ""
 
-#: Cura/util/profile.py:206
+#: Cura/util/profile.py:208 Cura/util/profile.py.BASE.py:206
+#: Cura/util/profile.py.LOCAL.py:206 Cura/util/profile.py.REMOTE.py:208
 #, python-format
 msgid ""
 "Amount of infill structure in the support material, less material gives "
 "weaker support which is easier to remove. 15% seems to be a good average."
 msgstr ""
 
-#: Cura/util/profile.py:207
+#: Cura/util/profile.py:209 Cura/util/profile.py.BASE.py:207
+#: Cura/util/profile.py.LOCAL.py:207 Cura/util/profile.py.REMOTE.py:209
 msgid "Distance X/Y (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:207
+#: Cura/util/profile.py:209 Cura/util/profile.py.BASE.py:207
+#: Cura/util/profile.py.LOCAL.py:207 Cura/util/profile.py.REMOTE.py:209
 msgid ""
 "Distance of the support material from the print, in the X/Y directions.\n"
 "0.7mm gives a nice distance from the print so the support does not stick to "
 "the print."
 msgstr ""
 
-#: Cura/util/profile.py:208
+#: Cura/util/profile.py:210 Cura/util/profile.py.BASE.py:208
+#: Cura/util/profile.py.LOCAL.py:208 Cura/util/profile.py.REMOTE.py:210
 msgid "Distance Z (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:208
+#: Cura/util/profile.py:210 Cura/util/profile.py.BASE.py:208
+#: Cura/util/profile.py.LOCAL.py:208 Cura/util/profile.py.REMOTE.py:210
 msgid ""
 "Distance from the top/bottom of the support to the print. A small gap here "
 "makes it easier to remove the support but makes the print a bit uglier.\n"
 "0.15mm gives a good seperation of the support material."
 msgstr ""
 
-#: Cura/util/profile.py:209
+#: Cura/util/profile.py:211 Cura/util/profile.py.BASE.py:209
+#: Cura/util/profile.py.LOCAL.py:209 Cura/util/profile.py.REMOTE.py:211
 msgid "Spiralize the outer contour"
 msgstr ""
 
-#: Cura/util/profile.py:209
+#: Cura/util/profile.py:211 Cura/util/profile.py.BASE.py:209
+#: Cura/util/profile.py.LOCAL.py:209 Cura/util/profile.py.REMOTE.py:211
 msgid ""
 "Spiralize is smoothing out the Z move of the outer edge. This will create a "
 "steady Z increase over the whole print. This feature turns a solid object "
 "into a single walled print with a solid bottom."
 msgstr ""
 
-#: Cura/util/profile.py:211
+#: Cura/util/profile.py:213 Cura/util/profile.py.BASE.py:211
+#: Cura/util/profile.py.LOCAL.py:211 Cura/util/profile.py.REMOTE.py:213
 msgid "Brim line amount"
 msgstr ""
 
-#: Cura/util/profile.py:211
+#: Cura/util/profile.py:213 Cura/util/profile.py.BASE.py:211
+#: Cura/util/profile.py.LOCAL.py:211 Cura/util/profile.py.REMOTE.py:213
 msgid ""
 "The amount of lines used for a brim, more lines means a larger brim which "
 "sticks better, but this also makes your effective print area smaller."
 msgstr ""
 
-#: Cura/util/profile.py:212
+#: Cura/util/profile.py:214 Cura/util/profile.py.BASE.py:212
+#: Cura/util/profile.py.LOCAL.py:212 Cura/util/profile.py.REMOTE.py:214
 msgid "Extra margin (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:212
+#: Cura/util/profile.py:214 Cura/util/profile.py.BASE.py:212
+#: Cura/util/profile.py.LOCAL.py:212 Cura/util/profile.py.REMOTE.py:214
 msgid ""
 "If the raft is enabled, this is the extra raft area around the object which "
 "is also rafted. Increasing this margin will create a stronger raft while "
 "using more material and leaving less are for your print."
 msgstr ""
 
-#: Cura/util/profile.py:213
+#: Cura/util/profile.py:215 Cura/util/profile.py.BASE.py:213
+#: Cura/util/profile.py.LOCAL.py:213 Cura/util/profile.py.REMOTE.py:215
 msgid "Line spacing (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:213
+#: Cura/util/profile.py:215 Cura/util/profile.py.BASE.py:213
+#: Cura/util/profile.py.LOCAL.py:213 Cura/util/profile.py.REMOTE.py:215
 msgid ""
 "When you are using the raft this is the distance between the centerlines of "
 "the raft line."
 msgstr ""
 
-#: Cura/util/profile.py:214
+#: Cura/util/profile.py:216 Cura/util/profile.py.BASE.py:214
+#: Cura/util/profile.py.LOCAL.py:214 Cura/util/profile.py.REMOTE.py:216
 msgid "Base thickness (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:214
+#: Cura/util/profile.py:216 Cura/util/profile.py.BASE.py:214
+#: Cura/util/profile.py.LOCAL.py:214 Cura/util/profile.py.REMOTE.py:216
 msgid ""
 "When you are using the raft this is the thickness of the base layer which is "
 "put down."
 msgstr ""
 
-#: Cura/util/profile.py:215
+#: Cura/util/profile.py:217 Cura/util/profile.py.BASE.py:215
+#: Cura/util/profile.py.LOCAL.py:215 Cura/util/profile.py.REMOTE.py:217
 msgid "Base line width (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:215
+#: Cura/util/profile.py:217 Cura/util/profile.py.BASE.py:215
+#: Cura/util/profile.py.LOCAL.py:215 Cura/util/profile.py.REMOTE.py:217
 msgid ""
 "When you are using the raft this is the width of the base layer lines which "
 "are put down."
 msgstr ""
 
-#: Cura/util/profile.py:216
+#: Cura/util/profile.py:218 Cura/util/profile.py.BASE.py:216
+#: Cura/util/profile.py.LOCAL.py:216 Cura/util/profile.py.REMOTE.py:218
 msgid "Interface thickness (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:216
+#: Cura/util/profile.py:218 Cura/util/profile.py.BASE.py:216
+#: Cura/util/profile.py.LOCAL.py:216 Cura/util/profile.py.REMOTE.py:218
 msgid ""
 "When you are using the raft this is the thickness of the interface layer "
 "which is put down."
 msgstr ""
 
-#: Cura/util/profile.py:217
+#: Cura/util/profile.py:219 Cura/util/profile.py.BASE.py:217
+#: Cura/util/profile.py.LOCAL.py:217 Cura/util/profile.py.REMOTE.py:219
 msgid "Interface line width (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:217
+#: Cura/util/profile.py:219 Cura/util/profile.py.BASE.py:217
+#: Cura/util/profile.py.LOCAL.py:217 Cura/util/profile.py.REMOTE.py:219
 msgid ""
 "When you are using the raft this is the width of the interface layer lines "
 "which are put down."
 msgstr ""
 
-#: Cura/util/profile.py:219 Cura/util/profile.py:220 Cura/util/profile.py:221
-#: Cura/util/profile.py:222
+#: Cura/util/profile.py:221 Cura/util/profile.py:222 Cura/util/profile.py:223
+#: Cura/util/profile.py:224 Cura/util/profile.py.BASE.py:219
+#: Cura/util/profile.py.BASE.py:220 Cura/util/profile.py.BASE.py:221
+#: Cura/util/profile.py.BASE.py:222 Cura/util/profile.py.LOCAL.py:219
+#: Cura/util/profile.py.LOCAL.py:220 Cura/util/profile.py.LOCAL.py:221
+#: Cura/util/profile.py.LOCAL.py:222 Cura/util/profile.py.REMOTE.py:221
+#: Cura/util/profile.py.REMOTE.py:222 Cura/util/profile.py.REMOTE.py:223
+#: Cura/util/profile.py.REMOTE.py:224
 msgid "Fix horrible"
 msgstr ""
 
-#: Cura/util/profile.py:219
+#: Cura/util/profile.py:221 Cura/util/profile.py.BASE.py:219
+#: Cura/util/profile.py.LOCAL.py:219 Cura/util/profile.py.REMOTE.py:221
 msgid "Combine everything (Type-A)"
 msgstr ""
 
-#: Cura/util/profile.py:219 Cura/util/profile.py:220
+#: Cura/util/profile.py:221 Cura/util/profile.py:222
+#: Cura/util/profile.py.BASE.py:219 Cura/util/profile.py.BASE.py:220
+#: Cura/util/profile.py.LOCAL.py:219 Cura/util/profile.py.LOCAL.py:220
+#: Cura/util/profile.py.REMOTE.py:221 Cura/util/profile.py.REMOTE.py:222
 msgid ""
 "This expert option adds all parts of the model together. The result is "
 "usually that internal cavities disappear. Depending on the model this can be "
@@ -1902,15 +2128,18 @@ msgid ""
 "Type-B ignores all internal holes and only keeps the outside shape per layer."
 msgstr ""
 
-#: Cura/util/profile.py:220
+#: Cura/util/profile.py:222 Cura/util/profile.py.BASE.py:220
+#: Cura/util/profile.py.LOCAL.py:220 Cura/util/profile.py.REMOTE.py:222
 msgid "Combine everything (Type-B)"
 msgstr ""
 
-#: Cura/util/profile.py:221
+#: Cura/util/profile.py:223 Cura/util/profile.py.BASE.py:221
+#: Cura/util/profile.py.LOCAL.py:221 Cura/util/profile.py.REMOTE.py:223
 msgid "Keep open faces"
 msgstr ""
 
-#: Cura/util/profile.py:221
+#: Cura/util/profile.py:223 Cura/util/profile.py.BASE.py:221
+#: Cura/util/profile.py.LOCAL.py:221 Cura/util/profile.py.REMOTE.py:223
 msgid ""
 "This expert option keeps all the open bits of the model intact. Normally "
 "Cura tries to stitch up small holes and remove everything with big holes, "
@@ -1922,11 +2151,13 @@ msgid ""
 "risk."
 msgstr ""
 
-#: Cura/util/profile.py:222
+#: Cura/util/profile.py:224 Cura/util/profile.py.BASE.py:222
+#: Cura/util/profile.py.LOCAL.py:222 Cura/util/profile.py.REMOTE.py:224
 msgid "Extensive stitching"
 msgstr ""
 
-#: Cura/util/profile.py:222
+#: Cura/util/profile.py:224 Cura/util/profile.py.BASE.py:222
+#: Cura/util/profile.py.LOCAL.py:222 Cura/util/profile.py.REMOTE.py:224
 msgid ""
 "Extrensive stitching tries to fix up open holes in the model by closing the "
 "hole with touching polygons. This algorthm is quite expensive and could "
@@ -1935,127 +2166,158 @@ msgid ""
 "risk."
 msgstr ""
 
-#: Cura/util/profile.py:330
+#: Cura/util/profile.py:332 Cura/util/profile.py.BASE.py:330
+#: Cura/util/profile.py.LOCAL.py:330 Cura/util/profile.py.REMOTE.py:332
 msgid "Save profile on slice"
 msgstr ""
 
-#: Cura/util/profile.py:330
+#: Cura/util/profile.py:332 Cura/util/profile.py.BASE.py:330
+#: Cura/util/profile.py.LOCAL.py:330 Cura/util/profile.py.REMOTE.py:332
 msgid ""
 "When slicing save the profile as [stl_file]_profile.ini next to the model."
 msgstr ""
 
-#: Cura/util/profile.py:331
+#: Cura/util/profile.py:333 Cura/util/profile.py.BASE.py:331
+#: Cura/util/profile.py.LOCAL.py:331 Cura/util/profile.py.REMOTE.py:333
 msgid "Cost (price/kg)"
 msgstr ""
 
-#: Cura/util/profile.py:331
+#: Cura/util/profile.py:333 Cura/util/profile.py.BASE.py:331
+#: Cura/util/profile.py.LOCAL.py:331 Cura/util/profile.py.REMOTE.py:333
 msgid "Cost of your filament per kg, to estimate the cost of the final print."
 msgstr ""
 
-#: Cura/util/profile.py:332
+#: Cura/util/profile.py:334 Cura/util/profile.py.BASE.py:332
+#: Cura/util/profile.py.LOCAL.py:332 Cura/util/profile.py.REMOTE.py:334
 msgid "Cost (price/m)"
 msgstr ""
 
-#: Cura/util/profile.py:332
+#: Cura/util/profile.py:334 Cura/util/profile.py.BASE.py:332
+#: Cura/util/profile.py.LOCAL.py:332 Cura/util/profile.py.REMOTE.py:334
 msgid ""
 "Cost of your filament per meter, to estimate the cost of the final print."
 msgstr ""
 
-#: Cura/util/profile.py:333
+#: Cura/util/profile.py:335 Cura/util/profile.py.BASE.py:333
+#: Cura/util/profile.py.LOCAL.py:333 Cura/util/profile.py.REMOTE.py:335
 msgid "Auto detect SD card drive"
 msgstr ""
 
-#: Cura/util/profile.py:333
+#: Cura/util/profile.py:335 Cura/util/profile.py.BASE.py:333
+#: Cura/util/profile.py.LOCAL.py:333 Cura/util/profile.py.REMOTE.py:335
 msgid ""
 "Auto detect the SD card. You can disable this because on some systems "
 "external hard-drives or USB sticks are detected as SD card."
 msgstr ""
 
-#: Cura/util/profile.py:334
+#: Cura/util/profile.py:336 Cura/util/profile.py.BASE.py:334
+#: Cura/util/profile.py.LOCAL.py:334 Cura/util/profile.py.REMOTE.py:336
 msgid "Check for updates"
 msgstr ""
 
-#: Cura/util/profile.py:334
+#: Cura/util/profile.py:336 Cura/util/profile.py.BASE.py:334
+#: Cura/util/profile.py.LOCAL.py:334 Cura/util/profile.py.REMOTE.py:336
 msgid "Check for newer versions of Cura on startup"
 msgstr ""
 
-#: Cura/util/profile.py:335
+#: Cura/util/profile.py:337 Cura/util/profile.py.BASE.py:335
+#: Cura/util/profile.py.LOCAL.py:335 Cura/util/profile.py.REMOTE.py:337
 msgid "Send usage statistics"
 msgstr ""
 
-#: Cura/util/profile.py:335
+#: Cura/util/profile.py:337 Cura/util/profile.py.BASE.py:335
+#: Cura/util/profile.py.LOCAL.py:335 Cura/util/profile.py.REMOTE.py:337
 msgid "Submit anonymous usage information to improve next versions of Cura"
 msgstr ""
 
-#: Cura/util/profile.py:337
+#: Cura/util/profile.py:339 Cura/util/profile.py.BASE.py:337
+#: Cura/util/profile.py.LOCAL.py:337 Cura/util/profile.py.REMOTE.py:339
 msgid "Density (kg/m3)"
 msgstr ""
 
-#: Cura/util/profile.py:337
+#: Cura/util/profile.py:339 Cura/util/profile.py.BASE.py:337
+#: Cura/util/profile.py.LOCAL.py:337 Cura/util/profile.py.REMOTE.py:339
 msgid ""
 "Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. "
 "This value is used to estimate the weight if the filament used for the print."
 msgstr ""
 
-#: Cura/util/profile.py:338
+#: Cura/util/profile.py:340 Cura/util/profile.py.BASE.py:338
+#: Cura/util/profile.py.LOCAL.py:338 Cura/util/profile.py.REMOTE.py:340
 msgid ""
 "Change the language in which Cura runs. Switching language requires a "
 "restart of Cura"
 msgstr ""
 
-#: Cura/util/profile.py:341
+#: Cura/util/profile.py:343 Cura/util/profile.py.BASE.py:341
+#: Cura/util/profile.py.LOCAL.py:341 Cura/util/profile.py.REMOTE.py:343
 msgid "Model colour"
 msgstr ""
 
-#: Cura/util/profile.py:342
+#: Cura/util/profile.py:344 Cura/util/profile.py.BASE.py:342
+#: Cura/util/profile.py.LOCAL.py:342 Cura/util/profile.py.REMOTE.py:344
 msgid "Model colour (2)"
 msgstr ""
 
-#: Cura/util/profile.py:343
+#: Cura/util/profile.py:345 Cura/util/profile.py.BASE.py:343
+#: Cura/util/profile.py.LOCAL.py:343 Cura/util/profile.py.REMOTE.py:345
 msgid "Model colour (3)"
 msgstr ""
 
-#: Cura/util/profile.py:344
+#: Cura/util/profile.py:346 Cura/util/profile.py.BASE.py:344
+#: Cura/util/profile.py.LOCAL.py:344 Cura/util/profile.py.REMOTE.py:346
 msgid "Model colour (4)"
 msgstr ""
 
-#: Cura/util/profile.py:355
+#: Cura/util/profile.py:357 Cura/util/profile.py.BASE.py:355
+#: Cura/util/profile.py.LOCAL.py:355 Cura/util/profile.py.REMOTE.py:357
 msgid "Maximum width (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:355 Cura/util/profile.py:356 Cura/util/profile.py:357
+#: Cura/util/profile.py:357 Cura/util/profile.py:358 Cura/util/profile.py:359
+#: Cura/util/profile.py.BASE.py:355 Cura/util/profile.py.BASE.py:356
+#: Cura/util/profile.py.BASE.py:357 Cura/util/profile.py.LOCAL.py:355
+#: Cura/util/profile.py.LOCAL.py:356 Cura/util/profile.py.LOCAL.py:357
+#: Cura/util/profile.py.REMOTE.py:357 Cura/util/profile.py.REMOTE.py:358
+#: Cura/util/profile.py.REMOTE.py:359
 msgid "Size of the machine in mm"
 msgstr ""
 
-#: Cura/util/profile.py:356
+#: Cura/util/profile.py:358 Cura/util/profile.py.BASE.py:356
+#: Cura/util/profile.py.LOCAL.py:356 Cura/util/profile.py.REMOTE.py:358
 msgid "Maximum depth (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:357
+#: Cura/util/profile.py:359 Cura/util/profile.py.BASE.py:357
+#: Cura/util/profile.py.LOCAL.py:357 Cura/util/profile.py.REMOTE.py:359
 msgid "Maximum height (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:358
+#: Cura/util/profile.py:360 Cura/util/profile.py.BASE.py:358
+#: Cura/util/profile.py.LOCAL.py:358 Cura/util/profile.py.REMOTE.py:360
 msgid "Machine center 0,0"
 msgstr ""
 
-#: Cura/util/profile.py:358
+#: Cura/util/profile.py:360 Cura/util/profile.py.BASE.py:358
+#: Cura/util/profile.py.LOCAL.py:358 Cura/util/profile.py.REMOTE.py:360
 msgid ""
 "Machines firmware defines the center of the bed as 0,0 instead of the front "
 "left corner."
 msgstr ""
 
-#: Cura/util/profile.py:360
+#: Cura/util/profile.py:362 Cura/util/profile.py.BASE.py:360
+#: Cura/util/profile.py.LOCAL.py:360 Cura/util/profile.py.REMOTE.py:362
 msgid ""
 "If you have an heated bed, this enabled heated bed settings (requires "
 "restart)"
 msgstr ""
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:363 Cura/util/profile.py.BASE.py:361
+#: Cura/util/profile.py.LOCAL.py:361 Cura/util/profile.py.REMOTE.py:363
 msgid "GCode Flavor"
 msgstr ""
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:363 Cura/util/profile.py.LOCAL.py:361
 msgid ""
 "Flavor of generated GCode.\n"
 "RepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\n"
@@ -2067,163 +2329,273 @@ msgid ""
 "commands."
 msgstr ""
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:364 Cura/util/profile.py.BASE.py:362
+#: Cura/util/profile.py.LOCAL.py:362 Cura/util/profile.py.REMOTE.py:364
 msgid "Extruder count"
 msgstr ""
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:364 Cura/util/profile.py.BASE.py:362
+#: Cura/util/profile.py.LOCAL.py:362 Cura/util/profile.py.REMOTE.py:364
 msgid "Amount of extruders in your machine."
 msgstr ""
 
-#: Cura/util/profile.py:363 Cura/util/profile.py:365 Cura/util/profile.py:367
+#: Cura/util/profile.py:365 Cura/util/profile.py:367 Cura/util/profile.py:369
+#: Cura/util/profile.py.BASE.py:363 Cura/util/profile.py.BASE.py:365
+#: Cura/util/profile.py.BASE.py:367 Cura/util/profile.py.LOCAL.py:363
+#: Cura/util/profile.py.LOCAL.py:365 Cura/util/profile.py.LOCAL.py:367
+#: Cura/util/profile.py.REMOTE.py:365 Cura/util/profile.py.REMOTE.py:367
+#: Cura/util/profile.py.REMOTE.py:369
 msgid "Offset X"
 msgstr ""
 
-#: Cura/util/profile.py:363 Cura/util/profile.py:364
+#: Cura/util/profile.py:365 Cura/util/profile.py:366
+#: Cura/util/profile.py.BASE.py:363 Cura/util/profile.py.BASE.py:364
+#: Cura/util/profile.py.LOCAL.py:363 Cura/util/profile.py.LOCAL.py:364
+#: Cura/util/profile.py.REMOTE.py:365 Cura/util/profile.py.REMOTE.py:366
 msgid "The offset of your secondary extruder compared to the primary."
 msgstr ""
 
-#: Cura/util/profile.py:364 Cura/util/profile.py:366 Cura/util/profile.py:368
+#: Cura/util/profile.py:366 Cura/util/profile.py:368 Cura/util/profile.py:370
+#: Cura/util/profile.py.BASE.py:364 Cura/util/profile.py.BASE.py:366
+#: Cura/util/profile.py.BASE.py:368 Cura/util/profile.py.LOCAL.py:364
+#: Cura/util/profile.py.LOCAL.py:366 Cura/util/profile.py.LOCAL.py:368
+#: Cura/util/profile.py.REMOTE.py:366 Cura/util/profile.py.REMOTE.py:368
+#: Cura/util/profile.py.REMOTE.py:370
 msgid "Offset Y"
 msgstr ""
 
-#: Cura/util/profile.py:365 Cura/util/profile.py:366
+#: Cura/util/profile.py:367 Cura/util/profile.py:368
+#: Cura/util/profile.py.BASE.py:365 Cura/util/profile.py.BASE.py:366
+#: Cura/util/profile.py.LOCAL.py:365 Cura/util/profile.py.LOCAL.py:366
+#: Cura/util/profile.py.REMOTE.py:367 Cura/util/profile.py.REMOTE.py:368
 msgid "The offset of your tertiary extruder compared to the primary."
 msgstr ""
 
-#: Cura/util/profile.py:367 Cura/util/profile.py:368
+#: Cura/util/profile.py:369 Cura/util/profile.py:370
+#: Cura/util/profile.py.BASE.py:367 Cura/util/profile.py.BASE.py:368
+#: Cura/util/profile.py.LOCAL.py:367 Cura/util/profile.py.LOCAL.py:368
+#: Cura/util/profile.py.REMOTE.py:369 Cura/util/profile.py.REMOTE.py:370
 msgid "The offset of your forth extruder compared to the primary."
 msgstr ""
 
-#: Cura/util/profile.py:369
+#: Cura/util/profile.py:371 Cura/util/profile.py.BASE.py:369
+#: Cura/util/profile.py.LOCAL.py:369 Cura/util/profile.py.REMOTE.py:371
 msgid "E-Steps per 1mm filament"
 msgstr ""
 
-#: Cura/util/profile.py:369
+#: Cura/util/profile.py:371 Cura/util/profile.py.BASE.py:369
+#: Cura/util/profile.py.LOCAL.py:369 Cura/util/profile.py.REMOTE.py:371
 msgid ""
 "Amount of steps per mm filament extrusion. If set to 0 then this value is "
 "ignored and the value in your firmware is used."
 msgstr ""
 
-#: Cura/util/profile.py:370
+#: Cura/util/profile.py:372 Cura/util/profile.py.BASE.py:370
+#: Cura/util/profile.py.LOCAL.py:370 Cura/util/profile.py.REMOTE.py:372
 msgid "Serial port"
 msgstr ""
 
-#: Cura/util/profile.py:370
+#: Cura/util/profile.py:372 Cura/util/profile.py.BASE.py:370
+#: Cura/util/profile.py.LOCAL.py:370 Cura/util/profile.py.REMOTE.py:372
 msgid "Serial port to use for communication with the printer"
 msgstr ""
 
-#: Cura/util/profile.py:372
+#: Cura/util/profile.py:374 Cura/util/profile.py.BASE.py:372
+#: Cura/util/profile.py.LOCAL.py:372 Cura/util/profile.py.REMOTE.py:374
 msgid "Baudrate"
 msgstr ""
 
-#: Cura/util/profile.py:372
+#: Cura/util/profile.py:374 Cura/util/profile.py.BASE.py:372
+#: Cura/util/profile.py.LOCAL.py:372 Cura/util/profile.py.REMOTE.py:374
 msgid ""
 "Speed of the serial port communication\n"
 "Needs to match your firmware settings\n"
 "Common values are 250000, 115200, 57600"
 msgstr ""
 
-#: Cura/util/profile.py:375
+#: Cura/util/profile.py:377 Cura/util/profile.py.BASE.py:375
+#: Cura/util/profile.py.LOCAL.py:375 Cura/util/profile.py.REMOTE.py:377
 msgid "Head size towards X min (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:375
+#: Cura/util/profile.py:377 Cura/util/profile.py.BASE.py:375
+#: Cura/util/profile.py.LOCAL.py:375 Cura/util/profile.py.REMOTE.py:377
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: Cura/util/profile.py:376
+#: Cura/util/profile.py:378 Cura/util/profile.py.BASE.py:376
+#: Cura/util/profile.py.LOCAL.py:376 Cura/util/profile.py.REMOTE.py:378
 msgid "Head size towards Y min (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:376 Cura/util/profile.py:377
+#: Cura/util/profile.py:378 Cura/util/profile.py:379
+#: Cura/util/profile.py.BASE.py:376 Cura/util/profile.py.BASE.py:377
+#: Cura/util/profile.py.LOCAL.py:376 Cura/util/profile.py.LOCAL.py:377
+#: Cura/util/profile.py.REMOTE.py:378 Cura/util/profile.py.REMOTE.py:379
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: Cura/util/profile.py:377
+#: Cura/util/profile.py:379 Cura/util/profile.py.BASE.py:377
+#: Cura/util/profile.py.LOCAL.py:377 Cura/util/profile.py.REMOTE.py:379
 msgid "Head size towards X max (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:380 Cura/util/profile.py.BASE.py:378
+#: Cura/util/profile.py.LOCAL.py:378 Cura/util/profile.py.REMOTE.py:380
 msgid "Head size towards Y max (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:380 Cura/util/profile.py.BASE.py:378
+#: Cura/util/profile.py.LOCAL.py:378 Cura/util/profile.py.REMOTE.py:380
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan "
 "is on the left side."
 msgstr ""
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:381 Cura/util/profile.py.BASE.py:379
+#: Cura/util/profile.py.LOCAL.py:379 Cura/util/profile.py.REMOTE.py:381
 msgid "Printer gantry height (mm)"
 msgstr ""
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:381 Cura/util/profile.py.BASE.py:379
+#: Cura/util/profile.py.LOCAL.py:379 Cura/util/profile.py.REMOTE.py:381
 msgid ""
 "The height of the gantry holding up the printer head. If an object is higher "
 "then this then you cannot print multiple objects one for one. 60mm for an "
 "Ultimaker."
 msgstr ""
 
-#: Cura/util/profile.py:381
+#: Cura/util/profile.py:383 Cura/util/profile.py.BASE.py:381
+#: Cura/util/profile.py.LOCAL.py:381 Cura/util/profile.py.REMOTE.py:383
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:382
+#: Cura/util/profile.py:384 Cura/util/profile.py.BASE.py:382
+#: Cura/util/profile.py.LOCAL.py:382 Cura/util/profile.py.REMOTE.py:384
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:385 Cura/util/profile.py.BASE.py:383
+#: Cura/util/profile.py.LOCAL.py:383 Cura/util/profile.py.REMOTE.py:385
 #, python-format
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
 "are not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:385
+#: Cura/util/profile.py:387 Cura/util/profile.py.BASE.py:385
+#: Cura/util/profile.py.LOCAL.py:385 Cura/util/profile.py.REMOTE.py:387
 msgid ""
 "It is highly unlikely that your machine can achieve a printing speed above "
 "150mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:387 Cura/util/profile.py:388 Cura/util/profile.py:389
-#: Cura/util/profile.py:390
+#: Cura/util/profile.py:389 Cura/util/profile.py:390 Cura/util/profile.py:391
+#: Cura/util/profile.py:392 Cura/util/profile.py.BASE.py:387
+#: Cura/util/profile.py.BASE.py:388 Cura/util/profile.py.BASE.py:389
+#: Cura/util/profile.py.BASE.py:390 Cura/util/profile.py.LOCAL.py:387
+#: Cura/util/profile.py.LOCAL.py:388 Cura/util/profile.py.LOCAL.py:389
+#: Cura/util/profile.py.LOCAL.py:390 Cura/util/profile.py.REMOTE.py:389
+#: Cura/util/profile.py.REMOTE.py:390 Cura/util/profile.py.REMOTE.py:391
+#: Cura/util/profile.py.REMOTE.py:392
 msgid "Temperatures above 260C could damage your machine, be careful!"
 msgstr ""
 
-#: Cura/util/profile.py:391 Cura/util/profile.py:392 Cura/util/profile.py:393
-#: Cura/util/profile.py:394
+#: Cura/util/profile.py:393 Cura/util/profile.py:394 Cura/util/profile.py:395
+#: Cura/util/profile.py:396 Cura/util/profile.py.BASE.py:391
+#: Cura/util/profile.py.BASE.py:392 Cura/util/profile.py.BASE.py:393
+#: Cura/util/profile.py.BASE.py:394 Cura/util/profile.py.LOCAL.py:391
+#: Cura/util/profile.py.LOCAL.py:392 Cura/util/profile.py.LOCAL.py:393
+#: Cura/util/profile.py.LOCAL.py:394 Cura/util/profile.py.REMOTE.py:393
+#: Cura/util/profile.py.REMOTE.py:394 Cura/util/profile.py.REMOTE.py:395
+#: Cura/util/profile.py.REMOTE.py:396
 msgid ""
 "Are you sure your filament is that thick? Normal filament is around 3mm or "
 "1.75mm."
 msgstr ""
 
-#: Cura/util/profile.py:395
+#: Cura/util/profile.py:397 Cura/util/profile.py.BASE.py:395
+#: Cura/util/profile.py.LOCAL.py:395 Cura/util/profile.py.REMOTE.py:397
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:396
+#: Cura/util/profile.py:398 Cura/util/profile.py.BASE.py:396
+#: Cura/util/profile.py.LOCAL.py:396 Cura/util/profile.py.REMOTE.py:398
 #, python-format
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
 "results and is not recommended."
 msgstr ""
 
-#: Cura/util/sliceEngine.py:210 Cura/util/sliceEngine.py.LOCAL.py:208
-msgid "Print time:"
+#: Cura/util/profile.py.BASE.py:165 Cura/util/profile.py.BASE.py:166
+#: Cura/util/profile.py.REMOTE.py:165 Cura/util/profile.py.REMOTE.py:166
+msgid "None"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:165 Cura/util/profile.py.REMOTE.py:165
+msgid "Touching buildplate"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:165 Cura/util/profile.py.REMOTE.py:165
+msgid "Everywhere"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:166 Cura/util/profile.py.BASE.py:211
+#: Cura/util/profile.py.REMOTE.py:166 Cura/util/profile.py.REMOTE.py:213
+msgid "Brim"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:166 Cura/util/profile.py.BASE.py:212
+#: Cura/util/profile.py.BASE.py:213 Cura/util/profile.py.BASE.py:214
+#: Cura/util/profile.py.BASE.py:215 Cura/util/profile.py.BASE.py:216
+#: Cura/util/profile.py.BASE.py:217 Cura/util/profile.py.REMOTE.py:166
+#: Cura/util/profile.py.REMOTE.py:214 Cura/util/profile.py.REMOTE.py:215
+#: Cura/util/profile.py.REMOTE.py:216 Cura/util/profile.py.REMOTE.py:217
+#: Cura/util/profile.py.REMOTE.py:218 Cura/util/profile.py.REMOTE.py:219
+msgid "Raft"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:167 Cura/util/profile.py.REMOTE.py:167
+msgid "Both"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:167 Cura/util/profile.py.REMOTE.py:167
+msgid "First extruder"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:167 Cura/util/profile.py.REMOTE.py:167
+msgid "Second extruder"
+msgstr ""
+
+#: Cura/util/profile.py.BASE.py:361 Cura/util/profile.py.REMOTE.py:363
+msgid ""
+"Flavor of generated GCode.\n"
+"RepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\n"
+"UltiGCode is a variation of the RepRap GCode which puts more settings in the "
+"machine instead of the slicer.\n"
+"MakerBot GCode has a few changes in the way GCode is generated, but still "
+"requires MakerWare to generate to X3G."
 msgstr ""
 
 #: Cura/util/sliceEngine.py:212 Cura/util/sliceEngine.py.LOCAL.py:210
+msgid "Print time:"
+msgstr ""
+
+#: Cura/util/sliceEngine.py:214 Cura/util/sliceEngine.py.LOCAL.py:212
 msgid "Filament:"
+msgstr ""
+
+#: Cura/util/sliceEngine.py:219
+msgid "Filament2:"
 msgstr ""
