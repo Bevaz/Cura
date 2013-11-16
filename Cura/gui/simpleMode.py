@@ -343,11 +343,11 @@ class simpleModePanel(wx.Panel):
 	def setupSlice(self):
 		if profile.getMachineSetting('machine_type') == 'JoysmakerR1':
 			setupSliceJoysmakerR1()
-		else if profile.getMachineSetting('machine_type') == 'JoysmakerR2':
+		elif profile.getMachineSetting('machine_type') == 'JoysmakerR2':
 			setupSliceJoysmakerR2()
-		else if profile.getMachineSetting('machine_type') == 'Myriwell':
+		elif profile.getMachineSetting('machine_type') == 'Myriwell':
 			setupSliceMyriwell()
-		else
+		else:
 			setupSliceDefault()
 
 	def updateProfileToControls(self):
