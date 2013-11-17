@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 10:18+0400\n"
+"POT-Creation-Date: 2013-11-17 11:35+0400\n"
 "PO-Revision-Date: 2013-10-02 14:50+0100\n"
 "Last-Translator: Jose Gemez <josegemez@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2584,20 +2584,17 @@ msgstr ""
 "Una capa final de mas de %.2fmm (3/4 del tamaño del nozzle) usualmente da "
 "malos resultados y no es recomendable."
 
-#: Cura/util/sliceEngine.py:212
 #, fuzzy
-msgid "Print time:"
-msgstr "Imprimiendo"
+#~ msgid "Print time:"
+#~ msgstr "Imprimiendo"
 
-#: Cura/util/sliceEngine.py:214
 #, fuzzy
-msgid "Filament:"
-msgstr "Filamento"
+#~ msgid "Filament:"
+#~ msgstr "Filamento"
 
-#: Cura/util/sliceEngine.py:219
 #, fuzzy
-msgid "Filament2:"
-msgstr "Filamento"
+#~ msgid "Filament2:"
+#~ msgstr "Filamento"
 
 #, fuzzy
 #~ msgid ""

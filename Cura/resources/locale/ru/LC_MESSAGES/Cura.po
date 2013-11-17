@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 10:18+0400\n"
+"POT-Creation-Date: 2013-11-17 11:35+0400\n"
 "PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2638,17 +2638,14 @@ msgstr ""
 "Не рекомендуется выставлять толщину нижнего слоя больше %.2fмм (3/4 диаметра "
 "сопла), так как обычно это дает плохие результаты при печати."
 
-#: Cura/util/sliceEngine.py:212
-msgid "Print time:"
-msgstr "Время печати:"
+#~ msgid "Print time:"
+#~ msgstr "Время печати:"
 
-#: Cura/util/sliceEngine.py:214
-msgid "Filament:"
-msgstr "Материал:"
+#~ msgid "Filament:"
+#~ msgstr "Материал:"
 
-#: Cura/util/sliceEngine.py:219
-msgid "Filament2:"
-msgstr "Материал2:"
+#~ msgid "Filament2:"
+#~ msgstr "Материал2:"
 
 #~ msgid ""
 #~ "Flavor of generated GCode.\n"

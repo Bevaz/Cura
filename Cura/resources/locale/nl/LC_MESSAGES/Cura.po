@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 10:18+0400\n"
+"POT-Creation-Date: 2013-11-17 11:35+0400\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -2612,20 +2612,17 @@ msgid ""
 "results and is not recommended."
 msgstr ""
 
-#: Cura/util/sliceEngine.py:212
 #, fuzzy
-msgid "Print time:"
-msgstr "Print"
+#~ msgid "Print time:"
+#~ msgstr "Print"
 
-#: Cura/util/sliceEngine.py:214
 #, fuzzy
-msgid "Filament:"
-msgstr "Filament"
+#~ msgid "Filament:"
+#~ msgstr "Filament"
 
-#: Cura/util/sliceEngine.py:219
 #, fuzzy
-msgid "Filament2:"
-msgstr "Filament"
+#~ msgid "Filament2:"
+#~ msgstr "Filament"
 
 #, fuzzy
 #~ msgid ""
