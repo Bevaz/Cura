@@ -7,6 +7,7 @@ from wx.lib.agw import floatspin
 
 from Cura.util import validators
 from Cura.util import profile
+import locale
 
 class configPanelBase(wx.Panel):
 	"A base class for configuration dialogs. Handles creation of settings, and popups"
@@ -242,11 +243,11 @@ class SettingRow(object):
 		if isinstance(self.ctrl, wx.ColourPickerCtrl):
 			return str(self.ctrl.GetColour().GetAsString(wx.C2S_HTML_SYNTAX))
 		elif isinstance(self.ctrl, wx.ComboBox):
-			value = str(self.ctrl.GetValue())
+			value = self.ctrl.GetValue().encode(locale.getpreferredencoding())
 			for ret in self._englishChoices:
-				if _(ret) == value:
+				if _(ret).encode(locale.getpreferredencoding()) == value:
 					return ret
-			return value
+			return str(self.ctrl.GetValue())
 		else:
 			return str(self.ctrl.GetValue())
 
