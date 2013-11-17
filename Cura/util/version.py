@@ -46,8 +46,8 @@ def checkForNewerVersion():
 	if isDevVersion():
 		return None
 	try:
-		updateBaseURL = 'http://software.ultimaker.com'
-		localVersion = map(int, getVersion(False).split('.'))
+		updateBaseURL = 'http://joysmaker.ru/software'
+		localVersion = map(int, getVersion(False).replace('-Extensio.ru','').split('.'))
 		while len(localVersion) < 3:
 			localVersion += [1]
 		latestFile = urllib2.urlopen("%s/latest.xml" % (updateBaseURL))
