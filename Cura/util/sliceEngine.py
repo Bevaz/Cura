@@ -209,14 +209,14 @@ class Slicer(object):
 						self._callback(progressValue, False)
 					except:
 						pass
-			elif line.startswith(_('Print time:')):
+			elif line.startswith('Print time:'):
 				self._printTimeSeconds = int(line.split(':')[1].strip())
-			elif line.startswith(_('Filament:')):
+			elif line.startswith('Filament:'):
 				self._filamentMM[0] = int(line.split(':')[1].strip())
 				if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 					radius = profile.getProfileSettingFloat('filament_diameter') / 2.0
 					self._filamentMM[0] /= (math.pi * radius * radius)
-			elif line.startswith(_('Filament2:')):
+			elif line.startswith('Filament2:'):
 				self._filamentMM[1] = int(line.split(':')[1].strip())
 				if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
 					radius = profile.getProfileSettingFloat('filament_diameter') / 2.0
