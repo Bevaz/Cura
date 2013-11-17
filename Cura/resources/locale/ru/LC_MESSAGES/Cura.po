@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-16 20:30+0400\n"
+"POT-Creation-Date: 2013-11-17 10:18+0400\n"
 "PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1512,6 +1512,18 @@ msgstr ""
 "Температура нагрева подогреваемой платформы.\n"
 "Для управления этим параметром на принтере задайте 0."
 
+#: Cura/util/profile.py:165 Cura/util/profile.py:166
+msgid "None"
+msgstr "Не используется"
+
+#: Cura/util/profile.py:165
+msgid "Touching buildplate"
+msgstr "Над платформой"
+
+#: Cura/util/profile.py:165
+msgid "Everywhere"
+msgstr "Везде"
+
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:208 Cura/util/profile.py:209 Cura/util/profile.py:210
 msgid "Support"
@@ -1537,6 +1549,16 @@ msgstr ""
 "которые свисают над платформой.\"Везде\" - опорная сетка создается даже над "
 "частями модели."
 
+#: Cura/util/profile.py:166 Cura/util/profile.py:213
+msgid "Brim"
+msgstr "Окаймление"
+
+#: Cura/util/profile.py:166 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+#: Cura/util/profile.py:219
+msgid "Raft"
+msgstr "Фундамент"
+
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr "Тип адгезии платформы"
@@ -1561,6 +1583,18 @@ msgstr ""
 "результаты, т. к. не происходит рубцевания дна, но его реализация требует "
 "большей площади платформы.Использование фундамента или окаймления отключает "
 "использование юбки."
+
+#: Cura/util/profile.py:167
+msgid "Both"
+msgstr "Оба экструдера"
+
+#: Cura/util/profile.py:167
+msgid "First extruder"
+msgstr "Первый экструдер"
+
+#: Cura/util/profile.py:167
+msgid "Second extruder"
+msgstr "Второй экструдер"
 
 #: Cura/util/profile.py:167
 msgid "Support dual extrusion"
@@ -2123,10 +2157,6 @@ msgstr ""
 "Это позволяет превратить сплошной объект в одностеночный со сплошным дном."
 
 #: Cura/util/profile.py:213
-msgid "Brim"
-msgstr "Окаймление"
-
-#: Cura/util/profile.py:213
 msgid "Brim line amount"
 msgstr "Количество окаймляющих линий"
 
@@ -2138,11 +2168,6 @@ msgstr ""
 "Количество линий, используемых для окаймления. Больше линий означает большее "
 "окаймление, и модель лучше прилипает к платформе, но делает площадь печати "
 "меньше."
-
-#: Cura/util/profile.py:214 Cura/util/profile.py:215 Cura/util/profile.py:216
-#: Cura/util/profile.py:217 Cura/util/profile.py:218 Cura/util/profile.py:219
-msgid "Raft"
-msgstr "Фундамент"
 
 #: Cura/util/profile.py:214
 msgid "Extra margin (mm)"
@@ -2624,24 +2649,6 @@ msgstr "Материал:"
 #: Cura/util/sliceEngine.py:219
 msgid "Filament2:"
 msgstr "Материал2:"
-
-#~ msgid "None"
-#~ msgstr "Не используется"
-
-#~ msgid "Touching buildplate"
-#~ msgstr "Поддержка над платформой"
-
-#~ msgid "Everywhere"
-#~ msgstr "Везде"
-
-#~ msgid "Both"
-#~ msgstr "Оба экструдера"
-
-#~ msgid "First extruder"
-#~ msgstr "Первый экструдер"
-
-#~ msgid "Second extruder"
-#~ msgstr "Второй экструдер"
 
 #~ msgid ""
 #~ "Flavor of generated GCode.\n"

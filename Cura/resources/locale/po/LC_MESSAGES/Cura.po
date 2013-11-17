@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-16 20:30+0400\n"
+"POT-Creation-Date: 2013-11-17 10:18+0400\n"
 "PO-Revision-Date: 2013-10-02 11:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1499,6 +1499,18 @@ msgid ""
 msgstr ""
 "Temperatura używana dla stołu drukarki. Ustaw 0 aby rozgrzać samodzielnie."
 
+#: Cura/util/profile.py:165 Cura/util/profile.py:166
+msgid "None"
+msgstr ""
+
+#: Cura/util/profile.py:165
+msgid "Touching buildplate"
+msgstr ""
+
+#: Cura/util/profile.py:165
+msgid "Everywhere"
+msgstr ""
+
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:208 Cura/util/profile.py:209 Cura/util/profile.py:210
 msgid "Support"
@@ -1527,6 +1539,16 @@ msgstr ""
 "Wszędzie powoduje utworzenie struktur wsparcia nawet w górnych częściach "
 "modelu."
 
+#: Cura/util/profile.py:166 Cura/util/profile.py:213
+msgid "Brim"
+msgstr "Obrys"
+
+#: Cura/util/profile.py:166 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+#: Cura/util/profile.py:219
+msgid "Raft"
+msgstr "Tratwa"
+
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr "Typ platformy przyklejania"
@@ -1548,6 +1570,18 @@ msgstr ""
 "Tratwa powoduje utworzenie grubej warstwy pod obiektem i cienkiego "
 "interfejsu pomiędzy taką tratwą a twoim obiektem.\n"
 "(Zwróć uwagę, że włączenie Obrysu lub Tratwy wyłączy Okrążanie)"
+
+#: Cura/util/profile.py:167
+msgid "Both"
+msgstr ""
+
+#: Cura/util/profile.py:167
+msgid "First extruder"
+msgstr ""
+
+#: Cura/util/profile.py:167
+msgid "Second extruder"
+msgstr ""
 
 #: Cura/util/profile.py:167
 msgid "Support dual extrusion"
@@ -2088,10 +2122,6 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:213
-msgid "Brim"
-msgstr "Obrys"
-
-#: Cura/util/profile.py:213
 msgid "Brim line amount"
 msgstr "Ilość lini obrysu"
 
@@ -2103,11 +2133,6 @@ msgstr ""
 "Ilość linii użytych do wydrukowania obrysu, więcej lini oznacza większy "
 "obrys który lepiej się przykleja, ale powoduje to zmniejszenia efektywnie "
 "dostępnej przestrzeni stołu."
-
-#: Cura/util/profile.py:214 Cura/util/profile.py:215 Cura/util/profile.py:216
-#: Cura/util/profile.py:217 Cura/util/profile.py:218 Cura/util/profile.py:219
-msgid "Raft"
-msgstr "Tratwa"
 
 #: Cura/util/profile.py:214
 msgid "Extra margin (mm)"

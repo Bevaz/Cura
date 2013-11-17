@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-16 20:30+0400\n"
+"POT-Creation-Date: 2013-11-17 10:18+0400\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -1511,6 +1511,18 @@ msgstr ""
 "Temperatuur voor een verwarmd platform. Voer 0 in wanneer je zelf handmatig "
 "voorverwarmt."
 
+#: Cura/util/profile.py:165 Cura/util/profile.py:166
+msgid "None"
+msgstr "Geen"
+
+#: Cura/util/profile.py:165
+msgid "Touching buildplate"
+msgstr "Contact met platform"
+
+#: Cura/util/profile.py:165
+msgid "Everywhere"
+msgstr "Overal"
+
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:208 Cura/util/profile.py:209 Cura/util/profile.py:210
 msgid "Support"
@@ -1535,6 +1547,16 @@ msgstr ""
 "\"Geen\" wanneer je nergens ondersteuning wilt gebruiken.\n"
 "\"Overal\" genereert ook ondersteuning in een model zelf."
 
+#: Cura/util/profile.py:166 Cura/util/profile.py:213
+msgid "Brim"
+msgstr "Boord"
+
+#: Cura/util/profile.py:166 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+#: Cura/util/profile.py:219
+msgid "Raft"
+msgstr "Mat"
+
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr "Type adhesie aan platform"
@@ -1555,6 +1577,18 @@ msgstr ""
 "gemakkelijk te verwijderen. Deze optie wordt aangeraden.\n"
 "\"Raft\" voegt een raster toe tussen het platform en het object.\n"
 "(Let op: Als brim of raft aan staan wordt \"skirt\" uitgezet)"
+
+#: Cura/util/profile.py:167
+msgid "Both"
+msgstr "Beide"
+
+#: Cura/util/profile.py:167
+msgid "First extruder"
+msgstr "Eerste kop"
+
+#: Cura/util/profile.py:167
+msgid "Second extruder"
+msgstr "Tweede kop"
 
 #: Cura/util/profile.py:167
 msgid "Support dual extrusion"
@@ -2096,10 +2130,6 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:213
-msgid "Brim"
-msgstr "Boord"
-
-#: Cura/util/profile.py:213
 msgid "Brim line amount"
 msgstr "Hoeveelheid boorden"
 
@@ -2111,11 +2141,6 @@ msgstr ""
 "De hoeveelheid lijnen die gebruikt worden voor een kleefrand. Meer lijnen is "
 "een grotere kleefrand, maar dit zorgt ook dat je printoppervlak kleiner "
 "wordt."
-
-#: Cura/util/profile.py:214 Cura/util/profile.py:215 Cura/util/profile.py:216
-#: Cura/util/profile.py:217 Cura/util/profile.py:218 Cura/util/profile.py:219
-msgid "Raft"
-msgstr "Mat"
 
 #: Cura/util/profile.py:214
 msgid "Extra margin (mm)"
@@ -2601,24 +2626,6 @@ msgstr "Filament"
 #, fuzzy
 msgid "Filament2:"
 msgstr "Filament"
-
-#~ msgid "None"
-#~ msgstr "Geen"
-
-#~ msgid "Touching buildplate"
-#~ msgstr "Contact met platform"
-
-#~ msgid "Everywhere"
-#~ msgstr "Overal"
-
-#~ msgid "Both"
-#~ msgstr "Beide"
-
-#~ msgid "First extruder"
-#~ msgstr "Eerste kop"
-
-#~ msgid "Second extruder"
-#~ msgstr "Tweede kop"
 
 #, fuzzy
 #~ msgid ""

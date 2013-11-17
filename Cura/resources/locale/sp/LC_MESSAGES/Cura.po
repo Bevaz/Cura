@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-16 20:30+0400\n"
+"POT-Creation-Date: 2013-11-17 10:18+0400\n"
 "PO-Revision-Date: 2013-10-02 14:50+0100\n"
 "Last-Translator: Jose Gemez <josegemez@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1494,6 +1494,18 @@ msgid ""
 msgstr ""
 "Temperatura usada para calentar la cama. Pon 0 para calentar tu mismo. "
 
+#: Cura/util/profile.py:165 Cura/util/profile.py:166
+msgid "None"
+msgstr "Nada"
+
+#: Cura/util/profile.py:165
+msgid "Touching buildplate"
+msgstr "Tocando la cama caliente"
+
+#: Cura/util/profile.py:165
+msgid "Everywhere"
+msgstr "Cualquier sitio"
+
 #: Cura/util/profile.py:165 Cura/util/profile.py:166 Cura/util/profile.py:167
 #: Cura/util/profile.py:208 Cura/util/profile.py:209 Cura/util/profile.py:210
 msgid "Support"
@@ -1521,6 +1533,16 @@ msgstr ""
 "plataforma. \n"
 "Cualquier sitio creara soportes incluso sobre la pieza"
 
+#: Cura/util/profile.py:166 Cura/util/profile.py:213
+msgid "Brim"
+msgstr "Borde - Brim"
+
+#: Cura/util/profile.py:166 Cura/util/profile.py:214 Cura/util/profile.py:215
+#: Cura/util/profile.py:216 Cura/util/profile.py:217 Cura/util/profile.py:218
+#: Cura/util/profile.py:219
+msgid "Raft"
+msgstr "Balsa-Raft"
+
 #: Cura/util/profile.py:166
 msgid "Platform adhesion type"
 msgstr "Tipo de adhesion en la cama"
@@ -1542,6 +1564,18 @@ msgstr ""
 "Raft-Balsa agrega una trama gruesa por debajo del objeto y una interfaz fina "
 "entre esto y su objeto. \n"
 "(Tenga en cuenta que la activación de Raft o Brim desactiva el borde-skirt)"
+
+#: Cura/util/profile.py:167
+msgid "Both"
+msgstr "Ambos"
+
+#: Cura/util/profile.py:167
+msgid "First extruder"
+msgstr "Primer extrusor"
+
+#: Cura/util/profile.py:167
+msgid "Second extruder"
+msgstr "Segundo extrusor"
 
 #: Cura/util/profile.py:167
 msgid "Support dual extrusion"
@@ -2071,10 +2105,6 @@ msgid ""
 msgstr ""
 
 #: Cura/util/profile.py:213
-msgid "Brim"
-msgstr "Borde - Brim"
-
-#: Cura/util/profile.py:213
 msgid "Brim line amount"
 msgstr "Cantidad de borde-brim"
 
@@ -2085,11 +2115,6 @@ msgid ""
 msgstr ""
 "La cantidad de lineas usada por Brim, mas lineas significa mayor Brim y "
 "mejor adhesión, pero hace tu área efectiva de impresión menor."
-
-#: Cura/util/profile.py:214 Cura/util/profile.py:215 Cura/util/profile.py:216
-#: Cura/util/profile.py:217 Cura/util/profile.py:218 Cura/util/profile.py:219
-msgid "Raft"
-msgstr "Balsa-Raft"
 
 #: Cura/util/profile.py:214
 msgid "Extra margin (mm)"
@@ -2573,24 +2598,6 @@ msgstr "Filamento"
 #, fuzzy
 msgid "Filament2:"
 msgstr "Filamento"
-
-#~ msgid "None"
-#~ msgstr "Nada"
-
-#~ msgid "Touching buildplate"
-#~ msgstr "Tocando la cama caliente"
-
-#~ msgid "Everywhere"
-#~ msgstr "Cualquier sitio"
-
-#~ msgid "Both"
-#~ msgstr "Ambos"
-
-#~ msgid "First extruder"
-#~ msgstr "Primer extrusor"
-
-#~ msgid "Second extruder"
-#~ msgstr "Segundo extrusor"
 
 #, fuzzy
 #~ msgid ""
