@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-17 11:35+0400\n"
+"POT-Creation-Date: 2013-11-24 01:19+0400\n"
 "PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:534
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:536
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Доступна новая версия Cura. Скачать?"
 
-#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:534
+#: Cura/gui/app.py:86 Cura/gui/mainWindow.py:536
 msgid "New version available"
 msgstr "Доступна новая версия"
 
@@ -390,7 +390,7 @@ msgstr ""
 msgid "Heatup for filament removal"
 msgstr "Нагреть принтер для извлечения пластика"
 
-#: Cura/gui/configWizard.py:738 Cura/gui/configWizard.py:770
+#: Cura/gui/configWizard.py:740 Cura/gui/configWizard.py:774
 msgid ""
 "Error: Failed to open serial port to machine\n"
 "If this keeps happening, try disconnecting and reconnecting the USB cable"
@@ -408,7 +408,7 @@ msgstr ""
 "принтера."
 
 #: Cura/gui/firmwareInstall.py:45 Cura/gui/firmwareInstall.py:49
-#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:469
+#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:471
 msgid "Firmware update"
 msgstr "Обновление прошивки"
 
@@ -466,167 +466,168 @@ msgstr ""
 msgid "Failed to write firmware.\n"
 msgstr "Не удалось загрузить прошивку.\n"
 
-#: Cura/gui/mainWindow.py:56
+#: Cura/gui/mainWindow.py:54
 msgid "Load model file...\tCTRL+L"
 msgstr "Загрузить файл с моделью...\tCTRL+L"
 
-#: Cura/gui/mainWindow.py:58
+#: Cura/gui/mainWindow.py:56
 msgid "Save model...\tCTRL+S"
 msgstr "Сохранить модель...\tCTRL+S"
 
-#: Cura/gui/mainWindow.py:60
+#: Cura/gui/mainWindow.py:58
 msgid "Clear platform"
 msgstr "Очистить платформу"
 
-#: Cura/gui/mainWindow.py:64
+#: Cura/gui/mainWindow.py:62
 msgid "Print...\tCTRL+P"
 msgstr "Печать...\tCTRL+P"
 
-#: Cura/gui/mainWindow.py:66 Cura/gui/sceneView.py:245
+#: Cura/gui/mainWindow.py:64 Cura/gui/sceneView.py:245
 msgid "Save GCode..."
 msgstr "Сохранить GCode..."
 
-#: Cura/gui/mainWindow.py:68
+#: Cura/gui/mainWindow.py:66
 msgid "Show slice engine log..."
 msgstr "Показать журнал слайсера..."
 
-#: Cura/gui/mainWindow.py:72
+#: Cura/gui/mainWindow.py:70
 msgid "Open Profile..."
 msgstr "Открыть профиль..."
 
-#: Cura/gui/mainWindow.py:75
+#: Cura/gui/mainWindow.py:73
 msgid "Save Profile..."
 msgstr "Сохранить профиль..."
 
-#: Cura/gui/mainWindow.py:78
+#: Cura/gui/mainWindow.py:76
 msgid "Load Profile from GCode..."
 msgstr "Загрузить профиль из файла GCode..."
 
-#: Cura/gui/mainWindow.py:82
+#: Cura/gui/mainWindow.py:80
 msgid "Reset Profile to default"
 msgstr "Восстановить профиль по умолчанию"
 
-#: Cura/gui/mainWindow.py:87
+#: Cura/gui/mainWindow.py:85
 msgid "Preferences...\tCTRL+,"
 msgstr "Настройки...\tCTRL+,"
 
-#: Cura/gui/mainWindow.py:89
+#: Cura/gui/mainWindow.py:87
 msgid "Machine settings..."
 msgstr "Настройки принтера..."
 
-#: Cura/gui/mainWindow.py:95
+#: Cura/gui/mainWindow.py:93
 msgid "Recent Model Files"
 msgstr "Недавние модели"
 
-#: Cura/gui/mainWindow.py:102
+#: Cura/gui/mainWindow.py:100
 msgid "Recent Profile Files"
 msgstr "Недавние профили"
 
-#: Cura/gui/mainWindow.py:108
+#: Cura/gui/mainWindow.py:106
 msgid "Quit"
 msgstr "Выход"
 
-#: Cura/gui/mainWindow.py:110
+#: Cura/gui/mainWindow.py:108
 msgid "File"
 msgstr "Файл"
 
-#: Cura/gui/mainWindow.py:118
+#: Cura/gui/mainWindow.py:116
 msgid "Minecraft map import..."
 msgstr "Импорт карты из Minecraft..."
 
-#: Cura/gui/mainWindow.py:122
+#: Cura/gui/mainWindow.py:120
 msgid "PID Debugger..."
 msgstr "PID отладчик..."
 
-#: Cura/gui/mainWindow.py:125
+#: Cura/gui/mainWindow.py:123
 msgid "Copy profile to clipboard"
 msgstr "Скопировать профиль в буфер обмена"
 
-#: Cura/gui/mainWindow.py:127
+#: Cura/gui/mainWindow.py:125
 msgid "Tools"
 msgstr "Инструменты"
 
-#: Cura/gui/mainWindow.py:133 Cura/util/profile.py:158
+#: Cura/gui/mainWindow.py:131 Cura/util/profile.py:158
 msgid "Machine"
 msgstr "Принтер"
 
-#: Cura/gui/mainWindow.py:136
+#: Cura/gui/mainWindow.py:134
 msgid "Switch to quickprint..."
 msgstr "Быстрая печать..."
 
-#: Cura/gui/mainWindow.py:140
+#: Cura/gui/mainWindow.py:138
 msgid "Switch to full settings..."
 msgstr "Расширенные настройки..."
 
-#: Cura/gui/mainWindow.py:145
-msgid "Open expert settings..."
+#: Cura/gui/mainWindow.py:143
+#, fuzzy
+msgid "Open expert settings...\tCTRL+E"
 msgstr "Открыть расширенные настройки..."
 
-#: Cura/gui/mainWindow.py:149
+#: Cura/gui/mainWindow.py:147
 msgid "Run first run wizard..."
 msgstr "Запустить мастер первоначальной настройки..."
 
-#: Cura/gui/mainWindow.py:151
+#: Cura/gui/mainWindow.py:149
 msgid "Run bed leveling wizard..."
 msgstr "Запустить мастер калибровки платформы..."
 
-#: Cura/gui/mainWindow.py:154
+#: Cura/gui/mainWindow.py:151
 msgid "Run head offset wizard..."
 msgstr "Запустить мастер настройки смещения головки..."
 
-#: Cura/gui/mainWindow.py:157
+#: Cura/gui/mainWindow.py:154
 msgid "Expert"
 msgstr "Эксперт"
 
-#: Cura/gui/mainWindow.py:160
+#: Cura/gui/mainWindow.py:157
 msgid "Online documentation..."
 msgstr "Онлайн документация..."
 
-#: Cura/gui/mainWindow.py:162
+#: Cura/gui/mainWindow.py:159
 msgid "Report a problem..."
 msgstr "Сообщить об ошибке..."
 
-#: Cura/gui/mainWindow.py:164
+#: Cura/gui/mainWindow.py:161
 msgid "Check for update..."
 msgstr "Проверить обновления..."
 
-#: Cura/gui/mainWindow.py:166
+#: Cura/gui/mainWindow.py:163
 msgid "Open YouMagine website..."
 msgstr "Открыть сайт YouMagine..."
 
-#: Cura/gui/mainWindow.py:168
+#: Cura/gui/mainWindow.py:165
 msgid "About Cura..."
 msgstr "О програме Cura..."
 
-#: Cura/gui/mainWindow.py:170
+#: Cura/gui/mainWindow.py:167
 msgid "Help"
 msgstr "Помощь"
 
-#: Cura/gui/mainWindow.py:187
+#: Cura/gui/mainWindow.py:184
 msgid "Buy filament on-line"
 msgstr "Заказать пластик онлайн"
 
-#: Cura/gui/mainWindow.py:399
+#: Cura/gui/mainWindow.py:401
 msgid "Add new machine..."
 msgstr "Добавить новый принтер..."
 
-#: Cura/gui/mainWindow.py:405
+#: Cura/gui/mainWindow.py:407
 msgid "Install default firmware..."
 msgstr "Установить прошивку по умолчанию..."
 
-#: Cura/gui/mainWindow.py:408
+#: Cura/gui/mainWindow.py:410
 msgid "Install custom firmware..."
 msgstr "Установить свою прошивку..."
 
-#: Cura/gui/mainWindow.py:412
+#: Cura/gui/mainWindow.py:414
 msgid "Select profile file to load"
 msgstr "Выберите файл с профилем"
 
-#: Cura/gui/mainWindow.py:424
+#: Cura/gui/mainWindow.py:426
 msgid "Select gcode file to load profile from"
 msgstr "Выберите файл GCode для загрузки профиля"
 
-#: Cura/gui/mainWindow.py:437
+#: Cura/gui/mainWindow.py:439
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -635,15 +636,15 @@ msgstr ""
 "Данная функция работает только с файлами GCode, сохраненными в Cura 12.07 "
 "или новее."
 
-#: Cura/gui/mainWindow.py:437
+#: Cura/gui/mainWindow.py:439
 msgid "Profile load error"
 msgstr "Ошибка загрузки профиля"
 
-#: Cura/gui/mainWindow.py:441
+#: Cura/gui/mainWindow.py:443
 msgid "Select profile file to save"
 msgstr "Выберите файл с профилем для сохранения"
 
-#: Cura/gui/mainWindow.py:449
+#: Cura/gui/mainWindow.py:451
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -653,11 +654,11 @@ msgstr ""
 "Если вы не сохранили ваш текущий профиль, то все настройки будут потеряны!\n"
 "Вы действительно хотите восстановить профиль по умолчанию?"
 
-#: Cura/gui/mainWindow.py:449
+#: Cura/gui/mainWindow.py:451
 msgid "Profile reset"
 msgstr "Сбросить профиль"
 
-#: Cura/gui/mainWindow.py:469
+#: Cura/gui/mainWindow.py:471
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -665,27 +666,27 @@ msgstr ""
 "Осторожно: Установка неоригинальной прошивки не гарантирует того, что ваш "
 "принтер будет правильно работать и не повредит ваше устройство."
 
-#: Cura/gui/mainWindow.py:470
+#: Cura/gui/mainWindow.py:472
 msgid "Open firmware to upload"
 msgstr "Откройте прошивку для загрузки"
 
-#: Cura/gui/mainWindow.py:537
+#: Cura/gui/mainWindow.py:539
 msgid "You are running the latest version of Cura!"
 msgstr "У вас запущена последняя версия Cura!"
 
-#: Cura/gui/mainWindow.py:537
+#: Cura/gui/mainWindow.py:539
 msgid "Awesome!"
 msgstr "Потрясающе!"
 
-#: Cura/gui/mainWindow.py:582
+#: Cura/gui/mainWindow.py:584
 msgid "Basic"
 msgstr "Базовые"
 
-#: Cura/gui/mainWindow.py:586
+#: Cura/gui/mainWindow.py:588
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: Cura/gui/mainWindow.py:592
+#: Cura/gui/mainWindow.py:594
 msgid "Plugins"
 msgstr "Плагины"
 
@@ -783,7 +784,7 @@ msgid "Connect"
 msgstr "Подключить"
 
 #: Cura/gui/printWindow.py:181 Cura/gui/sceneView.py:66
-#: Cura/gui/sceneView.py:819
+#: Cura/gui/sceneView.py:835
 msgid "Print"
 msgstr ""
 
@@ -978,63 +979,72 @@ msgstr ""
 msgid "Slice engine log..."
 msgstr ""
 
-#: Cura/gui/sceneView.py:260 Cura/gui/sceneView.py:825
+#: Cura/gui/sceneView.py:254
+msgid "USB printing on the Ultimaker2 is not supported."
+msgstr ""
+
+#: Cura/gui/sceneView.py:254
+#, fuzzy
+msgid "USB Printing Error"
+msgstr "Печать"
+
+#: Cura/gui/sceneView.py:263 Cura/gui/sceneView.py:841
 msgid "Save toolpath"
 msgstr ""
 
-#: Cura/gui/sceneView.py:298
+#: Cura/gui/sceneView.py:301
 msgid "The slicing engine reported the following"
 msgstr "Слайсер сообщил следующее"
 
-#: Cura/gui/sceneView.py:298
+#: Cura/gui/sceneView.py:301
 msgid "Engine log..."
 msgstr "Журнал слайсера..."
 
-#: Cura/gui/sceneView.py:425
+#: Cura/gui/sceneView.py:441
 msgid "How many copies do you want?"
 msgstr "Сколько копий сделать?"
 
-#: Cura/gui/sceneView.py:425
+#: Cura/gui/sceneView.py:441
 msgid "Number of copies"
 msgstr "Количество копий"
 
-#: Cura/gui/sceneView.py:425
+#: Cura/gui/sceneView.py:441
 msgid "Multiply"
 msgstr "Дублировать"
 
-#: Cura/gui/sceneView.py:690
+#: Cura/gui/sceneView.py:706
 msgid "Delete object"
 msgstr "Удалить объект"
 
-#: Cura/gui/sceneView.py:691
+#: Cura/gui/sceneView.py:707
 msgid "Center on platform"
 msgstr "Поместить в центр платформы"
 
-#: Cura/gui/sceneView.py:692
+#: Cura/gui/sceneView.py:708
 msgid "Multiply object"
 msgstr "Дублировать объект"
 
-#: Cura/gui/sceneView.py:693
+#: Cura/gui/sceneView.py:709
 msgid "Split object into parts"
 msgstr "Разделить объект на части"
 
-#: Cura/gui/sceneView.py:695
+#: Cura/gui/sceneView.py:711
 msgid "Dual extrusion merge"
 msgstr "Объединить для печати двумя экструдерами"
 
-#: Cura/gui/sceneView.py:697
+#: Cura/gui/sceneView.py:713
 msgid "Delete all objects"
 msgstr "Удалить все объекты"
 
-#: Cura/gui/sceneView.py:822
+#: Cura/gui/sceneView.py:838
 msgid "Toolpath to SD"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1132
+#: Cura/gui/sceneView.py:1148
 msgid "Loading toolpath for visualization..."
 msgstr ""
 
-#: Cura/gui/sceneView.py:1183
+#: Cura/gui/sceneView.py:1199
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 "Не удается отобразить в режиме подвешивания из-за недостаточной поддержки "
@@ -1076,8 +1086,8 @@ msgstr "Диаметр:"
 msgid "Other:"
 msgstr "Прочие:"
 
-#: Cura/gui/simpleMode.py:117 Cura/gui/simpleMode.py:202
-#: Cura/gui/simpleMode.py:299
+#: Cura/gui/simpleMode.py:86 Cura/gui/simpleMode.py:159
+#: Cura/gui/simpleMode.py:256
 msgid "Exterior Only"
 msgstr "Только снаружи"
 
@@ -1621,7 +1631,8 @@ msgid "Dual extrusion"
 msgstr "Печать двумя экструдерами"
 
 #: Cura/util/profile.py:168
-msgid "Wipe tower"
+#, fuzzy
+msgid "Wipe&prime tower"
 msgstr "Промокашка"
 
 #: Cura/util/profile.py:168
