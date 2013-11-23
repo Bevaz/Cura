@@ -17,7 +17,7 @@ BUILD_TARGET=${1:-all}
 ##Do we need to create the final archive
 ARCHIVE_FOR_DISTRIBUTION=1
 ##Which version name are we appending to the final archive
-export BUILD_NAME=13.11
+export BUILD_NAME=13.11.2
 TARGET_DIR=Cura-${BUILD_NAME}-${BUILD_TARGET}
 
 ##Which versions of external programs to use
@@ -160,7 +160,7 @@ if [ "$BUILD_TARGET" = "debian" ]; then
 	cp scripts/linux/cura.py scripts/linux/debian/usr/share/cura/
 	cp -a Power/power scripts/linux/debian/usr/share/cura/
 	echo $BUILD_NAME > scripts/linux/debian/usr/share/cura/Cura/version
-	sudo chown root:root scripts/linux/debian/usr -R
+	sudo chown root:root scripts/linux/debian -R
 	sudo chmod 755 scripts/linux/debian/usr -R
 	sudo chmod 755 scripts/linux/debian/DEBIAN -R
 	cd scripts/linux
