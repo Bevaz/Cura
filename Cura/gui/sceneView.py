@@ -250,6 +250,9 @@ class SceneView(openglGui.glGuiPanel):
 	def showPrintWindow(self):
 		if self._gcodeFilename is None:
 			return
+		if profile.getMachineSetting('gcode_flavor') == 'UltiGCode':
+			wx.MessageBox(_("USB printing on the Ultimaker2 is not supported."), _("USB Printing Error"), wx.OK | wx.ICON_WARNING)
+			return
 		self._usbPrintMonitor.loadFile(self._gcodeFilename, self._slicer.getID())
 		if self._gcodeFilename == self._slicer.getGCodeFilename():
 			self._slicer.submitSliceInfoOnline()
@@ -375,7 +378,20 @@ class SceneView(openglGui.glGuiPanel):
 	def OnScaleMax(self, button):
 		if self._selectedObj is None:
 			return
-		self._selectedObj.scaleUpTo(self._machineSize - numpy.array(profile.calculateObjectSizeOffsets() + [0.0], numpy.float32) * 2 - numpy.array([1,1,1], numpy.float32))
+		machine = profile.getMachineSetting('machine_type')
+		self._selectedObj.setPosition(numpy.array([0.0, 0.0]))
+		self._scene.pushFree()
+		#self.sceneUpdated()
+		if machine == "ultimaker2":
+			#This is bad and Jaime should feel bad!
+			self._selectedObj.setPosition(numpy.array([0.0,-10.0]))
+			self._selectedObj.scaleUpTo(self._machineSize - numpy.array(profile.calculateObjectSizeOffsets() + [0.0], numpy.float32) * 2 - numpy.array([1,1,1], numpy.float32))
+			self._selectedObj.setPosition(numpy.array([0.0,0.0]))
+			self._scene.pushFree()
+		else:
+			self._selectedObj.setPosition(numpy.array([0.0, 0.0]))
+			self._scene.pushFree()
+			self._selectedObj.scaleUpTo(self._machineSize - numpy.array(profile.calculateObjectSizeOffsets() + [0.0], numpy.float32) * 2 - numpy.array([1,1,1], numpy.float32))
 		self._scene.pushFree()
 		self._selectObject(self._selectedObj)
 		self.updateProfileToControls()
@@ -1334,10 +1350,10 @@ void main(void)
 			glColor4ub(127, 127, 127, 200)
 			#if UM2, draw bat-area zone for head. THe head can't stop there, because its bat-area.
 			#UpperRight
-			clipWidth = 50;
-			clipHeight = 35;
-			posX = sx / 2 - clipWidth;
-			posY = sy / 2 - clipHeight;
+			clipWidth = 25
+			clipHeight = 10
+			posX = sx / 2 - clipWidth
+			posY = sy / 2 - clipHeight
 			glBegin(GL_QUADS)
 			glVertex3f(posX, posY, 0.1)
 			glVertex3f(posX+clipWidth, posY, 0.1)
@@ -1345,10 +1361,10 @@ void main(void)
 			glVertex3f(posX, posY+clipHeight, 0.1)
 			glEnd()
 			#UpperLeft
-			clipWidth = 55;
-			clipHeight = 35;
-			posX = -sx / 2;
-			posY = sy / 2 - clipHeight;
+			clipWidth = 25
+			clipHeight = 10
+			posX = -sx / 2
+			posY = sy / 2 - clipHeight
 			glBegin(GL_QUADS)
 			glVertex3f(posX, posY, 0.1)
 			glVertex3f(posX+clipWidth, posY, 0.1)
@@ -1356,10 +1372,10 @@ void main(void)
 			glVertex3f(posX, posY+clipHeight, 0.1)
 			glEnd()
 			#LowerRight
-			clipWidth = 50;
-			clipHeight = 5;
-			posX = sx / 2 - clipWidth;
-			posY = -sy / 2;
+			clipWidth = 25
+			clipHeight = 10
+			posX = sx / 2 - clipWidth
+			posY = -sy / 2
 			glBegin(GL_QUADS)
 			glVertex3f(posX, posY, 0.1)
 			glVertex3f(posX+clipWidth, posY, 0.1)
@@ -1367,18 +1383,16 @@ void main(void)
 			glVertex3f(posX, posY+clipHeight, 0.1)
 			glEnd()
 			#LowerLeft
-			clipWidth = 55;
-			clipHeight = 5;
-			posX = -sx / 2;
-			posY = -sy / 2;
+			clipWidth = 25
+			clipHeight = 10
+			posX = -sx / 2
+			posY = -sy / 2
 			glBegin(GL_QUADS)
 			glVertex3f(posX, posY, 0.1)
 			glVertex3f(posX+clipWidth, posY, 0.1)
 			glVertex3f(posX+clipWidth, posY+clipHeight, 0.1)
 			glVertex3f(posX, posY+clipHeight, 0.1)
 			glEnd()
-
-
 
 		glDisable(GL_BLEND)
 		glDisable(GL_CULL_FACE)

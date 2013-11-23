@@ -27,8 +27,6 @@ class mainWindow(wx.Frame):
 	def __init__(self):
 		super(mainWindow, self).__init__(None, title='Cura - ' + version.getVersion())
 
-		self.extruderCount = int(profile.getMachineSetting('extruder_amount'))
-
 		wx.EVT_CLOSE(self, self.OnClose)
 
 		# allow dropping any file, restrict later
@@ -142,17 +140,16 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, self.OnNormalSwitch, i)
 		expertMenu.AppendSeparator()
 
-		i = expertMenu.Append(-1, _("Open expert settings..."))
+		i = expertMenu.Append(-1, _("Open expert settings...\tCTRL+E"))
 		self.normalModeOnlyItems.append(i)
 		self.Bind(wx.EVT_MENU, self.OnExpertOpen, i)
 		expertMenu.AppendSeparator()
 		i = expertMenu.Append(-1, _("Run first run wizard..."))
 		self.Bind(wx.EVT_MENU, self.OnFirstRunWizard, i)
-		i = expertMenu.Append(-1, _("Run bed leveling wizard..."))
-		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, i)
-		if self.extruderCount > 1:
-			i = expertMenu.Append(-1, _("Run head offset wizard..."))
-			self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, i)
+		self.bedLevelWizardMenuItem = expertMenu.Append(-1, _("Run bed leveling wizard..."))
+		self.Bind(wx.EVT_MENU, self.OnBedLevelWizard, self.bedLevelWizardMenuItem)
+		self.headOffsetWizardMenuItem = expertMenu.Append(-1, _("Run head offset wizard..."))
+		self.Bind(wx.EVT_MENU, self.OnHeadOffsetWizard, self.headOffsetWizardMenuItem)
 
 		self.menubar.Append(expertMenu, _("Expert"))
 
@@ -310,6 +307,11 @@ class mainWindow(wx.Frame):
 			# Enabled sash
 			self.splitter.SetSashSize(4)
 		self.defaultFirmwareInstallMenuItem.Enable(firmwareInstall.getDefaultFirmware() is not None)
+		if profile.getMachineSetting('machine_type') == 'ultimaker2':
+			self.bedLevelWizardMenuItem.Enable(False)
+			self.headOffsetWizardMenuItem.Enable(False)
+		if int(profile.getMachineSetting('extruder_amount')) < 2:
+			self.headOffsetWizardMenuItem.Enable(False)
 		self.scene.updateProfileToControls()
 
 	def OnPreferences(self, e):
