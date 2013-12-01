@@ -810,7 +810,7 @@ msgstr "Температура:"
 
 #: Cura/gui/printWindow.py:262 Cura/gui/printWindow2.py:131
 msgid "Jog"
-msgstr "Перемешение"
+msgstr "Перемещение"
 
 #: Cura/gui/printWindow.py:277
 msgid "Outer wall:"
@@ -835,7 +835,7 @@ msgstr "Скорость"
 
 #: Cura/gui/printWindow.py:308 Cura/gui/printWindow2.py:151
 msgid "Term"
-msgstr "Температура"
+msgstr "Консоль"
 
 #: Cura/gui/printWindow.py:363 Cura/gui/printWindow2.py:193
 msgid "Enable timelapse movie recording"
@@ -2212,13 +2212,13 @@ msgstr "Это расстояние между направляющими лин
 
 #: Cura/util/profile.py:216
 msgid "Base thickness (mm)"
-msgstr "Толщина основания (мм)"
+msgstr "Высота основания (мм)"
 
 #: Cura/util/profile.py:216
 msgid ""
 "When you are using the raft this is the thickness of the base layer which is "
 "put down."
-msgstr "Это толщина линий первого слоя основания фундамента."
+msgstr "Это высота линий первого слоя основания фундамента."
 
 #: Cura/util/profile.py:217
 msgid "Base line width (mm)"
@@ -2232,13 +2232,13 @@ msgstr "Это ширина линий первого слоя основани�
 
 #: Cura/util/profile.py:218
 msgid "Interface thickness (mm)"
-msgstr "Толщина интерфесных линий (мм)"
+msgstr "Высота интерфесных линий (мм)"
 
 #: Cura/util/profile.py:218
 msgid ""
 "When you are using the raft this is the thickness of the interface layer "
 "which is put down."
-msgstr "Это толщина интерфейсных линий второго слоя фундамента."
+msgstr "Это высота интерфейсных линий второго слоя фундамента."
 
 #: Cura/util/profile.py:219
 msgid "Interface line width (mm)"
