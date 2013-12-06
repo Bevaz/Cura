@@ -191,7 +191,7 @@ class printWindow(wx.Frame):
 			self.camPage.SetSizer(sizer)
 
 			self.timelapsEnable = wx.CheckBox(self.camPage, -1, _("Enable timelapse movie recording"))
-			self.timelapsSavePath = wx.TextCtrl(self.camPage, -1, os.path.expanduser('~/timelaps_' + datetime.datetime.now().strftime('%Y-%m-%d_%H:%M') + '.mpg'))
+			self.timelapsSavePath = wx.TextCtrl(self.camPage, -1, os.path.expanduser('~/timelaps_' + datetime.datetime.now().strftime('%Y-%m-%d_%H-%M') + '.mpg'))
 			sizer.Add(self.timelapsEnable, pos=(0, 0), span=(1, 2), flag=wx.EXPAND)
 			sizer.Add(self.timelapsSavePath, pos=(1, 0), span=(1, 2), flag=wx.EXPAND)
 
@@ -292,10 +292,13 @@ class printWindow(wx.Frame):
 		if len(self.termLog.GetValue()) > 10000:
 			self.termLog.SetValue(self.termLog.GetValue()[-10000:])
 		self.termLog.SetInsertionPointEnd()
-		self.termLog.AppendText(unicode(line, 'utf-8', 'replace'))
+		self.termLog.AppendText(line.encode('utf-8', 'replace'))
 
 	def _doPrinterConnectionUpdate(self, connection, extraInfo = None):
 		wx.CallAfter(self.__doPrinterConnectionUpdate, connection, extraInfo)
+		temp = [connection.getTemperature(0)]
+		self.temperatureGraph.addPoint(temp, [0], connection.getBedTemperature(), 0)
+
 	def __doPrinterConnectionUpdate(self, connection, extraInfo):
 		t = time.time()
 		if self.lastUpdateTime + 0.5 > t:
@@ -487,6 +490,14 @@ class TemperatureGraph(wx.Panel):
 			self._points.pop(0)
 
 	def addPoint(self, temp, tempSP, bedTemp, bedTempSP):
+		if len(self._points) > 0 and time.time() - self._points[-1][4] < 0.5:
+			return
+		for n in xrange(0, len(temp)):
+			if temp[n] is None:
+				temp[n] = 0
+		for n in xrange(0, len(tempSP)):
+			if tempSP[n] is None:
+				tempSP[n] = 0
 		if bedTemp is None:
 			bedTemp = 0
 		if bedTempSP is None:

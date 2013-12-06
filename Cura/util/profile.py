@@ -4,6 +4,7 @@ __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AG
 
 import os, traceback, math, re, zlib, base64, time, sys, platform, glob, string, stat, types
 import cPickle as pickle
+import numpy
 if sys.version_info[0] < 3:
 	import ConfigParser
 else:
@@ -193,7 +194,7 @@ setting('skirt_gap',                 3.0, float, 'expert', _('Skirt')).setRange(
 setting('skirt_minimal_length',    150.0, float, 'expert', _('Skirt')).setRange(0).setLabel(_("Minimal length (mm)"), _("The minimal length of the skirt, if this minimal length is not reached it will add more skirt lines to reach this minimal lenght.\nNote: If the line count is set to 0 this is ignored."))
 #setting('max_z_speed',               3.0, float, 'expert',   _('Speed')).setRange(0.1).setLabel(_("Max Z speed (mm/s)"), _("Speed at which Z moves are done. When you Z axis is properly lubricated you can increase this for less Z blob."))
 #setting('retract_on_jumps_only',    True, bool,  'expert',   _('Retraction')).setLabel(_('Retract on jumps only'), _('Only retract when we are making a move that is over a hole in the model, else retract on every move. This effects print quality in different ways.'))
-setting('fan_full_height',           0.5, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Fan full on at height"), _("The height at which the fan is turned on completely. For the layers below this the fan speed is scaled linear with the fan off at layer 0."))
+setting('fan_full_height',           0.5, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Fan full on at height (mm)"), _("The height at which the fan is turned on completely. For the layers below this the fan speed is scaled linear with the fan off at layer 0."))
 setting('fan_speed',                 100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed min (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Minimal fan speed is used if the layer is not slowed down due to cooling."))
 setting('fan_speed_max',             100, int,   'expert',   _('Cool')).setRange(0,100).setLabel(_("Fan speed max (%)"), _("When the fan is turned on, it is enabled at this speed setting. If cool slows down the layer, the fan is adjusted between the min and max speed. Maximal fan speed is used if the layer is slowed down due to cooling by more than 200%."))
 setting('cool_min_feedrate',          10, float, 'expert',   _('Cool')).setRange(0).setLabel(_("Minimum speed (mm/s)"), _("The minimal layer time can cause the print to slow down so much it starts to ooze. The minimal feedrate protects against this. Even if a print gets slown down it will never be slower than this minimal speed."))
@@ -870,6 +871,40 @@ def getMachineCenterCoords():
 		return [0, 0]
 	return [getMachineSettingFloat('machine_width') / 2, getMachineSettingFloat('machine_depth') / 2]
 
+#Returns a list of convex polygons, first polygon is the allowed area of the machine,
+# the rest of the polygons are the dis-allowed areas of the machine.
+def getMachineSizePolygons():
+	size = numpy.array([getMachineSettingFloat('machine_width'), getMachineSettingFloat('machine_depth'), getMachineSettingFloat('machine_height')], numpy.float32)
+	ret = []
+	ret.append(numpy.array([[-size[0]/2,-size[1]/2],[ size[0]/2,-size[1]/2],[ size[0]/2, size[1]/2], [-size[0]/2, size[1]/2]], numpy.float32))
+
+	# Circle platform for delta printers...
+	# circle = []
+	# steps = 16
+	# for n in xrange(0, steps):
+	# 	circle.append([math.cos(float(n)/steps*2*math.pi) * size[0]/2, math.sin(float(n)/steps*2*math.pi) * size[0]/2])
+	# ret.append(numpy.array(circle, numpy.float32))
+
+	if getMachineSetting('machine_type') == 'ultimaker2':
+		#UM2 no-go zones
+		w = 25
+		h = 10
+		ret.append(numpy.array([[-size[0]/2,-size[1]/2],[-size[0]/2+w+2,-size[1]/2], [-size[0]/2+w,-size[1]/2+h], [-size[0]/2,-size[1]/2+h]], numpy.float32))
+		ret.append(numpy.array([[ size[0]/2-w-2,-size[1]/2],[ size[0]/2,-size[1]/2], [ size[0]/2,-size[1]/2+h],[ size[0]/2-w,-size[1]/2+h]], numpy.float32))
+		ret.append(numpy.array([[-size[0]/2+w+2, size[1]/2],[-size[0]/2, size[1]/2], [-size[0]/2, size[1]/2-h],[-size[0]/2+w, size[1]/2-h]], numpy.float32))
+		ret.append(numpy.array([[ size[0]/2, size[1]/2],[ size[0]/2-w-2, size[1]/2], [ size[0]/2-w, size[1]/2-h],[ size[0]/2, size[1]/2-h]], numpy.float32))
+	return ret
+
+#returns the number of extruders minimal used. Normally this returns 1, but with dual-extrusion support material it returns 2
+def minimalExtruderCount():
+	if int(getMachineSetting('extruder_amount')) < 2:
+		return 1
+	if getProfileSetting('support') == 'None':
+		return 1
+	if getProfileSetting('support_dual_extrusion') == 'Second extruder':
+		return 2
+	return 1
+
 #########################################################
 ## Alteration file functions
 #########################################################
@@ -961,7 +996,7 @@ def getAlterationFileContents(filename, extruderCount = 1):
 	alterationContents = getAlterationFile(filename)
 	if getMachineSetting('gcode_flavor') == 'UltiGCode':
 		if filename == 'end.gcode':
-			return 'M25 ;Stop reading from this point on.\n'
+			return 'M25 ;Stop reading from this point on.\n;CURA_PROFILE_STRING:%s\n' % (getProfileString())
 		return ''
 	if filename == 'start.gcode':
 		if extruderCount > 1:

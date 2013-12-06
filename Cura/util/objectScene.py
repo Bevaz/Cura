@@ -11,9 +11,8 @@ class _objectOrder(object):
 		self.todo = todo
 
 class _objectOrderFinder(object):
-	def __init__(self, scene, offset, leftToRight, frontToBack, gantryHeight):
+	def __init__(self, scene, leftToRight, frontToBack, gantryHeight):
 		self._scene = scene
-		self._offset = offset - numpy.array([0.1,0.1])
 		self._objs = scene.objects()
 		self._leftToRight = leftToRight
 		self._frontToBack = frontToBack
@@ -83,7 +82,7 @@ class _objectOrderFinder(object):
 	def _checkHit(self, addIdx, idx):
 		obj = self._scene._objectList[idx]
 		addObj = self._scene._objectList[addIdx]
-		return polygon.polygonCollision(obj._headAreaHull + obj.getPosition(), addObj._boundaryHull + addObj.getPosition())
+		return polygon.polygonCollision(obj._boundaryHull + obj.getPosition(), addObj._headAreaHull + addObj.getPosition())
 
 class Scene(object):
 	def __init__(self):
@@ -91,6 +90,7 @@ class Scene(object):
 		self._sizeOffsets = numpy.array([0.0,0.0], numpy.float32)
 		self._machineSize = numpy.array([100,100,100], numpy.float32)
 		self._headSizeOffsets = numpy.array([18.0,18.0], numpy.float32)
+		self._minExtruderCount = None
 		self._extruderOffset = [numpy.array([0,0], numpy.float32)] * 4
 
 		#Print order variables
@@ -99,23 +99,39 @@ class Scene(object):
 		self._gantryHeight = 60
 		self._oneAtATime = True
 
-	# Physical (square) machine size.
-	def setMachineSize(self, machineSize):
-		self._machineSize = machineSize
+	# update the physical machine dimensions
+	def updateMachineDimensions(self):
+		self._machineSize = numpy.array([profile.getMachineSettingFloat('machine_width'), profile.getMachineSettingFloat('machine_depth'), profile.getMachineSettingFloat('machine_height')])
+		self._machinePolygons = profile.getMachineSizePolygons()
+		self.updateHeadSize()
 
 	# Size offsets are offsets caused by brim, skirt, etc.
 	def updateSizeOffsets(self, force=False):
 		newOffsets = numpy.array(profile.calculateObjectSizeOffsets(), numpy.float32)
-		if not force and numpy.array_equal(self._sizeOffsets, newOffsets):
+		minExtruderCount = profile.minimalExtruderCount()
+		if not force and numpy.array_equal(self._sizeOffsets, newOffsets) and self._minExtruderCount == minExtruderCount:
 			return
 		self._sizeOffsets = newOffsets
+		self._minExtruderCount = minExtruderCount
 
-		extends = numpy.array([[-newOffsets[0],-newOffsets[1]],[ newOffsets[0],-newOffsets[1]],[ newOffsets[0], newOffsets[1]],[-newOffsets[0], newOffsets[1]]], numpy.float32)
+		extends = [numpy.array([[-newOffsets[0],-newOffsets[1]],[ newOffsets[0],-newOffsets[1]],[ newOffsets[0], newOffsets[1]],[-newOffsets[0], newOffsets[1]]], numpy.float32)]
+		for n in xrange(1, 4):
+			headOffset = numpy.array([[0, 0], [-profile.getMachineSettingFloat('extruder_offset_x%d' % (n)), -profile.getMachineSettingFloat('extruder_offset_y%d' % (n))]], numpy.float32)
+			extends.append(polygon.minkowskiHull(extends[n-1], headOffset))
+		if minExtruderCount > 1:
+			extends[0] = extends[1]
+
 		for obj in self._objectList:
-			obj.setPrintAreaExtends(extends)
+			obj.setPrintAreaExtends(extends[len(obj._meshList) - 1])
 
 	#size of the printing head.
-	def setHeadSize(self, xMin, xMax, yMin, yMax, gantryHeight):
+	def updateHeadSize(self, obj = None):
+		xMin = profile.getMachineSettingFloat('extruder_head_size_min_x')
+		xMax = profile.getMachineSettingFloat('extruder_head_size_max_x')
+		yMin = profile.getMachineSettingFloat('extruder_head_size_min_y')
+		yMax = profile.getMachineSettingFloat('extruder_head_size_max_y')
+		gantryHeight = profile.getMachineSettingFloat('extruder_head_size_height')
+
 		self._leftToRight = xMin < xMax
 		self._frontToBack = yMin < yMax
 		self._headSizeOffsets[0] = min(xMin, xMax)
@@ -124,28 +140,30 @@ class Scene(object):
 		self._oneAtATime = self._gantryHeight > 0
 
 		headArea = numpy.array([[-xMin,-yMin],[ xMax,-yMin],[ xMax, yMax],[-xMin, yMax]], numpy.float32)
-		for obj in self._objectList:
-			obj.setHeadArea(headArea)
+
+		if obj is None:
+			for obj in self._objectList:
+				obj.setHeadArea(headArea, self._headSizeOffsets)
+		else:
+			obj.setHeadArea(headArea, self._headSizeOffsets)
 
 	def setExtruderOffset(self, extruderNr, offsetX, offsetY):
 		self._extruderOffset[extruderNr] = numpy.array([offsetX, offsetY], numpy.float32)
-
-	def getObjectExtend(self):
-		return self._sizeOffsets + self._headSizeOffsets
 
 	def objects(self):
 		return self._objectList
 
 	#Add new object to print area
 	def add(self, obj):
-		self._findFreePositionFor(obj)
-		self._objectList.append(obj)
-		self.pushFree()
 		if numpy.max(obj.getSize()[0:2]) > numpy.max(self._machineSize[0:2]) * 2.5:
 			scale = numpy.max(self._machineSize[0:2]) * 2.5 / numpy.max(obj.getSize()[0:2])
 			matrix = [[scale,0,0], [0, scale, 0], [0, 0, scale]]
 			obj.applyMatrix(numpy.matrix(matrix, numpy.float64))
+		self._findFreePositionFor(obj)
+		self._objectList.append(obj)
+		self.updateHeadSize(obj)
 		self.updateSizeOffsets(True)
+		self.pushFree()
 
 	def remove(self, obj):
 		self._objectList.remove(obj)
@@ -161,7 +179,7 @@ class Scene(object):
 		self.pushFree()
 
 	def pushFree(self):
-		n = 1000
+		n = 10
 		while self._pushFree():
 			n -= 1
 			if n < 0:
@@ -190,7 +208,7 @@ class Scene(object):
 
 	def printOrder(self):
 		if self._oneAtATime:
-			order = _objectOrderFinder(self, self._headSizeOffsets + self._sizeOffsets, self._leftToRight, self._frontToBack, self._gantryHeight).order
+			order = _objectOrderFinder(self, self._leftToRight, self._frontToBack, self._gantryHeight).order
 		else:
 			order = None
 		return order
@@ -198,13 +216,16 @@ class Scene(object):
 	def _pushFree(self):
 		for a in self._objectList:
 			for b in self._objectList:
-				if a == b:
+				if a == b or not self.checkPlatform(a) or not self.checkPlatform(b):
 					continue
-				v = polygon.polygonCollisionPushVector(a._boundaryHull + a.getPosition(), b._boundaryHull + b.getPosition())
+				if self._oneAtATime:
+					v = polygon.polygonCollisionPushVector(a._headAreaMinHull + a.getPosition(), b._boundaryHull + b.getPosition())
+				else:
+					v = polygon.polygonCollisionPushVector(a._boundaryHull + a.getPosition(), b._boundaryHull + b.getPosition())
 				if type(v) is bool:
 					continue
-				a.setPosition(a.getPosition() + v / 2.0)
-				b.setPosition(b.getPosition() - v / 2.0)
+				a.setPosition(a.getPosition() + v * 0.4)
+				b.setPosition(b.getPosition() - v * 0.6)
 				return True
 		return False
 
@@ -213,56 +234,17 @@ class Scene(object):
 		if a == b:
 			return False
 		if self._oneAtATime:
-			return polygon.polygonCollision(a._headAreaHull + a.getPosition(), b._boundaryHull + b.getPosition())
+			return polygon.polygonCollision(a._headAreaMinHull + a.getPosition(), b._boundaryHull + b.getPosition())
 		else:
 			return polygon.polygonCollision(a._boundaryHull + a.getPosition(), b._boundaryHull + b.getPosition())
 
 	def checkPlatform(self, obj):
-		p = obj.getPosition()
-		s = obj.getSize()[0:2] / 2 + self._sizeOffsets
-		offsetLeft = 0.0
-		offsetRight = 0.0
-		offsetBack = 0.0
-		offsetFront = 0.0
-		extruderCount = len(obj._meshList)
-		if profile.getProfileSetting('support_dual_extrusion') == 'Second extruder' and profile.getProfileSetting('support') != 'None':
-			extruderCount = max(extruderCount, 2)
-		for n in xrange(1, extruderCount):
-			if offsetLeft < self._extruderOffset[n][0]:
-				offsetLeft = self._extruderOffset[n][0]
-			if offsetRight > self._extruderOffset[n][0]:
-				offsetRight = self._extruderOffset[n][0]
-			if offsetFront < self._extruderOffset[n][1]:
-				offsetFront = self._extruderOffset[n][1]
-			if offsetBack > self._extruderOffset[n][1]:
-				offsetBack = self._extruderOffset[n][1]
-		boundLeft = -self._machineSize[0] / 2 + offsetLeft
-		boundRight = self._machineSize[0] / 2 + offsetRight
-		boundFront = -self._machineSize[1] / 2 + offsetFront
-		boundBack = self._machineSize[1] / 2 + offsetBack
-		if p[0] - s[0] < boundLeft:
+		area = obj._printAreaHull + obj.getPosition()
+		if not polygon.fullInside(area, self._machinePolygons[0]):
 			return False
-		if p[0] + s[0] > boundRight:
-			return False
-		if p[1] - s[1] < boundFront:
-			return False
-		if p[1] + s[1] > boundBack:
-			return False
-
-		#Do clip Check for UM2.
-		machine = profile.getMachineSetting('machine_type')
-		if machine == "ultimaker2":
-			#lowerRight clip check
-			if p[0] - s[0] < boundLeft + 25 and p[1] - s[1] < boundFront + 10:
-				return False
-			#UpperRight
-			if p[0] - s[0] < boundLeft + 25 and p[1] + s[1] > boundBack - 10:
-				return False
-			#LowerLeft
-			if p[0] + s[0] > boundRight - 25 and p[1] - s[1] < boundFront + 10:
-				return False
-			#UpperLeft
-			if p[0] + s[0] > boundRight - 25 and p[1] + s[1] > boundBack - 10:
+		#Check the "no go zones"
+		for poly in self._machinePolygons[1:]:
+			if polygon.polygonCollision(poly, area):
 				return False
 		return True
 
@@ -270,7 +252,10 @@ class Scene(object):
 		posList = []
 		for a in self._objectList:
 			p = a.getPosition()
-			s = (a.getSize()[0:2] + obj.getSize()[0:2]) / 2 + self._sizeOffsets + self._headSizeOffsets
+			if self._oneAtATime:
+				s = (a.getSize()[0:2] + obj.getSize()[0:2]) / 2 + self._sizeOffsets + self._headSizeOffsets + numpy.array([3,3], numpy.float32)
+			else:
+				s = (a.getSize()[0:2] + obj.getSize()[0:2]) / 2 + numpy.array([3,3], numpy.float32)
 			posList.append(p + s * ( 1.0, 1.0))
 			posList.append(p + s * ( 0.0, 1.0))
 			posList.append(p + s * (-1.0, 1.0))
