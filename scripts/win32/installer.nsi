@@ -46,7 +46,7 @@ SetCompressor /SOLID lzma
 
 ;Run Cura after installing
 !define MUI_FINISHPAGE_RUN
-!define MUI_FINISHPAGE_RUN_TEXT "Start Cura ${VERSION}"
+!define MUI_FINISHPAGE_RUN_TEXT "Запустить Cura ${VERSION}"
 !define MUI_FINISHPAGE_RUN_FUNCTION "LaunchLink"
 
 ; Pages
@@ -60,7 +60,7 @@ SetCompressor /SOLID lzma
 !insertmacro MUI_UNPAGE_FINISH
 
 ; Languages
-!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_LANGUAGE "Russian"
 
 ; Reserve Files
 !insertmacro MUI_RESERVEFILE_LANGDLL
@@ -108,7 +108,7 @@ Function LaunchLink
   ExecShell "" "$SMPROGRAMS\Cura ${VERSION}\Cura ${VERSION}.lnk"
 FunctionEnd
 
-Section "Install Arduino Drivers"
+Section "Установить драйвера Arduino (Joysmaker)"
   ; Set output path to the driver directory.
   SetOutPath "$INSTDIR\drivers\"
   File /r "drivers\"
@@ -120,7 +120,7 @@ Section "Install Arduino Drivers"
   ${EndIf}
 SectionEnd
 
-Section "Install Prolific PL2303 Drivers"
+Section "Установить драйвера Prolific PL2303 (Myriwell)"
   ; Set output path to the driver directory.
   SetOutPath "$INSTDIR\drivers\"
   File /r "drivers\"
@@ -128,7 +128,7 @@ Section "Install Prolific PL2303 Drivers"
   ExecWait '"$INSTDIR\drivers\PL2303_Prolific_DriverInstaller_v1.9.0.exe" /lm'
 SectionEnd
 
-Section "Open STL files with Cura"
+Section "Открывать файлы STL с помощью Cura"
 	WriteRegStr HKCR .stl "" "Cura STL model file"
 	DeleteRegValue HKCR .stl "Content Type"
 	WriteRegStr HKCR "Cura STL model file\DefaultIcon" "" "$INSTDIR\Cura\resources\stl.ico,0"
@@ -136,7 +136,7 @@ Section "Open STL files with Cura"
 	WriteRegStr HKCR "Cura STL model file\shell\open\command" "" '"$INSTDIR\python\pythonw.exe" -c "import os; os.chdir(\"$INSTDIR\"); import Cura.cura; Cura.cura.main()" "%1"'
 SectionEnd
 
-Section /o "Open OBJ files with Cura"
+Section /o "Открывать файлы OBJ с помощью Cura"
 	WriteRegStr HKCR .obj "" "Cura OBJ model file"
 	DeleteRegValue HKCR .obj "Content Type"
 	WriteRegStr HKCR "Cura OBJ model file\DefaultIcon" "" "$INSTDIR\Cura\resources\stl.ico,0"
@@ -144,7 +144,7 @@ Section /o "Open OBJ files with Cura"
 	WriteRegStr HKCR "Cura OBJ model file\shell\open\command" "" '"$INSTDIR\python\pythonw.exe" -c "import os; os.chdir(\"$INSTDIR\"); import Cura.cura; Cura.cura.main()" "%1"'
 SectionEnd
 
-Section /o "Open AMF files with Cura"
+Section /o "Открывать файлы AMF с помощью Cura"
 	WriteRegStr HKCR .amf "" "Cura AMF model file"
 	DeleteRegValue HKCR .amf "Content Type"
 	WriteRegStr HKCR "Cura AMF model file\DefaultIcon" "" "$INSTDIR\Cura\resources\stl.ico,0"
