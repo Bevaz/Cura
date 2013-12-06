@@ -120,6 +120,14 @@ Section "Install Arduino Drivers"
   ${EndIf}
 SectionEnd
 
+Section "Install Prolific PL2303 Drivers"
+  ; Set output path to the driver directory.
+  SetOutPath "$INSTDIR\drivers\"
+  File /r "drivers\"
+  
+  ExecWait '"$INSTDIR\drivers\PL2303_Prolific_DriverInstaller_v1.9.0.exe" /lm'
+SectionEnd
+
 Section "Open STL files with Cura"
 	WriteRegStr HKCR .stl "" "Cura STL model file"
 	DeleteRegValue HKCR .stl "Content Type"
