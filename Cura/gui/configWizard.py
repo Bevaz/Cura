@@ -309,11 +309,11 @@ class MachineSelectPage(InfoPage):
 		self.AddText(_("What kind of machine do you have:"))
 
 		self.Ultimaker2Radio = self.AddRadioButton("Ultimaker2", style=wx.RB_GROUP)
-		self.Ultimaker2Radio.SetValue(True)
 		self.Ultimaker2Radio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimaker2Select)
 		self.UltimakerRadio = self.AddRadioButton("Ultimaker Original")
 		self.UltimakerRadio.Bind(wx.EVT_RADIOBUTTON, self.OnUltimakerSelect)
 		self.OtherRadio = self.AddRadioButton(_("Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"))
+		self.OtherRadio.SetValue(True)
 		self.OtherRadio.Bind(wx.EVT_RADIOBUTTON, self.OnOtherSelect)
 		self.AddSeperator()
 		self.AddText(_("The collection of anonymous usage information helps with the continued improvement of Cura."))
@@ -332,7 +332,7 @@ class MachineSelectPage(InfoPage):
 		wx.wizard.WizardPageSimple.Chain(self, self.GetParent().otherMachineSelectPage)
 
 	def AllowNext(self):
-		wx.wizard.WizardPageSimple.Chain(self, self.GetParent().ultimaker2ReadyPage)
+		wx.wizard.WizardPageSimple.Chain(self, self.GetParent().otherMachineSelectPage)
 		return True
 
 	def StoreData(self):
