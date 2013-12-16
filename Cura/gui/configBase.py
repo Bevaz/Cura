@@ -244,9 +244,9 @@ class SettingRow(object):
 		if isinstance(self.ctrl, wx.ColourPickerCtrl):
 			return str(self.ctrl.GetColour().GetAsString(wx.C2S_HTML_SYNTAX))
 		elif isinstance(self.ctrl, wx.ComboBox):
-			value = self.ctrl.GetValue().encode(locale.getpreferredencoding())
+			value = self.ctrl.GetValue()
 			for ret in self._englishChoices:
-				if _(ret).encode(locale.getpreferredencoding()) == value:
+				if _(ret) == value:
 					return ret
 			return str(self.ctrl.GetValue())
 		else:
