@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-16 17:18+0400\n"
+"POT-Creation-Date: 2013-12-21 01:05+0400\n"
 "PO-Revision-Date: 2013-10-02 11:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:116 Cura/gui/mainWindow.py:538
+#: Cura/gui/app.py:116 Cura/gui/mainWindow.py:532
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Dostępna jest nowa wersja Cura, czy chcesz ją pobrać?"
 
-#: Cura/gui/app.py:116 Cura/gui/mainWindow.py:538
+#: Cura/gui/app.py:116 Cura/gui/mainWindow.py:532
 msgid "New version available"
 msgstr "Dostępna jest nowa wersja"
 
@@ -122,7 +122,7 @@ msgstr "Wybierz swoją drukarkę"
 msgid "What kind of machine do you have:"
 msgstr "Jaki rodzaj drukarki posiadasz:"
 
-#: Cura/gui/configWizard.py:316
+#: Cura/gui/configWizard.py:315
 #, fuzzy
 msgid "Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"
 msgstr "Inna (np: RepRap)"
@@ -407,7 +407,7 @@ msgstr ""
 "konfiguracji drukarki."
 
 #: Cura/gui/firmwareInstall.py:45 Cura/gui/firmwareInstall.py:49
-#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:473
+#: Cura/gui/firmwareInstall.py:104 Cura/gui/mainWindow.py:475
 msgid "Firmware update"
 msgstr "Uaktualnienie firmware"
 
@@ -476,7 +476,7 @@ msgstr "Wyczyść platformę"
 msgid "Print...\tCTRL+P"
 msgstr "Drukuj...\tCTRL+P"
 
-#: Cura/gui/mainWindow.py:64 Cura/gui/sceneView.py:261
+#: Cura/gui/mainWindow.py:64 Cura/gui/sceneView.py:262
 msgid "Save GCode..."
 msgstr "Zapisz GCode..."
 
@@ -504,7 +504,7 @@ msgstr "Zresetuj Profil do domyślnego"
 msgid "Preferences...\tCTRL+,"
 msgstr "Ustawienia...\tCTRL+,"
 
-#: Cura/gui/mainWindow.py:87
+#: Cura/gui/mainWindow.py:87 Cura/gui/mainWindow.py:405
 msgid "Machine settings..."
 msgstr "Ustawienia drukarki..."
 
@@ -602,29 +602,25 @@ msgstr "Pomoc"
 msgid "Buy filament on-line"
 msgstr "Filament"
 
-#: Cura/gui/mainWindow.py:403
-msgid "Add new machine..."
-msgstr "Dodaj nową drukarkę..."
-
-#: Cura/gui/mainWindow.py:409
+#: Cura/gui/mainWindow.py:411
 #, fuzzy
 msgid "Install default firmware..."
 msgstr "Zainstaluj domyślny firmware Marlin"
 
-#: Cura/gui/mainWindow.py:412
+#: Cura/gui/mainWindow.py:414
 #, fuzzy
 msgid "Install custom firmware..."
 msgstr "Zainstaluj własny firmware"
 
-#: Cura/gui/mainWindow.py:416
+#: Cura/gui/mainWindow.py:418
 msgid "Select profile file to load"
 msgstr "Wybierz Profil do wczytania"
 
-#: Cura/gui/mainWindow.py:428
+#: Cura/gui/mainWindow.py:430
 msgid "Select gcode file to load profile from"
 msgstr "Wybierz plik GCode z którego wczytać Profil"
 
-#: Cura/gui/mainWindow.py:441
+#: Cura/gui/mainWindow.py:443
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -633,15 +629,15 @@ msgstr ""
 "Ta funkcja działa tylko z plikami GCode utworzonymi przez wersję Cura 12.07 "
 "lub nowszą"
 
-#: Cura/gui/mainWindow.py:441
+#: Cura/gui/mainWindow.py:443
 msgid "Profile load error"
 msgstr "Błąd wczytywania Profilu"
 
-#: Cura/gui/mainWindow.py:445
+#: Cura/gui/mainWindow.py:447
 msgid "Select profile file to save"
 msgstr "Wybierz plik Profilu do zapisu"
 
-#: Cura/gui/mainWindow.py:453
+#: Cura/gui/mainWindow.py:455
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -652,11 +648,11 @@ msgstr ""
 "utracone!\n"
 "Jesteś pewien że chcesz zresetować?"
 
-#: Cura/gui/mainWindow.py:453
+#: Cura/gui/mainWindow.py:455
 msgid "Profile reset"
 msgstr "Reset Profilu"
 
-#: Cura/gui/mainWindow.py:473
+#: Cura/gui/mainWindow.py:475
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -664,47 +660,47 @@ msgstr ""
 "Uwaga: Instalowanie własnego firmware nie gwarantuje poprawnego działania "
 "drukarki i może ją uszkodzić."
 
-#: Cura/gui/mainWindow.py:474
+#: Cura/gui/mainWindow.py:476
 msgid "Open firmware to upload"
 msgstr "Otwóz firmware do wysłania"
 
-#: Cura/gui/mainWindow.py:541
+#: Cura/gui/mainWindow.py:535
 msgid "You are running the latest version of Cura!"
 msgstr "Posiadasz najnowszą wersję Cura!"
 
-#: Cura/gui/mainWindow.py:541
+#: Cura/gui/mainWindow.py:535
 msgid "Awesome!"
 msgstr "Zajebiasczo!"
 
-#: Cura/gui/mainWindow.py:586
+#: Cura/gui/mainWindow.py:580
 msgid "Basic"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:590
+#: Cura/gui/mainWindow.py:584
 msgid "Advanced"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:596
+#: Cura/gui/mainWindow.py:590
 msgid "Plugins"
 msgstr "Rozszerzenia"
 
-#: Cura/gui/pluginPanel.py:26
+#: Cura/gui/pluginPanel.py:27
 msgid "Plugins:"
 msgstr "Rozszerzenia:"
 
-#: Cura/gui/pluginPanel.py:30
+#: Cura/gui/pluginPanel.py:31
 msgid "Open plugin location"
 msgstr "Otwórz lokalizację rozszerzenia"
 
-#: Cura/gui/pluginPanel.py:31
+#: Cura/gui/pluginPanel.py:32
 msgid "Enabled plugins"
 msgstr "Włączone rozszerzenia"
 
-#: Cura/gui/pluginPanel.py:133
+#: Cura/gui/pluginPanel.py:134
 msgid "You need to select a plugin before you can add anything."
 msgstr "Musisz wybrać rozszerzenie żeby coś dodać."
 
-#: Cura/gui/pluginPanel.py:133
+#: Cura/gui/pluginPanel.py:134
 msgid "Error: no plugin selected"
 msgstr "Błąd: nie wybrano rozszerzenia"
 
@@ -783,7 +779,7 @@ msgid "Connect"
 msgstr "Podłącz"
 
 #: Cura/gui/printWindow.py:181 Cura/gui/printWindow2.py:52
-#: Cura/gui/sceneView.py:70 Cura/gui/sceneView.py:854
+#: Cura/gui/sceneView.py:71 Cura/gui/sceneView.py:913
 msgid "Print"
 msgstr "Drukuj"
 
@@ -867,190 +863,190 @@ msgstr "Filament: %(amount).2fm %(weight).2fg\n"
 msgid "Filament cost: %s\n"
 msgstr "Koszt Filamenty: %s\n"
 
-#: Cura/gui/sceneView.py:69
+#: Cura/gui/sceneView.py:70
 msgid "Load"
 msgstr "Wczytaj"
 
-#: Cura/gui/sceneView.py:74
+#: Cura/gui/sceneView.py:75
 msgid "Rotate"
 msgstr "Obróć"
 
-#: Cura/gui/sceneView.py:75
+#: Cura/gui/sceneView.py:76
 msgid "Scale"
 msgstr "Skaluj"
 
-#: Cura/gui/sceneView.py:76
+#: Cura/gui/sceneView.py:77
 msgid "Mirror"
 msgstr "Odbij"
 
-#: Cura/gui/sceneView.py:78 Cura/gui/sceneView.py:81
+#: Cura/gui/sceneView.py:79 Cura/gui/sceneView.py:82
 msgid "Reset"
 msgstr "Zresetuj"
 
-#: Cura/gui/sceneView.py:79
+#: Cura/gui/sceneView.py:80
 msgid "Lay flat"
 msgstr "Ułóż na płasko"
 
-#: Cura/gui/sceneView.py:82
+#: Cura/gui/sceneView.py:83
 msgid "To max"
 msgstr "Maximum"
 
-#: Cura/gui/sceneView.py:84
+#: Cura/gui/sceneView.py:85
 msgid "Mirror X"
 msgstr "Odbij X"
 
-#: Cura/gui/sceneView.py:85
+#: Cura/gui/sceneView.py:86
 msgid "Mirror Y"
 msgstr "Odbij Y"
 
-#: Cura/gui/sceneView.py:86
+#: Cura/gui/sceneView.py:87
 msgid "Mirror Z"
 msgstr "Odbij Z"
 
-#: Cura/gui/sceneView.py:94
+#: Cura/gui/sceneView.py:95
 msgid "Scale X"
 msgstr "Skaluj X"
 
-#: Cura/gui/sceneView.py:96
+#: Cura/gui/sceneView.py:97
 msgid "Scale Y"
 msgstr "Skaluj Y"
 
-#: Cura/gui/sceneView.py:98
+#: Cura/gui/sceneView.py:99
 msgid "Scale Z"
 msgstr "Skaluj Z"
 
-#: Cura/gui/sceneView.py:100
+#: Cura/gui/sceneView.py:101
 msgid "Size X (mm)"
 msgstr "Rozmiar X (mm)"
 
-#: Cura/gui/sceneView.py:102
+#: Cura/gui/sceneView.py:103
 msgid "Size Y (mm)"
 msgstr "Rozmiar Y (mm)"
 
-#: Cura/gui/sceneView.py:104
+#: Cura/gui/sceneView.py:105
 msgid "Size Z (mm)"
 msgstr "Rozmiar Z (mm)"
 
-#: Cura/gui/sceneView.py:106
+#: Cura/gui/sceneView.py:107
 msgid "Uniform scale"
 msgstr "Jednorodna skala"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "View mode"
 msgstr "Tryb widoku"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "Normal"
 msgstr "Normalny"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "Overhang"
 msgstr "Zwisy"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "Transparent"
 msgstr "Przeźroczysty"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "X-Ray"
 msgstr "Promienie X"
 
-#: Cura/gui/sceneView.py:109
+#: Cura/gui/sceneView.py:110
 msgid "Layers"
 msgstr "Warstwy"
 
-#: Cura/gui/sceneView.py:112
+#: Cura/gui/sceneView.py:113
 msgid "Share on YouMagine"
 msgstr "Umieść na YouMagine"
 
-#: Cura/gui/sceneView.py:203
+#: Cura/gui/sceneView.py:204
 msgid "Open 3D model"
 msgstr "Otwórz model 3D"
 
-#: Cura/gui/sceneView.py:218
+#: Cura/gui/sceneView.py:219
 msgid "Save 3D model"
 msgstr "Zapisz model 3D"
 
-#: Cura/gui/sceneView.py:260
+#: Cura/gui/sceneView.py:261
 msgid "Print with USB"
 msgstr "Drukuj przez USB"
 
-#: Cura/gui/sceneView.py:262
+#: Cura/gui/sceneView.py:263
 msgid "Slice engine log..."
 msgstr "Dziennik modułu Slice..."
 
-#: Cura/gui/sceneView.py:270
+#: Cura/gui/sceneView.py:271
 msgid "USB printing on the Ultimaker2 is not supported."
 msgstr ""
 
-#: Cura/gui/sceneView.py:270
+#: Cura/gui/sceneView.py:271
 #, fuzzy
 msgid "USB Printing Error"
 msgstr "Drukowanie"
 
-#: Cura/gui/sceneView.py:279 Cura/gui/sceneView.py:863
+#: Cura/gui/sceneView.py:280 Cura/gui/sceneView.py:922
 msgid "Save toolpath"
 msgstr "Zapisz ścieżkę narzędzia"
 
-#: Cura/gui/sceneView.py:317
+#: Cura/gui/sceneView.py:326
 msgid "The slicing engine reported the following"
 msgstr "Raport z modułu Slice "
 
-#: Cura/gui/sceneView.py:317
+#: Cura/gui/sceneView.py:326
 msgid "Engine log..."
 msgstr "Dziennik z silnika..."
 
-#: Cura/gui/sceneView.py:457
+#: Cura/gui/sceneView.py:466
 msgid "How many copies do you want?"
 msgstr ""
 
-#: Cura/gui/sceneView.py:457
+#: Cura/gui/sceneView.py:466
 msgid "Number of copies"
 msgstr ""
 
-#: Cura/gui/sceneView.py:457
+#: Cura/gui/sceneView.py:466
 #, fuzzy
 msgid "Multiply"
 msgstr "Powiel obiekt"
 
-#: Cura/gui/sceneView.py:724
+#: Cura/gui/sceneView.py:783
 msgid "Delete object"
 msgstr "Usuń obiekt"
 
-#: Cura/gui/sceneView.py:725
+#: Cura/gui/sceneView.py:784
 msgid "Center on platform"
 msgstr "Wyśrodkuj na platformie"
 
-#: Cura/gui/sceneView.py:726
+#: Cura/gui/sceneView.py:785
 msgid "Multiply object"
 msgstr "Powiel obiekt"
 
-#: Cura/gui/sceneView.py:727
+#: Cura/gui/sceneView.py:786
 msgid "Split object into parts"
 msgstr "Podziel obiekt na części"
 
-#: Cura/gui/sceneView.py:729
+#: Cura/gui/sceneView.py:788
 msgid "Dual extrusion merge"
 msgstr "Złącz podwójne ekstrudowanie"
 
-#: Cura/gui/sceneView.py:731
+#: Cura/gui/sceneView.py:790
 msgid "Delete all objects"
 msgstr "Usuń wszystkie obiekty"
 
-#: Cura/gui/sceneView.py:857
+#: Cura/gui/sceneView.py:916
 msgid "Toolpath to SD"
 msgstr "Zapisz ścieżkę na SD"
 
-#: Cura/gui/sceneView.py:860
+#: Cura/gui/sceneView.py:919
 #, fuzzy, python-format
 msgid "Print with %s"
 msgstr "Drukuj przez USB"
 
-#: Cura/gui/sceneView.py:1170
+#: Cura/gui/sceneView.py:1229
 msgid "Loading toolpath for visualization..."
 msgstr "Wczytaj ścieżkę do wizualizacji..."
 
-#: Cura/gui/sceneView.py:1233
+#: Cura/gui/sceneView.py:1292
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr "Widok zwisów nie działą z powodu braku wsparcia shaderów OpenGL."
 
@@ -1173,10 +1169,15 @@ msgstr "Wysokość warstwy (mm)"
 
 #: Cura/gui/tools/imageToMesh.py:35
 #, fuzzy
+msgid "Base (mm)"
+msgstr "Grubość bazy (mm)"
+
+#: Cura/gui/tools/imageToMesh.py:39
+#, fuzzy
 msgid "Width (mm)"
 msgstr "Szerokość drukarki (mm)"
 
-#: Cura/gui/tools/imageToMesh.py:39
+#: Cura/gui/tools/imageToMesh.py:43
 #, fuzzy
 msgid "Depth (mm)"
 msgstr "Średnica (mm)"
@@ -2627,6 +2628,9 @@ msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
 "results and is not recommended."
 msgstr ""
+
+#~ msgid "Add new machine..."
+#~ msgstr "Dodaj nową drukarkę..."
 
 #, fuzzy
 #~ msgid "Print time:"
