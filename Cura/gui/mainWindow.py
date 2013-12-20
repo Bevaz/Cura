@@ -249,6 +249,7 @@ class mainWindow(wx.Frame):
 			self.Centre()
 
 		self.updateSliceMode()
+		self.scene.SetFocus()
 
 	def onTimer(self, e):
 		#Check if there is something in the clipboard
@@ -400,8 +401,9 @@ class mainWindow(wx.Frame):
 			self.Bind(wx.EVT_MENU, lambda e: self.OnSelectMachine(e.GetId() - 0x1000), i)
 
 		self.machineMenu.AppendSeparator()
-		i = self.machineMenu.Append(-1, _("Add new machine..."))
-		self.Bind(wx.EVT_MENU, self.OnAddNewMachine, i)
+
+		i = self.machineMenu.Append(-1, _("Machine settings..."))
+		self.Bind(wx.EVT_MENU, self.OnMachineSettings, i)
 
 		#Add tools for machines.
 		self.machineMenu.AppendSeparator()
@@ -485,14 +487,6 @@ class mainWindow(wx.Frame):
 		configWizard.configWizard()
 		self.Show()
 		self.reloadSettingPanels()
-
-	def OnAddNewMachine(self, e):
-		self.Hide()
-		profile.setActiveMachine(profile.getMachineCount())
-		configWizard.configWizard(True)
-		self.Show()
-		self.reloadSettingPanels()
-		self.updateMachineMenu()
 
 	def OnSelectMachine(self, index):
 		profile.setActiveMachine(index)

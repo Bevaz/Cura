@@ -25,6 +25,7 @@ from Cura.util import sliceEngine
 from Cura.util import machineCom
 from Cura.util import removableStorage
 from Cura.util import gcodeInterpreter
+from Cura.util import explorer
 from Cura.util.printerConnection import printerConnectionManager
 from Cura.gui.util import previewTools
 from Cura.gui.util import opengl
@@ -306,12 +307,20 @@ class SceneView(openglGui.glGuiPanel):
 			self.notification.message("Failed to save")
 		else:
 			if allowEject:
-				self.notification.message("Saved as %s" % (fileB), lambda : self.notification.message('You can now eject the card.') if removableStorage.ejectDrive(allowEject) else self.notification.message('Safe remove failed...'))
+				self.notification.message("Saved as %s" % (fileB), lambda : self._doEjectSD(allowEject), 31, 'Eject')
+			elif explorer.hasExplorer():
+				self.notification.message("Saved as %s" % (fileB), lambda : explorer.openExplorer(fileB), 4, 'Open folder')
 			else:
 				self.notification.message("Saved as %s" % (fileB))
 		self.printButton.setProgressBar(None)
 		if fileA == self._slicer.getGCodeFilename():
 			self._slicer.submitSliceInfoOnline()
+
+	def _doEjectSD(self, drive):
+		if removableStorage.ejectDrive(drive):
+			self.notification.message('You can now eject the card.')
+		else:
+			self.notification.message('Safe remove failed...')
 
 	def _showSliceLog(self):
 		dlg = wx.TextEntryDialog(self, _("The slicing engine reported the following"), _("Engine log..."), '\n'.join(self._slicer.getSliceLog()), wx.TE_MULTILINE | wx.OK | wx.CENTRE)
@@ -652,18 +661,68 @@ class SceneView(openglGui.glGuiPanel):
 			if self._selectedObj is not None:
 				self._deleteObject(self._selectedObj)
 				self.QueueRefresh()
-		if keyCode == wx.WXK_UP:
-			self.layerSelect.setValue(self.layerSelect.getValue() + 1)
-			self.QueueRefresh()
-		elif keyCode == wx.WXK_DOWN:
-			self.layerSelect.setValue(self.layerSelect.getValue() - 1)
-			self.QueueRefresh()
-		elif keyCode == wx.WXK_PAGEUP:
-			self.layerSelect.setValue(self.layerSelect.getValue() + 10)
-			self.QueueRefresh()
-		elif keyCode == wx.WXK_PAGEDOWN:
-			self.layerSelect.setValue(self.layerSelect.getValue() - 10)
-			self.QueueRefresh()
+		if self.viewMode == 'gcode':
+			if keyCode == wx.WXK_UP:
+				self.layerSelect.setValue(self.layerSelect.getValue() + 1)
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_DOWN:
+				self.layerSelect.setValue(self.layerSelect.getValue() - 1)
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_PAGEUP:
+				self.layerSelect.setValue(self.layerSelect.getValue() + 10)
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_PAGEDOWN:
+				self.layerSelect.setValue(self.layerSelect.getValue() - 10)
+				self.QueueRefresh()
+		else:
+			if keyCode == wx.WXK_UP:
+				if wx.GetKeyState(wx.WXK_SHIFT):
+					self._zoom /= 1.2
+					if self._zoom < 1:
+						self._zoom = 1
+				else:
+					self._pitch -= 15
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_DOWN:
+				if wx.GetKeyState(wx.WXK_SHIFT):
+					self._zoom *= 1.2
+					if self._zoom > numpy.max(self._machineSize) * 3:
+						self._zoom = numpy.max(self._machineSize) * 3
+				else:
+					self._pitch += 15
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_LEFT:
+				self._yaw -= 15
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_RIGHT:
+				self._yaw += 15
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_NUMPAD_ADD or keyCode == wx.WXK_ADD or keyCode == ord('+') or keyCode == ord('='):
+				self._zoom /= 1.2
+				if self._zoom < 1:
+					self._zoom = 1
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_NUMPAD_SUBTRACT or keyCode == wx.WXK_SUBTRACT or keyCode == ord('-'):
+				self._zoom *= 1.2
+				if self._zoom > numpy.max(self._machineSize) * 3:
+					self._zoom = numpy.max(self._machineSize) * 3
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_HOME:
+				self._yaw = 30
+				self._pitch = 60
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_PAGEUP:
+				self._yaw = 0
+				self._pitch = 0
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_PAGEDOWN:
+				self._yaw = 0
+				self._pitch = 90
+				self.QueueRefresh()
+			elif keyCode == wx.WXK_END:
+				self._yaw = 90
+				self._pitch = 90
+				self.QueueRefresh()
 
 		if keyCode == wx.WXK_F3 and wx.GetKeyState(wx.WXK_SHIFT):
 			shaderEditor(self, self.ShaderUpdate, self._objectLoadShader.getVertexShader(), self._objectLoadShader.getFragmentShader())
