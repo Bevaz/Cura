@@ -59,7 +59,7 @@ def checkForNewerVersion():
 	if isDevVersion():
 		return None
 	try:
-		updateBaseURL = 'http://joysmaker.ru/software'
+		updateBaseURL = 'http://extensio.ru/software'
 		localVersion = map(int, getVersion(False).replace('-Extensio.ru','').split('.'))
 		while len(localVersion) < 3:
 			localVersion += [1]
