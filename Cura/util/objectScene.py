@@ -137,7 +137,10 @@ class Scene(object):
 		self._headSizeOffsets[0] = min(xMin, xMax)
 		self._headSizeOffsets[1] = min(yMin, yMax)
 		self._gantryHeight = gantryHeight
-		self._oneAtATime = self._gantryHeight > 0
+		self._oneAtATime = self._gantryHeight > 0 and profile.getPreference('oneAtATime') == 'True'
+		for obj in self._objectList:
+			if obj.getSize()[2] > self._gantryHeight:
+				self._oneAtATime = False
 
 		headArea = numpy.array([[-xMin,-yMin],[ xMax,-yMin],[ xMax, yMax],[-xMin, yMax]], numpy.float32)
 
@@ -146,6 +149,9 @@ class Scene(object):
 				obj.setHeadArea(headArea, self._headSizeOffsets)
 		else:
 			obj.setHeadArea(headArea, self._headSizeOffsets)
+
+	def isOneAtATime(self):
+		return self._oneAtATime
 
 	def setExtruderOffset(self, extruderNr, offsetX, offsetY):
 		self._extruderOffset[extruderNr] = numpy.array([offsetX, offsetY], numpy.float32)
@@ -163,7 +169,7 @@ class Scene(object):
 		self._objectList.append(obj)
 		self.updateHeadSize(obj)
 		self.updateSizeOffsets(True)
-		self.pushFree()
+		self.pushFree(obj)
 
 	def remove(self, obj):
 		self._objectList.remove(obj)
@@ -176,14 +182,25 @@ class Scene(object):
 			m._obj = obj1
 		obj1.processMatrix()
 		obj1.setPosition((obj1.getPosition() + obj2.getPosition()) / 2)
-		self.pushFree()
+		self.pushFree(obj1)
 
-	def pushFree(self):
-		n = 10
-		while self._pushFree():
-			n -= 1
-			if n < 0:
-				return
+	def pushFree(self, staticObj):
+		if not self.checkPlatform(staticObj):
+			return
+		pushList = []
+		for obj in self._objectList:
+			if obj == staticObj or not self.checkPlatform(obj):
+				continue
+			if self._oneAtATime:
+				v = polygon.polygonCollisionPushVector(obj._headAreaMinHull + obj.getPosition(), staticObj._boundaryHull + staticObj.getPosition())
+			else:
+				v = polygon.polygonCollisionPushVector(obj._boundaryHull + obj.getPosition(), staticObj._boundaryHull + staticObj.getPosition())
+			if type(v) is bool:
+				continue
+			obj.setPosition(obj.getPosition() + v * 1.01)
+			pushList.append(obj)
+		for obj in pushList:
+			self.pushFree(obj)
 
 	def arrangeAll(self):
 		oldList = self._objectList
@@ -212,22 +229,6 @@ class Scene(object):
 		else:
 			order = None
 		return order
-
-	def _pushFree(self):
-		for a in self._objectList:
-			for b in self._objectList:
-				if a == b or not self.checkPlatform(a) or not self.checkPlatform(b):
-					continue
-				if self._oneAtATime:
-					v = polygon.polygonCollisionPushVector(a._headAreaMinHull + a.getPosition(), b._boundaryHull + b.getPosition())
-				else:
-					v = polygon.polygonCollisionPushVector(a._boundaryHull + a.getPosition(), b._boundaryHull + b.getPosition())
-				if type(v) is bool:
-					continue
-				a.setPosition(a.getPosition() + v * 0.4)
-				b.setPosition(b.getPosition() - v * 0.6)
-				return True
-		return False
 
 	#Check if two objects are hitting each-other (+ head space).
 	def _checkHit(self, a, b):

@@ -1,3 +1,4 @@
+syntax: glob
 *.tar.bz2
 *.tar.gz
 *.7z
@@ -23,13 +24,17 @@ cura.bat
 object-mirror.png
 object.png
 *darwin.dmg
-scripts/darwin/dist/*
-scripts/darwin/build/*
+scripts/darwin/dist/
+scripts/darwin/build/
 scripts/darwin/Cura.dmg.sparseimage
-scripts/win32/dist/*
-scripts/linux/debian/usr/*
+scripts/win32/dist/
+scripts/linux/debian/usr/
 log.txt
 output.txt
 *.bak
-
-Win32
+*.deb
+.git
+.hgignore
+.hgsubstate
+CuraEngine/
+Power/

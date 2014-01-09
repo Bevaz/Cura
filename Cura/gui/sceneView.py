@@ -399,7 +399,7 @@ class SceneView(openglGui.glGuiPanel):
 		if self._selectedObj is None:
 			return
 		self._selectedObj.resetRotation()
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		self._selectObject(self._selectedObj)
 		self.sceneUpdated()
 
@@ -407,7 +407,7 @@ class SceneView(openglGui.glGuiPanel):
 		if self._selectedObj is None:
 			return
 		self._selectedObj.layFlat()
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		self._selectObject(self._selectedObj)
 		self.sceneUpdated()
 
@@ -424,19 +424,19 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		machine = profile.getMachineSetting('machine_type')
 		self._selectedObj.setPosition(numpy.array([0.0, 0.0]))
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		#self.sceneUpdated()
 		if machine == "ultimaker2":
 			#This is bad and Jaime should feel bad!
 			self._selectedObj.setPosition(numpy.array([0.0,-10.0]))
 			self._selectedObj.scaleUpTo(self._machineSize - numpy.array(profile.calculateObjectSizeOffsets() + [0.0], numpy.float32) * 2 - numpy.array([1,1,1], numpy.float32))
 			self._selectedObj.setPosition(numpy.array([0.0,0.0]))
-			self._scene.pushFree()
+			self._scene.pushFree(self._selectedObj)
 		else:
 			self._selectedObj.setPosition(numpy.array([0.0, 0.0]))
-			self._scene.pushFree()
+			self._scene.pushFree(self._selectedObj)
 			self._selectedObj.scaleUpTo(self._machineSize - numpy.array(profile.calculateObjectSizeOffsets() + [0.0], numpy.float32) * 2 - numpy.array([1,1,1], numpy.float32))
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		self._selectObject(self._selectedObj)
 		self.updateProfileToControls()
 		self.sceneUpdated()
@@ -456,7 +456,7 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		self._selectedObj.setScale(value, axis, self.scaleUniform.getValue())
 		self.updateProfileToControls()
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		self._selectObject(self._selectedObj)
 		self.sceneUpdated()
 
@@ -469,7 +469,7 @@ class SceneView(openglGui.glGuiPanel):
 			return
 		self._selectedObj.setSize(value, axis, self.scaleUniform.getValue())
 		self.updateProfileToControls()
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		self._selectObject(self._selectedObj)
 		self.sceneUpdated()
 
@@ -519,7 +519,7 @@ class SceneView(openglGui.glGuiPanel):
 		if self._focusObj is None:
 			return
 		self._focusObj.setPosition(numpy.array([0.0, 0.0]))
-		self._scene.pushFree()
+		self._scene.pushFree(self._selectedObj)
 		newViewPos = numpy.array([self._focusObj.getPosition()[0], self._focusObj.getPosition()[1], self._focusObj.getSize()[2] / 2])
 		self._animView = openglGui.animation(self, self._viewTarget.copy(), newViewPos, 0.5)
 		self.sceneUpdated()
@@ -680,7 +680,7 @@ class SceneView(openglGui.glGuiPanel):
 			if self._selectedObj is not None:
 				self._deleteObject(self._selectedObj)
 				self.QueueRefresh()
-		if self.viewMode == 'gcode':
+		if self.viewMode == 'gcode' and (wx.GetKeyState(wx.WXK_SHIFT) or wx.GetKeyState(wx.WXK_CONTROL)):
 			if keyCode == wx.WXK_UP:
 				self.layerSelect.setValue(self.layerSelect.getValue() + 1)
 				self.QueueRefresh()
@@ -811,12 +811,12 @@ class SceneView(openglGui.glGuiPanel):
 						self.PopupMenu(menu)
 					menu.Destroy()
 		elif self._mouseState == 'dragObject' and self._selectedObj is not None:
-			self._scene.pushFree()
+			self._scene.pushFree(self._selectedObj)
 			self.sceneUpdated()
 		elif self._mouseState == 'tool':
 			if self.tempMatrix is not None and self._selectedObj is not None:
 				self._selectedObj.applyMatrix(self.tempMatrix)
-				self._scene.pushFree()
+				self._scene.pushFree(self._selectedObj)
 				self._selectObject(self._selectedObj)
 			self.tempMatrix = None
 			self.tool.OnDragEnd()
@@ -1227,16 +1227,28 @@ void main(void)
 		self._drawMachine()
 
 		if self._usbPrintMonitor.getState() == 'PRINTING' and self._usbPrintMonitor.getID() == self._slicer.getID():
-			glEnable(GL_BLEND)
 			z = self._usbPrintMonitor.getZ()
-			size = self._machineSize
-			glColor4ub(255,255,0,128)
-			glBegin(GL_QUADS)
-			glVertex3f(-size[0]/2,-size[1]/2, z)
-			glVertex3f( size[0]/2,-size[1]/2, z)
-			glVertex3f( size[0]/2, size[1]/2, z)
-			glVertex3f(-size[0]/2, size[1]/2, z)
-			glEnd()
+			if self.viewMode == 'gcode':
+				layer_height = profile.getProfileSettingFloat('layer_height')
+				layer1_height = profile.getProfileSettingFloat('bottom_thickness')
+				if layer_height > 0:
+					if layer1_height > 0:
+						layer = int((z - layer1_height) / layer_height) + 1
+					else:
+						layer = int(z / layer_height)
+				else:
+					layer = 1
+				self.layerSelect.setValue(layer)
+			else:
+				size = self._machineSize
+				glEnable(GL_BLEND)
+				glColor4ub(255,255,0,128)
+				glBegin(GL_QUADS)
+				glVertex3f(-size[0]/2,-size[1]/2, z)
+				glVertex3f( size[0]/2,-size[1]/2, z)
+				glVertex3f( size[0]/2, size[1]/2, z)
+				glVertex3f(-size[0]/2, size[1]/2, z)
+				glEnd()
 
 		if self.viewMode == 'gcode':
 			if self._gcodeLoadThread is not None and self._gcodeLoadThread.isAlive():
@@ -1262,20 +1274,21 @@ void main(void)
 						glVertex3f(p[0], p[1], 0)
 					glEnd()
 					glPopMatrix()
-				glPushMatrix()
-				glColor4f(0,0,0,0.06)
-				glTranslatef(self._selectedObj.getPosition()[0], self._selectedObj.getPosition()[1], 0)
-				glBegin(GL_TRIANGLE_FAN)
-				for p in self._selectedObj._printAreaHull[::-1]:
-					glVertex3f(p[0], p[1], 0)
-				glEnd()
-				glBegin(GL_TRIANGLE_FAN)
-				for p in self._selectedObj._headAreaMinHull[::-1]:
-					glVertex3f(p[0], p[1], 0)
-				glEnd()
+				if self._scene.isOneAtATime():
+					glPushMatrix()
+					glColor4f(0,0,0,0.06)
+					glTranslatef(self._selectedObj.getPosition()[0], self._selectedObj.getPosition()[1], 0)
+					glBegin(GL_TRIANGLE_FAN)
+					for p in self._selectedObj._printAreaHull[::-1]:
+						glVertex3f(p[0], p[1], 0)
+					glEnd()
+					glBegin(GL_TRIANGLE_FAN)
+					for p in self._selectedObj._headAreaMinHull[::-1]:
+						glVertex3f(p[0], p[1], 0)
+					glEnd()
+					glPopMatrix()
 				glDepthMask(True)
 				glDisable(GL_CULL_FACE)
-				glPopMatrix()
 
 			#Draw the outline of the selected object, on top of everything else except the GUI.
 			if self._selectedObj is not None and self._selectedObj._loadAnim is None:
