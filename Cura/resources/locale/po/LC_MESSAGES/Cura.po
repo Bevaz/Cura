@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-10 00:51+0400\n"
+"POT-Creation-Date: 2014-01-12 19:57+0400\n"
 "PO-Revision-Date: 2013-10-02 11:23+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr "Wysokość drukarki (mm)"
 msgid "Nozzle size (mm)"
 msgstr "Średnica dyszy (mm)"
 
-#: Cura/gui/configWizard.py:287 Cura/util/profile.py:366
+#: Cura/gui/configWizard.py:287 Cura/util/profile.py:367
 msgid "Heated bed"
 msgstr "Podgrzewany stół"
 
@@ -743,24 +743,24 @@ msgstr "Ustawienia Cura"
 msgid "Machine settings"
 msgstr "Ustawienia drukarki"
 
-#: Cura/gui/preferencesDialog.py:88
+#: Cura/gui/preferencesDialog.py:89
 msgid "Printer head size"
 msgstr "Rozmiar głowicy drukarki"
 
-#: Cura/gui/preferencesDialog.py:96
+#: Cura/gui/preferencesDialog.py:97
 #, python-format
 msgid "Extruder %d"
 msgstr "Ekstruder %d"
 
-#: Cura/gui/preferencesDialog.py:100
+#: Cura/gui/preferencesDialog.py:101
 msgid "Communication settings"
 msgstr "Ustawienia łączności"
 
-#: Cura/gui/preferencesDialog.py:143
+#: Cura/gui/preferencesDialog.py:144
 msgid "Cannot remove the last machine configuration in Cura"
 msgstr "Nie można usunąć ostatniej w Cura konfiguracji drukari"
 
-#: Cura/gui/preferencesDialog.py:143
+#: Cura/gui/preferencesDialog.py:144
 msgid "Machine remove error"
 msgstr "Błąd usuwania drukarki"
 
@@ -2448,7 +2448,15 @@ msgid ""
 "left corner."
 msgstr ""
 
-#: Cura/util/profile.py:366
+#: Cura/util/profile.py:365
+msgid "Build area shape"
+msgstr ""
+
+#: Cura/util/profile.py:365
+msgid "The shape of machine build area."
+msgstr ""
+
+#: Cura/util/profile.py:367
 msgid ""
 "If you have an heated bed, this enabled heated bed settings (requires "
 "restart)"
@@ -2456,11 +2464,11 @@ msgstr ""
 "Jeśli posiadasz podgrzewany stół, ta opcja włącza ustawienia podgrzewanego "
 "stołu (wymaga restartu)"
 
-#: Cura/util/profile.py:367
+#: Cura/util/profile.py:368
 msgid "GCode Flavor"
 msgstr "Rodzaj GCode"
 
-#: Cura/util/profile.py:367
+#: Cura/util/profile.py:368
 #, fuzzy
 msgid ""
 "Flavor of generated GCode.\n"
@@ -2478,39 +2486,39 @@ msgstr ""
 "UltiGCode jest odmianą GCode 5D która umieszcza więcej ustawień w drukarce "
 "zamiast w Slicerze."
 
-#: Cura/util/profile.py:368
+#: Cura/util/profile.py:369
 msgid "Extruder count"
 msgstr "Ilość ekstruderów"
 
-#: Cura/util/profile.py:368
+#: Cura/util/profile.py:369
 msgid "Amount of extruders in your machine."
 msgstr "Ilość ekstruderów w Twojej drukarce"
 
-#: Cura/util/profile.py:369 Cura/util/profile.py:371 Cura/util/profile.py:373
+#: Cura/util/profile.py:370 Cura/util/profile.py:372 Cura/util/profile.py:374
 msgid "Offset X"
 msgstr "Przesunięcie X"
 
-#: Cura/util/profile.py:369 Cura/util/profile.py:370
+#: Cura/util/profile.py:370 Cura/util/profile.py:371
 msgid "The offset of your secondary extruder compared to the primary."
 msgstr "Przesunięcie drugiego esktrudera w odniesieniu do głównego."
 
-#: Cura/util/profile.py:370 Cura/util/profile.py:372 Cura/util/profile.py:374
+#: Cura/util/profile.py:371 Cura/util/profile.py:373 Cura/util/profile.py:375
 msgid "Offset Y"
 msgstr "Przesunięcie Y"
 
-#: Cura/util/profile.py:371 Cura/util/profile.py:372
+#: Cura/util/profile.py:372 Cura/util/profile.py:373
 msgid "The offset of your tertiary extruder compared to the primary."
 msgstr "Przesunięcie trzeciego esktrudera w odniesieniu do głównego."
 
-#: Cura/util/profile.py:373 Cura/util/profile.py:374
+#: Cura/util/profile.py:374 Cura/util/profile.py:375
 msgid "The offset of your forth extruder compared to the primary."
 msgstr "Przesunięcie czwartego esktrudera w odniesieniu do głównego."
 
-#: Cura/util/profile.py:375
+#: Cura/util/profile.py:376
 msgid "E-Steps per 1mm filament"
 msgstr "Ilość E-kroków na 1mm filamentu"
 
-#: Cura/util/profile.py:375
+#: Cura/util/profile.py:376
 msgid ""
 "Amount of steps per mm filament extrusion. If set to 0 then this value is "
 "ignored and the value in your firmware is used."
@@ -2518,19 +2526,19 @@ msgstr ""
 "Ilość kroków na mm ekstrudowanego filamentu. Jeśli ustawisz 0 wartość "
 "zostanie zignorowana i użyte będzie ustawienie w firmware."
 
-#: Cura/util/profile.py:376
+#: Cura/util/profile.py:377
 msgid "Serial port"
 msgstr "Port szeregowy"
 
-#: Cura/util/profile.py:376
+#: Cura/util/profile.py:377
 msgid "Serial port to use for communication with the printer"
 msgstr "Port szeregowy który ma zostać użyty do komunikacji z drukarką"
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:379
 msgid "Baudrate"
 msgstr "Prędkość transmisji"
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:379
 msgid ""
 "Speed of the serial port communication\n"
 "Needs to match your firmware settings\n"
@@ -2540,11 +2548,11 @@ msgstr ""
 "Musi odpowiadać ustawieniu w firmware\n"
 "Najczęściej spotykane wartości to 250000, 115200 i 57600"
 
-#: Cura/util/profile.py:381
+#: Cura/util/profile.py:382
 msgid "Head size towards X min (mm)"
 msgstr "Rozmiar głowicy w kierunku X min (mm)"
 
-#: Cura/util/profile.py:381
+#: Cura/util/profile.py:382
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan "
@@ -2554,11 +2562,11 @@ msgstr ""
 "czubka dyszy w kierunku zewnętrznych części głowicy. Dla Ultimakera jest to "
 "75mm jeśli wentylator jest po lewej stronie."
 
-#: Cura/util/profile.py:382
+#: Cura/util/profile.py:383
 msgid "Head size towards Y min (mm)"
 msgstr "Rozmiar głowicy w kierunku Y min (mm)"
 
-#: Cura/util/profile.py:382 Cura/util/profile.py:383
+#: Cura/util/profile.py:383 Cura/util/profile.py:384
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan "
@@ -2568,15 +2576,15 @@ msgstr ""
 "czubka dyszy w kierunku zewnętrznych części głowicy. Dla Ultimakera jest to "
 "18mm jeśli wentylator jest po lewej stronie."
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:384
 msgid "Head size towards X max (mm)"
 msgstr "Rozmiar głowicy w kierunku X max (mm)"
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid "Head size towards Y max (mm)"
 msgstr "Rozmiar głowicy w kierunku Y max (mm)"
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan "
@@ -2586,11 +2594,11 @@ msgstr ""
 "czubka dyszy w kierunku zewnętrznych części głowicy. Dla Ultimakera jest to "
 "35mm jeśli wentylator jest po lewej stronie."
 
-#: Cura/util/profile.py:385
+#: Cura/util/profile.py:386
 msgid "Printer gantry height (mm)"
 msgstr "Wysokość bramy drukarki (mm)"
 
-#: Cura/util/profile.py:385
+#: Cura/util/profile.py:386
 msgid ""
 "The height of the gantry holding up the printer head. If an object is higher "
 "then this then you cannot print multiple objects one for one. 60mm for an "
@@ -2600,48 +2608,48 @@ msgstr ""
 "wyższy niż ta wartość nie możesz drukować obiektów jednego po drugim. Dla "
 "Ultimakera jest to 60mm."
 
-#: Cura/util/profile.py:387
+#: Cura/util/profile.py:388
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:388
+#: Cura/util/profile.py:389
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:389
+#: Cura/util/profile.py:390
 #, python-format
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
 "are not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:391
+#: Cura/util/profile.py:392
 msgid ""
 "It is highly unlikely that your machine can achieve a printing speed above "
 "150mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:393 Cura/util/profile.py:394 Cura/util/profile.py:395
-#: Cura/util/profile.py:396
+#: Cura/util/profile.py:394 Cura/util/profile.py:395 Cura/util/profile.py:396
+#: Cura/util/profile.py:397
 msgid "Temperatures above 260C could damage your machine, be careful!"
 msgstr ""
 
-#: Cura/util/profile.py:397 Cura/util/profile.py:398 Cura/util/profile.py:399
-#: Cura/util/profile.py:400
+#: Cura/util/profile.py:398 Cura/util/profile.py:399 Cura/util/profile.py:400
+#: Cura/util/profile.py:401
 msgid ""
 "Are you sure your filament is that thick? Normal filament is around 3mm or "
 "1.75mm."
 msgstr ""
 
-#: Cura/util/profile.py:401
+#: Cura/util/profile.py:402
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:402
+#: Cura/util/profile.py:403
 #, python-format
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
