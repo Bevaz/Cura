@@ -1672,7 +1672,7 @@ msgstr ""
 
 #: Cura/util/profile.py:170
 msgid "Wipe&prime tower volume per layer (mm3)"
-msgstr ""
+msgstr "Объем промокашки на каждом слое (мм3)"
 
 #: Cura/util/profile.py:170
 msgid ""
@@ -1682,10 +1682,13 @@ msgid ""
 "height.\n"
 "This means that with thinner layers, your tower gets bigger."
 msgstr ""
+"Количество материала, выдавливаемого на промокашку.\n"
+"Задается в мм3 так как интерес представляет только объем\n"
+"выдавливаемого пластика не зависимо от толщины слоя и других параметров\n"
 
 #: Cura/util/profile.py:171
 msgid "Ooze shield"
-msgstr "защита от подтеков"
+msgstr "Защита от подтеков"
 
 #: Cura/util/profile.py:171
 msgid ""
