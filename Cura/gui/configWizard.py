@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 __copyright__ = "Copyright (C) 2013 David Braam - Released under terms of the AGPLv3 License"
 
 import os
@@ -211,6 +210,9 @@ class InfoPage(wx.wizard.WizardPageSimple):
 	def AllowNext(self):
 		return True
 
+	def AllowBack(self):
+		return True
+
 	def StoreData(self):
 		pass
 
@@ -232,6 +234,9 @@ class FirstInfoPage(InfoPage):
 
 		#self.AddText('* Calibrate your machine')
 		#self.AddText('* Do your first print')
+
+	def AllowBack(self):
+		return False
 
 
 class OtherMachineSelectPage(InfoPage):
@@ -282,7 +287,7 @@ class CustomRepRapInfoPage(InfoPage):
 		self.machineName = self.AddLabelTextCtrl(_("Machine name"), "RepRap")
 		self.machineWidth = self.AddLabelTextCtrl(_("Machine width (mm)"), "80")
 		self.machineDepth = self.AddLabelTextCtrl(_("Machine depth (mm)"), "80")
-		self.machineHeight = self.AddLabelTextCtrl(_("Machine height (mm)"), "60")
+		self.machineHeight = self.AddLabelTextCtrl(_("Machine height (mm)"), "55")
 		self.nozzleSize = self.AddLabelTextCtrl(_("Nozzle size (mm)"), "0.5")
 		self.heatedBed = self.AddCheckbox(_("Heated bed"))
 		self.HomeAtCenter = self.AddCheckbox(_("Bed center is 0,0,0 (RoStock)"))
@@ -368,7 +373,7 @@ class MachineSelectPage(InfoPage):
 			profile.putMachineSetting('extruder_head_size_min_y', '18.0')
 			profile.putMachineSetting('extruder_head_size_max_x', '18.0')
 			profile.putMachineSetting('extruder_head_size_max_y', '35.0')
-			profile.putMachineSetting('extruder_head_size_height', '60.0')
+			profile.putMachineSetting('extruder_head_size_height', '55.0')
 		else:
 			profile.putMachineSetting('machine_width', '80')
 			profile.putMachineSetting('machine_depth', '80')
@@ -861,7 +866,10 @@ class configWizard(wx.wizard.Wizard):
 			self.FindWindowById(wx.ID_FORWARD).Enable()
 		else:
 			self.FindWindowById(wx.ID_FORWARD).Disable()
-		self.FindWindowById(wx.ID_BACKWARD).Disable()
+		if e.GetPage().AllowBack():
+			self.FindWindowById(wx.ID_BACKWARD).Enable()
+		else:
+			self.FindWindowById(wx.ID_BACKWARD).Disable()
 
 class bedLevelWizardMain(InfoPage):
 	def __init__(self, parent):
@@ -1045,6 +1053,9 @@ class headOffsetCalibrationPage(InfoPage):
 
 		self.Bind(wx.EVT_BUTTON, self.OnConnect, self.connectButton)
 		self.Bind(wx.EVT_BUTTON, self.OnResume, self.resumeButton)
+
+	def AllowBack(self):
+		return True
 
 	def OnConnect(self, e = None):
 		if self.comm is not None:
@@ -1266,7 +1277,10 @@ class bedLevelWizard(wx.wizard.Wizard):
 			self.FindWindowById(wx.ID_FORWARD).Enable()
 		else:
 			self.FindWindowById(wx.ID_FORWARD).Disable()
-		self.FindWindowById(wx.ID_BACKWARD).Disable()
+		if e.GetPage().AllowBack():
+			self.FindWindowById(wx.ID_BACKWARD).Enable()
+		else:
+			self.FindWindowById(wx.ID_BACKWARD).Disable()
 
 class headOffsetWizard(wx.wizard.Wizard):
 	def __init__(self):
@@ -1291,4 +1305,7 @@ class headOffsetWizard(wx.wizard.Wizard):
 			self.FindWindowById(wx.ID_FORWARD).Enable()
 		else:
 			self.FindWindowById(wx.ID_FORWARD).Disable()
-		self.FindWindowById(wx.ID_BACKWARD).Disable()
+		if e.GetPage().AllowBack():
+			self.FindWindowById(wx.ID_BACKWARD).Enable()
+		else:
+			self.FindWindowById(wx.ID_BACKWARD).Disable()
