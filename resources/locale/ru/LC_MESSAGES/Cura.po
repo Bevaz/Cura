@@ -1395,15 +1395,15 @@ msgstr ""
 
 #: Cura/util/profile.py:182 Cura/util/profile.py:183
 msgid "None"
-msgstr "Не используется"
+msgstr "None"
 
 #: Cura/util/profile.py:182
 msgid "Touching buildplate"
-msgstr "Над платформой"
+msgstr "Touching buildplate"
 
 #: Cura/util/profile.py:182
 msgid "Everywhere"
-msgstr "Везде"
+msgstr "Touching buildplate"
 
 #: Cura/util/profile.py:182 Cura/util/profile.py:183 Cura/util/profile.py:184
 #: Cura/util/profile.py:223 Cura/util/profile.py:224 Cura/util/profile.py:225
@@ -1433,13 +1433,13 @@ msgstr ""
 
 #: Cura/util/profile.py:183 Cura/util/profile.py:230
 msgid "Brim"
-msgstr "Окаймление"
+msgstr "Brim"
 
 #: Cura/util/profile.py:183 Cura/util/profile.py:231 Cura/util/profile.py:232
 #: Cura/util/profile.py:233 Cura/util/profile.py:234 Cura/util/profile.py:235
 #: Cura/util/profile.py:236
 msgid "Raft"
-msgstr "Фундамент"
+msgstr "Raft"
 
 #: Cura/util/profile.py:183
 msgid "Platform adhesion type"
