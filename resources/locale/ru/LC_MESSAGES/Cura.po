@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-21 00:00+0400\n"
+"POT-Creation-Date: 2014-03-09 21:19+0400\n"
 "PO-Revision-Date: 2013-10-29 17:57+0400\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:559
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Доступна новая версия Cura. Скачать?"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:559
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "New version available"
 msgstr "Доступна новая версия"
 
@@ -110,7 +110,7 @@ msgstr "Высота печати (мм)"
 msgid "Nozzle size (mm)"
 msgstr "Диаметр сопла (мм)"
 
-#: Cura/gui/configWizard.py:292 Cura/util/profile.py:382
+#: Cura/gui/configWizard.py:292 Cura/util/profile.py:383
 msgid "Heated bed"
 msgstr "Подогреваемая платформа"
 
@@ -408,7 +408,7 @@ msgstr ""
 "принтера."
 
 #: Cura/gui/firmwareInstall.py:44 Cura/gui/firmwareInstall.py:48
-#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:502
+#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:510
 msgid "Firmware update"
 msgstr "Обновление прошивки"
 
@@ -466,155 +466,160 @@ msgstr ""
 msgid "Failed to write firmware.\n"
 msgstr "Не удалось загрузить прошивку.\n"
 
-#: Cura/gui/mainWindow.py:63
+#: Cura/gui/mainWindow.py:66
 msgid "Load model file...\tCTRL+L"
 msgstr "Загрузить файл с моделью...\tCTRL+L"
 
-#: Cura/gui/mainWindow.py:65
+#: Cura/gui/mainWindow.py:68
 msgid "Save model...\tCTRL+S"
 msgstr "Сохранить модель...\tCTRL+S"
 
-#: Cura/gui/mainWindow.py:67
+#: Cura/gui/mainWindow.py:70
+#, fuzzy
+msgid "Reload platform\tF5"
+msgstr "Очистить платформу"
+
+#: Cura/gui/mainWindow.py:72
 msgid "Clear platform"
 msgstr "Очистить платформу"
 
-#: Cura/gui/mainWindow.py:71
+#: Cura/gui/mainWindow.py:76
 msgid "Print...\tCTRL+P"
 msgstr "Печать...\tCTRL+P"
 
-#: Cura/gui/mainWindow.py:73 Cura/gui/sceneView.py:271
+#: Cura/gui/mainWindow.py:78 Cura/gui/sceneView.py:279
 msgid "Save GCode..."
 msgstr "Сохранить GCode..."
 
-#: Cura/gui/mainWindow.py:75
+#: Cura/gui/mainWindow.py:80
 msgid "Show slice engine log..."
 msgstr "Показать журнал слайсера..."
 
-#: Cura/gui/mainWindow.py:79
+#: Cura/gui/mainWindow.py:84
 msgid "Open Profile..."
 msgstr "Открыть профиль..."
 
-#: Cura/gui/mainWindow.py:82
+#: Cura/gui/mainWindow.py:87
 msgid "Save Profile..."
 msgstr "Сохранить профиль..."
 
-#: Cura/gui/mainWindow.py:85
+#: Cura/gui/mainWindow.py:90
 msgid "Load Profile from GCode..."
 msgstr "Загрузить профиль из файла GCode..."
 
-#: Cura/gui/mainWindow.py:89
+#: Cura/gui/mainWindow.py:94
 msgid "Reset Profile to default"
 msgstr "Восстановить профиль по умолчанию"
 
-#: Cura/gui/mainWindow.py:94
+#: Cura/gui/mainWindow.py:99
 msgid "Preferences...\tCTRL+,"
 msgstr "Настройки...\tCTRL+,"
 
-#: Cura/gui/mainWindow.py:96 Cura/gui/mainWindow.py:432
+#: Cura/gui/mainWindow.py:101 Cura/gui/mainWindow.py:438
 msgid "Machine settings..."
 msgstr "Настройки принтера..."
 
-#: Cura/gui/mainWindow.py:102
+#: Cura/gui/mainWindow.py:107
 msgid "Recent Model Files"
 msgstr "Недавние модели"
 
-#: Cura/gui/mainWindow.py:109
+#: Cura/gui/mainWindow.py:114
 msgid "Recent Profile Files"
 msgstr "Недавние профили"
 
-#: Cura/gui/mainWindow.py:115
+#: Cura/gui/mainWindow.py:120
 msgid "Quit"
 msgstr "Выход"
 
-#: Cura/gui/mainWindow.py:117
+#: Cura/gui/mainWindow.py:122
 msgid "File"
 msgstr "Файл"
 
-#: Cura/gui/mainWindow.py:125
+#: Cura/gui/mainWindow.py:130
 msgid "Minecraft map import..."
 msgstr "Импорт карты из Minecraft..."
 
-#: Cura/gui/mainWindow.py:129
+#: Cura/gui/mainWindow.py:134
 msgid "PID Debugger..."
 msgstr "PID отладчик..."
 
-#: Cura/gui/mainWindow.py:132
+#: Cura/gui/mainWindow.py:137
 msgid "Copy profile to clipboard"
 msgstr "Скопировать профиль в буфер обмена"
 
-#: Cura/gui/mainWindow.py:136
+#: Cura/gui/mainWindow.py:141
 msgid "Print all at once"
 msgstr "Печатать все за один раз"
 
-#: Cura/gui/mainWindow.py:138
+#: Cura/gui/mainWindow.py:143
 msgid "Print one at a time"
 msgstr "Печатать по очереди"
 
-#: Cura/gui/mainWindow.py:145
+#: Cura/gui/mainWindow.py:150
 msgid "Tools"
 msgstr "Инструменты"
 
-#: Cura/gui/mainWindow.py:151 Cura/util/profile.py:175
+#: Cura/gui/mainWindow.py:156 Cura/util/profile.py:175
 msgid "Machine"
 msgstr "Принтер"
 
-#: Cura/gui/mainWindow.py:154
+#: Cura/gui/mainWindow.py:159
 msgid "Switch to quickprint..."
 msgstr "Быстрая печать..."
 
-#: Cura/gui/mainWindow.py:158
+#: Cura/gui/mainWindow.py:163
 msgid "Switch to full settings..."
 msgstr "Расширенные настройки..."
 
-#: Cura/gui/mainWindow.py:163
+#: Cura/gui/mainWindow.py:168
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Открыть расширенные настройки...\tCTRL+E"
 
-#: Cura/gui/mainWindow.py:167
+#: Cura/gui/mainWindow.py:172
 msgid "Run first run wizard..."
 msgstr "Запустить мастер первоначальной настройки..."
 
-#: Cura/gui/mainWindow.py:169
+#: Cura/gui/mainWindow.py:174
 msgid "Run bed leveling wizard..."
 msgstr "Запустить мастер калибровки платформы..."
 
-#: Cura/gui/mainWindow.py:171
+#: Cura/gui/mainWindow.py:176
 msgid "Run head offset wizard..."
 msgstr "Запустить мастер настройки смещения головки..."
 
-#: Cura/gui/mainWindow.py:174
+#: Cura/gui/mainWindow.py:179
 msgid "Expert"
 msgstr "Эксперт"
 
-#: Cura/gui/mainWindow.py:177
+#: Cura/gui/mainWindow.py:182
 msgid "Online documentation..."
 msgstr "Онлайн документация..."
 
-#: Cura/gui/mainWindow.py:179
+#: Cura/gui/mainWindow.py:184
 msgid "Report a problem..."
 msgstr "Сообщить об ошибке..."
 
-#: Cura/gui/mainWindow.py:181
+#: Cura/gui/mainWindow.py:186
 msgid "Check for update..."
 msgstr "Проверить обновления..."
 
-#: Cura/gui/mainWindow.py:183
+#: Cura/gui/mainWindow.py:188
 msgid "Open YouMagine website..."
 msgstr "Открыть сайт YouMagine..."
 
-#: Cura/gui/mainWindow.py:185
+#: Cura/gui/mainWindow.py:190
 msgid "About Cura..."
 msgstr "О програме Cura..."
 
-#: Cura/gui/mainWindow.py:187
+#: Cura/gui/mainWindow.py:192
 msgid "Help"
 msgstr "Помощь"
 
-#: Cura/gui/mainWindow.py:204
+#: Cura/gui/mainWindow.py:209
 msgid "Buy filament on-line"
 msgstr "Заказать пластик онлайн"
 
-#: Cura/gui/mainWindow.py:341
+#: Cura/gui/mainWindow.py:347
 msgid ""
 "For \"One at a time\" printing, you need to have entered the correct head "
 "size and gantry height in the machine settings"
@@ -622,27 +627,27 @@ msgstr ""
 "Для печати по очереди необдходимо задать размеры печатающей головки в "
 "настройках принтера"
 
-#: Cura/gui/mainWindow.py:341
+#: Cura/gui/mainWindow.py:347
 msgid "One at a time warning"
 msgstr "Предупреждение для режима \"Печать по очереди\""
 
-#: Cura/gui/mainWindow.py:438
+#: Cura/gui/mainWindow.py:444
 msgid "Install default firmware..."
 msgstr "Установить прошивку по умолчанию..."
 
-#: Cura/gui/mainWindow.py:441
+#: Cura/gui/mainWindow.py:447
 msgid "Install custom firmware..."
 msgstr "Установить свою прошивку..."
 
-#: Cura/gui/mainWindow.py:445
+#: Cura/gui/mainWindow.py:451
 msgid "Select profile file to load"
 msgstr "Выберите файл с профилем"
 
-#: Cura/gui/mainWindow.py:457
+#: Cura/gui/mainWindow.py:463
 msgid "Select gcode file to load profile from"
 msgstr "Выберите файл GCode для загрузки профиля"
 
-#: Cura/gui/mainWindow.py:470
+#: Cura/gui/mainWindow.py:476
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -651,15 +656,15 @@ msgstr ""
 "Данная функция работает только с файлами GCode, сохраненными в Cura 12.07 "
 "или новее."
 
-#: Cura/gui/mainWindow.py:470
+#: Cura/gui/mainWindow.py:476
 msgid "Profile load error"
 msgstr "Ошибка загрузки профиля"
 
-#: Cura/gui/mainWindow.py:474
+#: Cura/gui/mainWindow.py:480
 msgid "Select profile file to save"
 msgstr "Выберите файл с профилем для сохранения"
 
-#: Cura/gui/mainWindow.py:482
+#: Cura/gui/mainWindow.py:490
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -669,11 +674,11 @@ msgstr ""
 "Если вы не сохранили ваш текущий профиль, то все настройки будут потеряны!\n"
 "Вы действительно хотите восстановить профиль по умолчанию?"
 
-#: Cura/gui/mainWindow.py:482
+#: Cura/gui/mainWindow.py:490
 msgid "Profile reset"
 msgstr "Сбросить профиль"
 
-#: Cura/gui/mainWindow.py:502
+#: Cura/gui/mainWindow.py:510
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -681,27 +686,27 @@ msgstr ""
 "Осторожно: Установка неоригинальной прошивки не гарантирует того, что ваш "
 "принтер будет правильно работать и не повредит ваше устройство."
 
-#: Cura/gui/mainWindow.py:503
+#: Cura/gui/mainWindow.py:511
 msgid "Open firmware to upload"
 msgstr "Откройте прошивку для загрузки"
 
-#: Cura/gui/mainWindow.py:562
+#: Cura/gui/mainWindow.py:570
 msgid "You are running the latest version of Cura!"
 msgstr "У вас запущена последняя версия Cura!"
 
-#: Cura/gui/mainWindow.py:562
+#: Cura/gui/mainWindow.py:570
 msgid "Awesome!"
 msgstr "Потрясающе!"
 
-#: Cura/gui/mainWindow.py:607
+#: Cura/gui/mainWindow.py:615
 msgid "Basic"
 msgstr "Базовые"
 
-#: Cura/gui/mainWindow.py:611
+#: Cura/gui/mainWindow.py:619
 msgid "Advanced"
 msgstr "Расширенные"
 
-#: Cura/gui/mainWindow.py:617
+#: Cura/gui/mainWindow.py:625
 msgid "Plugins"
 msgstr "Плагины"
 
@@ -733,7 +738,7 @@ msgstr "Печать"
 msgid "Colours"
 msgstr "Цвета"
 
-#: Cura/gui/preferencesDialog.py:37 Cura/util/profile.py:357
+#: Cura/gui/preferencesDialog.py:37 Cura/util/profile.py:358
 msgid "Language"
 msgstr "Язык"
 
@@ -907,76 +912,81 @@ msgstr ""
 msgid "Share on YouMagine"
 msgstr ""
 
-#: Cura/gui/sceneView.py:196
+#: Cura/gui/sceneView.py:204
 msgid "Open 3D model"
 msgstr ""
 
-#: Cura/gui/sceneView.py:221
+#: Cura/gui/sceneView.py:229
 msgid "Save 3D model"
 msgstr ""
 
-#: Cura/gui/sceneView.py:268 Cura/gui/sceneView.py:903
+#: Cura/gui/sceneView.py:276 Cura/gui/sceneView.py:914
 #, python-format
 msgid "Print with %s"
 msgstr ""
 
-#: Cura/gui/sceneView.py:272
+#: Cura/gui/sceneView.py:280
 msgid "Slice engine log..."
 msgstr ""
 
-#: Cura/gui/sceneView.py:297 Cura/gui/sceneView.py:906
+#: Cura/gui/sceneView.py:305 Cura/gui/sceneView.py:917
 msgid "Save toolpath"
 msgstr ""
 
-#: Cura/gui/sceneView.py:343
+#: Cura/gui/sceneView.py:351
 msgid "The slicing engine reported the following"
 msgstr "Слайсер сообщил следующее"
 
-#: Cura/gui/sceneView.py:343
+#: Cura/gui/sceneView.py:351
 msgid "Engine log..."
 msgstr "Журнал слайсера..."
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 msgid "How many copies do you want?"
 msgstr "Сколько копий сделать?"
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 msgid "Number of copies"
 msgstr "Количество копий"
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 msgid "Multiply"
 msgstr "Дублировать"
 
-#: Cura/gui/sceneView.py:770
+#: Cura/gui/sceneView.py:780
 msgid "Center on platform"
 msgstr "Поместить в центр платформы"
 
-#: Cura/gui/sceneView.py:771
+#: Cura/gui/sceneView.py:781
 msgid "Delete object"
 msgstr "Удалить объект"
 
-#: Cura/gui/sceneView.py:772
+#: Cura/gui/sceneView.py:782
 msgid "Multiply object"
 msgstr "Дублировать объект"
 
-#: Cura/gui/sceneView.py:773
+#: Cura/gui/sceneView.py:783
 msgid "Split object into parts"
 msgstr "Разделить объект на части"
 
-#: Cura/gui/sceneView.py:775
+#: Cura/gui/sceneView.py:785
 msgid "Dual extrusion merge"
 msgstr "Объединить для печати двумя экструдерами"
 
-#: Cura/gui/sceneView.py:777
+#: Cura/gui/sceneView.py:787
 msgid "Delete all objects"
 msgstr "Удалить все объекты"
 
-#: Cura/gui/sceneView.py:900
+#: Cura/gui/sceneView.py:788
+#, fuzzy
+msgid "Reload all objects"
+msgstr "Удалить все объекты"
+
+#: Cura/gui/sceneView.py:911
 msgid "Toolpath to SD"
 msgstr ""
 
-#: Cura/gui/sceneView.py:1194
+#: Cura/gui/sceneView.py:1205
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 "Не удается отобразить в режиме подвешивания из-за недостаточной поддержки "
@@ -1209,7 +1219,7 @@ msgstr "В вашей системе не найдена вебкамера"
 msgid "Webcam error"
 msgstr "Ошибка вебкамеры"
 
-#: Cura/gui/util/engineResultView.py:158
+#: Cura/gui/util/engineResultView.py:165
 #, python-format
 msgid "Loading toolpath for visualization (%d%%)"
 msgstr ""
@@ -1403,7 +1413,7 @@ msgstr "Touching buildplate"
 
 #: Cura/util/profile.py:182
 msgid "Everywhere"
-msgstr "Touching buildplate"
+msgstr "Everywhere"
 
 #: Cura/util/profile.py:182 Cura/util/profile.py:183 Cura/util/profile.py:184
 #: Cura/util/profile.py:223 Cura/util/profile.py:224 Cura/util/profile.py:225
@@ -2287,42 +2297,42 @@ msgstr ""
 "Этот алгоритм очень ресурсоемкий и может значительно увеличить время "
 "подготовки. Используйте эту опцию на свой риск."
 
-#: Cura/util/profile.py:349
+#: Cura/util/profile.py:350
 msgid "Save profile on slice"
 msgstr "Сохранять профиль"
 
-#: Cura/util/profile.py:349
+#: Cura/util/profile.py:350
 msgid ""
 "When slicing save the profile as [stl_file]_profile.ini next to the model."
 msgstr ""
 "Профиль сохраняется вместе с подготовленной моделью в файле [stl_file]"
 "_profile.ini"
 
-#: Cura/util/profile.py:350
+#: Cura/util/profile.py:351
 msgid "Cost (price/kg)"
 msgstr "Стоимость (стоимость/кг)"
 
-#: Cura/util/profile.py:350
+#: Cura/util/profile.py:351
 msgid "Cost of your filament per kg, to estimate the cost of the final print."
 msgstr ""
 "Стоимость пластика за килограмм. Позволяет оценить финальную стоимость "
 "модели."
 
-#: Cura/util/profile.py:351
+#: Cura/util/profile.py:352
 msgid "Cost (price/m)"
 msgstr "Стоимость (стоимость/м)"
 
-#: Cura/util/profile.py:351
+#: Cura/util/profile.py:352
 msgid ""
 "Cost of your filament per meter, to estimate the cost of the final print."
 msgstr ""
 "Стоимость пластика за метр. Позволяет оценить финальную стоимость модели."
 
-#: Cura/util/profile.py:352
+#: Cura/util/profile.py:353
 msgid "Auto detect SD card drive"
 msgstr "Автоопределение наличия SD карты"
 
-#: Cura/util/profile.py:352
+#: Cura/util/profile.py:353
 msgid ""
 "Auto detect the SD card. You can disable this because on some systems "
 "external hard-drives or USB sticks are detected as SD card."
@@ -2331,29 +2341,29 @@ msgstr ""
 "системе внешние жесткие диски или USB флешки определяются также как и SD "
 "карты."
 
-#: Cura/util/profile.py:353
+#: Cura/util/profile.py:354
 msgid "Check for updates"
 msgstr "Проверить обновления"
 
-#: Cura/util/profile.py:353
+#: Cura/util/profile.py:354
 msgid "Check for newer versions of Cura on startup"
 msgstr "Проверять наличие новый версий при старте приложения"
 
-#: Cura/util/profile.py:354
+#: Cura/util/profile.py:355
 msgid "Send usage statistics"
 msgstr "Оправлять статистику об использовании"
 
-#: Cura/util/profile.py:354
+#: Cura/util/profile.py:355
 msgid "Submit anonymous usage information to improve next versions of Cura"
 msgstr ""
 "Отправить анонимную информацию об использовании Cura, для того чтобы помочь "
 "улучшить следующие версии."
 
-#: Cura/util/profile.py:356
+#: Cura/util/profile.py:357
 msgid "Density (kg/m3)"
 msgstr "Плотность (кг/м3)"
 
-#: Cura/util/profile.py:356
+#: Cura/util/profile.py:357
 msgid ""
 "Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. "
 "This value is used to estimate the weight if the filament used for the print."
@@ -2361,65 +2371,74 @@ msgstr ""
 "Вес 1 куб. м. пластика. Около 1240 для PLA. И около 1040 для ABS. Это "
 "значение использует для вычисления веса напечатанной модели."
 
-#: Cura/util/profile.py:357
+#: Cura/util/profile.py:358
 msgid ""
 "Change the language in which Cura runs. Switching language requires a "
 "restart of Cura"
 msgstr "Изменить язык интерфейса Cura. Требуется перезапуск приложения."
 
-#: Cura/util/profile.py:360
+#: Cura/util/profile.py:361
 msgid "Model colour"
 msgstr "Цвет модели"
 
-#: Cura/util/profile.py:360
+#: Cura/util/profile.py:361
 msgid "Display color for first extruder"
 msgstr "Цвет для первого экструдера"
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:362
 msgid "Model colour (2)"
 msgstr "Цвет модели (2)"
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:362
 msgid "Display color for second extruder"
 msgstr "Цвет для второго экструдера"
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:363
 msgid "Model colour (3)"
 msgstr "Цвет модели (3)"
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:363
 msgid "Display color for third extruder"
 msgstr "Цвет для третьего экструдера"
 
-#: Cura/util/profile.py:363
+#: Cura/util/profile.py:364
 msgid "Model colour (4)"
 msgstr "Цвет модели (4)"
 
-#: Cura/util/profile.py:363
+#: Cura/util/profile.py:364
 msgid "Display color for forth extruder"
 msgstr "Цвет для четвертого экструдера"
 
-#: Cura/util/profile.py:376
+#: Cura/util/profile.py:365
+#, fuzzy
+msgid "Printing window type"
+msgstr "Печать"
+
+#: Cura/util/profile.py:365
+msgid "Select the interface used for USB printing."
+msgstr ""
+
+#: Cura/util/profile.py:377
 msgid "Maximum width (mm)"
 msgstr "Максимальная ширина (мм)"
 
-#: Cura/util/profile.py:376 Cura/util/profile.py:377 Cura/util/profile.py:378
+#: Cura/util/profile.py:377 Cura/util/profile.py:378 Cura/util/profile.py:379
 msgid "Size of the machine in mm"
 msgstr "Размер области печати в мм"
 
-#: Cura/util/profile.py:377
+#: Cura/util/profile.py:378
 msgid "Maximum depth (mm)"
 msgstr "Максимальная глубина (мм)"
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:379
 msgid "Maximum height (mm)"
 msgstr "Максимальная высоат (мм)"
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:380
 msgid "Machine center 0,0"
 msgstr "Начало координат в центре платформы."
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:380
 msgid ""
 "Machines firmware defines the center of the bed as 0,0 instead of the front "
 "left corner."
@@ -2427,15 +2446,15 @@ msgstr ""
 "Прошивка принтера определяет начало координат (0, 0) в центра платформы, а "
 "не в левом переднем углу."
 
-#: Cura/util/profile.py:380
+#: Cura/util/profile.py:381
 msgid "Build area shape"
 msgstr "Форма области печати"
 
-#: Cura/util/profile.py:380
+#: Cura/util/profile.py:381
 msgid "The shape of machine build area."
 msgstr "Форма области печати принтера"
 
-#: Cura/util/profile.py:382
+#: Cura/util/profile.py:383
 msgid ""
 "If you have an heated bed, this enabled heated bed settings (requires "
 "restart)"
@@ -2443,11 +2462,11 @@ msgstr ""
 "Если у вас есть подогреваемая платформа, эта опция включит соответствующие "
 "настройки (требуется перезапуск приложения)"
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:384
 msgid "GCode Flavor"
 msgstr "Особенности GCode"
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:384
 msgid ""
 "Flavor of generated GCode.\n"
 "RepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\n"
@@ -2467,39 +2486,39 @@ msgstr ""
 "еще требуется MakerWare для создания X3G.\n"
 "Myriwell GCode повторяет вариант Makerbot за исключением некоторых команд"
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid "Extruder count"
 msgstr "Количество экструдеров"
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid "Amount of extruders in your machine."
 msgstr "Количество экструдеров на вашем принтере."
 
-#: Cura/util/profile.py:385 Cura/util/profile.py:387 Cura/util/profile.py:389
+#: Cura/util/profile.py:386 Cura/util/profile.py:388 Cura/util/profile.py:390
 msgid "Offset X"
 msgstr "Смещение X"
 
-#: Cura/util/profile.py:385 Cura/util/profile.py:386
+#: Cura/util/profile.py:386 Cura/util/profile.py:387
 msgid "The offset of your secondary extruder compared to the primary."
 msgstr "Смещение второго сопла по отношение к основному соплу."
 
-#: Cura/util/profile.py:386 Cura/util/profile.py:388 Cura/util/profile.py:390
+#: Cura/util/profile.py:387 Cura/util/profile.py:389 Cura/util/profile.py:391
 msgid "Offset Y"
 msgstr "Смещение Y"
 
-#: Cura/util/profile.py:387 Cura/util/profile.py:388
+#: Cura/util/profile.py:388 Cura/util/profile.py:389
 msgid "The offset of your tertiary extruder compared to the primary."
 msgstr "Смещение третьего сопла по отношение к основному соплу."
 
-#: Cura/util/profile.py:389 Cura/util/profile.py:390
+#: Cura/util/profile.py:390 Cura/util/profile.py:391
 msgid "The offset of your forth extruder compared to the primary."
 msgstr "Смещение четвертого сопла по отношение к основному соплу."
 
-#: Cura/util/profile.py:391
+#: Cura/util/profile.py:392
 msgid "E-Steps per 1mm filament"
 msgstr "Количество шагов экструдера на 1мм пластика"
 
-#: Cura/util/profile.py:391
+#: Cura/util/profile.py:392
 msgid ""
 "Amount of steps per mm filament extrusion. If set to 0 then this value is "
 "ignored and the value in your firmware is used."
@@ -2507,19 +2526,19 @@ msgstr ""
 "Количество шагов экструдера на 1мм пластиковой нити. Если установлен 0, то "
 "значение игнорируется и используется значение из прошивки."
 
-#: Cura/util/profile.py:392
+#: Cura/util/profile.py:393
 msgid "Serial port"
 msgstr "Последовательный порт"
 
-#: Cura/util/profile.py:392
+#: Cura/util/profile.py:393
 msgid "Serial port to use for communication with the printer"
 msgstr "Номер последовательного порта для подключения принтера"
 
-#: Cura/util/profile.py:394
+#: Cura/util/profile.py:395
 msgid "Baudrate"
 msgstr "Скорость передачи данных"
 
-#: Cura/util/profile.py:394
+#: Cura/util/profile.py:395
 msgid ""
 "Speed of the serial port communication\n"
 "Needs to match your firmware settings\n"
@@ -2529,11 +2548,11 @@ msgstr ""
 "Должна совпадать с настройками в прошивке\n"
 "Обычно это 250000, 115200, 57600"
 
-#: Cura/util/profile.py:397
+#: Cura/util/profile.py:398
 msgid "Head size towards X min (mm)"
 msgstr "Размер головки до левого края. X min (мм)"
 
-#: Cura/util/profile.py:397
+#: Cura/util/profile.py:398
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan "
@@ -2543,11 +2562,11 @@ msgstr ""
 "от кончика сопла до внешней границы головки. 75мм для Ultimaker если "
 "вентилятор с левой стороны."
 
-#: Cura/util/profile.py:398
+#: Cura/util/profile.py:399
 msgid "Head size towards Y min (mm)"
 msgstr "Размер головки до переднего края. Y min (мм)"
 
-#: Cura/util/profile.py:398 Cura/util/profile.py:399
+#: Cura/util/profile.py:399 Cura/util/profile.py:400
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan "
@@ -2557,15 +2576,15 @@ msgstr ""
 "от кончика сопла до внешней границы головки. 18мм для Ultimaker если "
 "вентилятор с левой стороны."
 
-#: Cura/util/profile.py:399
+#: Cura/util/profile.py:400
 msgid "Head size towards X max (mm)"
 msgstr "Размер головки до правого края. X max (мм)"
 
-#: Cura/util/profile.py:400
+#: Cura/util/profile.py:401
 msgid "Head size towards Y max (mm)"
 msgstr "Размер головки до заднего края. Y max (мм)"
 
-#: Cura/util/profile.py:400
+#: Cura/util/profile.py:401
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan "
@@ -2575,11 +2594,11 @@ msgstr ""
 "от кончика сопла до внешней границы головки. 35мм для Ultimaker если "
 "вентилятор с левой стороны."
 
-#: Cura/util/profile.py:401
+#: Cura/util/profile.py:402
 msgid "Printer gantry height (mm)"
 msgstr "Высота печатающей головки (мм)"
 
-#: Cura/util/profile.py:401
+#: Cura/util/profile.py:402
 msgid ""
 "The height of the gantry holding up the printer head. If an object is higher "
 "then this then you cannot print multiple objects one for one. 60mm for an "
@@ -2589,17 +2608,17 @@ msgstr ""
 "этой величины, то вы не сможете печатать несколько объектов один за другим. "
 "Для Ultimaker эта высота составляет 60мм"
 
-#: Cura/util/profile.py:403
+#: Cura/util/profile.py:404
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
 msgstr "Не рекомендуется задавать поток более 150%"
 
-#: Cura/util/profile.py:404
+#: Cura/util/profile.py:405
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
 msgstr "Не рекомендуется задавать поток менее 50%"
 
-#: Cura/util/profile.py:405
+#: Cura/util/profile.py:406
 #, python-format
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
@@ -2608,22 +2627,22 @@ msgstr ""
 "Не рекомендуется выставлять толщину слоя больше %.2fмм (80%% диаметра "
 "сопла), так как обычно это дает плохие результаты при печати."
 
-#: Cura/util/profile.py:407
+#: Cura/util/profile.py:408
 msgid ""
 "It is highly unlikely that your machine can achieve a printing speed above "
 "150mm/s"
 msgstr ""
 "Маловероятно, что ваш принтер может достичь скорости печати выше 150мм/с"
 
-#: Cura/util/profile.py:409 Cura/util/profile.py:410 Cura/util/profile.py:411
-#: Cura/util/profile.py:412
+#: Cura/util/profile.py:410 Cura/util/profile.py:411 Cura/util/profile.py:412
+#: Cura/util/profile.py:413
 msgid "Temperatures above 260C could damage your machine, be careful!"
 msgstr ""
 "Нагрев печатающей головки до температуры выше 260С может повредить принтер. "
 "Будьте осторожны!"
 
-#: Cura/util/profile.py:413 Cura/util/profile.py:414 Cura/util/profile.py:415
-#: Cura/util/profile.py:416
+#: Cura/util/profile.py:414 Cura/util/profile.py:415 Cura/util/profile.py:416
+#: Cura/util/profile.py:417
 msgid ""
 "Are you sure your filament is that thick? Normal filament is around 3mm or "
 "1.75mm."
@@ -2631,14 +2650,14 @@ msgstr ""
 "Вы уверены, что пластиковая нить настолько толстая? Стандартные размеры это "
 "3мм и 1.75мм."
 
-#: Cura/util/profile.py:417
+#: Cura/util/profile.py:418
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
 msgstr ""
 "Маловероятно, что ваш принтер может достичь скорости перемещения выше 300мм/с"
 
-#: Cura/util/profile.py:418
+#: Cura/util/profile.py:419
 #, python-format
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "

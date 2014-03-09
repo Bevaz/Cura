@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-20 23:34+0400\n"
+"POT-Creation-Date: 2014-03-09 21:19+0400\n"
 "PO-Revision-Date: 2013-10-01 15:32+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE &lt;LL@li.org&gt;\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:559
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "A new version of Cura is available, would you like to download?"
 msgstr "Er is een nieuwere versie van Cura beschikbaar, wil je die downloaden?"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:559
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "New version available"
 msgstr "Nieuwe versie beschikbaar"
 
@@ -109,7 +109,7 @@ msgstr "Machine hoogte (mm)"
 msgid "Nozzle size (mm)"
 msgstr "Nozzle maat (mm)"
 
-#: Cura/gui/configWizard.py:292 Cura/util/profile.py:382
+#: Cura/gui/configWizard.py:292 Cura/util/profile.py:383
 msgid "Heated bed"
 msgstr "Verwarmd platform"
 
@@ -410,7 +410,7 @@ msgstr ""
 "machine."
 
 #: Cura/gui/firmwareInstall.py:44 Cura/gui/firmwareInstall.py:48
-#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:502
+#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:510
 msgid "Firmware update"
 msgstr "Firmware update"
 
@@ -463,185 +463,190 @@ msgstr ""
 msgid "Failed to write firmware.\n"
 msgstr "Het is niet gelukt de firmware te uploaden. \n"
 
-#: Cura/gui/mainWindow.py:63
+#: Cura/gui/mainWindow.py:66
 msgid "Load model file...\tCTRL+L"
 msgstr "Laad Model...\tCTRL+L"
 
-#: Cura/gui/mainWindow.py:65
+#: Cura/gui/mainWindow.py:68
 msgid "Save model...\tCTRL+S"
 msgstr "Model Opslaan...\tCTRL+S"
 
-#: Cura/gui/mainWindow.py:67
+#: Cura/gui/mainWindow.py:70
+#, fuzzy
+msgid "Reload platform\tF5"
+msgstr "Maak Het Platform Leeg"
+
+#: Cura/gui/mainWindow.py:72
 msgid "Clear platform"
 msgstr "Maak Het Platform Leeg"
 
-#: Cura/gui/mainWindow.py:71
+#: Cura/gui/mainWindow.py:76
 msgid "Print...\tCTRL+P"
 msgstr "Print...\tCTRL+P"
 
-#: Cura/gui/mainWindow.py:73 Cura/gui/sceneView.py:271
+#: Cura/gui/mainWindow.py:78 Cura/gui/sceneView.py:279
 msgid "Save GCode..."
 msgstr "Sla GCode Op..."
 
-#: Cura/gui/mainWindow.py:75
+#: Cura/gui/mainWindow.py:80
 msgid "Show slice engine log..."
 msgstr "Toon Slicer Log..."
 
-#: Cura/gui/mainWindow.py:79
+#: Cura/gui/mainWindow.py:84
 msgid "Open Profile..."
 msgstr "Open Profiel..."
 
-#: Cura/gui/mainWindow.py:82
+#: Cura/gui/mainWindow.py:87
 msgid "Save Profile..."
 msgstr "Sla Profiel Op..."
 
-#: Cura/gui/mainWindow.py:85
+#: Cura/gui/mainWindow.py:90
 msgid "Load Profile from GCode..."
 msgstr "Laad Profiel Uit GCode..."
 
-#: Cura/gui/mainWindow.py:89
+#: Cura/gui/mainWindow.py:94
 msgid "Reset Profile to default"
 msgstr "Reset Profiel Naar Standaardinstellingen"
 
-#: Cura/gui/mainWindow.py:94
+#: Cura/gui/mainWindow.py:99
 msgid "Preferences...\tCTRL+,"
 msgstr "Voorkeuren...\tCTRL+,"
 
-#: Cura/gui/mainWindow.py:96 Cura/gui/mainWindow.py:432
+#: Cura/gui/mainWindow.py:101 Cura/gui/mainWindow.py:438
 msgid "Machine settings..."
 msgstr "Machineinstellingen..."
 
-#: Cura/gui/mainWindow.py:102
+#: Cura/gui/mainWindow.py:107
 msgid "Recent Model Files"
 msgstr "Recente Modellen"
 
-#: Cura/gui/mainWindow.py:109
+#: Cura/gui/mainWindow.py:114
 msgid "Recent Profile Files"
 msgstr "Recente Profielen"
 
-#: Cura/gui/mainWindow.py:115
+#: Cura/gui/mainWindow.py:120
 msgid "Quit"
 msgstr "Sluit"
 
-#: Cura/gui/mainWindow.py:117
+#: Cura/gui/mainWindow.py:122
 msgid "File"
 msgstr "Bestand"
 
-#: Cura/gui/mainWindow.py:125
+#: Cura/gui/mainWindow.py:130
 #, fuzzy
 msgid "Minecraft map import..."
 msgstr "Importeer Minecraft kaart data..."
 
-#: Cura/gui/mainWindow.py:129
+#: Cura/gui/mainWindow.py:134
 msgid "PID Debugger..."
 msgstr "PID foutopsporing..."
 
-#: Cura/gui/mainWindow.py:132
+#: Cura/gui/mainWindow.py:137
 msgid "Copy profile to clipboard"
 msgstr "Kopieer profiel naar klembord"
 
-#: Cura/gui/mainWindow.py:136
+#: Cura/gui/mainWindow.py:141
 msgid "Print all at once"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:138
+#: Cura/gui/mainWindow.py:143
 #, fuzzy
 msgid "Print one at a time"
 msgstr "Afmetingen printkop"
 
-#: Cura/gui/mainWindow.py:145
+#: Cura/gui/mainWindow.py:150
 msgid "Tools"
 msgstr "Gereedschappen"
 
-#: Cura/gui/mainWindow.py:151 Cura/util/profile.py:175
+#: Cura/gui/mainWindow.py:156 Cura/util/profile.py:175
 msgid "Machine"
 msgstr "Machine"
 
-#: Cura/gui/mainWindow.py:154
+#: Cura/gui/mainWindow.py:159
 msgid "Switch to quickprint..."
 msgstr "Eenvoudige bedieningsmodus"
 
-#: Cura/gui/mainWindow.py:158
+#: Cura/gui/mainWindow.py:163
 msgid "Switch to full settings..."
 msgstr "Uitgebreide bedieningsmodus"
 
-#: Cura/gui/mainWindow.py:163
+#: Cura/gui/mainWindow.py:168
 #, fuzzy
 msgid "Open expert settings...\tCTRL+E"
 msgstr "Expertinstellingen..."
 
-#: Cura/gui/mainWindow.py:167
+#: Cura/gui/mainWindow.py:172
 msgid "Run first run wizard..."
 msgstr "Opstartwizard..."
 
-#: Cura/gui/mainWindow.py:169
+#: Cura/gui/mainWindow.py:174
 msgid "Run bed leveling wizard..."
 msgstr "Wizard: Platform vlak afstellen..."
 
-#: Cura/gui/mainWindow.py:171
+#: Cura/gui/mainWindow.py:176
 msgid "Run head offset wizard..."
 msgstr "Wizard: Afstand printkoppen calibreren..."
 
-#: Cura/gui/mainWindow.py:174
+#: Cura/gui/mainWindow.py:179
 msgid "Expert"
 msgstr "Expert"
 
-#: Cura/gui/mainWindow.py:177
+#: Cura/gui/mainWindow.py:182
 msgid "Online documentation..."
 msgstr "Online documentatie..."
 
-#: Cura/gui/mainWindow.py:179
+#: Cura/gui/mainWindow.py:184
 msgid "Report a problem..."
 msgstr "Meld een probleem..."
 
-#: Cura/gui/mainWindow.py:181
+#: Cura/gui/mainWindow.py:186
 msgid "Check for update..."
 msgstr "Controleer op updates..."
 
-#: Cura/gui/mainWindow.py:183
+#: Cura/gui/mainWindow.py:188
 msgid "Open YouMagine website..."
 msgstr "Open de YouMagine website..."
 
-#: Cura/gui/mainWindow.py:185
+#: Cura/gui/mainWindow.py:190
 msgid "About Cura..."
 msgstr "Over Cura..."
 
-#: Cura/gui/mainWindow.py:187
+#: Cura/gui/mainWindow.py:192
 msgid "Help"
 msgstr "Help"
 
-#: Cura/gui/mainWindow.py:204
+#: Cura/gui/mainWindow.py:209
 msgid "Buy filament on-line"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:341
+#: Cura/gui/mainWindow.py:347
 msgid ""
 "For \"One at a time\" printing, you need to have entered the correct head "
 "size and gantry height in the machine settings"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:341
+#: Cura/gui/mainWindow.py:347
 msgid "One at a time warning"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:438
+#: Cura/gui/mainWindow.py:444
 #, fuzzy
 msgid "Install default firmware..."
 msgstr "Installeer de standaardfirmware..."
 
-#: Cura/gui/mainWindow.py:441
+#: Cura/gui/mainWindow.py:447
 msgid "Install custom firmware..."
 msgstr "Installeer je eigen firmware..."
 
-#: Cura/gui/mainWindow.py:445
+#: Cura/gui/mainWindow.py:451
 msgid "Select profile file to load"
 msgstr "Selecteer een profielbestand om te laden"
 
-#: Cura/gui/mainWindow.py:457
+#: Cura/gui/mainWindow.py:463
 msgid "Select gcode file to load profile from"
 msgstr "Selecteer een GCode bestand om het profiel uit te laden..."
 
-#: Cura/gui/mainWindow.py:470
+#: Cura/gui/mainWindow.py:476
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -650,15 +655,15 @@ msgstr ""
 "Deze feature werkt alleen wanneer GCode is gemaakt vanuit Cura nieuwer dan "
 "versie 12.07"
 
-#: Cura/gui/mainWindow.py:470
+#: Cura/gui/mainWindow.py:476
 msgid "Profile load error"
 msgstr "Fout bij het laden van het profiel"
 
-#: Cura/gui/mainWindow.py:474
+#: Cura/gui/mainWindow.py:480
 msgid "Select profile file to save"
 msgstr "Selecteer een profiel om op te slaan"
 
-#: Cura/gui/mainWindow.py:482
+#: Cura/gui/mainWindow.py:490
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -669,11 +674,11 @@ msgstr ""
 "opgeslagen!\n"
 "Wil je echt herstellen?"
 
-#: Cura/gui/mainWindow.py:482
+#: Cura/gui/mainWindow.py:490
 msgid "Profile reset"
 msgstr "Profiel herstellen"
 
-#: Cura/gui/mainWindow.py:502
+#: Cura/gui/mainWindow.py:510
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -681,27 +686,27 @@ msgstr ""
 "Let op: Wanneer je je eigen firmware installeert, zou je machine niet goed "
 "kunnen werken en zou je je printer kunnen beschadigen."
 
-#: Cura/gui/mainWindow.py:503
+#: Cura/gui/mainWindow.py:511
 msgid "Open firmware to upload"
 msgstr "Open firmware om te installeren"
 
-#: Cura/gui/mainWindow.py:562
+#: Cura/gui/mainWindow.py:570
 msgid "You are running the latest version of Cura!"
 msgstr "Je hebt de nieuwste versie van Cura!"
 
-#: Cura/gui/mainWindow.py:562
+#: Cura/gui/mainWindow.py:570
 msgid "Awesome!"
 msgstr "Te gek!"
 
-#: Cura/gui/mainWindow.py:607
+#: Cura/gui/mainWindow.py:615
 msgid "Basic"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:611
+#: Cura/gui/mainWindow.py:619
 msgid "Advanced"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:617
+#: Cura/gui/mainWindow.py:625
 msgid "Plugins"
 msgstr "Plugins"
 
@@ -735,7 +740,7 @@ msgstr "Printen"
 msgid "Colours"
 msgstr "Kleuren"
 
-#: Cura/gui/preferencesDialog.py:37 Cura/util/profile.py:357
+#: Cura/gui/preferencesDialog.py:37 Cura/util/profile.py:358
 msgid "Language"
 msgstr "Taal"
 
@@ -909,78 +914,83 @@ msgstr "Lagen"
 msgid "Share on YouMagine"
 msgstr "Deel op YouMagine..."
 
-#: Cura/gui/sceneView.py:196
+#: Cura/gui/sceneView.py:204
 msgid "Open 3D model"
 msgstr "Open 3D model"
 
-#: Cura/gui/sceneView.py:221
+#: Cura/gui/sceneView.py:229
 msgid "Save 3D model"
 msgstr "Sla 3D model op"
 
-#: Cura/gui/sceneView.py:268 Cura/gui/sceneView.py:903
+#: Cura/gui/sceneView.py:276 Cura/gui/sceneView.py:914
 #, fuzzy, python-format
 msgid "Print with %s"
 msgstr "Print via USB..."
 
-#: Cura/gui/sceneView.py:272
+#: Cura/gui/sceneView.py:280
 msgid "Slice engine log..."
 msgstr "Slicer log..."
 
-#: Cura/gui/sceneView.py:297 Cura/gui/sceneView.py:906
+#: Cura/gui/sceneView.py:305 Cura/gui/sceneView.py:917
 msgid "Save toolpath"
 msgstr "Sla toolpad op..."
 
-#: Cura/gui/sceneView.py:343
+#: Cura/gui/sceneView.py:351
 msgid "The slicing engine reported the following"
 msgstr "De slicer geeft de volgende melding"
 
-#: Cura/gui/sceneView.py:343
+#: Cura/gui/sceneView.py:351
 msgid "Engine log..."
 msgstr "Logboek..."
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 msgid "How many copies do you want?"
 msgstr "Hoeveel exemplaren wilt u?"
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 msgid "Number of copies"
 msgstr "Aantal exemplaren"
 
-#: Cura/gui/sceneView.py:482
+#: Cura/gui/sceneView.py:490
 #, fuzzy
 msgid "Multiply"
 msgstr "Vermenigvuldig object"
 
-#: Cura/gui/sceneView.py:770
+#: Cura/gui/sceneView.py:780
 msgid "Center on platform"
 msgstr "Centreer op platform"
 
-#: Cura/gui/sceneView.py:771
+#: Cura/gui/sceneView.py:781
 msgid "Delete object"
 msgstr "Verwijder object"
 
-#: Cura/gui/sceneView.py:772
+#: Cura/gui/sceneView.py:782
 msgid "Multiply object"
 msgstr "Vermenigvuldig object"
 
-#: Cura/gui/sceneView.py:773
+#: Cura/gui/sceneView.py:783
 msgid "Split object into parts"
 msgstr "Deel object op in onderdelen"
 
-#: Cura/gui/sceneView.py:775
+#: Cura/gui/sceneView.py:785
 msgid "Dual extrusion merge"
 msgstr "Voeg duo extrusie samen"
 
-#: Cura/gui/sceneView.py:777
+#: Cura/gui/sceneView.py:787
 msgid "Delete all objects"
 msgstr "Verwijder alle objecten"
 
+#: Cura/gui/sceneView.py:788
+#, fuzzy
+msgid "Reload all objects"
+msgstr "Verwijder alle objecten"
+
 # Misschien GCode noemen in plaats van Toolpath
-#: Cura/gui/sceneView.py:900
+#: Cura/gui/sceneView.py:911
 msgid "Toolpath to SD"
 msgstr "Toolpad naar SD-kaart"
 
-#: Cura/gui/sceneView.py:1194
+#: Cura/gui/sceneView.py:1205
 msgid "Overhang view not working due to lack of OpenGL shaders support."
 msgstr ""
 "De voorvertoning van de overhang is niet mogelijk omdat OpenGL dit niet "
@@ -1218,7 +1228,7 @@ msgstr ""
 msgid "Webcam error"
 msgstr ""
 
-#: Cura/gui/util/engineResultView.py:158
+#: Cura/gui/util/engineResultView.py:165
 #, fuzzy, python-format
 msgid "Loading toolpath for visualization (%d%%)"
 msgstr "Bezig met toolpad laden voor visualisatie..."
@@ -2254,42 +2264,42 @@ msgstr ""
 "Zoals met alle \"Repareer een dramatisch model\" opties, zullen resultaten "
 "variëren en is het gebruik van deze opties op eigen risico."
 
-#: Cura/util/profile.py:349
+#: Cura/util/profile.py:350
 msgid "Save profile on slice"
 msgstr "Bewaar het profiel wanneer je slicet."
 
-#: Cura/util/profile.py:349
+#: Cura/util/profile.py:350
 msgid ""
 "When slicing save the profile as [stl_file]_profile.ini next to the model."
 msgstr ""
 "Sla ook meteen het profiel op als [stl_file]_profile.ini wanneer je slicet."
 
-#: Cura/util/profile.py:350
+#: Cura/util/profile.py:351
 msgid "Cost (price/kg)"
 msgstr "Kosten (prijs/kg)"
 
-#: Cura/util/profile.py:350
+#: Cura/util/profile.py:351
 msgid "Cost of your filament per kg, to estimate the cost of the final print."
 msgstr ""
 "Kosten van je filament per kg om de kosten van je uiteindelijke print te "
 "kunnen inschatten."
 
-#: Cura/util/profile.py:351
+#: Cura/util/profile.py:352
 msgid "Cost (price/m)"
 msgstr "Kosten (prijs/m)"
 
-#: Cura/util/profile.py:351
+#: Cura/util/profile.py:352
 msgid ""
 "Cost of your filament per meter, to estimate the cost of the final print."
 msgstr ""
 "Kosten van je filament per meter om de kosten van je uiteindelijke print te "
 "kunnen inschatten."
 
-#: Cura/util/profile.py:352
+#: Cura/util/profile.py:353
 msgid "Auto detect SD card drive"
 msgstr "Detecteer automatisch de aanwezigheid van een SD kaartlezer"
 
-#: Cura/util/profile.py:352
+#: Cura/util/profile.py:353
 msgid ""
 "Auto detect the SD card. You can disable this because on some systems "
 "external hard-drives or USB sticks are detected as SD card."
@@ -2298,29 +2308,29 @@ msgstr ""
 "sommige systemen zullen externe harde schijven of USB's als SD kaart gezien "
 "worden."
 
-#: Cura/util/profile.py:353
+#: Cura/util/profile.py:354
 msgid "Check for updates"
 msgstr "Controleer of er updates zijn"
 
-#: Cura/util/profile.py:353
+#: Cura/util/profile.py:354
 msgid "Check for newer versions of Cura on startup"
 msgstr "Controleer of er een nieuwe versie van Cura is tijdens het opstarten"
 
-#: Cura/util/profile.py:354
+#: Cura/util/profile.py:355
 msgid "Send usage statistics"
 msgstr "Verstuur gebruiks statistieken"
 
-#: Cura/util/profile.py:354
+#: Cura/util/profile.py:355
 msgid "Submit anonymous usage information to improve next versions of Cura"
 msgstr ""
 "Verstuur anonieme gebruiksinformatie om de volgende versie van Cura te "
 "verbeteren"
 
-#: Cura/util/profile.py:356
+#: Cura/util/profile.py:357
 msgid "Density (kg/m3)"
 msgstr "Dichtheid (kg/m3)"
 
-#: Cura/util/profile.py:356
+#: Cura/util/profile.py:357
 msgid ""
 "Weight of the filament per m3. Around 1240 for PLA. And around 1040 for ABS. "
 "This value is used to estimate the weight if the filament used for the print."
@@ -2329,80 +2339,89 @@ msgstr ""
 "Deze waarde wordt gebruikt om het gewicht van de uiteindelijke print te "
 "schatten."
 
-#: Cura/util/profile.py:357
+#: Cura/util/profile.py:358
 msgid ""
 "Change the language in which Cura runs. Switching language requires a "
 "restart of Cura"
 msgstr ""
 
-#: Cura/util/profile.py:360
+#: Cura/util/profile.py:361
 msgid "Model colour"
 msgstr "Model kleur"
 
-#: Cura/util/profile.py:360
+#: Cura/util/profile.py:361
 msgid "Display color for first extruder"
 msgstr ""
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:362
 msgid "Model colour (2)"
 msgstr "Model kleur (2)"
 
-#: Cura/util/profile.py:361
+#: Cura/util/profile.py:362
 msgid "Display color for second extruder"
 msgstr ""
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:363
 msgid "Model colour (3)"
 msgstr "Model kleur (3)"
 
-#: Cura/util/profile.py:362
+#: Cura/util/profile.py:363
 msgid "Display color for third extruder"
 msgstr ""
 
-#: Cura/util/profile.py:363
+#: Cura/util/profile.py:364
 msgid "Model colour (4)"
 msgstr "Model kleur (4)"
 
-#: Cura/util/profile.py:363
+#: Cura/util/profile.py:364
 msgid "Display color for forth extruder"
 msgstr ""
 
-#: Cura/util/profile.py:376
+#: Cura/util/profile.py:365
+#, fuzzy
+msgid "Printing window type"
+msgstr "Printen"
+
+#: Cura/util/profile.py:365
+msgid "Select the interface used for USB printing."
+msgstr ""
+
+#: Cura/util/profile.py:377
 msgid "Maximum width (mm)"
 msgstr "Maximale breedte (mm)"
 
-#: Cura/util/profile.py:376 Cura/util/profile.py:377 Cura/util/profile.py:378
+#: Cura/util/profile.py:377 Cura/util/profile.py:378 Cura/util/profile.py:379
 msgid "Size of the machine in mm"
 msgstr "Afmeting van de machine in mm"
 
-#: Cura/util/profile.py:377
+#: Cura/util/profile.py:378
 msgid "Maximum depth (mm)"
 msgstr "Maximale diepte (mm)"
 
-#: Cura/util/profile.py:378
+#: Cura/util/profile.py:379
 msgid "Maximum height (mm)"
 msgstr "Maximale hoogte (mm)"
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:380
 #, fuzzy
 msgid "Machine center 0,0"
 msgstr "Machine naam"
 
-#: Cura/util/profile.py:379
+#: Cura/util/profile.py:380
 msgid ""
 "Machines firmware defines the center of the bed as 0,0 instead of the front "
 "left corner."
 msgstr ""
 
-#: Cura/util/profile.py:380
+#: Cura/util/profile.py:381
 msgid "Build area shape"
 msgstr ""
 
-#: Cura/util/profile.py:380
+#: Cura/util/profile.py:381
 msgid "The shape of machine build area."
 msgstr ""
 
-#: Cura/util/profile.py:382
+#: Cura/util/profile.py:383
 msgid ""
 "If you have an heated bed, this enabled heated bed settings (requires "
 "restart)"
@@ -2410,11 +2429,11 @@ msgstr ""
 "Wanneer je een verwarmd platform hebt, zet deze vink de opties hiervoor aan. "
 "Je dient Cura wel opnieuw op te starten."
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:384
 msgid "GCode Flavor"
 msgstr "GCode soort"
 
-#: Cura/util/profile.py:383
+#: Cura/util/profile.py:384
 #, fuzzy
 msgid ""
 "Flavor of generated GCode.\n"
@@ -2432,39 +2451,39 @@ msgstr ""
 "UltiGCode is een variatie van de RepRap GCode die meer instellingen in de "
 "machine opslaat in plaats van in de slicersoftware."
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid "Extruder count"
 msgstr "Aantal printkoppen"
 
-#: Cura/util/profile.py:384
+#: Cura/util/profile.py:385
 msgid "Amount of extruders in your machine."
 msgstr "Aantal printkoppen op je printer"
 
-#: Cura/util/profile.py:385 Cura/util/profile.py:387 Cura/util/profile.py:389
+#: Cura/util/profile.py:386 Cura/util/profile.py:388 Cura/util/profile.py:390
 msgid "Offset X"
 msgstr "X afstand"
 
-#: Cura/util/profile.py:385 Cura/util/profile.py:386
+#: Cura/util/profile.py:386 Cura/util/profile.py:387
 msgid "The offset of your secondary extruder compared to the primary."
 msgstr "De afstand tussen de eerste en de tweede printkop."
 
-#: Cura/util/profile.py:386 Cura/util/profile.py:388 Cura/util/profile.py:390
+#: Cura/util/profile.py:387 Cura/util/profile.py:389 Cura/util/profile.py:391
 msgid "Offset Y"
 msgstr "Y afstand"
 
-#: Cura/util/profile.py:387 Cura/util/profile.py:388
+#: Cura/util/profile.py:388 Cura/util/profile.py:389
 msgid "The offset of your tertiary extruder compared to the primary."
 msgstr "De afstand tussen de eerste en de derde printkop."
 
-#: Cura/util/profile.py:389 Cura/util/profile.py:390
+#: Cura/util/profile.py:390 Cura/util/profile.py:391
 msgid "The offset of your forth extruder compared to the primary."
 msgstr "De afstand tussen de eerste en de vierde printkop."
 
-#: Cura/util/profile.py:391
+#: Cura/util/profile.py:392
 msgid "E-Steps per 1mm filament"
 msgstr "E-stappen per 1 mm. filament"
 
-#: Cura/util/profile.py:391
+#: Cura/util/profile.py:392
 msgid ""
 "Amount of steps per mm filament extrusion. If set to 0 then this value is "
 "ignored and the value in your firmware is used."
@@ -2473,19 +2492,19 @@ msgstr ""
 "Wanneer hier 0 wordt ingevoerd, wordt de waarde genegeerd en de waarde uit "
 "je firmware gebruikt."
 
-#: Cura/util/profile.py:392
+#: Cura/util/profile.py:393
 msgid "Serial port"
 msgstr "Seriële poort"
 
-#: Cura/util/profile.py:392
+#: Cura/util/profile.py:393
 msgid "Serial port to use for communication with the printer"
 msgstr "De seriële poort die gebruikt wordt voor communicatie met de printer."
 
-#: Cura/util/profile.py:394
+#: Cura/util/profile.py:395
 msgid "Baudrate"
 msgstr "Baudrate"
 
-#: Cura/util/profile.py:394
+#: Cura/util/profile.py:395
 msgid ""
 "Speed of the serial port communication\n"
 "Needs to match your firmware settings\n"
@@ -2495,11 +2514,11 @@ msgstr ""
 "Deze dient overeen te komen met de instellingen in je firmware \n"
 "Meestal 250000, 115200 of 57600"
 
-#: Cura/util/profile.py:397
+#: Cura/util/profile.py:398
 msgid "Head size towards X min (mm)"
 msgstr "Minimale afmeting printkop X (mm)"
 
-#: Cura/util/profile.py:397
+#: Cura/util/profile.py:398
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 75mm for an Ultimaker if the fan "
@@ -2510,11 +2529,11 @@ msgstr ""
 "Deze waarde is belangrijk als je meerdere objecten wilt printen en de kop "
 "niet met eerdere objecten mag botsen."
 
-#: Cura/util/profile.py:398
+#: Cura/util/profile.py:399
 msgid "Head size towards Y min (mm)"
 msgstr "Minimale afmeting printkop Y (mm)"
 
-#: Cura/util/profile.py:398 Cura/util/profile.py:399
+#: Cura/util/profile.py:399 Cura/util/profile.py:400
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 18mm for an Ultimaker if the fan "
@@ -2525,15 +2544,15 @@ msgstr ""
 "Deze waarde is belangrijk als je meerdere objecten wilt printen en de kop "
 "niet met eerdere objecten mag botsen."
 
-#: Cura/util/profile.py:399
+#: Cura/util/profile.py:400
 msgid "Head size towards X max (mm)"
 msgstr "Maximale afmeting X (mm)"
 
-#: Cura/util/profile.py:400
+#: Cura/util/profile.py:401
 msgid "Head size towards Y max (mm)"
 msgstr "Maximale afmeting printkop Y (mm)"
 
-#: Cura/util/profile.py:400
+#: Cura/util/profile.py:401
 msgid ""
 "The head size when printing multiple objects, measured from the tip of the "
 "nozzle towards the outer part of the head. 35mm for an Ultimaker if the fan "
@@ -2544,11 +2563,11 @@ msgstr ""
 "Deze waarde is belangrijk als je meerdere objecten wilt printen en de kop "
 "niet met eerdere objecten mag botsen."
 
-#: Cura/util/profile.py:401
+#: Cura/util/profile.py:402
 msgid "Printer gantry height (mm)"
 msgstr "Hoogte printkop samenstelling (mm)"
 
-#: Cura/util/profile.py:401
+#: Cura/util/profile.py:402
 msgid ""
 "The height of the gantry holding up the printer head. If an object is higher "
 "then this then you cannot print multiple objects one for one. 60mm for an "
@@ -2558,48 +2577,48 @@ msgstr ""
 "dan deze waarde, kan je niet meerdere objecten printen. Dit is 60 mm voor "
 "een Ultimaker."
 
-#: Cura/util/profile.py:403
+#: Cura/util/profile.py:404
 #, python-format
 msgid "More flow than 150% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:404
+#: Cura/util/profile.py:405
 #, python-format
 msgid "Less flow than 50% is rare and usually not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:405
+#: Cura/util/profile.py:406
 #, python-format
 msgid ""
 "Thicker layers then %.2fmm (80%% nozzle size) usually give bad results and "
 "are not recommended."
 msgstr ""
 
-#: Cura/util/profile.py:407
+#: Cura/util/profile.py:408
 msgid ""
 "It is highly unlikely that your machine can achieve a printing speed above "
 "150mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:409 Cura/util/profile.py:410 Cura/util/profile.py:411
-#: Cura/util/profile.py:412
+#: Cura/util/profile.py:410 Cura/util/profile.py:411 Cura/util/profile.py:412
+#: Cura/util/profile.py:413
 msgid "Temperatures above 260C could damage your machine, be careful!"
 msgstr ""
 
-#: Cura/util/profile.py:413 Cura/util/profile.py:414 Cura/util/profile.py:415
-#: Cura/util/profile.py:416
+#: Cura/util/profile.py:414 Cura/util/profile.py:415 Cura/util/profile.py:416
+#: Cura/util/profile.py:417
 msgid ""
 "Are you sure your filament is that thick? Normal filament is around 3mm or "
 "1.75mm."
 msgstr ""
 
-#: Cura/util/profile.py:417
+#: Cura/util/profile.py:418
 msgid ""
 "It is highly unlikely that your machine can achieve a travel speed above "
 "300mm/s"
 msgstr ""
 
-#: Cura/util/profile.py:418
+#: Cura/util/profile.py:419
 #, python-format
 msgid ""
 "A bottom layer of more then %.2fmm (3/4 nozzle size) usually give bad "
