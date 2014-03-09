@@ -22,6 +22,7 @@ from Cura.gui.tools import pidDebugger
 from Cura.gui.tools import minecraftImport
 from Cura.util import profile
 from Cura.util import version
+import platform
 from Cura.util import meshLoader
 
 class mainWindow(wx.Frame):
@@ -35,11 +36,13 @@ class mainWindow(wx.Frame):
 
 		# TODO: wxWidgets 2.9.4 has a bug when NSView does not register for dragged types when wx drop target is set. It was fixed in 2.9.5
 		if sys.platform.startswith('darwin'):
-			import Cocoa
-			import objc
-			nswindow = objc.objc_object(c_void_p=self.MacGetTopLevelWindowRef())
-			view = nswindow.contentView()
-			view.registerForDraggedTypes_([Cocoa.NSFilenamesPboardType])
+			try:
+				import objc
+				nswindow = objc.objc_object(c_void_p=self.MacGetTopLevelWindowRef())
+				view = nswindow.contentView()
+				view.registerForDraggedTypes_([u'NSFilenamesPboardType'])
+			except:
+				pass
 
 		self.normalModeOnlyItems = []
 
@@ -64,6 +67,8 @@ class mainWindow(wx.Frame):
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showLoadModel(), i)
 		i = self.fileMenu.Append(-1, _("Save model...\tCTRL+S"))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.showSaveModel(), i)
+		i = self.fileMenu.Append(-1, _("Reload platform\tF5"))
+		self.Bind(wx.EVT_MENU, lambda e: self.scene.reloadScene(e), i)
 		i = self.fileMenu.Append(-1, _("Clear platform"))
 		self.Bind(wx.EVT_MENU, lambda e: self.scene.OnDeleteAll(e), i)
 
@@ -334,6 +339,7 @@ class mainWindow(wx.Frame):
 		if int(profile.getMachineSetting('extruder_amount')) < 2:
 			self.headOffsetWizardMenuItem.Enable(False)
 		self.scene.updateProfileToControls()
+		self.scene._scene.pushFree()
 
 	def onOneAtATimeSwitch(self, e):
 		profile.putPreference('oneAtATime', self.oneAtATime.IsChecked())
@@ -475,6 +481,8 @@ class mainWindow(wx.Frame):
 		dlg.SetWildcard("ini files (*.ini)|*.ini")
 		if dlg.ShowModal() == wx.ID_OK:
 			profileFile = dlg.GetPath()
+			if platform.system() == 'Linux': #hack for linux, as for some reason the .ini is not appended.
+				profileFile += '.ini'
 			profile.saveProfile(profileFile)
 		dlg.Destroy()
 

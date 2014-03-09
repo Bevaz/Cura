@@ -10,7 +10,6 @@
 ##Select the build target
 BUILD_TARGET=${1:-none}
 #BUILD_TARGET=win32
-#BUILD_TARGET=linux
 #BUILD_TARGET=darwin
 #BUILD_TARGET=debian_i386
 #BUILD_TARGET=debian_amd64
@@ -18,7 +17,7 @@ BUILD_TARGET=${1:-none}
 ##Do we need to create the final archive
 ARCHIVE_FOR_DISTRIBUTION=1
 ##Which version name are we appending to the final archive
-export BUILD_NAME=14.02.1-Extensio.ru
+export BUILD_NAME=14.03-Extensio.ru
 TARGET_DIR=Cura-${BUILD_NAME}-${BUILD_TARGET}
 
 ##Which versions of external programs to use
@@ -75,8 +74,8 @@ function extract
 if [ "$BUILD_TARGET" = "none" ]; then
 	echo "You need to specify a build target with:"
 	echo "$0 win32"
-	echo "$0 linux_i368"
-	echo "$0 linux_amd64"
+	echo "$0 debian_i368"
+	echo "$0 debian_amd64"
 	echo "$0 darwin"
 	exit 0
 fi
