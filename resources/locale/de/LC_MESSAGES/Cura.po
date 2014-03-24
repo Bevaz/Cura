@@ -1,29 +1,30 @@
 # Copyright (C) 2013
 # This file is distributed under the same license as the Cura package.
 # Ilya Kulakov &lt;kulakov.ilya@gmail.com&gt;, 2013.
-# 
+#
 # Lars Pötter <Lars_Poetter@gmx.de>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Cura\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-17 10:38+0100\n"
+"POT-Creation-Date: 2014-03-24 22:30+0400\n"
 "PO-Revision-Date: 2014-02-11 21:03+0100\n"
 "Last-Translator: Lars Pötter <Lars_Poetter@gmx.de>\n"
 "Language-Team: Deutsch <Lars_Poetter@gmx.de>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.6\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:563
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "A new version of Cura is available, would you like to download?"
 msgstr ""
 "Eine neue Version von Cura ist verfügbar, möchten Sie diese herunterladen?"
 
-#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:563
+#: Cura/gui/app.py:141 Cura/gui/mainWindow.py:567
 msgid "New version available"
 msgstr "Neue Version verfügbar"
 
@@ -127,8 +128,9 @@ msgstr "Wählen Sie ihr Gerät aus"
 msgid "What kind of machine do you have:"
 msgstr "Welchen Typ Maschine haben Sie:"
 
-#: Cura/gui/configWizard.py:321
-msgid "Other (Ex: RepRap, MakerBot)"
+#: Cura/gui/configWizard.py:320
+#, fuzzy
+msgid "Other (Ex: Joysmaker, Myriwell, RepRap, MakerBot)"
 msgstr "Andere (Ausser: RepRap und RepRap)"
 
 #: Cura/gui/configWizard.py:324
@@ -417,7 +419,7 @@ msgstr ""
 "Geräte-Konfiguration."
 
 #: Cura/gui/firmwareInstall.py:44 Cura/gui/firmwareInstall.py:48
-#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:506
+#: Cura/gui/firmwareInstall.py:103 Cura/gui/mainWindow.py:510
 msgid "Firmware update"
 msgstr "Firmware-Aktualisierung"
 
@@ -519,7 +521,7 @@ msgstr "Profil auf Standard zurücksetzen"
 msgid "Preferences...\tCTRL+,"
 msgstr "Voreinstellungen...\tCTRL+,"
 
-#: Cura/gui/mainWindow.py:101 Cura/gui/mainWindow.py:434
+#: Cura/gui/mainWindow.py:101 Cura/gui/mainWindow.py:438
 msgid "Machine settings..."
 msgstr "Geräte-Einstellungen..."
 
@@ -621,34 +623,38 @@ msgstr "Über Cura..."
 msgid "Help"
 msgstr "Hilfe"
 
-#: Cura/gui/mainWindow.py:343
+#: Cura/gui/mainWindow.py:209
+msgid "Buy filament on-line"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:347
 msgid ""
 "For \"One at a time\" printing, you need to have entered the correct head "
 "size and gantry height in the machine settings"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:343
+#: Cura/gui/mainWindow.py:347
 msgid "One at a time warning"
 msgstr ""
 
-#: Cura/gui/mainWindow.py:440
+#: Cura/gui/mainWindow.py:444
 #, fuzzy
 msgid "Install default firmware..."
 msgstr "Installiere Standard Marlin Firmware..."
 
-#: Cura/gui/mainWindow.py:443
+#: Cura/gui/mainWindow.py:447
 msgid "Install custom firmware..."
 msgstr "Installiere benutzerdefinierte Firmware..."
 
-#: Cura/gui/mainWindow.py:447
+#: Cura/gui/mainWindow.py:451
 msgid "Select profile file to load"
 msgstr "Wählen Sie die Profil-Datei zum Laden"
 
-#: Cura/gui/mainWindow.py:459
+#: Cura/gui/mainWindow.py:463
 msgid "Select gcode file to load profile from"
 msgstr "Wählen Sie die GCode-Datei zum Laden des Profils"
 
-#: Cura/gui/mainWindow.py:472
+#: Cura/gui/mainWindow.py:476
 msgid ""
 "No profile found in GCode file.\n"
 "This feature only works with GCode files made by Cura 12.07 or newer."
@@ -657,15 +663,15 @@ msgstr ""
 "Diese Funktion ist nur bei GCode-Dateien verfügbar, welche mit Cura ab "
 "Version 12.07 erstellt wurden."
 
-#: Cura/gui/mainWindow.py:472
+#: Cura/gui/mainWindow.py:476
 msgid "Profile load error"
 msgstr "Fehler beim Laden des Profils"
 
-#: Cura/gui/mainWindow.py:476
+#: Cura/gui/mainWindow.py:480
 msgid "Select profile file to save"
 msgstr "Wählen Sie die Profil-Datei zum Speichern aus"
 
-#: Cura/gui/mainWindow.py:486
+#: Cura/gui/mainWindow.py:490
 msgid ""
 "This will reset all profile settings to defaults.\n"
 "Unless you have saved your current profile, all settings will be lost!\n"
@@ -676,11 +682,11 @@ msgstr ""
 "verloren!\n"
 "Wollen Sie die Profil-Einstellungen wirklich zurücksetzen?"
 
-#: Cura/gui/mainWindow.py:486
+#: Cura/gui/mainWindow.py:490
 msgid "Profile reset"
 msgstr "Profil zurücksetzen"
 
-#: Cura/gui/mainWindow.py:506
+#: Cura/gui/mainWindow.py:510
 msgid ""
 "Warning: Installing a custom firmware does not guarantee that you machine "
 "will function correctly, and could damage your machine."
@@ -689,19 +695,27 @@ msgstr ""
 "nicht automatisch die Funktionstüchtigkeit ihres Geräts, und kann zu "
 "Beschädigungen an Ihrem Gerät führen."
 
-#: Cura/gui/mainWindow.py:507
+#: Cura/gui/mainWindow.py:511
 msgid "Open firmware to upload"
 msgstr "Firmware zum Hochladen auswählen"
 
-#: Cura/gui/mainWindow.py:566
+#: Cura/gui/mainWindow.py:570
 msgid "You are running the latest version of Cura!"
 msgstr "Sie verwenden die aktuelle Version von Cura!"
 
-#: Cura/gui/mainWindow.py:566
+#: Cura/gui/mainWindow.py:570
 msgid "Awesome!"
 msgstr "Sehr gut!"
 
-#: Cura/gui/mainWindow.py:621
+#: Cura/gui/mainWindow.py:615
+msgid "Basic"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:619
+msgid "Advanced"
+msgstr ""
+
+#: Cura/gui/mainWindow.py:625
 msgid "Plugins"
 msgstr "Plugins"
 
@@ -1025,7 +1039,8 @@ msgstr "Durchmesser:"
 msgid "Other:"
 msgstr "Weiteres:"
 
-#: Cura/gui/simpleMode.py:85
+#: Cura/gui/simpleMode.py:85 Cura/gui/simpleMode.py:158
+#: Cura/gui/simpleMode.py:255
 msgid "Exterior Only"
 msgstr "Nur Aussen"
 
@@ -1048,23 +1063,6 @@ msgstr "Breite des Geräts (mm)"
 #, fuzzy
 msgid "Depth (mm)"
 msgstr "Durchmesser (mm)"
-
-#: Cura/gui/tools/projector.py:42
-msgid "Edit"
-msgstr ""
-
-#: Cura/gui/tools/projector.py:43
-msgid "Rectangle"
-msgstr ""
-
-#: Cura/gui/tools/projector.py:44
-#, fuzzy
-msgid "Circle"
-msgstr "Datei"
-
-#: Cura/gui/tools/projector.py:45
-msgid "Draw curves"
-msgstr ""
 
 #: Cura/gui/tools/youmagineGui.py:78
 msgid "Checking token"
@@ -2118,6 +2116,10 @@ msgstr ""
 "0.15mm ergibt eine gute Trennung zwischen Stützmaterial und Druckobjekt."
 
 #: Cura/util/profile.py:228
+msgid "Spiralize"
+msgstr ""
+
+#: Cura/util/profile.py:228
 msgid "Spiralize the outer contour"
 msgstr ""
 
@@ -2464,13 +2466,16 @@ msgid "GCode Flavor"
 msgstr "GCode Flavor"
 
 #: Cura/util/profile.py:384
+#, fuzzy
 msgid ""
 "Flavor of generated GCode.\n"
 "RepRap is normal 5D GCode which works on Marlin/Sprinter based firmwares.\n"
 "UltiGCode is a variation of the RepRap GCode which puts more settings in the "
 "machine instead of the slicer.\n"
 "MakerBot GCode has a few changes in the way GCode is generated, but still "
-"requires MakerWare to generate to X3G."
+"requires MakerWare to generate to X3G.\n"
+"BFB style generates RPM based code.\n"
+"Mach3 uses A,B,C instead of E for extruders."
 msgstr ""
 "Flavor des generierten GCodes.\n"
 "RepRap verwendet normalen 5D GCode welcher auf Marlin/Sprinter basierter "
@@ -2670,6 +2675,10 @@ msgstr ""
 "Eine Schicht dicke von mehr als  %.2fmm (3/4 des Düsen Durchmessers) für die "
 "erste Schicht führt zu einer schlechten Druckqualität und wird nicht "
 "empfohlen."
+
+#, fuzzy
+#~ msgid "Circle"
+#~ msgstr "Datei"
 
 #~ msgid "* Configure Cura for your machine"
 #~ msgstr "* Cura für Ihr Gerät einrichten"
