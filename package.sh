@@ -17,7 +17,7 @@ BUILD_TARGET=${1:-none}
 ##Do we need to create the final archive
 ARCHIVE_FOR_DISTRIBUTION=1
 ##Which version name are we appending to the final archive
-export BUILD_NAME=14.03-Extensio.ru
+export BUILD_NAME=14.03.1-Extensio.ru
 TARGET_DIR=Cura-${BUILD_NAME}-${BUILD_TARGET}
 
 ##Which versions of external programs to use
@@ -122,7 +122,7 @@ if [ "$BUILD_TARGET" = "darwin" ]; then
 	rm -rf CuraEngine
 	git clone -b ${CURA_ENGINE_BRANCH} ${CURA_ENGINE_REPO}
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
-	make -C CuraEngine
+	make -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
 	cp CuraEngine/CuraEngine scripts/darwin/dist/Cura.app/Contents/Resources/CuraEngine
 
@@ -165,7 +165,7 @@ if [ "$BUILD_TARGET" = "debian_i386" ]; then
 	rm -rf CuraEngine
 	git clone -b ${CURA_ENGINE_BRANCH} ${CURA_ENGINE_REPO}
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
-	make -C CuraEngine
+	make -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
 	rm -rf scripts/linux/${BUILD_TARGET}/usr/share/cura
 	mkdir -p scripts/linux/${BUILD_TARGET}/usr/share/cura
@@ -304,7 +304,7 @@ if [ $BUILD_TARGET = "win32" ]; then
 	rm -rf ${TARGET_DIR}/python/Lib/OpenGL/DLLS/gle*
 
     #Build the C++ engine
-	mingw32-make -C CuraEngine
+	mingw32-make -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
 fi
 
