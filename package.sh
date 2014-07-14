@@ -18,7 +18,7 @@ BUILD_TARGET=${1:-none}
 ##Do we need to create the final archive
 ARCHIVE_FOR_DISTRIBUTION=1
 ##Which version name are we appending to the final archive
-export BUILD_NAME=14.06.2-extensio.ru
+export BUILD_NAME=14.06.5-extensio.ru
 TARGET_DIR=Cura-${BUILD_NAME}-${BUILD_TARGET}
 
 ##Which versions of external programs to use
@@ -26,7 +26,10 @@ WIN_PORTABLE_PY_VERSION=2.7.2.1
 
 ##Which CuraEngine to use
 if [ -z ${CURA_ENGINE_REPO} ] ; then
-	CURA_ENGINE_REPO="https://github.com/Ultimaker/CuraEngine"
+	CURA_ENGINE_REPO="https://github.com/Bevaz/CuraEngine"
+fi
+if [ -z ${CURA_ENGINE_BRANCH} ] ; then
+	CURA_ENGINE_BRANCH="master"
 fi
 
 #############################
@@ -119,7 +122,7 @@ if [ "$BUILD_TARGET" = "darwin" ]; then
     #Add cura version file (should read the version from the bundle with pyobjc, but will figure that out later)
     echo $BUILD_NAME > scripts/darwin/dist/Cura.app/Contents/Resources/version
 	rm -rf CuraEngine
-	git clone ${CURA_ENGINE_REPO}
+	git clone -b ${CURA_ENGINE_BRANCH} ${CURA_ENGINE_REPO}
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 	make -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
@@ -162,7 +165,7 @@ if [ "$BUILD_TARGET" = "debian_i386" ]; then
 		cd ..
 	fi
 	rm -rf CuraEngine
-	git clone ${CURA_ENGINE_REPO}
+	git clone -b ${CURA_ENGINE_BRANCH} ${CURA_ENGINE_REPO}
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 	make -C CuraEngine VERSION=${BUILD_NAME}
     if [ $? != 0 ]; then echo "Failed to build CuraEngine"; exit 1; fi
@@ -243,7 +246,7 @@ if [ $BUILD_TARGET = "win32" ]; then
 	rm -rf Power
 	git clone https://github.com/GreatFruitOmsk/Power
 	rm -rf CuraEngine
-	git clone ${CURA_ENGINE_REPO}
+	git clone -b ${CURA_ENGINE_BRANCH} ${CURA_ENGINE_REPO}
     if [ $? != 0 ]; then echo "Failed to clone CuraEngine"; exit 1; fi
 fi
 
