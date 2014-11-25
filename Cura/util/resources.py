@@ -65,6 +65,7 @@ def getLanguageOptions():
 		['en', 'English'],
 		['de', 'Deutsch'],
 		['fr', 'French'],
+		['ru', 'Russian'],
 		# ['cs', 'Cesky'],
 		# ['nl', 'Nederlands'],
 		# ['es', 'Spanish'],
