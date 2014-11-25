@@ -179,6 +179,8 @@ class mainWindow(wx.Frame):
 		self.menubar.Append(expertMenu, _("Expert"))
 
 		helpMenu = wx.Menu()
+		i = helpMenu.Append(-1, _("www.unimatech.ru"))
+		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://www.unimatech.ru'), i)
 		i = helpMenu.Append(-1, _("Online documentation..."))
 		self.Bind(wx.EVT_MENU, lambda e: webbrowser.open('http://daid.github.com/Cura'), i)
 		i = helpMenu.Append(-1, _("Report a problem..."))
