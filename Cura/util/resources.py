@@ -48,8 +48,8 @@ def getDefaultMachineProfiles():
 	return glob.glob(path)
 
 def setupLocalization(selectedLanguage = None):
-	#Default to english
-	languages = ['en']
+	#Default to russian
+	languages = ['ru']
 
 	if selectedLanguage is not None:
 		for item in getLanguageOptions():
