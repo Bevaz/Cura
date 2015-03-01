@@ -371,7 +371,8 @@ echo $BUILD_NAME > ${TARGET_DIR}/Cura/version
 #add script files
 if [ $BUILD_TARGET = "win32" ]; then
     cp -a scripts/${BUILD_TARGET}/*.bat $TARGET_DIR/
-    cp CuraEngine/build/CuraEngine.exe $TARGET_DIR
+#   Force to use local copy instead of complied CuraEngine/build/CuraEngine.exe
+    cp CuraEngine.exe $TARGET_DIR
 else
     cp -a scripts/${BUILD_TARGET}/*.sh $TARGET_DIR/
 fi
