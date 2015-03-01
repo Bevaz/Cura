@@ -60,6 +60,8 @@ def isDevVersion():
 	return os.path.exists(gitPath) or os.path.exists(hgPath)
 
 def checkForNewerVersion():
+	#turn off update
+	return None
 	if isDevVersion():
 		return None
 	try:
