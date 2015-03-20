@@ -1409,15 +1409,15 @@ msgstr "Температура подогреваемого стола. Уста
 
 #: Cura/util/profile.py:182 Cura/util/profile.py:183
 msgid "None"
-msgstr "Нет"
+msgstr ""
 
 #: Cura/util/profile.py:182
 msgid "Touching buildplate"
-msgstr "От поверхности"
+msgstr ""
 
 #: Cura/util/profile.py:182
 msgid "Everywhere"
-msgstr "Везде"
+msgstr ""
 
 #: Cura/util/profile.py:182 Cura/util/profile.py:183 Cura/util/profile.py:184
 #: Cura/util/profile.py:224 Cura/util/profile.py:225 Cura/util/profile.py:226
@@ -1448,13 +1448,13 @@ msgstr ""
 
 #: Cura/util/profile.py:183 Cura/util/profile.py:232
 msgid "Brim"
-msgstr "Кайма"
+msgstr ""
 
 #: Cura/util/profile.py:183 Cura/util/profile.py:233 Cura/util/profile.py:234
 #: Cura/util/profile.py:235 Cura/util/profile.py:236 Cura/util/profile.py:237
 #: Cura/util/profile.py:238 Cura/util/profile.py:239 Cura/util/profile.py:240
 msgid "Raft"
-msgstr "Подложка"
+msgstr ""
 
 #: Cura/util/profile.py:183
 msgid "Platform adhesion type"
